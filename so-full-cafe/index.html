@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The So Full Cafe — Southern Soul Food | North Little Rock, AR</title>
+<meta name="description" content="North Little Rock's Sunday soul-food cafe on Kampground Way — oxtails, fried catfish, mac &amp; cheese, greens and yams, made from scratch. Order pickup or call (501) 615-8551. Black Swan Catering any day of the week." />
+<!--
+  DEMO MOCKUP — The So Full Cafe, North Little Rock AR
+  Archetype: B · Cinematic Full-Bleed (upgraded from A · Editorial Wordmark)
+  Signature: THE MENU AS FILM TITLES — a full-bleed dark stage whose backdrop photo crossfades
+    between course groups (Plates / Sides / Sweets) while the dotted-leader ladder overlays it.
+    Ported from the A build: the wordmark letter-rise reveal + the dish-name marquee
+    (now the "opening credits" strip under the hero).
+  REAL (verified per candidate pack): name; phone (501) 615-8551; address 7805 Kampground Way,
+    North Little Rock AR 72118; family-owned; Sunday-only cafe service + Black Swan Catering any day;
+    dish names oxtails, fried catfish, mac & cheese, collard greens, candied yams, fried pork chops,
+    chicken wings, Philly cheesesteaks; homemade Southern soul food.
+  SAMPLE-TO-REPLACE (labeled inline): ALL PRICES · exact Sunday hours · all reviews/ratings/counts ·
+    every photograph (licensed stand-ins, swapped for the cafe's own plates on launch) ·
+    online-ordering link target (Toast / Uber Eats / DoorDash — confirm which).
+  Amplify note: built on the cafe's real identity — family-owned Southern soul food, "leave so full
+    you mean it," Sundays in the cafe + Black Swan any day. Their dishes are the design material.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600;1,9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/b2-03-so-full-cafe-nlr/hero-oxtail-plate.jpg" fetchpriority="high" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232A241C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-style='italic' font-weight='700' fill='%23D97A28' text-anchor='middle'%3ESF%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#2A241C" />
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:title" content="The So Full Cafe — Southern Soul Food | North Little Rock, AR" />
+<meta property="og:description" content="Sunday soul food on Kampground Way — oxtails, fried catfish, mac &amp; cheese, greens and yams. Black Swan Catering any day of the week." />
+<meta property="og:image" content="assets/b2-03-so-full-cafe-nlr/hero-oxtail-plate.jpg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"The So Full Cafe","servesCuisine":["Southern","Soul Food"],"telephone":"+15016158551","address":{"@type":"PostalAddress","streetAddress":"7805 Kampground Way","addressLocality":"North Little Rock","addressRegion":"AR","postalCode":"72118","addressCountry":"US"},"areaServed":"North Little Rock, AR","description":"Family-owned Southern soul-food cafe in North Little Rock serving oxtails, fried catfish, mac & cheese, collard greens and candied yams. Cafe service on Sundays; Black Swan Catering available any day of the week."}
+</script>
+<style>
+  :root{
+    --butter:#F6EED9;--butter-2:#EDE2C6;
+    --collard:#3E5834;--collard-dk:#2C3F26;
+    --hot:#C3401F;--yam:#D97A28;
+    --smoke:#2A241C;--smoke-2:#1B1712;
+    --mut:#7C6C55;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--butter);color:var(--smoke);font-family:'Work Sans',system-ui,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+  .fr{font-family:'Fraunces',Georgia,serif}
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--hot);color:#fff;padding:12px 18px;font-weight:700}
+  .skip:focus{left:12px;top:12px}
+
+  /* ————— the commissioned-shoot grade: every photo gets these three layers ————— */
+  .shot{position:relative;overflow:hidden;background:var(--smoke-2)}
+  .shot > img{width:100%;height:100%;object-fit:cover;filter:contrast(1.1) saturate(1.12) brightness(.96)}
+  .shot::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:soft-light;background-image:var(--grain);background-size:240px 240px}
+  .grade{position:absolute;inset:0;pointer-events:none}
+  .grade::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(80% 70% at 50% 42%,rgba(217,122,40,.30),transparent 70%);
+    mix-blend-mode:soft-light}
+  .grade::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 50% 45%,transparent 30%,rgba(27,23,18,.55) 75%,rgba(27,23,18,.9) 100%)}
+
+  /* ————— demo banner ————— */
+  .mock{position:relative;z-index:80;background:var(--smoke-2);color:var(--yam);text-align:center;font-size:12.5px;line-height:1.45;font-weight:600;padding:9px 16px}
+  .mock b{color:#fff}
+
+  /* ————— minimal chrome nav ————— */
+  .nav{position:absolute;left:0;right:0;z-index:60;transition:background .35s var(--ease),backdrop-filter .35s}
+  .nav.solid{position:fixed;top:0;background:rgba(27,23,18,.92);backdrop-filter:blur(8px)}
+  .nav .navin{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
+  .nav .brand{font-family:'Fraunces';font-weight:900;font-size:19px;color:var(--butter);letter-spacing:-.01em}
+  .nav .brand em{font-style:italic;color:var(--yam)}
+  .nav .links{display:none;gap:30px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,238,217,.82)}
+  .nav .links a{padding:6px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+  .nav .links a:hover,.nav .links a:focus-visible{color:var(--yam);border-color:var(--yam)}
+  @media(min-width:960px){.nav .links{display:flex}}
+  .nav .call{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(246,238,217,.45);color:var(--butter);border-radius:999px;padding:10px 17px;font-weight:600;font-size:14px;min-height:44px;transition:background .2s,color .2s,border-color .2s}
+  .nav .call:hover,.nav .call:focus-visible{background:var(--yam);border-color:var(--yam);color:var(--smoke-2)}
+  .nav .call svg{width:16px;height:16px}
+
+  /* ————— MIRROR HERO — full bleed ————— */
+  .hero{position:relative;height:100svh;min-height:600px;color:var(--butter)}
+  .hero .shot{position:absolute;inset:0}
+  .hero .shot > img{object-position:52% 58%;transform:scale(1.06);animation:pushin 2.4s var(--ease) forwards}
+  @keyframes pushin{to{transform:scale(1)}}
+  .hero .heroin{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(46px,9vh,84px)}
+  .hero .the{display:block;font-family:'Fraunces';font-style:italic;font-weight:600;font-size:clamp(20px,2.3vw,30px);color:var(--yam);margin-left:.14em;opacity:0;animation:fadein .7s var(--ease) .15s forwards}
+  @keyframes fadein{to{opacity:1}}
+  h1{font-family:'Fraunces';font-weight:900;font-size:clamp(60px,12vw,168px);line-height:.86;letter-spacing:-.025em;margin:2px 0 0 0}
+  h1 .set{display:block}
+  h1 .set.two{font-style:italic;color:var(--butter)}
+  .wchar{display:inline-block;transform:translateY(34%);opacity:0;animation:rise .85s var(--ease) forwards;text-shadow:0 10px 40px rgba(27,23,18,.55)}
+  @keyframes rise{to{transform:translateY(0);opacity:1}}
+  .hero .rule{display:flex;align-items:center;gap:16px;margin-top:clamp(16px,2.4vh,26px);opacity:0;animation:fadein .8s var(--ease) 1s forwards}
+  .hero .rule .ln{height:1px;background:linear-gradient(90deg,var(--yam),rgba(217,122,40,0));flex:1;max-width:170px}
+  .hero .rule .cafe{font-size:12.5px;font-weight:700;letter-spacing:.38em;text-transform:uppercase;color:var(--butter)}
+  .hero .rule .loc{font-size:12.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,238,217,.72)}
+  .hero .tag{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:clamp(19px,2.5vw,27px);color:var(--butter);margin-top:clamp(14px,2vh,22px);max-width:22ch;text-shadow:0 4px 22px rgba(27,23,18,.6);opacity:0;animation:fadein .9s var(--ease) 1.15s forwards}
+  .hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(20px,3vh,30px);opacity:0;animation:fadein .9s var(--ease) 1.35s forwards}
+  .hero .credit{position:absolute;right:clamp(20px,5vw,60px);bottom:clamp(46px,9vh,84px);z-index:3;writing-mode:vertical-rl;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:rgba(246,238,217,.55)}
+  @media(max-width:900px){.hero .credit{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Work Sans';font-weight:700;font-size:14px;letter-spacing:.04em;padding:15px 24px;min-height:52px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:background .18s,color .18s,border-color .18s,transform .14s}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:17px;height:17px;flex:none}
+  .btn-yam{background:var(--yam);color:var(--smoke-2)}
+  .btn-yam:hover,.btn-yam:focus-visible{background:var(--butter)}
+  .btn-hot{background:var(--hot);color:#fff}
+  .btn-hot:hover,.btn-hot:focus-visible{background:var(--smoke-2)}
+  .btn-line{background:transparent;color:var(--butter);border-color:rgba(246,238,217,.5)}
+  .btn-line:hover,.btn-line:focus-visible{border-color:var(--yam);color:var(--yam)}
+  .btn-ink{background:var(--smoke);color:var(--butter)}
+  .btn-ink:hover,.btn-ink:focus-visible{background:var(--collard)}
+
+  /* ————— opening credits: dish-name marquee ————— */
+  .credits{position:relative;z-index:4;background:var(--smoke-2);color:var(--butter);border-top:1px solid rgba(217,122,40,.35);border-bottom:1px solid rgba(217,122,40,.35);overflow:hidden}
+  .credits .track{display:flex;width:max-content;padding:15px 0;animation:marq 42s linear infinite}
+  .credits:hover .track,.credits:focus-within .track{animation-play-state:paused}
+  .credits .track span{display:inline-flex;align-items:center;gap:30px;padding-right:30px;font-family:'Fraunces';font-style:italic;font-weight:600;font-size:16px;color:rgba(246,238,217,.85);white-space:nowrap}
+  .credits .track b{font-style:normal;font-weight:900;color:var(--yam);letter-spacing:.01em}
+  .credits .track i{font-style:normal;color:var(--hot);font-size:11px;transform:translateY(-1px)}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  .shotnote{position:relative;z-index:4;background:var(--smoke-2);color:rgba(246,238,217,.55);text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:9px 16px 12px}
+  .shotnote b{color:var(--yam);font-weight:700}
+
+  /* ————— section scaffolding ————— */
+  .sec{position:relative;padding:clamp(72px,10vw,124px) 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:11px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--collard)}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--hot)}
+  .eyebrow.on-dark{color:var(--yam)}
+  .eyebrow.on-dark::before{background:var(--yam)}
+  h2{font-family:'Fraunces';font-weight:900;font-size:clamp(34px,5.2vw,64px);line-height:1.02;letter-spacing:-.02em;margin-top:16px}
+  h2 em{font-style:italic;color:var(--hot)}
+  .lede{font-size:18px;color:#4a4136;max-width:52ch;margin-top:20px}
+
+  /* SUNDAYS panel — the model, stated plainly. Mostly whitespace. */
+  .sundays{background:var(--butter);text-align:center}
+  .sundays .two{display:grid;grid-template-columns:1fr;gap:0;margin-top:clamp(38px,6vw,62px);border-top:1px solid rgba(42,36,28,.18);border-bottom:1px solid rgba(42,36,28,.18)}
+  @media(min-width:800px){.sundays .two{grid-template-columns:1fr 1fr}.sundays .two > div + div{border-left:1px solid rgba(42,36,28,.18)}}
+  .sundays .two > div{padding:clamp(30px,4vw,46px) clamp(16px,3vw,34px)}
+  .sundays .two > div + div{border-top:1px solid rgba(42,36,28,.18)}
+  @media(min-width:800px){.sundays .two > div + div{border-top:0}}
+  .sundays .day{font-family:'Fraunces';font-weight:900;font-style:italic;font-size:clamp(30px,3.6vw,46px);line-height:1.05}
+  .sundays .day.a{color:var(--collard)}
+  .sundays .day.b{color:var(--hot)}
+  .sundays .two p{font-size:16px;color:var(--mut);margin-top:12px;max-width:34ch;margin-left:auto;margin-right:auto}
+  .flag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);border:1px dashed rgba(124,108,85,.6);border-radius:2px;padding:3px 8px;margin-top:14px}
+
+  /* ————— SIGNATURE: THE MENU AS FILM TITLES ————— */
+  .stage{position:relative;background:var(--smoke-2);color:var(--butter)}
+  .stage .media{position:sticky;top:0;height:100svh;overflow:hidden}
+  .stage .media .shot{position:absolute;inset:0;opacity:0;transition:opacity .9s var(--ease);will-change:opacity}
+  .stage .media .shot.live{opacity:1}
+  .stage .media .shot > img{object-position:center 55%}
+  .stage .media::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(27,23,18,.86) 0%,rgba(27,23,18,.62) 34%,rgba(27,23,18,.76) 100%)}
+  @media(min-width:900px){.stage .media::after{background:linear-gradient(90deg,rgba(27,23,18,.92) 0%,rgba(27,23,18,.8) 46%,rgba(27,23,18,.34) 100%)}}
+  .stage .reel{position:relative;z-index:2;margin-top:-100svh}
+  .course{min-height:100svh;display:flex;align-items:center;padding:64px 0}
+  .course .card{width:min(620px,100%)}
+  .course .no{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--yam)}
+  .course h3{font-family:'Fraunces';font-weight:900;font-size:clamp(38px,5.6vw,72px);line-height:1;letter-spacing:-.02em;margin:6px 0 4px}
+  .course .sub{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:17px;color:rgba(246,238,217,.72)}
+  .ladder{margin-top:clamp(24px,3vw,36px);border-top:1px solid rgba(246,238,217,.24)}
+  .rung{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid rgba(246,238,217,.14);
+    opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .course.in .rung{opacity:1;transform:none}
+  .course.in .rung:nth-child(1){transition-delay:.06s}
+  .course.in .rung:nth-child(2){transition-delay:.14s}
+  .course.in .rung:nth-child(3){transition-delay:.22s}
+  .course.in .rung:nth-child(4){transition-delay:.3s}
+  .course.in .rung:nth-child(5){transition-delay:.38s}
+  .rung .nm{font-family:'Fraunces';font-weight:900;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.01em}
+  .rung .dots{flex:1;min-width:26px;border-bottom:2px dotted rgba(246,238,217,.38);transform:translateY(-6px)}
+  .rung .pr{font-family:'Fraunces';font-weight:900;font-size:19px;color:var(--yam);white-space:nowrap}
+  .rung .pr sup{font-size:9px;font-weight:700;font-family:'Work Sans';letter-spacing:.12em;color:rgba(246,238,217,.55);margin-left:5px;vertical-align:super}
+  .rung .ds{flex-basis:100%;font-size:14.5px;color:rgba(246,238,217,.66);margin-top:2px;max-width:46ch}
+  .ladder-note{margin-top:16px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(246,238,217,.5)}
+  .ladder-note b{color:var(--yam);font-weight:700}
+
+  /* ————— CATERING full-bleed ————— */
+  .cater{position:relative;color:var(--butter);overflow:hidden}
+  .cater .shot{position:absolute;inset:0}
+  .cater .shot > img{object-position:center}
+  .cater::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(44,63,38,.9),rgba(27,23,18,.86))}
+  .cater .in{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:34px;align-items:center;padding:clamp(72px,10vw,130px) 0}
+  @media(min-width:900px){.cater .in{grid-template-columns:1.05fr .95fr;gap:60px}}
+  .cater h2 em{color:var(--yam)}
+  .cater p{font-size:17px;color:rgba(246,238,217,.86);margin-top:18px;max-width:46ch}
+  .cater p b{color:#fff;font-weight:600}
+  .swan{background:rgba(27,23,18,.72);border:1px solid rgba(217,122,40,.4);padding:clamp(26px,3.4vw,38px)}
+  .swan .kk{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--yam)}
+  .swan h3{font-family:'Fraunces';font-weight:900;font-size:clamp(24px,2.8vw,32px);margin-top:8px}
+  .swan ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:2px}
+  .swan li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:rgba(246,238,217,.9);padding:11px 0;border-top:1px solid rgba(246,238,217,.14)}
+  .swan li svg{width:16px;height:16px;color:var(--yam);flex:none;margin-top:5px}
+  .swan .btn{margin-top:22px;width:100%}
+
+  /* ————— FAMILY STORY ————— */
+  .story .in{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,64px);align-items:center}
+  @media(min-width:900px){.story .in{grid-template-columns:.92fr 1.08fr}}
+  .story .shot{aspect-ratio:4/5;border-radius:2px}
+  .story .shot > img{object-position:center 42%}
+  .story .lead{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:clamp(22px,2.9vw,32px);line-height:1.3;color:var(--collard);margin-top:22px}
+  .story p.body{font-size:17px;color:#4a4136;margin-top:18px;max-width:54ch}
+  .story .caps{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+  .story .caps span{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--collard);border:1px solid rgba(62,88,52,.35);padding:8px 13px;border-radius:2px}
+
+  /* ————— REVIEWS ————— */
+  .revs{background:var(--butter-2)}
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:44px}
+  @media(min-width:820px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{background:var(--butter);border:1px solid rgba(42,36,28,.16);padding:26px 24px;display:flex;flex-direction:column}
+  .rev .stars{display:flex;gap:3px;margin-bottom:14px}
+  .rev .stars svg{width:15px;height:15px;color:var(--yam)}
+  .rev p{font-family:'Fraunces';font-size:16.5px;line-height:1.5;flex:1}
+  .rev .who{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(42,36,28,.14)}
+  .rev .who b{font-size:14px}
+  .rev .who small{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);border:1px dashed rgba(124,108,85,.6);padding:3px 7px}
+  .rev-note{margin-top:22px;font-size:13px;color:var(--mut);font-style:italic}
+
+  /* ————— VISIT ————— */
+  .visit .in{display:grid;grid-template-columns:1fr;gap:20px;margin-top:44px}
+  @media(min-width:880px){.visit .in{grid-template-columns:1.02fr .98fr}}
+  .vcard{background:var(--smoke);color:var(--butter);padding:clamp(28px,3.6vw,44px)}
+  .vcard h3{font-family:'Fraunces';font-weight:900;font-size:26px}
+  .vcard address{font-style:normal;font-size:17px;color:rgba(246,238,217,.86);margin-top:14px;line-height:1.5}
+  .vcard .tel{display:inline-block;font-family:'Fraunces';font-weight:900;font-size:clamp(26px,3.4vw,38px);color:var(--yam);margin-top:18px;letter-spacing:-.01em;border-bottom:1px solid rgba(217,122,40,.4);transition:color .18s,border-color .18s}
+  .vcard .tel:hover,.vcard .tel:focus-visible{color:#fff;border-color:#fff}
+  .hours{margin-top:24px;border-top:1px solid rgba(246,238,217,.2);padding-top:16px}
+  .hours .lbl{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--yam);margin-bottom:10px}
+  .hours div.r{display:flex;justify-content:space-between;gap:14px;font-size:15px;padding:6px 0;color:rgba(246,238,217,.75)}
+  .hours div.r span:last-child{color:var(--butter);font-weight:600}
+  .vcta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .vcta .btn{flex:1;min-width:160px}
+  .mapbox{position:relative;border:1px solid rgba(42,36,28,.2);min-height:300px;display:grid;place-items:center;text-align:center;padding:28px;
+    background:
+      repeating-linear-gradient(0deg,transparent 0 27px,rgba(62,88,52,.1) 27px 28px),
+      repeating-linear-gradient(90deg,transparent 0 27px,rgba(62,88,52,.1) 27px 28px),
+      var(--butter-2)}
+  .mapbox svg{width:40px;height:40px;color:var(--hot);margin:0 auto 12px}
+  .mapbox b{display:block;font-family:'Fraunces';font-weight:900;font-size:17px}
+  .mapbox small{display:block;font-size:12px;color:var(--mut);margin-top:6px}
+
+  /* ————— FRESH SIGNAL CLOSE ————— */
+  .fs{background:var(--butter);border-top:1px solid rgba(42,36,28,.18);padding:clamp(80px,11vw,140px) 0}
+  .fs .in{max-width:760px;margin:0 auto}
+  .fs .kick{font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--mut)}
+  .fs h2{font-family:'Fraunces';font-weight:900;font-size:clamp(32px,4.6vw,56px);line-height:1.06;margin-top:18px;max-width:16ch}
+  .fs h2 em{font-style:italic;color:var(--hot)}
+  .fs .letter{margin-top:26px;font-size:17.5px;color:#4a4136;max-width:56ch}
+  .fs .letter p + p{margin-top:14px}
+  .fs hr{border:0;border-top:1px solid rgba(42,36,28,.2);margin:clamp(34px,5vw,50px) 0}
+  .offer{border:1px solid rgba(42,36,28,.22);background:#fbf6e9}
+  .offer .row{display:flex;gap:18px;align-items:baseline;padding:22px clamp(20px,3vw,30px);border-bottom:1px solid rgba(42,36,28,.14);flex-wrap:wrap}
+  .offer .row:last-child{border-bottom:0}
+  .offer .amt{font-family:'Fraunces';font-weight:900;font-size:clamp(24px,3vw,32px);color:var(--collard);white-space:nowrap;min-width:9ch}
+  .offer .amt.b{color:var(--hot)}
+  .offer .amt.c{font-size:clamp(19px,2.2vw,23px);color:var(--smoke)}
+  .offer .what{font-size:16px;color:#4a4136;flex:1;min-width:250px}
+  .fs .why{margin-top:26px;font-size:15.5px;color:var(--mut);font-style:italic;max-width:58ch}
+  .fs .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
+  .fs .ghost{font-size:14px;color:var(--mut)}
+  .fs .sign{margin-top:30px;font-family:'Fraunces';font-style:italic;font-weight:600;font-size:19px;color:var(--collard)}
+
+  footer{background:var(--smoke-2);color:rgba(246,238,217,.62);text-align:center;padding:clamp(46px,6vw,70px) 22px;font-size:14.5px}
+  footer .mark{font-family:'Fraunces';font-weight:900;font-size:clamp(28px,4.4vw,50px);color:var(--butter);letter-spacing:-.02em;margin-bottom:14px}
+  footer .mark em{font-style:italic;color:var(--yam)}
+  footer a{color:var(--yam);font-weight:600}
+  footer .fine{margin-top:18px;font-size:11.5px;color:rgba(246,238,217,.42);letter-spacing:.02em}
+
+  /* ————— sticky mobile bar ————— */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;background:var(--smoke-2);border-top:1px solid rgba(217,122,40,.45)}
+  .bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:10px 8px;font-weight:700;font-size:14px;color:var(--butter)}
+  .bar a.hot{background:var(--hot);color:#fff}
+  .bar svg{width:16px;height:16px}
+  @media(min-width:900px){.bar{display:none}}
+  @media(max-width:899px){body{padding-bottom:56px}}
+
+  /* ————— reveal verb: SETTLE (rise + settle onto the table) ————— */
+  .rv{opacity:0;transform:translateY(22px) scale(.985);transition:opacity .62s var(--ease),transform .62s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+  :focus-visible{outline:3px solid var(--yam);outline-offset:3px}
+
+  /* ————— mobile deviation: hero recomposed, no crossfade cost on the stage ————— */
+  @media(max-width:899px){
+    .hero .shot > img{object-position:56% 62%}
+    .hero .heroin{justify-content:flex-end;padding-bottom:34px}
+    h1{font-size:clamp(54px,15vw,86px)}
+    .hero .tag{font-size:19px;max-width:100%}
+    .hero .acts .btn{flex:1;min-width:150px}
+    .stage .media .shot{transition:none}
+    .stage .media::after{background:linear-gradient(180deg,rgba(27,23,18,.7) 0%,rgba(27,23,18,.8) 55%,rgba(27,23,18,.92) 100%)}
+    .course{min-height:auto;padding:clamp(60px,14vw,90px) 0}
+    .credits .track{animation-duration:64s}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .rv,.rung{opacity:1!important;transform:none!important}
+    .wchar{opacity:1;transform:none}
+    .hero .the,.hero .rule,.hero .tag,.hero .acts{opacity:1}
+    .hero .shot > img{transform:none}
+    .credits .track{animation:none;transform:none}
+    .stage .media .shot{opacity:0}
+    .stage .media .shot.live{opacity:1}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to the menu</a>
+
+<div class="mock">DEMO MOCKUP — built for <b>The So Full Cafe</b> by Nate Witt · real name, phone (501) 615-8551, address &amp; dishes · <b>sample photos</b>, sample prices, hours &amp; reviews — all swapped for the cafe's own on launch</div>
+
+<header class="hero" id="top">
+  <div class="shot">
+    <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+    <img src="assets/b2-03-so-full-cafe-nlr/hero-oxtail-plate.jpg" width="1600" height="1068" alt="The So Full Cafe oxtails braised in gravy — North Little Rock, AR" fetchpriority="high" decoding="async" />
+    <div class="grade" aria-hidden="true"></div>
+  </div>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="wrap navin">
+      <a class="brand" href="#top">The So <em>Full</em> Cafe</a>
+      <div class="links">
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#story">Our Story</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <a class="call" href="tel:+15016158551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 615-8551</a>
+    </div>
+  </nav>
+
+  <div class="wrap heroin">
+    <span class="the">The</span>
+    <h1 aria-label="The So Full Cafe">
+      <span class="set one" data-word="So"></span>
+      <span class="set two" data-word="Full."></span>
+    </h1>
+    <div class="rule">
+      <span class="cafe">Cafe</span>
+      <span class="ln" aria-hidden="true"></span>
+      <span class="loc">North Little Rock, Arkansas</span>
+    </div>
+    <p class="tag">Homemade Southern soul food — the kind you leave so full you mean it.</p>
+    <div class="acts">
+      <a class="btn btn-yam" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7a4 4 0 0 0 8 0V2M7 2v20M17 2c-1.7 0-3 2-3 5s1.3 5 3 5v10"/></svg>See Sunday's plate</a>
+      <a class="btn btn-line" href="tel:+15016158551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call the cafe</a>
+    </div>
+  </div>
+  <span class="credit" aria-hidden="true">7805 Kampground Way · Sundays</span>
+</header>
+
+<div class="credits" aria-hidden="true">
+  <div class="track">
+    <span><b>Oxtails</b><i>◆</i>Fried Catfish<i>◆</i><b>Mac &amp; Cheese</b><i>◆</i>Collard Greens<i>◆</i><b>Candied Yams</b><i>◆</i>Fried Pork Chops<i>◆</i><b>Chicken Wings</b><i>◆</i>Philly Cheesesteaks<i>◆</i><b>Cornbread</b><i>◆</i></span>
+    <span><b>Oxtails</b><i>◆</i>Fried Catfish<i>◆</i><b>Mac &amp; Cheese</b><i>◆</i>Collard Greens<i>◆</i><b>Candied Yams</b><i>◆</i>Fried Pork Chops<i>◆</i><b>Chicken Wings</b><i>◆</i>Philly Cheesesteaks<i>◆</i><b>Cornbread</b><i>◆</i></span>
+  </div>
+</div>
+<p class="shotnote">Sample photography — <b>swapped for The So Full Cafe's real plates on launch</b></p>
+
+<main id="main">
+
+<section class="sec sundays" aria-labelledby="sun-h">
+  <div class="wrap">
+    <span class="eyebrow rv">The way this kitchen works</span>
+    <h2 id="sun-h" class="rv d1">Sundays in the cafe.<br><em>Any day</em> at your table.</h2>
+    <div class="two">
+      <div class="rv">
+        <p class="day a">The cafe opens Sunday.</p>
+        <p>One day a week, cooked from scratch, served till it's gone. Come early — the oxtails go first.</p>
+        <!-- SAMPLE-TO-REPLACE — Sunday service is REAL per listings; exact times UNVERIFIED. Confirm before launch. -->
+        <span class="flag">Sample hours · 12–5 PM listed — confirm</span>
+      </div>
+      <div class="rv d1">
+        <p class="day b">Black Swan cooks any day.</p>
+        <p>Reunions, church dinners, office lunches, celebrations of life — the same food, brought to you, any day of the week.</p>
+        <span class="flag">Real — catering by appointment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SIGNATURE ELEMENT: THE MENU AS FILM TITLES ═══
+     A dark full-bleed stage. The backdrop photograph crossfades between course groups
+     as you scroll; the dotted-leader ladder plays over it like a title card.
+     ALL PRICES BELOW ARE SAMPLE. Dish names are REAL (from the cafe's own listings). -->
+<section class="stage" id="menu" aria-labelledby="menu-h">
+  <h2 id="menu-h" class="sr" style="position:absolute;left:-9999px">The So Full Cafe menu</h2>
+  <div class="media" aria-hidden="true">
+    <div class="shot live" data-back="0">
+      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+      <img src="assets/b2-03-so-full-cafe-nlr/course-plates-fried-catfish.jpg" width="750" height="1000" alt="" loading="lazy" decoding="async" />
+      <div class="grade"></div>
+    </div>
+    <div class="shot" data-back="1">
+      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+      <img src="assets/b2-03-so-full-cafe-nlr/course-sides-mac-and-cheese.jpg" width="667" height="1000" alt="" loading="lazy" decoding="async" />
+      <div class="grade"></div>
+    </div>
+    <div class="shot" data-back="2">
+      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+      <img src="assets/b2-03-so-full-cafe-nlr/course-sweets-cobbler.jpg" width="1000" height="668" alt="" loading="lazy" decoding="async" />
+      <div class="grade"></div>
+    </div>
+  </div>
+
+  <div class="reel">
+    <article class="course" data-course="0">
+      <div class="wrap"><div class="card">
+        <span class="no">Course One</span>
+        <h3>The Plates</h3>
+        <p class="sub">Served with two sides and bread.</p>
+        <div class="ladder">
+          <div class="rung"><span class="nm">Oxtails</span><span class="dots" aria-hidden="true"></span><span class="pr">$16<sup>sample</sup></span><span class="ds">Braised low and slow till they fall off the bone, over rice with gravy. The one folks drive across the river for.</span></div>
+          <div class="rung"><span class="nm">Fried Catfish</span><span class="dots" aria-hidden="true"></span><span class="pr">$14<sup>sample</sup></span><span class="ds">Cornmeal-crisp fillets, straight out the fryer.</span></div>
+          <div class="rung"><span class="nm">Fried Pork Chops</span><span class="dots" aria-hidden="true"></span><span class="pr">$13<sup>sample</sup></span><span class="ds">Seasoned, fried golden, smothered on request.</span></div>
+          <div class="rung"><span class="nm">Chicken Wings</span><span class="dots" aria-hidden="true"></span><span class="pr">$12<sup>sample</sup></span><span class="ds">Fried to order, six to a plate.</span></div>
+          <div class="rung"><span class="nm">Philly Cheesesteak</span><span class="dots" aria-hidden="true"></span><span class="pr">$11<sup>sample</sup></span><span class="ds">The off-menu favorite that stayed on the menu.</span></div>
+        </div>
+        <p class="ladder-note">Dish names are real · <b>every price is a sample</b> — your real menu drops in on launch</p>
+      </div></div>
+    </article>
+
+    <article class="course" data-course="1">
+      <div class="wrap"><div class="card">
+        <span class="no">Course Two</span>
+        <h3>The Sides</h3>
+        <p class="sub">The reason people come back.</p>
+        <div class="ladder">
+          <div class="rung"><span class="nm">Mac &amp; Cheese</span><span class="dots" aria-hidden="true"></span><span class="pr">$4<sup>sample</sup></span><span class="ds">Baked, not stirred — pulled out the oven bubbling.</span></div>
+          <div class="rung"><span class="nm">Collard Greens</span><span class="dots" aria-hidden="true"></span><span class="pr">$4<sup>sample</sup></span><span class="ds">Simmered all morning. Bring bread for the pot likker.</span></div>
+          <div class="rung"><span class="nm">Candied Yams</span><span class="dots" aria-hidden="true"></span><span class="pr">$4<sup>sample</sup></span><span class="ds">Sweet, soft, cinnamon-dark at the edges.</span></div>
+          <div class="rung"><span class="nm">Cornbread</span><span class="dots" aria-hidden="true"></span><span class="pr">$2<sup>sample</sup></span><span class="ds">Cut from the pan, warm.</span></div>
+        </div>
+        <p class="ladder-note">Dish names are real · <b>every price is a sample</b></p>
+      </div></div>
+    </article>
+
+    <article class="course" data-course="2">
+      <div class="wrap"><div class="card">
+        <span class="no">Course Three</span>
+        <h3>The Sweets</h3>
+        <p class="sub">Because "so full" has to mean something.</p>
+        <div class="ladder">
+          <!-- SAMPLE ITEMS — dessert lineup UNVERIFIED. Confirm the cafe's real sweets before launch. -->
+          <div class="rung"><span class="nm">Peach Cobbler</span><span class="dots" aria-hidden="true"></span><span class="pr">$5<sup>sample</sup></span><span class="ds">Sample item — swapped for whatever's actually coming out of the oven.</span></div>
+          <div class="rung"><span class="nm">Banana Pudding</span><span class="dots" aria-hidden="true"></span><span class="pr">$5<sup>sample</sup></span><span class="ds">Sample item — confirm on launch.</span></div>
+          <div class="rung"><span class="nm">Sweet Tea</span><span class="dots" aria-hidden="true"></span><span class="pr">$3<sup>sample</sup></span><span class="ds">Sample item — confirm on launch.</span></div>
+        </div>
+        <p class="ladder-note"><b>Sample course</b> — dessert lineup and prices confirmed with the kitchen before launch</p>
+      </div></div>
+    </article>
+  </div>
+</section>
+
+<section class="cater" id="catering" aria-labelledby="cat-h">
+  <div class="shot">
+    <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+    <img src="assets/b2-03-so-full-cafe-nlr/catering-spread.jpg" width="1200" height="800" alt="The So Full Cafe catering spread — Black Swan Catering, North Little Rock, AR" loading="lazy" decoding="async" />
+    <div class="grade" aria-hidden="true"></div>
+  </div>
+  <div class="wrap in">
+    <div class="rv">
+      <span class="eyebrow on-dark">Any day of the week</span>
+      <h2 id="cat-h">Can't wait till Sunday? <em>Let us cook it to you.</em></h2>
+      <p>The cafe cooks on Sundays — but <b>Black Swan Catering</b> brings the same from-scratch soul food to your people any day. You bring the room; we bring the pans.</p>
+    </div>
+    <div class="swan rv d1">
+      <span class="kk">Black Swan Catering</span>
+      <h3>Book any day, not just Sunday</h3>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Family reunions &amp; church dinners</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Corporate &amp; office catering</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Private chef &amp; meal prep</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Trays by the pan — greens, mac, yams</li>
+      </ul>
+      <a class="btn btn-yam" href="tel:+15016158551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Ask about catering — (501) 615-8551</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec story" id="story" aria-labelledby="story-h">
+  <div class="wrap in">
+    <div class="shot rv">
+      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+      <img src="assets/b2-03-so-full-cafe-nlr/family-table.jpg" width="666" height="1000" alt="The So Full Cafe family-style Sunday table — North Little Rock, AR" loading="lazy" decoding="async" />
+      <div class="grade" aria-hidden="true"></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow">Family-owned · Kampground Way</span>
+      <h2 id="story-h">The name is the <em>promise</em>.</h2>
+      <p class="lead">You're supposed to leave so full you mean it — plate clean, heart happy, ready for a nap.</p>
+      <p class="body">The So Full Cafe is a family-owned kitchen in North Little Rock cooking the Southern soul food this family grew up on. Everything's made from scratch: the oxtails braise low and slow, the greens simmer all morning, the mac &amp; cheese comes out of the oven bubbling. Sunday, the plates go out till they're gone — and Black Swan Catering carries the rest of the week.</p>
+      <div class="caps">
+        <span>Family-owned</span>
+        <span>From scratch</span>
+        <span>Sundays in the cafe</span>
+        <span>Catering any day</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE REVIEWS — realistic placeholders written for this demo, clearly labeled.
+     Replace with real, verbatim Google/Yelp reviews and pull the live rating + count
+     from the cafe's listing before launch. No rating or review count is claimed here. -->
+<section class="sec revs" aria-labelledby="rev-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Word around North Little Rock</span>
+    <h2 id="rev-h" class="rv d1">They came hungry. <em>Left so full.</em></h2>
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+        <p>The oxtails are the real deal — fall-apart tender and the gravy is everything. Got there early because they sell out. Worth it.</p>
+        <div class="who"><b>Placeholder review</b><small>Sample</small></div>
+      </article>
+      <article class="rev rv d1">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+        <p>Mac &amp; cheese and greens, hands down. Catfish fried perfect. This is a Sunday tradition for us now.</p>
+        <div class="who"><b>Placeholder review</b><small>Sample</small></div>
+      </article>
+      <article class="rev rv d2">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+        <p>Had them cater our family reunion through Black Swan and everybody raved. Trays came hot, seasoned right, plenty of it.</p>
+        <div class="who"><b>Placeholder review</b><small>Sample</small></div>
+      </article>
+    </div>
+    <p class="rev-note">These three are placeholders written for the demo — on launch they're replaced with the cafe's real Google and Yelp reviews, and the live star rating is pulled straight from the listing.</p>
+  </div>
+</section>
+
+<section class="sec visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Come sit a spell</span>
+    <h2 id="visit-h" class="rv d1">Find <em>The So Full Cafe</em></h2>
+    <div class="in">
+      <div class="vcard rv">
+        <h3>7805 Kampground Way</h3>
+        <address>North Little Rock, AR 72118</address>
+        <a class="tel" href="tel:+15016158551">(501) 615-8551</a>
+        <div class="hours">
+          <!-- Sunday-only cafe service is REAL per listings. Exact times UNVERIFIED — SAMPLE until confirmed. -->
+          <div class="lbl">Hours — sample, confirm before launch</div>
+          <div class="r"><span>Sunday</span><span>12:00 – 5:00 PM</span></div>
+          <div class="r"><span>Monday – Saturday</span><span>Catering only</span></div>
+          <div class="r"><span>Black Swan Catering</span><span>Any day · by order</span></div>
+        </div>
+        <div class="vcta">
+          <a class="btn btn-hot" href="tel:+15016158551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call to order</a>
+          <a class="btn btn-line" href="https://maps.google.com/?q=The+So+Full+Cafe+7805+Kampground+Way+North+Little+Rock+AR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+        </div>
+      </div>
+      <div class="mapbox rv d1">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <b>Kampground Way · North Little Rock</b>
+          <small>Live Google map embeds here on launch</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fs" id="fresh-signal" aria-labelledby="fs-h">
+  <div class="wrap in">
+    <span class="kick">A note from the person who built this</span>
+    <h2 id="fs-h">This page doesn't exist yet. <em>It's already yours.</em></h2>
+    <div class="letter">
+      <p>I'm Nate. I build websites for local shops here in Central Arkansas. I made this mockup for The So Full Cafe before we ever spoke, because a kitchen doing oxtails like yours deserves a better front door than a Facebook page and a delivery app.</p>
+      <p>Everything on it marked "sample" — the photos, the prices, the hours, the reviews — gets replaced with your real ones. If you want it, it's live in 2–3 days. If you don't, keep the link. It's yours either way.</p>
+    </div>
+    <hr />
+    <div class="offer">
+      <div class="row">
+        <span class="amt">$500<br><span style="font-size:11px;font-family:'Work Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700">one-time</span></span>
+        <span class="what">The whole setup: this site made real with your photos and menu, your Google Business Profile fixed so people find <em>you</em> instead of an aggregator, and a simple AI assistant that answers the common questions and helps folks reach you or book catering.</span>
+      </div>
+      <div class="row">
+        <span class="amt b">$99<br><span style="font-size:11px;font-family:'Work Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700">per month</span></span>
+        <span class="what">Starting the month after launch — basic upkeep of the servers and services that keep it live: hosting, updates, your Google page. Cancel anytime.</span>
+      </div>
+      <div class="row">
+        <span class="amt c">2–3 days</span>
+        <span class="what">That's how fast it goes live, because it's already about 80% built — you're looking at it.</span>
+      </div>
+    </div>
+    <p class="why">An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month. AI lets me build in days what used to take a team weeks — I pass that on, because I'd rather price it so it's easy to say yes and earn a long relationship.</p>
+    <div class="cta">
+      <a class="btn btn-ink" href="sms:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4.2-1L3 20l1.3-4.3A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>Text Nate — (501) 757-3468</a>
+      <a class="btn btn-line" style="color:var(--smoke);border-color:rgba(42,36,28,.35)" href="tel:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Or call</a>
+      <span class="ghost">No pressure. The demo stays yours either way.</span>
+    </div>
+    <p class="sign">— Nate Witt, Fresh Signal · Central Arkansas</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="mark">The So <em>Full</em> Cafe</div>
+  Southern soul food · 7805 Kampground Way, North Little Rock, AR · <a href="tel:+15016158551">(501) 615-8551</a><br />
+  Sundays in the cafe · Black Swan Catering any day of the week
+  <p class="fine">Demo mockup by Nate Witt / Fresh Signal. Photographs are licensed stand-ins; prices, hours and reviews shown are samples and are replaced with the cafe's real information on launch.</p>
+</footer>
+
+<div class="bar">
+  <a href="tel:+15016158551"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call the cafe</a>
+  <a class="hot" href="#catering"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M12 3v2"/></svg>Catering</a>
+</div>
+
+<script>
+(function(){
+  // ——— hero wordmark: letters rise + settle (ported from the editorial build) ———
+  document.querySelectorAll('h1 [data-word]').forEach(function(el,wi){
+    el.dataset.word.split('').forEach(function(ch,i){
+      var s=document.createElement('span');
+      s.className='wchar';s.textContent=ch;
+      s.style.animationDelay=(0.3+(wi*4+i)*0.055)+'s';
+      el.appendChild(s);
+    });
+  });
+
+  // ——— scroll reveals: the SETTLE verb ———
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  // ——— SIGNATURE: menu-as-film-titles — backdrop crossfades per course group ———
+  var backs=document.querySelectorAll('.stage .media .shot');
+  var courses=document.querySelectorAll('.course');
+  var cio=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting && e.intersectionRatio>.4){
+        e.target.classList.add('in');
+        var n=+e.target.dataset.course;
+        backs.forEach(function(b,i){ b.classList.toggle('live', i===n); });
+      }
+    });
+  },{threshold:[.4,.6]});
+  courses.forEach(function(c){cio.observe(c);});
+
+  // ——— nav goes solid once the hero has passed ———
+  var nav=document.getElementById('nav'), hero=document.getElementById('top');
+  var nio=new IntersectionObserver(function(es){
+    nav.classList.toggle('solid', !es[0].isIntersecting);
+  },{rootMargin:'-70px 0px 0px 0px'});
+  nio.observe(hero);
+})();
+</script>
+</body>
+</html>
