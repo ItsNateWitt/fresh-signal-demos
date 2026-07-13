@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Fresh Signal — New Client Onboarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14181D; --mut:#5A646E; --line:#D8DEE4; --paper:#FFF; --bg:#F2F4F6;
+    --accent:#1F6F5C; --accent-soft:#EEF5F2; --flag:#B4551F; --flag-soft:#FBF1E9;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Archivo',system-ui,sans-serif;font-size:16px;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 18px 80px}
+
+  header{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:26px}
+  .brand{font-family:'Oswald';font-weight:600;font-size:24px;letter-spacing:.02em;text-transform:uppercase}
+  .brand span{color:var(--accent)}
+  .brandsub{font-size:12px;color:var(--mut);letter-spacing:.14em;text-transform:uppercase;margin-top:3px}
+
+  h1{font-family:'Oswald';font-weight:600;font-size:28px;text-transform:uppercase;margin:0 0 6px}
+  .lede{color:var(--mut);margin:0 0 26px}
+
+  fieldset{border:1px solid var(--line);background:var(--paper);border-radius:6px;
+    padding:20px 20px 14px;margin:0 0 20px}
+  legend{font-family:'Oswald';font-weight:500;font-size:13px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--accent);padding:0 8px}
+
+  label{display:block;font-weight:500;font-size:14px;margin:14px 0 5px}
+  label .req{color:var(--flag)}
+  .hint{font-weight:400;color:var(--mut);font-size:13px;margin-top:2px}
+
+  input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{
+    width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;
+    font-family:inherit;font-size:16px;background:#fff;color:var(--ink);
+    transition:border-color .18s var(--ease),box-shadow .18s var(--ease)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(31,111,92,.14)}
+  textarea{min-height:90px;resize:vertical}
+
+  .consent{display:flex;gap:12px;align-items:flex-start;background:var(--flag-soft);
+    border-left:3px solid var(--flag);padding:14px 15px;margin:18px 0 6px;border-radius:0 4px 4px 0}
+  .consent input[type=checkbox]{margin-top:3px;width:20px;height:20px;flex:none;accent-color:var(--flag)}
+  .consent span{font-size:14px;line-height:1.55}
+  .consent a{color:var(--flag)}
+
+  button{width:100%;margin-top:22px;padding:16px;border:0;border-radius:5px;cursor:pointer;
+    background:var(--accent);color:#fff;font-family:'Oswald';font-weight:600;font-size:16px;
+    letter-spacing:.06em;text-transform:uppercase;min-height:52px;
+    transition:transform .16s var(--ease),background .16s var(--ease)}
+  button:hover{background:#1a5c4d}
+  button:active{transform:translateY(1px)}
+  button:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+
+  .note{font-size:13px;color:var(--mut);margin-top:14px;text-align:center}
+  .ok{display:none;background:var(--accent-soft);border-left:3px solid var(--accent);
+    padding:18px;border-radius:0 4px 4px 0;margin-bottom:20px}
+  .ok.show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">Fresh <span>Signal</span></div>
+  <div class="brandsub">Websites &amp; Customer Assistants · Central Arkansas</div>
+</header>
+
+<div class="ok" id="ok">
+  <b>Got it — thank you.</b> I have everything I need to start. Your site goes live in 2–3 business days,
+  and I'll text you the moment it's ready.
+</div>
+
+<h1>Let's build your site</h1>
+<p class="lede">This is everything I need to make the mockup real. It takes about 5 minutes.
+Anything you're unsure about, leave blank and we'll sort it on a call.</p>
+
+<form id="f" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+  <fieldset>
+    <legend>Your business</legend>
+
+    <label for="biz">Business name <span class="req">*</span></label>
+    <input type="text" id="biz" name="business" required />
+
+    <label for="owner">Your name <span class="req">*</span></label>
+    <input type="text" id="owner" name="owner" required />
+
+    <label for="phone">Best phone <span class="req">*</span></label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="email">Email <span class="req">*</span></label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="addr">Business address</label>
+    <input type="text" id="addr" name="address" />
+    <div class="hint">Exactly as it should appear on Google. If you're mobile-only, say so.</div>
+
+    <label for="hours">Your hours <span class="req">*</span></label>
+    <textarea id="hours" name="hours" required placeholder="Mon–Fri 9–6, Sat 10–4, closed Sunday"></textarea>
+    <div class="hint">The demo used placeholder hours — these replace them.</div>
+  </fieldset>
+
+  <fieldset>
+    <legend>What you sell</legend>
+
+    <label for="services">Your services and prices <span class="req">*</span></label>
+    <textarea id="services" name="services" required placeholder="The Cut — $25&#10;Skin Fade — $30&#10;Beard Trim — $20"></textarea>
+    <div class="hint">Every price on the demo is a placeholder. Give me the real ones — I won't guess.</div>
+
+    <label for="staff">Your team (names + roles)</label>
+    <textarea id="staff" name="staff" placeholder="Jason — owner, custom work&#10;..."></textarea>
+    <div class="hint">Only real names. Blank is better than made up.</div>
+
+    <label for="about">Anything you want people to know</label>
+    <textarea id="about" name="about" placeholder="Years in business, what makes you different, the thing customers always say..."></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Your photos &amp; accounts</legend>
+
+    <label for="photos">Where are your photos? <span class="req">*</span></label>
+    <textarea id="photos" name="photos" required placeholder="I'll text them / they're on my Facebook page / Google Drive link..."></textarea>
+    <div class="hint">The demo uses stock stand-ins. Your real photos replace all of them.</div>
+
+    <label for="social">Facebook / Instagram / booking links</label>
+    <textarea id="social" name="social" placeholder="facebook.com/yourpage&#10;instagram.com/yourshop&#10;booksy.com/..."></textarea>
+
+    <label for="gbp">Do you have a Google Business Profile?</label>
+    <select id="gbp" name="google_profile">
+      <option value="">Select…</option>
+      <option>Yes — and I can log in</option>
+      <option>Yes — but I've lost access</option>
+      <option>No / not sure</option>
+    </select>
+    <div class="hint">Part of the $500 setup is cleaning this up. If you've lost access, I'll help you claim it.</div>
+
+    <label for="domain">Do you own a domain name?</label>
+    <input type="text" id="domain" name="domain" placeholder="yourshop.com — or 'no'" />
+  </fieldset>
+
+  <fieldset>
+    <legend>The customer assistant</legend>
+
+    <label for="faq">The 5 questions customers ask you most <span class="req">*</span></label>
+    <textarea id="faq" name="faq" required placeholder="Are you open Sunday?&#10;Do you take walk-ins?&#10;How much for a fade?&#10;Where do I park?&#10;Do you do kids' cuts?"></textarea>
+    <div class="hint">This is what the assistant will answer for you, 24/7. Be honest about the boring ones — those are the calls you're losing.</div>
+
+    <label for="handoff">When should it hand off to a human?</label>
+    <input type="text" id="handoff" name="handoff" placeholder="Anything about pricing a big job / complaints / booking changes" />
+
+    <div class="consent">
+      <input type="checkbox" id="consent" name="sms_consent" value="yes" required />
+      <span>
+        <b>I agree to receive text messages from Fresh Signal (Nate Witt)</b> about building and
+        maintaining my website. Message and data rates may apply. Message frequency varies.
+        Reply STOP at any time to opt out, or HELP for help. <span class="req">*</span>
+      </span>
+    </div>
+    <div class="hint" style="margin-top:8px">
+      Required by federal law (TCPA) — I can only text people who ask me to. This covers <b>you</b>, the
+      owner. Your <b>customers</b> give their own separate consent on your website before the assistant
+      ever messages them. <b>I will never text a list of your existing customers.</b>
+    </div>
+  </fieldset>
+
+  <button type="submit">Send it — let's build</button>
+  <p class="note">Questions? Text Nate — <a href="sms:+15017573468">(501) 757-3468</a></p>
+</form>
+
+<script>
+  // Graceful confirmation without leaving the page.
+  var f = document.getElementById('f'), ok = document.getElementById('ok');
+  f.addEventListener('submit', function(e){
+    if (f.action.indexOf('YOUR_FORM_ID') !== -1) {
+      e.preventDefault();
+      alert('Setup needed: replace YOUR_FORM_ID in the form action with a real Formspree endpoint (free at formspree.io) so responses reach Nate.');
+      return;
+    }
+    e.preventDefault();
+    fetch(f.action, { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
+      .then(function(r){
+        if (r.ok) { f.style.display='none'; ok.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'}); }
+        else { alert('Something went wrong sending that. Text Nate at (501) 757-3468 and he\'ll sort it.'); }
+      })
+      .catch(function(){ alert('Network problem. Text Nate at (501) 757-3468.'); });
+  });
+</script>
+
+</div>
+</body>
+</html>
