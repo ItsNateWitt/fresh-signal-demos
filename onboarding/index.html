@@ -62,6 +62,25 @@
   .ok{display:none;background:var(--accent-soft);border-left:3px solid var(--accent);
     padding:18px;border-radius:0 4px 4px 0;margin-bottom:20px}
   .ok.show{display:block}
+
+  /* Fallback send panel — shown only if the direct send can't go through.
+     Guarantees the client's answers still reach Nate instead of vanishing. */
+  .fb{display:none;background:var(--paper);border:1px solid var(--line);
+    border-left:3px solid var(--flag);padding:20px;border-radius:0 6px 6px 0;margin-bottom:20px}
+  .fb.show{display:block}
+  .fb h2{font-family:'Oswald';font-weight:600;font-size:20px;text-transform:uppercase;margin:0 0 8px}
+  .fb p{margin:0 0 14px;font-size:15px}
+  .btnrow{display:flex;flex-direction:column;gap:10px}
+  .btn2{display:block;width:100%;padding:15px;border:0;border-radius:5px;cursor:pointer;
+    text-align:center;text-decoration:none;font-family:'Oswald';font-weight:600;font-size:15px;
+    letter-spacing:.05em;text-transform:uppercase;min-height:50px;line-height:20px;
+    transition:transform .16s var(--ease),background .16s var(--ease)}
+  .btn2:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#1a5c4d}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .saved{font-size:13px;color:var(--mut);margin-top:12px}
 </style>
 </head>
 <body>
@@ -77,11 +96,24 @@
   and I'll text you the moment it's ready.
 </div>
 
+<div class="fb" id="fb">
+  <h2>One last tap</h2>
+  <p>Your answers are saved and ready — I just need you to send them across. Either button works,
+  whichever you'd rather use.</p>
+  <div class="btnrow">
+    <a class="btn2 btn-primary" id="fbMail" href="#">Email my answers to Nate</a>
+    <button class="btn2 btn-ghost" id="fbCopy" type="button">Copy my answers</button>
+    <a class="btn2 btn-ghost" id="fbSms" href="sms:+15017573468">Text Nate — (501) 757-3468</a>
+  </div>
+  <p class="saved" id="fbSaved">Nothing is lost — your answers are saved on this device. You can close
+  this page and come back to it.</p>
+</div>
+
 <h1>Let's build your site</h1>
 <p class="lede">This is everything I need to make the mockup real. It takes about 5 minutes.
 Anything you're unsure about, leave blank and we'll sort it on a call.</p>
 
-<form id="f" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form id="f" method="POST">
 
   <fieldset>
     <legend>Your business</legend>
@@ -175,21 +207,125 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
 </form>
 
 <script>
-  // Graceful confirmation without leaving the page.
-  var f = document.getElementById('f'), ok = document.getElementById('ok');
+  // Paste a Formspree endpoint here to get answers by email automatically.
+  // Leaving it blank is safe: the form falls back to email/copy/text so answers still reach Nate.
+  var FORM_ENDPOINT = '';
+
+  var STORE = 'fs_onboarding_v1';
+  var TO = 'natewittfit@gmail.com';
+
+  var FIELDS = [
+    ['business','Business name'], ['owner','Your name'], ['phone','Best phone'],
+    ['email','Email'], ['address','Business address'], ['hours','Hours'],
+    ['services','Services and prices'], ['staff','Team'], ['about','About'],
+    ['photos','Photos'], ['social','Social / booking links'],
+    ['google_profile','Google Business Profile'], ['domain','Domain'],
+    ['faq','Top 5 customer questions'], ['handoff','Hand off to a human when'],
+    ['sms_consent','Agreed to receive texts']
+  ];
+
+  var f = document.getElementById('f'),
+      ok = document.getElementById('ok'),
+      fb = document.getElementById('fb');
+
+  function hideIntro(){
+    var h = document.querySelector('h1'), l = document.querySelector('.lede');
+    if (h) h.style.display = 'none';
+    if (l) l.style.display = 'none';
+  }
+
+  function values(){
+    var v = {};
+    FIELDS.forEach(function(pair){
+      var el = f.elements[pair[0]];
+      if (!el) return;
+      v[pair[0]] = (el.type === 'checkbox') ? (el.checked ? 'Yes' : 'No') : el.value;
+    });
+    return v;
+  }
+
+  function save(){ try { localStorage.setItem(STORE, JSON.stringify(values())); } catch(e){} }
+
+  function restore(){
+    var raw;
+    try { raw = localStorage.getItem(STORE); } catch(e){ return; }
+    if (!raw) return;
+    var v;
+    try { v = JSON.parse(raw); } catch(e){ return; }
+    FIELDS.forEach(function(pair){
+      var el = f.elements[pair[0]];
+      if (!el || !v[pair[0]]) return;
+      // Never restore SMS consent pre-checked — TCPA consent must be an affirmative act every time.
+      if (el.type === 'checkbox') return;
+      el.value = v[pair[0]];
+    });
+  }
+
+  function transcript(){
+    var v = values();
+    var out = ['Fresh Signal — new client onboarding', ''];
+    FIELDS.forEach(function(pair){
+      var val = (v[pair[0]] || '').trim();
+      if (val) out.push(pair[1] + ':\n' + val + '\n');
+    });
+    return out.join('\n');
+  }
+
+  function done(){
+    try { localStorage.removeItem(STORE); } catch(e){}
+    f.style.display = 'none';
+    fb.classList.remove('show');
+    ok.classList.add('show');
+    hideIntro();
+    window.scrollTo({ top:0, behavior:'smooth' });
+  }
+
+  function fallback(){
+    var text = transcript();
+    var v = values();
+    var subj = 'Fresh Signal onboarding — ' + (v.business || 'new client');
+    var mail = 'mailto:' + TO + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(text);
+
+    document.getElementById('fbMail').setAttribute('href', mail);
+
+    document.getElementById('fbCopy').onclick = function(){
+      var btn = this;
+      function flash(msg){ btn.textContent = msg; setTimeout(function(){ btn.textContent = 'Copy my answers'; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ flash('Copied — now paste it to Nate'); })
+          .catch(function(){ flash('Press and hold to copy'); });
+      } else { flash('Press and hold to copy'); }
+    };
+
+    f.style.display = 'none';
+    fb.classList.add('show');
+    hideIntro();
+    window.scrollTo({ top:0, behavior:'smooth' });
+  }
+
+  restore();
+  f.addEventListener('input', save);
+
   f.addEventListener('submit', function(e){
-    if (f.action.indexOf('YOUR_FORM_ID') !== -1) {
-      e.preventDefault();
-      alert('Setup needed: replace YOUR_FORM_ID in the form action with a real Formspree endpoint (free at formspree.io) so responses reach Nate.');
-      return;
-    }
     e.preventDefault();
-    fetch(f.action, { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
-      .then(function(r){
-        if (r.ok) { f.style.display='none'; ok.classList.add('show'); window.scrollTo({top:0,behavior:'smooth'}); }
-        else { alert('Something went wrong sending that. Text Nate at (501) 757-3468 and he\'ll sort it.'); }
-      })
-      .catch(function(){ alert('Network problem. Text Nate at (501) 757-3468.'); });
+    save();
+
+    if (!FORM_ENDPOINT) { fallback(); return; }
+
+    var btn = f.querySelector('button[type=submit]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch(FORM_ENDPOINT, {
+      method:'POST', body:new FormData(f), headers:{'Accept':'application/json'}
+    }).then(function(r){
+      if (r.ok) done(); else fallback();
+    }).catch(function(){
+      fallback();
+    }).then(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send it — let\'s build';
+    });
   });
 </script>
 
