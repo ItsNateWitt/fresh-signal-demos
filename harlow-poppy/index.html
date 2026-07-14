@@ -449,6 +449,12 @@
   .hero .mw > i.amp{margin:0 .16em !important}
   /* the nav lockup was crammed too: 'harlow&poppy' */
   .logo{word-spacing:.16em !important;letter-spacing:.015em !important}
+  /* Allura's space glyph is very narrow — the nav lockup needs a lot more word-spacing */
+  .logo{word-spacing:.5em !important}
+  /* the NAV ampersand is <span class="amp"> — a different element from the hero's
+     <i class="amp">, so none of the hero rules ever reached it. Style it directly. */
+  .logo .amp{font-family:'Great Vibes',cursive !important;font-size:1.25em !important;
+    display:inline-block;margin:0 .2em !important;transform:translateY(.02em)}
 </style>
 </head>
 <body>
