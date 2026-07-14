@@ -572,6 +572,81 @@
        Horizontal snap-scroll wall of taped flash sheets. An ink dot stitches a dashed
        needle-line along the bottom edge, tracking scrollLeft / (scrollWidth - clientWidth).
        Keyboard: the strip is focusable; ← → advance snap points, Home/End jump to the ends. -->
+  <!-- ══ SIGNATURE: PICK YOUR FLASH — the wall, but it books ══ -->
+  <section class="pick-sec" id="pick" aria-labelledby="pickhead">
+    <div class="wrap">
+      <div style="margin-bottom:34px">
+        <span class="kicker">Point at it</span>
+        <h2 id="pickhead" style="margin-top:8px">PICK YOUR FLASH.</h2>
+        <p style="max-width:52ch;color:var(--bone-2);margin-top:12px">
+          Same as walking in and pointing at the wall — except this one remembers.
+          Tap what you want, and it goes on a slip you can send straight to the shop.</p>
+      </div>
+
+      <div class="pick-grid">
+        <div class="sheet" id="sheet">
+        <button class="fl" type="button" data-name="American Traditional" aria-pressed="false">
+          <span class="no">№ 01</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — American Traditional flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Black &amp; Grey" aria-pressed="false">
+          <span class="no">№ 02</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-blackgrey.jpg" alt="Big Country Tattoos — Black &amp; Grey flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Fine Line" aria-pressed="false">
+          <span class="no">№ 03</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-fineline.jpg" alt="Big Country Tattoos — Fine Line flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Colour" aria-pressed="false">
+          <span class="no">№ 04</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-color.jpg" alt="Big Country Tattoos — Colour flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Off the Wall" aria-pressed="false">
+          <span class="no">№ 05</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-wall.jpg" alt="Big Country Tattoos — Off the Wall flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="In the Chair" aria-pressed="false">
+          <span class="no">№ 06</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-chair.jpg" alt="Big Country Tattoos — In the Chair flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Healed Work" aria-pressed="false">
+          <span class="no">№ 07</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-healed.jpg" alt="Big Country Tattoos — Healed Work flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Bold Will Hold" aria-pressed="false">
+          <span class="no">№ 08</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — Bold Will Hold flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        </div>
+
+        <aside class="slip">
+          <h3>Your slip</h3>
+          <div class="sub">Up to 3 pieces</div>
+          <ol id="slipList"><li class="empty">Nothing picked yet.</li></ol>
+          <a class="go" id="slipGo" href="sms:+14799688282" aria-disabled="true">Text it to the shop</a>
+          <p class="fine">Sample flash — on launch these are Big Country's real pieces, and this slip lands
+          in the shop's inbox with a deposit link.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
   <section class="wall" id="wall" aria-labelledby="wallhead">
     <div class="head">
       <span class="kicker">The flash wall</span>
@@ -713,81 +788,6 @@
   </section>
 
   <!-- SAMPLE style wording — reflects the shop's verified "all styles" claim; confirm each artist's specialties. -->
-  <!-- ══ SIGNATURE: PICK YOUR FLASH — the wall, but it books ══ -->
-  <section class="pick-sec" id="pick" aria-labelledby="pickhead">
-    <div class="wrap">
-      <div style="margin-bottom:34px">
-        <span class="kicker">Point at it</span>
-        <h2 id="pickhead" style="margin-top:8px">PICK YOUR FLASH.</h2>
-        <p style="max-width:52ch;color:var(--bone-2);margin-top:12px">
-          Same as walking in and pointing at the wall — except this one remembers.
-          Tap what you want, and it goes on a slip you can send straight to the shop.</p>
-      </div>
-
-      <div class="pick-grid">
-        <div class="sheet" id="sheet">
-        <button class="fl" type="button" data-name="American Traditional" aria-pressed="false">
-          <span class="no">№ 01</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — American Traditional flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Black &amp; Grey" aria-pressed="false">
-          <span class="no">№ 02</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-blackgrey.jpg" alt="Big Country Tattoos — Black &amp; Grey flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Fine Line" aria-pressed="false">
-          <span class="no">№ 03</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-fineline.jpg" alt="Big Country Tattoos — Fine Line flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Colour" aria-pressed="false">
-          <span class="no">№ 04</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-color.jpg" alt="Big Country Tattoos — Colour flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Off the Wall" aria-pressed="false">
-          <span class="no">№ 05</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-wall.jpg" alt="Big Country Tattoos — Off the Wall flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="In the Chair" aria-pressed="false">
-          <span class="no">№ 06</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-chair.jpg" alt="Big Country Tattoos — In the Chair flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Healed Work" aria-pressed="false">
-          <span class="no">№ 07</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-healed.jpg" alt="Big Country Tattoos — Healed Work flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        <button class="fl" type="button" data-name="Bold Will Hold" aria-pressed="false">
-          <span class="no">№ 08</span>
-          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — Bold Will Hold flash, Russellville AR"
-               width="600" height="800" loading="lazy" decoding="async" />
-          <span class="tick">✓</span>
-        </button>
-        </div>
-
-        <aside class="slip">
-          <h3>Your slip</h3>
-          <div class="sub">Up to 3 pieces</div>
-          <ol id="slipList"><li class="empty">Nothing picked yet.</li></ol>
-          <a class="go" id="slipGo" href="sms:+14799688282" aria-disabled="true">Text it to the shop</a>
-          <p class="fine">Sample flash — on launch these are Big Country's real pieces, and this slip lands
-          in the shop's inbox with a deposit link.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
   <section class="styles" id="styles" aria-labelledby="styleshead">
     <div class="wrap">
       <div class="head">
