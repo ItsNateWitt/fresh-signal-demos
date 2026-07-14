@@ -456,6 +456,56 @@
   .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
     font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
   .legalnote b{font-weight:700}
+  /* ══ MOTION LAYER + SIGNATURE (Fresh Signal) ══ */
+  .fs-cur,.fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.7);margin:-18px 0 0 -18px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* ══ SIGNATURE: PICK YOUR FLASH — point at it, like you would on the wall ══ */
+  .pick-sec{background:var(--ink-3);color:var(--bone);padding:96px 0;border-top:1px solid var(--line-inv)}
+  .pick-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:start}
+  @media(max-width:960px){.pick-grid{grid-template-columns:1fr;gap:32px}}
+  .sheet{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media(max-width:620px){.sheet{grid-template-columns:repeat(2,1fr)}}
+  .fl{position:relative;border:1px solid var(--line-inv);background:var(--ink-2);cursor:pointer;
+    padding:0;overflow:hidden;transition:border-color .2s,transform .3s cubic-bezier(.22,1,.36,1)}
+  .fl img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;
+    filter:grayscale(.5) contrast(1.1) brightness(.82);transition:filter .35s,transform .6s}
+  .fl:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .fl:hover img{filter:grayscale(0) contrast(1.06) brightness(1);transform:scale(1.04)}
+  .fl .no{position:absolute;top:8px;left:8px;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;
+    letter-spacing:.16em;color:var(--bone);background:rgba(14,11,9,.72);padding:3px 7px}
+  .fl.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
+  .fl.on img{filter:grayscale(0) contrast(1.06) brightness(1)}
+  .fl .tick{position:absolute;right:8px;bottom:8px;width:26px;height:26px;border-radius:50%;
+    background:var(--gold);color:var(--ink);display:none;place-items:center;
+    font-family:'Oswald';font-weight:700;font-size:14px}
+  .fl.on .tick{display:grid}
+  .fl:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  .slip{background:var(--paper);color:var(--ink);padding:26px 24px;position:sticky;top:24px}
+  .slip h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:16px;letter-spacing:.14em;
+    text-transform:uppercase;margin:0 0 4px}
+  .slip .sub{font-size:13px;color:var(--mut);margin-bottom:16px}
+  .slip ol{list-style:none;margin:0 0 16px;padding:0;min-height:96px}
+  .slip li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;
+    border-bottom:1px dashed var(--line);font-size:14.5px}
+  .slip li button{background:none;border:0;color:var(--red);cursor:pointer;font-size:14px;padding:0 2px}
+  .slip .empty{color:var(--mut);font-size:14px;font-style:italic;padding:9px 0}
+  .slip .go{display:block;text-align:center;background:var(--red);color:var(--paper);
+    text-decoration:none;padding:14px;font-family:'Oswald';font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;font-size:14px;transition:background .18s}
+  .slip .go:hover{background:var(--red-dk)}
+  .slip .go[aria-disabled="true"]{background:var(--mut);pointer-events:none}
+  .slip .fine{font-size:11.5px;color:var(--mut);margin-top:12px;line-height:1.5}
+
+  html,body{max-width:100%;overflow-x:clip}
 </style>
 </head>
 <body>
@@ -663,6 +713,81 @@
   </section>
 
   <!-- SAMPLE style wording — reflects the shop's verified "all styles" claim; confirm each artist's specialties. -->
+  <!-- ══ SIGNATURE: PICK YOUR FLASH — the wall, but it books ══ -->
+  <section class="pick-sec" id="pick" aria-labelledby="pickhead">
+    <div class="wrap">
+      <div style="margin-bottom:34px">
+        <span class="kicker">Point at it</span>
+        <h2 id="pickhead" style="margin-top:8px">PICK YOUR FLASH.</h2>
+        <p style="max-width:52ch;color:var(--bone-2);margin-top:12px">
+          Same as walking in and pointing at the wall — except this one remembers.
+          Tap what you want, and it goes on a slip you can send straight to the shop.</p>
+      </div>
+
+      <div class="pick-grid">
+        <div class="sheet" id="sheet">
+        <button class="fl" type="button" data-name="American Traditional" aria-pressed="false">
+          <span class="no">№ 01</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — American Traditional flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Black &amp; Grey" aria-pressed="false">
+          <span class="no">№ 02</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-blackgrey.jpg" alt="Big Country Tattoos — Black &amp; Grey flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Fine Line" aria-pressed="false">
+          <span class="no">№ 03</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-fineline.jpg" alt="Big Country Tattoos — Fine Line flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Colour" aria-pressed="false">
+          <span class="no">№ 04</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-color.jpg" alt="Big Country Tattoos — Colour flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Off the Wall" aria-pressed="false">
+          <span class="no">№ 05</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-wall.jpg" alt="Big Country Tattoos — Off the Wall flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="In the Chair" aria-pressed="false">
+          <span class="no">№ 06</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-chair.jpg" alt="Big Country Tattoos — In the Chair flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Healed Work" aria-pressed="false">
+          <span class="no">№ 07</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-healed.jpg" alt="Big Country Tattoos — Healed Work flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        <button class="fl" type="button" data-name="Bold Will Hold" aria-pressed="false">
+          <span class="no">№ 08</span>
+          <img src="assets/b2-09-big-country-tattoos-russellville/flash-traditional.jpg" alt="Big Country Tattoos — Bold Will Hold flash, Russellville AR"
+               width="600" height="800" loading="lazy" decoding="async" />
+          <span class="tick">✓</span>
+        </button>
+        </div>
+
+        <aside class="slip">
+          <h3>Your slip</h3>
+          <div class="sub">Up to 3 pieces</div>
+          <ol id="slipList"><li class="empty">Nothing picked yet.</li></ol>
+          <a class="go" id="slipGo" href="sms:+14799688282" aria-disabled="true">Text it to the shop</a>
+          <p class="fine">Sample flash — on launch these are Big Country's real pieces, and this slip lands
+          in the shop's inbox with a deposit link.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
   <section class="styles" id="styles" aria-labelledby="styleshead">
     <div class="wrap">
       <div class="head">
@@ -1042,6 +1167,65 @@ function bookConsult(ev){
   document.getElementById('bConfirm').classList.add('show');
   return false;
 }
+</script>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(FINE&&!RM){
+    var d=document.createElement('div');d.className='fs-cur';
+    var r=document.createElement('div');r.className='fs-ring';
+    document.body.appendChild(d);document.body.appendChild(r);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;
+      d.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      r.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(l);})();
+    var H='a,button,input,select,textarea,[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(H))r.classList.add('is-hot');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(H))r.classList.remove('is-hot');});
+    document.addEventListener('mouseleave',function(){r.classList.add('is-hide');});
+    document.addEventListener('mouseenter',function(){r.classList.remove('is-hide');});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.2;
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();
+        el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ── pick your flash ── */
+  var sheet=document.getElementById('sheet');
+  if(sheet){
+    var list=document.getElementById('slipList'), go=document.getElementById('slipGo'), MAX=3, picked=[];
+    function render(){
+      list.innerHTML='';
+      if(!picked.length){ list.innerHTML='<li class="empty">Nothing picked yet.</li>';
+        go.setAttribute('aria-disabled','true'); go.removeAttribute('href'); return; }
+      picked.forEach(function(b){
+        var li=document.createElement('li');
+        var s=document.createElement('span'); s.textContent=b.getAttribute('data-name');
+        var x=document.createElement('button'); x.type='button'; x.textContent='✕';
+        x.setAttribute('aria-label','Remove '+b.getAttribute('data-name'));
+        x.onclick=function(){ toggle(b); };
+        li.appendChild(s); li.appendChild(x); list.appendChild(li);
+      });
+      go.setAttribute('aria-disabled','false');
+      go.setAttribute('href','sms:+14799688282&body='+encodeURIComponent(
+        "Hey Big Country — I'd like a consult on: " + picked.map(function(b){return b.getAttribute('data-name');}).join(', ')));
+    }
+    function toggle(b){
+      var i=picked.indexOf(b);
+      if(i>-1){ picked.splice(i,1); b.classList.remove('on'); b.setAttribute('aria-pressed','false'); }
+      else if(picked.length<MAX){ picked.push(b); b.classList.add('on'); b.setAttribute('aria-pressed','true'); }
+      render();
+    }
+    sheet.addEventListener('click',function(e){
+      var b=e.target.closest('.fl'); if(b) toggle(b);
+    });
+    render();
+  }
+})();
 </script>
 </body>
 </html>

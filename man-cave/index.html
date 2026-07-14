@@ -361,6 +361,62 @@
   .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
     font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
   .legalnote b{font-weight:700}
+  /* ══ MOTION LAYER + SIGNATURE (Fresh Signal) ══ */
+  .fs-cur,.fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.6);margin:-18px 0 0 -18px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* the strip: shop vernacular, moving */
+  .strip{background:var(--brass);color:var(--coal);padding:12px 0;overflow:hidden;
+    border-top:2px solid var(--coal-3);border-bottom:2px solid var(--coal-3)}
+  .strip .trk{display:inline-flex;gap:2.2rem;padding-right:2.2rem;white-space:nowrap;
+    animation:strip 30s linear infinite;font-family:'Oswald';font-weight:600;font-size:12px;
+    letter-spacing:.24em;text-transform:uppercase}
+  .strip b{font-weight:700;color:var(--oxblood)}
+  @keyframes strip{to{transform:translateX(-100%)}}
+
+  /* ══ THE SIGNATURE: guard-length selector ══ */
+  .guard{background:var(--coal-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .g-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media(max-width:880px){.g-wrap{grid-template-columns:1fr;gap:30px}}
+  .g-stage{background:var(--coal-3);border:1px solid var(--line);padding:34px 30px 26px;position:relative}
+  .g-strands{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:190px;
+    border-bottom:2px solid var(--brass);padding-bottom:0}
+  .g-strands i{display:block;width:7px;background:linear-gradient(180deg,var(--smoke),var(--coal));
+    border-radius:3px 3px 0 0;
+    height:calc(14px + (var(--g) * 20px));
+    transition:height .45s cubic-bezier(.22,1,.36,1)}
+  .g-strands i:nth-child(odd){opacity:.72}
+  .g-scalp{font-family:'Oswald';font-weight:600;font-size:9.5px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--smoke);text-align:center;margin-top:9px}
+  .g-num{font-family:'Bebas Neue';font-size:86px;line-height:.9;color:var(--brass);letter-spacing:.02em}
+  .g-in{font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--bone);margin-top:2px}
+  .g-say{font-size:17px;color:var(--bone-2);line-height:1.6;margin-top:14px;min-height:5.4em}
+  .g-slide{width:100%;margin-top:26px;-webkit-appearance:none;appearance:none;height:3px;
+    background:var(--line);outline:none;border-radius:2px}
+  .g-slide::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+    background:var(--brass);border:3px solid var(--coal);cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.5)}
+  .g-slide::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--brass);
+    border:3px solid var(--coal);cursor:pointer}
+  .g-slide:focus-visible{outline:3px solid var(--amber);outline-offset:6px}
+  .g-ends{display:flex;justify-content:space-between;margin-top:9px;font-family:'Oswald';
+    font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)}
+
+  /* small-phone guard — nothing may push past the viewport */
+  html,body{max-width:100%;overflow-x:clip}
+  @media(max-width:440px){
+    .g-num{font-size:64px}
+    .g-say{min-height:0;font-size:16px}
+    .g-strands{height:150px}
+  }
 </style>
 
 <!-- LocalBusiness schema — VERIFIED NAP ONLY. Hours, prices and rating are unconfirmed and deliberately
@@ -509,6 +565,40 @@
         <div class="row"><span class="nm">Line-Up / Edge</span><span class="dots"></span><span class="pr">$15</span><span class="ds">Between-cut maintenance to keep it crisp.</span></div>
       </div>
       <p class="note">Every service and price above is a placeholder for this demo — Man Cave's real board drops in on launch.</p>
+    </section>
+
+    <div class="strip" aria-hidden="true">
+      <div class="trk">
+        <span>Walk in a guy · <b>Walk out sharp</b></span><span>·</span>
+        <span>Straight-razor <b>edges</b></span><span>·</span>
+        <span>Book the chair, <b>skip the wait</b></span><span>·</span>
+        <span>Bob Courtway Dr · <b>Conway, AR</b></span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ══ SIGNATURE: the guard selector — new customers never know what to ask for ══ -->
+    <section class="sec guard" id="guard">
+      <div class="head">
+        <span class="kicker">Not sure what to ask for?</span>
+        <h2>SLIDE IT. <span>THEN SAY THE NUMBER.</span></h2>
+        <span class="cline"><i></i></span>
+      </div>
+      <div class="g-wrap">
+        <div class="g-stage rv">
+          <div class="g-strands" id="gStrands" aria-hidden="true"></div>
+          <div class="g-scalp">Scalp</div>
+        </div>
+        <div class="rv">
+          <div class="g-num" id="gNum">#4</div>
+          <div class="g-in" id="gIn">1/2 inch</div>
+          <p class="g-say" id="gSay">Classic. If you genuinely don't know what you want, say four —
+          nobody has ever walked out of here mad about a four.</p>
+          <input class="g-slide" id="gSlide" type="range" min="0" max="8" step="1" value="4"
+                 aria-label="Clipper guard number, 0 to 8" />
+          <div class="g-ends"><span>0 · Skin</span><span>8 · One inch</span></div>
+          <p class="note" style="margin-top:18px">Walk in and say the number. That's all it takes.</p>
+        </div>
+      </div>
     </section>
 
     <!-- The den — photography. All images are licensed stand-ins, graded to the shop's palette. -->
@@ -777,6 +867,65 @@
     document.getElementById('bConfirm').classList.add('show');
     return false;
   }
+</script>
+<script>
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var d=document.createElement('div'); d.className='fs-cur';
+    var r=document.createElement('div'); r.className='fs-ring';
+    document.body.appendChild(d); document.body.appendChild(r);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;
+      d.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      r.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(l);})();
+    var H='a,button,input,select,[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(H))r.classList.add('is-hot');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(H))r.classList.remove('is-hot');});
+    document.addEventListener('mouseleave',function(){r.classList.add('is-hide');});
+    document.addEventListener('mouseenter',function(){r.classList.remove('is-hide');});
+
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.25;
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();
+        el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  document.querySelectorAll('.strip').forEach(function(m){
+    var t=m.querySelector('.trk'); if(t&&m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  /* ── the guard selector ── */
+  var GUARDS=[
+    ['#0','Skin',      'Skin. Nothing left. This is where a fade starts — and where a bad barber gets found out.'],
+    ['#1','1/8 inch',  'Tight. It shows the actual shape of your head, so we had better get the blend right.'],
+    ['#2','1/4 inch',  'The safe short. Most fades do their blending right about here.'],
+    ['#3','3/8 inch',  'Short but soft. Grows out clean for about three weeks before you miss us.'],
+    ['#4','1/2 inch',  "Classic. If you genuinely don't know what you want, say four — nobody has ever walked out of here mad about a four."],
+    ['#5','5/8 inch',  'Enough to comb. Not enough to fuss with in the morning.'],
+    ['#6','3/4 inch',  "Longer-on-top territory. Up here we'd rather use scissors than clippers."],
+    ['#7','7/8 inch',  "Barely clipped. Honestly, you're asking for a trim."],
+    ['#8','1 inch',    "That's a trim, not a cut. We'll still make it look sharp."]
+  ];
+  var sl=document.getElementById('gSlide');
+  if(sl){
+    var st=document.getElementById('gStrands'), nm=document.getElementById('gNum'),
+        inch=document.getElementById('gIn'), say=document.getElementById('gSay');
+    for(var i=0;i<26;i++){ st.appendChild(document.createElement('i')); }
+    function paint(){
+      var g=+sl.value, G=GUARDS[g];
+      nm.textContent=G[0]; inch.textContent=G[1]; say.textContent=G[2];
+      st.style.setProperty('--g', g);
+    }
+    sl.addEventListener('input', paint);
+    paint();
+  }
+})();
 </script>
 </body>
 </html>

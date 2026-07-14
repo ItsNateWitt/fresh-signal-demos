@@ -320,6 +320,47 @@
   .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
     font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
   .legalnote b{font-weight:700}
+  /* ══ MOTION LAYER + SIGNATURE (Fresh Signal) ══ */
+  .fs-cur,.fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.7);margin:-18px 0 0 -18px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* ══ SIGNATURE: BUILD YOUR PLATE — soul food is meat-and-three ══ */
+  .plate-sec{background:var(--smoke);color:var(--butter);padding:96px 0}
+  .plate-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+  @media(max-width:900px){.plate-grid{grid-template-columns:1fr;gap:34px}}
+  .plate{position:relative;aspect-ratio:1/1;border-radius:50%;background:var(--butter);
+    box-shadow:0 30px 80px rgba(0,0,0,.5),inset 0 0 0 14px var(--butter-2);
+    display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1.05fr .95fr;overflow:hidden}
+  .slot{position:relative;display:grid;place-items:center;text-align:center;padding:14px;
+    border:1px dashed rgba(42,36,28,.22)}
+  .slot .lbl{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:13px;color:var(--mut)}
+  .slot .pick{font-family:'Fraunces';font-weight:900;font-size:clamp(15px,1.5vw,20px);
+    color:var(--smoke);line-height:1.1;padding:0 6px}
+  .slot.main{grid-column:1 / -1;border-bottom:1px dashed rgba(42,36,28,.22)}
+  .slot.main .pick{font-size:clamp(20px,2.2vw,30px);color:var(--hot)}
+  .plate-note{font-family:'Fraunces';font-style:italic;font-size:14px;color:rgba(246,238,217,.6);
+    margin-top:16px;text-align:center}
+
+  .picker h3{font-family:'Fraunces';font-style:italic;font-weight:600;font-size:14px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--yam);margin:0 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}
+  .chip{background:transparent;border:1px solid rgba(246,238,217,.3);color:var(--butter);
+    font-family:'Work Sans';font-weight:600;font-size:14px;padding:10px 15px;border-radius:2px;
+    cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+  .chip:hover{border-color:var(--yam)}
+  .chip.on{background:var(--hot);border-color:var(--hot);color:var(--butter)}
+  .chip:focus-visible{outline:3px solid var(--yam);outline-offset:3px}
+  .plate-cta{margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .plate-warn{font-family:'Work Sans';font-size:13px;color:var(--yam);margin-top:10px;min-height:1.4em}
+
+  html,body{max-width:100%;overflow-x:clip}
 </style>
 </head>
 <body>
@@ -466,6 +507,55 @@
         <p class="ladder-note"><b>Sample course</b> — dessert lineup and prices confirmed with the kitchen before launch</p>
       </div></div>
     </article>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE: BUILD YOUR PLATE — meat-and-three, the way soul food is actually ordered ══ -->
+<section class="plate-sec" id="plate" aria-labelledby="plate-h">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:44px">
+      <span class="no" style="font-family:'Fraunces';font-style:italic;font-weight:600;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--yam)">Meat &amp; three</span>
+      <h2 id="plate-h" class="fr" style="margin-top:10px">Build your plate.</h2>
+      <p style="font-family:'Fraunces';font-style:italic;font-size:18px;color:rgba(246,238,217,.72);max-width:44ch;margin:14px auto 0">
+        Pick a meat. Pick three sides. That's how it's always been done — now it's how you order it.</p>
+    </div>
+
+    <div class="plate-grid">
+      <div>
+        <div class="plate" id="thePlate" role="img" aria-live="polite" aria-label="Your plate">
+          <div class="slot main"><div><div class="lbl">The meat</div><div class="pick" id="pMain">Pick one</div></div></div>
+          <div class="slot"><div><div class="lbl">Side</div><div class="pick" id="pS1">—</div></div></div>
+          <div class="slot"><div><div class="lbl">Side</div><div class="pick" id="pS2">—</div></div></div>
+          <div class="slot"><div><div class="lbl">Side</div><div class="pick" id="pS3">—</div></div></div>
+        </div>
+        <p class="plate-note">Sample menu — So Full's real plate drops in on launch.</p>
+      </div>
+
+      <div class="picker">
+        <h3>The meat — pick one</h3>
+        <div class="chips" id="mains">
+          <button class="chip" type="button">Fried Catfish</button>
+          <button class="chip" type="button">Smothered Oxtail</button>
+          <button class="chip" type="button">Fried Chicken</button>
+          <button class="chip" type="button">Meatloaf</button>
+        </div>
+        <h3>The sides — pick three</h3>
+        <div class="chips" id="sides">
+          <button class="chip" type="button">Mac &amp; Cheese</button>
+          <button class="chip" type="button">Collard Greens</button>
+          <button class="chip" type="button">Candied Yams</button>
+          <button class="chip" type="button">Black-Eyed Peas</button>
+          <button class="chip" type="button">Cornbread Dressing</button>
+          <button class="chip" type="button">Fried Okra</button>
+        </div>
+        <p class="plate-warn" id="pWarn"></p>
+        <div class="plate-cta">
+          <a class="btn btn-hot" id="pOrder" href="tel:+15016158551" data-magnetic="0.18">Call it in — (501) 615-8551</a>
+        </div>
+        <p style="font-family:'Work Sans';font-size:13.5px;color:rgba(246,238,217,.55);margin-top:14px">
+          On launch this sends the order straight to the kitchen, and the catering form does the same for a crowd.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -673,6 +763,58 @@
     nav.classList.toggle('solid', !es[0].isIntersecting);
   },{rootMargin:'-70px 0px 0px 0px'});
   nio.observe(hero);
+})();
+</script>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(FINE&&!RM){
+    var d=document.createElement('div');d.className='fs-cur';
+    var r=document.createElement('div');r.className='fs-ring';
+    document.body.appendChild(d);document.body.appendChild(r);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;
+      d.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      r.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(l);})();
+    var H='a,button,input,select,textarea,[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(H))r.classList.add('is-hot');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(H))r.classList.remove('is-hot');});
+    document.addEventListener('mouseleave',function(){r.classList.add('is-hide');});
+    document.addEventListener('mouseenter',function(){r.classList.remove('is-hide');});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.2;
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();
+        el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ── build your plate ── */
+  var mains=document.getElementById('mains'), sides=document.getElementById('sides');
+  if(mains&&sides){
+    var pMain=document.getElementById('pMain'), pS1=document.getElementById('pS1'),
+        pS2=document.getElementById('pS2'), pS3=document.getElementById('pS3'), warn=document.getElementById('pWarn');
+    var picked=[], MAX=3;
+    mains.addEventListener('click',function(e){
+      var b=e.target.closest('.chip'); if(!b) return;
+      [].forEach.call(mains.children,function(c){c.classList.remove('on');});
+      b.classList.add('on'); pMain.textContent=b.textContent;
+    });
+    sides.addEventListener('click',function(e){
+      var b=e.target.closest('.chip'); if(!b) return;
+      var i=picked.indexOf(b);
+      if(i>-1){ picked.splice(i,1); b.classList.remove('on'); }
+      else if(picked.length<MAX){ picked.push(b); b.classList.add('on'); }
+      else { warn.textContent='Meat and three. Tap one off to swap it.';
+             setTimeout(function(){warn.textContent='';},2400); return; }
+      warn.textContent='';
+      pS1.textContent = picked[0] ? picked[0].textContent : '—';
+      pS2.textContent = picked[1] ? picked[1].textContent : '—';
+      pS3.textContent = picked[2] ? picked[2].textContent : '—';
+    });
+  }
 })();
 </script>
 </body>

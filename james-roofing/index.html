@@ -383,6 +383,45 @@
   .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
     font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
   .legalnote b{font-weight:700}
+  /* ══ MOTION LAYER + SIGNATURE (Fresh Signal) ══ */
+  .fs-cur,.fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.65);margin:-18px 0 0 -18px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .cut{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--blueprint);
+    border:1px solid var(--grid-inv);display:flex;flex-direction:column;justify-content:flex-end}
+  .cut-sky{position:absolute;inset:0;background:linear-gradient(180deg,#0E243E,#12315A 60%,#1B4677)}
+  .cut-stack{position:relative;z-index:2}
+  .lyr{position:relative;height:0;overflow:hidden;opacity:0;
+    transition:height .42s cubic-bezier(.22,1,.36,1),opacity .42s;
+    display:flex;align-items:center;padding-left:16px;
+    font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:#DCEBFA;border-top:1px solid rgba(220,235,250,.2)}
+  .lyr.on{height:15%;opacity:1}
+  .lyr[data-l="1"]{background:repeating-linear-gradient(90deg,#6E5B44 0 14px,#5E4D39 14px 28px)}
+  .lyr[data-l="2"]{background:#1F2A36}
+  .lyr[data-l="3"]{background:#37506B}
+  .lyr[data-l="4"]{background:#4C86C4}
+  .lyr[data-l="5"]{background:repeating-linear-gradient(90deg,#2E3B4A 0 22px,#26313E 22px 44px)}
+  .lyr[data-l="6"]{background:var(--safety);color:var(--blueprint);font-weight:700}
+  .cut-house{position:relative;z-index:2;height:20%;background:#EEF2F6;border-top:2px solid var(--safety)}
+  .cut-slide{width:100%;margin-top:16px;-webkit-appearance:none;appearance:none;height:3px;
+    background:var(--line);outline:none;border-radius:2px}
+  .cut-slide::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+    background:var(--safety);border:3px solid var(--paper);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+  .cut-slide::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--safety);
+    border:3px solid var(--paper);cursor:pointer}
+  .cut-slide:focus-visible{outline:3px solid var(--steel);outline-offset:6px}
+  .cut-ends{display:flex;justify-content:space-between;margin-top:8px;font-family:'Space Mono',monospace;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
+  html,body{max-width:100%;overflow-x:clip}
 </style>
 </head>
 <body>
@@ -593,18 +632,28 @@
 <section class="storm pad" id="storm">
   <div class="wrap inner">
     <figure class="rise">
-      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
-      <div class="ph">
-        <img src="assets/b2-15-james-roofing-cabot/storm-hail-damage.jpg" width="900" height="600"
-             loading="lazy" decoding="async"
-             alt="James Roofing storm assessment — hail-bruised and cracked asphalt shingles documented for an insurance claim, Central Arkansas" />
+      <!-- SIGNATURE: the roof system, layer by layer. Knowledge, not stock photography. -->
+      <div class="cut" id="cut">
+        <div class="cut-sky"></div>
+        <div class="cut-stack">
+          <div class="lyr" data-l="6"><span>Ridge vent &amp; cap</span></div>
+          <div class="lyr" data-l="5"><span>Architectural shingles</span></div>
+          <div class="lyr" data-l="4"><span>Starter strip</span></div>
+          <div class="lyr" data-l="3"><span>Synthetic underlayment</span></div>
+          <div class="lyr" data-l="2"><span>Ice &amp; water shield</span></div>
+          <div class="lyr" data-l="1"><span>Roof deck</span></div>
+        </div>
+        <div class="cut-house"></div>
       </div>
-      <figcaption class="figcap">FIG. 03 — Hail bruising &amp; granule loss · sample photograph</figcaption>
+      <input class="cut-slide" id="cutSlide" type="range" min="1" max="6" step="1" value="6"
+             aria-label="Roof system layer, 1 to 6" />
+      <div class="cut-ends"><span>01 · Deck</span><span>06 · Finished</span></div>
+      <figcaption class="figcap">FIG. 03 — Drag to build the roof. Six layers. A cheap bid skips two of them.</figcaption>
     </figure>
     <div>
       <div class="sec-head" style="margin-bottom:0">
         <span class="kicker">// After the storm</span>
-        <h2 class="draw">When the hail comes through, <em>we document it.</em></h2>
+        <h2 class="draw">A roof is six layers. <em>Not one.</em></h2>
         <p>Central Arkansas gets hit. We walk the roof, photograph the damage, write the scope, and help you work the claim — then we manage the job from the adjuster's visit to the final cleanup.</p>
       </div>
       <ol>
@@ -887,6 +936,40 @@
     document.getElementById('woConfirm').classList.add('show');
     return false;
   }
+</script>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(FINE&&!RM){
+    var d=document.createElement('div');d.className='fs-cur';
+    var r=document.createElement('div');r.className='fs-ring';
+    document.body.appendChild(d);document.body.appendChild(r);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;
+      d.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      r.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(l);})();
+    var H='a,button,input,select,textarea,[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(H))r.classList.add('is-hot');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(H))r.classList.remove('is-hot');});
+    document.addEventListener('mouseleave',function(){r.classList.add('is-hide');});
+    document.addEventListener('mouseenter',function(){r.classList.remove('is-hide');});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.2;
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();
+        el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+  var cs=document.getElementById('cutSlide');
+  if(cs){
+    var lyrs=[].slice.call(document.querySelectorAll('.lyr'));
+    function build(){var n=+cs.value;
+      lyrs.forEach(function(l){l.classList.toggle('on', +l.getAttribute('data-l') <= n);});}
+    cs.addEventListener('input',build); build();
+  }
+})();
 </script>
 </body>
 </html>
