@@ -284,6 +284,88 @@
   .mark .xm{width:22px;height:22px;color:var(--sky-dk);flex:none}
   .fmark{font-family:'Archivo Black',Impact,sans-serif;font-size:21px;color:var(--white);letter-spacing:-.01em}
   .script{font-family:'Caveat',cursive;font-size:1.5em;color:var(--sun);line-height:1}
+  /* ══ PALETTE CORRECTION ══
+     Their cup label is a WHITE house, a BLUE label, BLACK type. White is the
+     surface; sky blue is the ACCENT. I had it backwards — big sky-blue blocks
+     against dark brown coffee photography and orange buttons = three fighting
+     temperatures. Now: white/paper surfaces, sky as accent, ink as the CTA. */
+  .roast{background:var(--paper) !important}
+  .visit{background:var(--paper) !important}
+  .roast .lede, .visit .lede{color:var(--mut) !important}
+  .roast h2, .visit h2{color:var(--ink) !important}
+  .roast .lab, .visit .lab{color:var(--sky-dk) !important}
+  .roast-read{border-left:4px solid var(--sky) !important}
+  .roast-level{color:var(--ink) !important}
+  .roast-notes{color:var(--ink-2) !important}
+  .roast-hint{color:var(--sky-dk) !important}
+  .sample-tag{color:var(--mut) !important;border-color:rgba(18,24,31,.2) !important}
+  .cmp-cap{color:var(--mut) !important}
+  .v-card{background:#fff !important;border:1px solid rgba(18,24,31,.14) !important;
+    box-shadow:0 10px 34px rgba(18,24,31,.06)}
+  .hrow b{color:var(--ink) !important}
+  .hrow span{color:var(--mut) !important}
+  .addr{color:var(--ink) !important}
+  .addr b{color:var(--sky-dk) !important}
+  .v-card h3{color:var(--ink) !important}
+
+  /* primary CTA = ink (their label's black type). Orange stays a small accent. */
+  .btn-a{background:var(--ink) !important;color:#fff !important}
+  .btn-a:hover{background:var(--sky-dk) !important;color:#fff !important}
+  .num{border-top:4px solid var(--sky) !important}
+
+  /* ══ HERO — it was a wall of beans on a phone ══ */
+  header{min-height:78svh}
+  .hero-img{object-position:60% 45% !important;
+    filter:contrast(.96) saturate(1.02) brightness(1.12) !important}
+  .hero-tint{background:var(--sky) !important;mix-blend-mode:screen !important;opacity:.26 !important}
+
+  @media(max-width:640px){
+    header{min-height:66svh}
+    .hero-img{object-position:66% 42% !important}
+    .hero-in{padding-bottom:44px}
+    h1{font-size:clamp(38px,11vw,56px) !important}
+    .hero-sub{font-size:16px}
+    /* the gallery was stacking very tall portraits on a narrow screen */
+    .gal{grid-template-columns:1fr 1fr !important;gap:10px}
+    .gal img{aspect-ratio:1/1 !important}
+    .gal figure:first-child{grid-column:span 2}
+    .gal figure:first-child img{aspect-ratio:16/10 !important}
+    .fs-cmp{aspect-ratio:1/1}
+    .roast-stage{gap:22px}
+  }
+  /* ══ HERO v2 — bright iced coffee, mirrored so the glass sits RIGHT and the
+     headline lands on clean bokeh. Sunny and airy, like their cup label —
+     the old dark bean field fought the sky-blue brand. ══ */
+  .hero-img{transform:scaleX(-1);
+    object-position:38% 50% !important;
+    filter:contrast(1.02) saturate(1.06) brightness(1.06) !important}
+  .hero-scrim{background:
+      linear-gradient(90deg,rgba(18,24,31,.78) 0%,rgba(18,24,31,.42) 40%,rgba(18,24,31,.02) 70%,transparent 100%),
+      linear-gradient(180deg,rgba(124,198,232,.24) 0%,rgba(18,24,31,0) 42%,rgba(18,24,31,.6) 100%) !important}
+  .hero-tint{background:var(--sky) !important;mix-blend-mode:soft-light !important;opacity:.3 !important}
+
+  /* ══ THEIR BLUE, BACK AS THE ACCENT ══
+     Emphasis + labels in sky, not orange. Orange stays a small warm pop only. */
+  h1 em{color:var(--sky-2) !important}
+  h2 em{color:var(--sky-dk) !important}
+  .lab{color:var(--sky-dk) !important}
+  .kicker{color:var(--sky-2) !important}
+  .band{background:var(--sky) !important;color:var(--ink) !important}
+  .band b{color:var(--pop) !important}
+  .num .v{color:var(--sky-dk) !important}
+  .fs-cmp-bar{background:#fff !important}
+  .mbar{background:var(--ink) !important}
+  .mbar a{color:#fff !important}
+  .mbar a + a{background:var(--sky);color:var(--ink) !important}
+  .sig{color:var(--sky-dk) !important}
+  .fs-close{background:var(--sky-2) !important}
+  .fs-prog{background:var(--sky-dk) !important}
+  /* Pin the hero so a landscape photo isn't crushed into a portrait keyhole on a phone. */
+  @media(max-width:640px){
+    header{min-height:0 !important;height:clamp(440px,62svh,560px) !important}
+    .hero-img{object-position:44% 52% !important}
+    .hero-in{padding-bottom:34px}
+  }
 </style>
 </head>
 <body>
