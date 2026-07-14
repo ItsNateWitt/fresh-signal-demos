@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fresh Signal — Websites &amp; AI Assistants for Local Businesses | Central Arkansas</title>
+<meta name="description" content="Fresh Signal builds a custom website, cleans up your Google listing, and adds an AI assistant that answers your customers 24/7. $500 one-time, then $99/month. Central Arkansas." />
+<meta name="theme-color" content="#14181D" />
+<link rel="canonical" href="https://itsnatewitt.github.io/fresh-signal-demos/" />
+<meta property="og:title" content="Fresh Signal — Websites & AI Assistants for Local Businesses" />
+<meta property="og:description" content="A real website, your Google listing fixed, and an assistant that answers customers at 9pm. $500 once, then $99/month. Cancel anytime — you keep the site." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F6F5C'/%3E%3Cpath d='M9 21V11h9M9 16h7' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14181D; --ink-2:#20262E; --mut:#5C6672; --line:#DDE3E8;
+    --paper:#FFFFFF; --bg:#F4F6F7; --pine:#1F6F5C; --pine-lt:#2E9179;
+    --clay:#B4551F; --sand:#F0EBE3;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  .fs-prog{background:linear-gradient(90deg,var(--pine),var(--clay))}
+
+  /* ---- nav ---- */
+  nav{position:sticky;top:0;z-index:60;background:rgba(244,246,247,.86);
+    backdrop-filter:blur(11px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:19px;
+    text-decoration:none}
+  .logo i{width:26px;height:26px;border-radius:6px;background:var(--pine);display:grid;place-items:center;
+    font-style:normal;color:#fff;font-size:13px;font-weight:700}
+  .navcta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;
+    text-decoration:none;padding:10px 17px;border-radius:7px;font-weight:600;font-size:15px;
+    transition:background .18s var(--ease)}
+  .navcta:hover{background:var(--pine)}
+  @media(max-width:620px){.navcta span{display:none}}
+
+  /* ---- hero ---- */
+  header{padding:92px 0 76px;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;top:-30%;right:-14%;width:52vw;height:52vw;
+    background:radial-gradient(circle,rgba(31,111,92,.13),transparent 62%);pointer-events:none}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--pine);margin-bottom:20px}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(40px,6.4vw,72px);
+    line-height:1.02;letter-spacing:-.022em;margin:0 0 22px;max-width:16ch}
+  h1 em{font-style:italic;color:var(--pine)}
+  .sub{font-size:clamp(18px,2.1vw,21px);color:var(--mut);max-width:56ch;margin:0 0 32px}
+  .row{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:15px 26px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;
+    transition:background .18s var(--ease),transform .18s var(--ease),border-color .18s var(--ease)}
+  .btn-a{background:var(--pine);color:#fff}
+  .btn-a:hover{background:var(--pine-lt)}
+  .btn-b{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-b:hover{border-color:var(--ink)}
+  .micro{font-size:14px;color:var(--mut);margin-top:16px}
+
+  /* ---- band ---- */
+  .band{background:var(--ink);color:#E9EDF0;padding:15px 0;overflow:hidden;
+    border-top:1px solid var(--ink-2);border-bottom:1px solid var(--ink-2)}
+  .band .fs-mq__t{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:#8FA3AC}
+  .band b{color:var(--pine-lt);font-weight:500}
+
+  /* ---- sections ---- */
+  section{padding:88px 0}
+  .lab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(29px,4vw,42px);
+    line-height:1.1;letter-spacing:-.018em;margin:0 0 18px;max-width:20ch}
+  .lede{font-size:19px;color:var(--mut);max-width:60ch;margin:0 0 40px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:26px 24px;
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(20,24,29,.09);border-color:#C9D3DA}
+  .card h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin:14px 0 8px;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--mut);font-size:16px}
+  .ico{width:42px;height:42px;border-radius:10px;background:var(--sand);display:grid;place-items:center}
+  .ico svg{width:21px;height:21px;stroke:var(--clay);fill:none;stroke-width:1.8;
+    stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---- steps ---- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;
+    counter-reset:st;margin-top:8px}
+  .step{counter-increment:st;position:relative;padding-top:46px}
+  .step::before{content:"0" counter(st);position:absolute;top:0;left:0;
+    font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--pine);
+    border-top:2px solid var(--pine);padding-top:9px;width:100%}
+  .step h3{font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 7px}
+  .step p{margin:0;color:var(--mut);font-size:15.5px}
+
+  /* ---- price ---- */
+  .price-sec{background:var(--ink);color:#E9EDF0}
+  .price-sec h2{color:#fff}
+  .price-sec .lede{color:#93A2AC}
+  .price-sec .lab{color:var(--pine-lt)}
+  .pbox{background:var(--ink-2);border:1px solid #2E3640;border-radius:16px;padding:36px 34px;
+    max-width:560px}
+  .pnum{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .pnum .big{font-family:'Fraunces',serif;font-weight:600;font-size:60px;line-height:1;color:#fff}
+  .pnum .then{font-size:17px;color:#93A2AC}
+  .pnum .then b{color:var(--pine-lt);font-weight:600}
+  .incl{list-style:none;padding:0;margin:26px 0 0}
+  .incl li{position:relative;padding-left:28px;margin-bottom:11px;color:#C6D0D7;font-size:16px}
+  .incl li::before{content:"";position:absolute;left:0;top:.55em;width:13px;height:7px;
+    border-left:2px solid var(--pine-lt);border-bottom:2px solid var(--pine-lt);
+    transform:rotate(-45deg)}
+  .keep{margin-top:24px;padding-top:20px;border-top:1px solid #2E3640;font-size:15.5px;color:#93A2AC}
+  .keep b{color:#fff}
+
+  /* ---- honest ---- */
+  .honest{background:var(--sand)}
+  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
+  .letter p{margin:0 0 16px}
+  .sig{font-family:'Fraunces',serif;font-style:italic;font-size:21px;color:var(--pine);margin-top:6px}
+
+  /* ---- contact ---- */
+  .cbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:8px}
+  .cc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px;
+    text-decoration:none;display:block;transition:border-color .2s var(--ease),transform .2s var(--ease)}
+  .cc:hover{border-color:var(--pine);transform:translateY(-2px)}
+  .cc .k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+  .cc .v{font-weight:600;font-size:17.5px;color:var(--ink)}
+
+  footer{background:var(--ink);color:#7E8D97;padding:44px 0 34px;font-size:14.5px}
+  footer a{color:#B3C0C8;text-decoration:none;border-bottom:1px solid #333C46}
+  footer a:hover{color:#fff}
+  .flinks{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+  .fbot{border-top:1px solid #262E37;padding-top:18px;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap}
+
+  :focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="fs-prog"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="/fresh-signal-demos/"><i>F</i> Fresh Signal</a>
+    <a class="navcta" href="tel:+15017573468">Call Nate <span>· (501) 757-3468</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>Central Arkansas</div>
+    <h1 data-hero>
+      <span class="fs-line"><span style="--i:0">Your shop is</span></span>
+      <span class="fs-line"><span style="--i:1">better than your</span></span>
+      <span class="fs-line"><span style="--i:2"><em>website</em> lets on.</span></span>
+    </h1>
+    <p class="sub" data-reveal style="--i:1">We build local businesses a real website, fix the Google
+    listing people actually find you through, and add an assistant that answers your customers at 9pm
+    on a Sunday — when you're home with your family.</p>
+    <div class="row" data-reveal style="--i:2">
+      <a class="btn btn-a" href="#pricing" data-magnetic="0.2">See what it costs</a>
+      <a class="btn btn-b" href="tel:+15017573468">Talk to a human</a>
+    </div>
+    <p class="micro" data-reveal style="--i:3">$500 once, then $99/month. Cancel anytime — the site and
+    the domain are yours to keep.</p>
+  </div>
+</header>
+
+<div class="band">
+  <div class="fs-mq">
+    <div class="fs-mq__t">
+      <span>A missed call is a <b>lost job</b></span><span>·</span>
+      <span>Built in <b>2–3 days</b></span><span>·</span>
+      <span>You <b>own</b> the site and the domain</span><span>·</span>
+      <span>No contracts. <b>Cancel anytime</b></span><span>·</span>
+      <span>Made in <b>Arkansas</b></span><span>·</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="lab" data-reveal>What you get</div>
+    <h2 data-reveal>Everything, for one price. Nothing held back for an upsell.</h2>
+    <p class="lede" data-reveal>Most local businesses aren't losing to better competitors. They're
+    losing to being hard to find, hard to reach, and hard to trust at a glance. That's all fixable.</p>
+
+    <div class="cards">
+      <div class="card" data-reveal style="--i:0">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9h18M7 3v4M4 5h16a1 1 0 011 1v13a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"/></svg></div>
+        <h3>A website that looks like you</h3>
+        <p>Custom-built for your trade — not a template with your name dropped in. Fast, and perfect on
+        a phone, because that's where your customers actually are.</p>
+      </div>
+      <div class="card" data-reveal style="--i:1">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.5-4.5"/></svg></div>
+        <h3>Found on Google</h3>
+        <p>We claim and clean up your Google Business Profile — right category, right hours, real photos,
+        the same name and number everywhere. It's the listing most people judge you by.</p>
+      </div>
+      <div class="card" data-reveal style="--i:2">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>An assistant that never sleeps</h3>
+        <p>It answers the questions you get fifty times a week — hours, prices, "do you take walk-ins" —
+        and hands the real ones to you. The call you'd have missed becomes a job.</p>
+      </div>
+      <div class="card" data-reveal style="--i:3">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 9.9l-4.8 4.5 1.3 6.6L12 17.8 6.5 21l1.3-6.6L3 9.9l6.4-1.3z"/></svg></div>
+        <h3>More real reviews</h3>
+        <p>A simple system that asks your happy customers to leave one, and helps you reply to the ones
+        you have. Real reviews only — we don't write them, buy them, or fake them. Ever.</p>
+      </div>
+      <div class="card" data-reveal style="--i:4">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V8a1 1 0 011-1h4V3h6v4h4a1 1 0 011 1v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Kept running</h3>
+        <p>Hosting, domain, updates, backups, security. New price, new hire, holiday hours — you text us,
+        it's done. You never touch a server.</p>
+      </div>
+      <div class="card" data-reveal style="--i:5">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>It's yours</h3>
+        <p>The site and the domain are in your name from day one. If you ever leave, you take them with
+        you. We'd rather earn you every month than trap you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="lab" data-reveal>How it works</div>
+    <h2 data-reveal>Four steps. About three days.</h2>
+    <div class="steps">
+      <div class="step" data-reveal style="--i:0"><h3>We build it first</h3>
+        <p>Before you pay anything, we make you a real mockup of your own site — so you're looking at
+        something, not listening to a pitch.</p></div>
+      <div class="step" data-reveal style="--i:1"><h3>You say go</h3>
+        <p>No discovery meeting, no proposal deck. If you like it, we start.</p></div>
+      <div class="step" data-reveal style="--i:2"><h3>You send the real stuff</h3>
+        <p>Your photos, your real prices, your hours. A five-minute form on your phone.</p></div>
+      <div class="step" data-reveal style="--i:3"><h3>You're live</h3>
+        <p>Two to three days later it's up, and we text you the second it is.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="price-sec" id="pricing">
+  <div class="wrap">
+    <div class="lab" data-reveal>Pricing</div>
+    <h2 data-reveal>One price. Said plainly.</h2>
+    <p class="lede" data-reveal>An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month.
+    We're not being generous — AI lets us build in days what used to take a team weeks, and we pass that
+    straight to you.</p>
+
+    <div class="pbox" data-reveal>
+      <div class="pnum">
+        <span class="big">$500</span>
+        <span class="then">one time — the whole build<br/>then <b>$99/month</b>, starting 30 days after you're live</span>
+      </div>
+      <ul class="incl">
+        <li>Custom website, built for your trade</li>
+        <li>Google Business Profile claimed and cleaned up</li>
+        <li>AI assistant answering customers 24/7</li>
+        <li>Review system that asks your real customers</li>
+        <li>Hosting, domain, updates, backups, changes on request</li>
+      </ul>
+      <div class="keep">
+        <b>Cancel any time.</b> No contract, no cancellation fee. <b>You keep the website and the domain</b>
+        — they're in your name from the first day.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="honest">
+  <div class="wrap">
+    <div class="lab" data-reveal>Straight with you</div>
+    <div class="letter" data-reveal>
+      <p>I'm Nate. I'm one person, in Central Arkansas, and Fresh Signal is new. I'd rather tell you that
+      than pretend to be an agency with a floor of employees.</p>
+      <p>Here's what I actually believe: most local owners are excellent at their trade and getting quietly
+      punished for being hard to find online. That's not a character flaw. It's just a thing nobody ever
+      sat down and fixed for them.</p>
+      <p>So I fix it, for a price that's honest, and I tell you the truth about what it will and won't do.
+      I won't promise you rankings. I won't write you fake reviews. I won't lock you into anything — the
+      site is yours, and if I stop earning the ninety-nine bucks, you should leave.</p>
+      <p>If that sounds like the kind of person you'd want handling this, call me.</p>
+      <div class="sig">— Nate Witt</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:70px">
+  <div class="wrap">
+    <div class="lab" data-reveal>Get in touch</div>
+    <h2 data-reveal>Call, text, or email. A person answers.</h2>
+    <div class="cbox">
+      <a class="cc" href="tel:+15017573468" data-reveal style="--i:0">
+        <div class="k">Phone</div><div class="v">(501) 757-3468</div></a>
+      <a class="cc" href="mailto:natewittfit@gmail.com" data-reveal style="--i:1">
+        <div class="k">Email</div><div class="v">natewittfit@gmail.com</div></a>
+      <div class="cc" data-reveal style="--i:2">
+        <div class="k">Where</div><div class="v">Central Arkansas</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refunds.html">Refund Policy</a>
+      <a href="tel:+15017573468">(501) 757-3468</a>
+      <a href="mailto:natewittfit@gmail.com">natewittfit@gmail.com</a>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Fresh Signal — Nate Witt, Sole Proprietor. Central Arkansas, USA.</span>
+      <span>Websites, local SEO &amp; AI assistants for local businesses.</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .fs-cur,.fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.6);margin:-18px 0 0 -18px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+  .fs-ring.is-hot{width:62px;height:62px}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal].is-in{opacity:1;transform:none}
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.2rem;padding-right:2.2rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+  .fs-prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:9998}
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+    html{scroll-behavior:auto}
+  }
+</style>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(FINE&&!RM){
+    var d=document.createElement('div');d.className='fs-cur';
+    var r=document.createElement('div');r.className='fs-ring';
+    document.body.appendChild(d);document.body.appendChild(r);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;
+      d.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      r.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(l);})();
+    var H='a,button,[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(H))r.classList.add('is-hot');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(H))r.classList.remove('is-hot');});
+    document.addEventListener('mouseleave',function(){r.classList.add('is-hide');});
+    document.addEventListener('mouseenter',function(){r.classList.remove('is-hide');});
+  }
+  var rev=document.querySelectorAll('[data-reveal]');
+  if(RM||!('IntersectionObserver' in window)){rev.forEach(function(e){e.classList.add('is-in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(en){
+    if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},
+    {threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    rev.forEach(function(e){io.observe(e);});}
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){h.classList.add('fs-lit');});});
+  if(FINE&&!RM){document.querySelectorAll('[data-magnetic]').forEach(function(el){
+    var s=parseFloat(el.getAttribute('data-magnetic'))||.3;
+    el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();
+      el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+    el.addEventListener('mouseleave',function(){el.style.transform='';});});}
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t&&m.children.length===1) m.appendChild(t.cloneNode(true));});
+  var p=document.querySelector('.fs-prog');
+  if(p){addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    p.style.width=(h>0?(scrollY/h*100):0)+'%';},{passive:true});}
+})();
+</script>
+</body>
+</html>
