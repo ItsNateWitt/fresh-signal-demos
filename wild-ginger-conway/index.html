@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wild Ginger — Fresh Hibachi Food Truck | Conway, AR</title>
+<meta name="description" content="Wild Ginger — fresh hibachi off the griddle in Conway, AR. Chicken, steak, shrimp & veggie plates with fried rice, plus spring rolls, dumplings & crab rangoon. Order ahead, hot in 10–15 minutes." />
+<!--
+  DEMO MOCKUP — Wild Ginger (hibachi food truck), Conway AR · built by Nate Witt / Fresh Signal
+  Design DNA: hibachi griddle + ginger-gold + express-speed (Nate asked to use hibachi/ginger/express as ideas).
+  REAL (verified — Wild Ginger, Conway): hibachi menu + prices (veggie $6.99 / chicken $7.99 / steak $9.99 / shrimp $9.99,
+    all w/ fried rice + veg), starters (spring rolls $2.99, rissoles $3.99, crab rangoon $4.59, dumplings $4.59, wings $5.29),
+    ~10–15 min takeout, 580 Dave Ward Dr (corner of Dave Ward & Industrial), (501) 548-5123, Mon–Sat 11a–8:30p / Sun closed.
+  CONFIRM ON SITE (Nate is there in person): logo, today's spot, combos/add-ons, exact hours, online-order link.
+  SAMPLE-TO-REPLACE (labeled): logo, food photos, combos/add-ons/drinks. AI assistant runs in OFFLINE DEMO MODE.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --char:#14100C;--char2:#1F1812;
+    --ember:#E4622B;--ginger:#E8A33D;--ginger-lt:#F6CE7B;
+    --scallion:#6FA84B;--cream:#FBF4E6;--cream2:#F3E9D4;
+    --ink:#211812;--mut:#7d7264;
+    --line:rgba(33,24,18,.12);--line-inv:rgba(251,244,230,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{font-family:'Inter',system-ui,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip;width:100%}
+  img,svg{max-width:100%}
+  .nm,.menucat .ct h3{min-width:0}
+  a{color:inherit;text-decoration:none}
+  .disp{font-family:'Anton','Arial Narrow',Impact,sans-serif;font-weight:400;line-height:.95;text-transform:uppercase}
+  .beb{font-family:'Bebas Neue','Arial Narrow',Impact,sans-serif;letter-spacing:.03em;text-transform:uppercase}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,34px)}
+  .mockbar{background:var(--char);color:var(--ginger-lt);text-align:center;font-size:11.5px;font-weight:700;padding:7px 14px}
+  .mockbar b{color:#fff}
+  :focus-visible{outline:3px solid var(--ginger);outline-offset:2px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(20,16,12,.96);backdrop-filter:blur(6px);color:var(--cream);border-bottom:1px solid var(--line-inv)}
+  nav .row{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo .badge{width:38px;height:38px;border-radius:11px;background:radial-gradient(circle at 40% 35%,var(--ginger),var(--ember) 78%);display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 0 0 2px rgba(232,163,61,.35)}
+  .logo .txt{line-height:1}
+  .logo .txt .a{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.04em}
+  .logo .txt .a .g{color:var(--ginger)}
+  .logo .txt .b{font-size:9px;letter-spacing:.26em;color:var(--ginger-lt);opacity:.85}
+  .navlinks{display:none;gap:26px;font-size:13px;font-weight:600}
+  .navlinks a{color:rgba(251,244,230,.82)}.navlinks a:hover{color:var(--ginger)}
+  @media(min-width:820px){.navlinks{display:flex}}
+  .navcta{background:var(--ember);color:#fff;font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px}
+  .navcta:hover{background:#c9511f}
+
+  .hero{position:relative;background:
+      radial-gradient(120% 90% at 82% -12%,rgba(228,98,43,.4),transparent 55%),
+      radial-gradient(95% 85% at 8% 112%,rgba(232,163,61,.24),transparent 60%),
+      linear-gradient(180deg,#1c150f,#14100C);color:var(--cream);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.45;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 3px,rgba(0,0,0,.28) 3px 4px);mix-blend-mode:overlay}
+  .heat{position:absolute;left:0;right:0;bottom:-10px;height:150px;pointer-events:none;
+    background:radial-gradient(55% 100% at 28% 100%,rgba(228,98,43,.55),transparent 70%),radial-gradient(45% 100% at 72% 100%,rgba(232,163,61,.45),transparent 70%);filter:blur(8px);animation:shimmer 4.2s ease-in-out infinite}
+  @keyframes shimmer{50%{transform:translateY(-7px) scaleX(1.06);opacity:.82}}
+  .hero .inner{position:relative;z-index:2;padding:clamp(40px,7vw,72px) 0 clamp(44px,7vw,74px);text-align:center}
+  .kick{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ginger-lt);border:1px solid var(--line-inv);border-radius:40px;padding:7px 15px;margin-bottom:18px;max-width:100%;text-align:center}
+  .kick .dot{width:7px;height:7px;border-radius:50%;background:var(--scallion);box-shadow:0 0 0 3px rgba(111,168,75,.28)}
+  .logoslot{width:104px;height:104px;margin:0 auto 4px;border-radius:24px;background:radial-gradient(circle at 42% 34%,var(--ginger),var(--ember) 80%);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 34px rgba(228,98,43,.42),0 0 0 4px rgba(251,244,230,.1)}
+  .logoslot .em{font-size:36px;line-height:1}
+  .logoslot .lb{font-size:8px;letter-spacing:.16em;color:rgba(20,16,12,.7);font-weight:800;margin-top:2px}
+  .hero h1{font-size:clamp(40px,9vw,120px);margin:10px 0 2px;overflow-wrap:anywhere;max-width:100%}
+  .hero h1 .g{color:var(--ginger)}
+  .hero .sub{font-size:clamp(15px,2.4vw,20px);color:rgba(251,244,230,.86);max-width:36ch;margin:6px auto 0}
+  .hero .sub b{color:var(--ginger-lt)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;padding:15px 26px;border-radius:10px;border:2px solid transparent;cursor:pointer;min-height:52px;transition:transform .12s,background .2s,color .2s,border-color .2s}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-order{background:var(--ember);color:#fff}.btn-order:hover{background:#c9511f}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--line-inv)}.btn-ghost:hover{border-color:var(--ginger);color:var(--ginger)}
+  .proof{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:center;margin-top:24px;font-size:12.5px;font-weight:600;color:rgba(251,244,230,.82)}
+  .proof span{display:inline-flex;align-items:center;gap:7px}.proof .i{color:var(--ginger)}
+
+  section{padding:clamp(44px,7vw,78px) 0}
+  .head{text-align:center;margin-bottom:32px}
+  .head .eyebrow{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--ember)}
+  .head h2{font-size:clamp(30px,5.5vw,52px);margin-top:8px}.head h2 .g{color:var(--ginger)}
+  .head p{color:var(--mut);max-width:52ch;margin:10px auto 0;font-size:15px}
+  .sample{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);border:1px dashed var(--mut);border-radius:5px;padding:2px 7px}
+
+  #menu{background:var(--cream)}
+  .menucat{margin-bottom:28px}
+  .menucat .ct{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+  .menucat .ct h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,32px);letter-spacing:.03em}
+  .menucat .ct .em{font-size:22px}
+  .menucat .ct .ln{flex:1;height:2px;background:linear-gradient(90deg,var(--ginger),transparent)}
+  .menucat .ct .note{font-size:11.5px;font-weight:700;color:var(--scallion);text-transform:uppercase}
+  .items{display:grid;grid-template-columns:1fr;gap:2px}
+  @media(min-width:680px){.items{grid-template-columns:1fr 1fr;gap:2px 40px}}
+  .item{display:flex;align-items:baseline;gap:8px;padding:11px 2px;border-bottom:1px dashed var(--line)}
+  .item .nm{font-weight:700;font-size:15.5px}
+  .item .tag{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--scallion);padding:2px 6px;border-radius:5px;margin-left:2px}
+  .item .tag.hot{background:var(--ember)}
+  .item .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+  .item .pr{font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--ember)}
+  .plates{background:linear-gradient(180deg,var(--char),#1b1510);color:var(--cream);border-radius:18px;padding:clamp(22px,4vw,36px);margin-bottom:28px;box-shadow:0 16px 40px rgba(20,16,12,.16)}
+  .plates .ct h3{color:var(--ginger-lt)}
+  .plates .item,.plates .item .dots{border-bottom-color:var(--line-inv)}
+  .plates .item .pr{color:var(--ginger)}
+  .plates .servewith{font-size:12.5px;color:var(--ginger-lt);margin-bottom:14px}
+
+  #order{background:linear-gradient(180deg,#1b1510,#14100C);color:var(--cream)}
+  .orderwrap{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:860px){.orderwrap{grid-template-columns:1.1fr .9fr;align-items:center}}
+  .steps{display:flex;flex-direction:column;gap:14px}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .step .n{flex:none;width:38px;height:38px;border-radius:10px;background:var(--ember);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:20px;display:flex;align-items:center;justify-content:center}
+  .step h4{font-size:16px;margin-bottom:2px}.step p{font-size:13.5px;color:rgba(251,244,230,.72)}
+  .ordercard{background:var(--cream);color:var(--ink);border-radius:16px;padding:26px;text-align:center;box-shadow:0 16px 40px rgba(0,0,0,.28)}
+  .ordercard .em{font-size:34px}.ordercard h4{font-size:20px;margin:6px 0 4px}
+  .ordercard p{font-size:13.5px;color:var(--mut);margin-bottom:16px}
+  .ordercard .btn{width:100%;margin-bottom:10px}
+  .btn-call{background:var(--char);color:var(--cream)}.btn-call:hover{background:#000}
+  .btn-chat{background:var(--scallion);color:#fff}.btn-chat:hover{background:#5c9040}
+
+  #where{background:var(--cream2)}
+  .wheregrid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.wheregrid{grid-template-columns:1fr 1fr}}
+  .wcard{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .wcard .ic{font-size:24px}
+  .wcard h4{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.03em;margin:8px 0 6px}
+  .wcard .big{font-size:17px;font-weight:700}
+  .wcard .open{display:inline-flex;align-items:center;gap:7px;margin-top:10px;font-size:12px;font-weight:800;text-transform:uppercase;color:var(--scallion)}
+  .wcard .open i{width:8px;height:8px;border-radius:50%;background:var(--scallion);animation:pulse 1.8s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .hours{list-style:none;font-size:14px}
+  .hours li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .hours li b{color:var(--ember)}
+
+  footer{background:var(--char);color:var(--cream);padding:44px 0 30px;text-align:center}
+  footer .f-logo{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:.04em}
+  footer .f-logo .g{color:var(--ginger)}
+  footer .tel{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--ginger);margin:12px 0 4px}
+  footer .addr{font-size:13.5px;color:rgba(251,244,230,.7)}
+  footer .fine{font-size:11px;color:rgba(251,244,230,.42);margin-top:20px}
+
+  .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,16,12,.97);border-top:1px solid var(--line-inv)}
+  .stickybar .btn{flex:1;min-height:48px;font-size:14px}
+  @media(min-width:820px){.stickybar{display:none}}
+  body{padding-bottom:70px}@media(min-width:820px){body{padding-bottom:0}}
+
+  #hx{position:fixed;right:16px;bottom:78px;z-index:70}
+  @media(min-width:820px){#hx{bottom:20px}}
+  .hx-fab{width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;background:radial-gradient(circle at 40% 35%,var(--ginger),var(--ember) 78%);color:#fff;font-size:26px;box-shadow:0 10px 28px rgba(228,98,43,.45)}
+  .hx-panel{position:absolute;right:0;bottom:74px;width:min(340px,calc(100vw - 32px));height:min(480px,70vh);background:var(--cream);border-radius:16px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 20px 54px rgba(0,0,0,.34)}
+  .hx-panel.open{display:flex}
+  .hx-head{background:var(--char);color:var(--cream);padding:13px 15px;display:flex;align-items:center;gap:10px}
+  .hx-head .av{width:30px;height:30px;border-radius:9px;background:radial-gradient(circle at 40% 35%,var(--ginger),var(--ember));display:flex;align-items:center;justify-content:center;font-size:15px}
+  .hx-head b{font-size:14px}.hx-head small{display:block;font-size:10.5px;color:var(--ginger-lt);opacity:.85}
+  .hx-log{flex:1;overflow-y:auto;padding:13px;display:flex;flex-direction:column;gap:9px;background:var(--cream2)}
+  .hx-msg{max-width:86%;padding:9px 12px;border-radius:13px;font-size:13.5px;line-height:1.42}
+  .hx-bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+  .hx-me{background:var(--char);color:var(--cream);align-self:flex-end}
+  .hx-quick{display:flex;flex-wrap:wrap;gap:7px;padding:0 13px 11px;background:var(--cream2)}
+  .hx-chip{border:1px solid var(--char);background:#fff;border-radius:18px;padding:7px 12px;font-size:12.5px;font-weight:600;cursor:pointer;color:inherit;display:inline-block}
+  .hx-chip:hover{background:var(--char);color:var(--cream)}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+</style>
+</head>
+<body id="top">
+
+<div class="mockbar">DEMO MOCKUP — built for <b>Wild Ginger</b> by Nate Witt · Fresh Signal · real menu &amp; prices · <b>swap in the truck's logo, photos &amp; today's spot on launch</b></div>
+
+<nav>
+  <div class="wrap row">
+    <a class="logo" href="#top">
+      <span class="badge">🔥</span>
+      <span class="txt"><span class="a">WILD <span class="g">GINGER</span></span><span class="b">HIBACHI · CONWAY, AR</span></span>
+    </a>
+    <div class="navlinks">
+      <a href="#menu">Menu</a><a href="#order">Order</a><a href="#where">Find the Truck</a>
+    </div>
+    <a class="navcta" href="tel:+15015485123">📞 Order</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="heat" aria-hidden="true"></div>
+  <div class="wrap inner">
+    <span class="kick"><span class="dot"></span>Fresh Hibachi Food Truck · Conway, AR</span>
+    <div class="logoslot" aria-hidden="true"><span class="em">🔥</span><span class="lb">YOUR LOGO</span></div>
+    <h1 class="disp">Wild <span class="g">Ginger</span></h1>
+    <p class="sub">Chicken, steak, shrimp &amp; veggie hibachi seared fresh on the griddle — <b>hot in 10–15 minutes.</b> Fried rice, fresh veg, and that wild ginger flavor Conway lines up for.</p>
+    <div class="cta">
+      <a class="btn btn-order" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 3h2l2 13h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>See the Menu</a>
+      <a class="btn btn-ghost" href="tel:+15015485123">Call to Order</a>
+    </div>
+    <div class="proof">
+      <span><span class="i">⏱</span> Ready in 10–15 min</span>
+      <span><span class="i">🍚</span> Served with fried rice + veg</span>
+      <span><span class="i">📍</span> Dave Ward Dr, Conway</span>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Off the Griddle</div>
+      <h2 class="disp">The <span class="g">Menu</span></h2>
+      <p>Fresh hibachi, made to order. <span class="sample">sample prices — swap for your real board</span></p>
+    </div>
+
+    <div class="plates">
+      <div class="menucat">
+        <div class="ct"><span class="em">🔥</span><h3>Hibachi Plates</h3><span class="ln"></span><span class="note" style="color:var(--ginger-lt)">most popular</span></div>
+        <div class="servewith">Every plate seared on the griddle &amp; served with <b>fried rice + fresh veggies</b>.</div>
+        <div class="items">
+          <div class="item"><span class="nm">Hibachi Vegetable</span><span class="dots"></span><span class="pr">$6.99</span></div>
+          <div class="item"><span class="nm">Hibachi Chicken</span><span class="tag">fan fave</span><span class="dots"></span><span class="pr">$7.99</span></div>
+          <div class="item"><span class="nm">Hibachi Steak</span><span class="dots"></span><span class="pr">$9.99</span></div>
+          <div class="item"><span class="nm">Hibachi Shrimp</span><span class="dots"></span><span class="pr">$9.99</span></div>
+          <div class="item"><span class="nm">Steak + Shrimp Combo</span><span class="tag hot">chef's pick</span><span class="dots"></span><span class="pr">$12.99</span></div>
+          <div class="item"><span class="nm">Chicken + Shrimp Combo</span><span class="dots"></span><span class="pr">$11.99</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menucat">
+      <div class="ct"><span class="em">🥟</span><h3>Starters</h3><span class="ln"></span></div>
+      <div class="items">
+        <div class="item"><span class="nm">Spring Rolls</span><span class="dots"></span><span class="pr">$2.99</span></div>
+        <div class="item"><span class="nm">Rissoles</span><span class="dots"></span><span class="pr">$3.99</span></div>
+        <div class="item"><span class="nm">Crab Rangoon</span><span class="dots"></span><span class="pr">$4.59</span></div>
+        <div class="item"><span class="nm">Pan-Fried Dumplings</span><span class="dots"></span><span class="pr">$4.59</span></div>
+        <div class="item"><span class="nm">Chicken Wings</span><span class="dots"></span><span class="pr">$5.29</span></div>
+        <div class="item"><span class="nm">Rangoon + Spring Roll</span><span class="dots"></span><span class="pr">$6.99</span></div>
+      </div>
+    </div>
+
+    <div class="menucat">
+      <div class="ct"><span class="em">➕</span><h3>Add-Ons &amp; Drinks</h3><span class="ln"></span><span class="note">sample — confirm</span></div>
+      <div class="items">
+        <div class="item"><span class="nm">Extra Fried Rice</span><span class="dots"></span><span class="pr">$2.50</span></div>
+        <div class="item"><span class="nm">Extra Yum-Yum Sauce</span><span class="dots"></span><span class="pr">$0.75</span></div>
+        <div class="item"><span class="nm">Extra Veggies</span><span class="dots"></span><span class="pr">$2.00</span></div>
+        <div class="item"><span class="nm">Canned Drink / Water</span><span class="dots"></span><span class="pr">$1.50</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" style="color:var(--ginger)">Skip the Wait</div>
+      <h2 class="disp" style="color:var(--cream)">How to <span class="g">Order</span></h2>
+    </div>
+    <div class="orderwrap">
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><h4>Call it in or tap the assistant</h4><p>Phone your order ahead or use the assistant on this page — it takes orders 24/7, even after the truck closes.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h4>We fire it fresh</h4><p>Everything's seared to order on the griddle. Hot and ready in about 10–15 minutes.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h4>Roll up &amp; grab it</h4><p>Pull up to the truck on Dave Ward, grab your bag, and go. No line, no wait.</p></div></div>
+      </div>
+      <div class="ordercard">
+        <div class="em">🍱</div>
+        <h4>Order in 30 seconds</h4>
+        <p>Fastest way — call the truck or let the assistant take it.</p>
+        <a class="btn btn-call" href="tel:+15015485123">📞 Call (501) 548-5123</a>
+        <button class="btn btn-chat" type="button" onclick="hxOpen('order')">💬 Order with the Assistant</button>
+        <div class="sample" style="margin-top:8px">confirm the truck's real line</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="where">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Come Find Us</div>
+      <h2 class="disp">Where's the <span class="g">Truck</span>?</h2>
+    </div>
+    <div class="wheregrid">
+      <div class="wcard">
+        <div class="ic">📍</div>
+        <h4>Today's Spot</h4>
+        <div class="big">580 Dave Ward Dr, Conway, AR</div>
+        <p style="font-size:13.5px;color:var(--mut);margin-top:4px">Corner of Dave Ward &amp; Industrial Blvd. <span class="sample">confirm daily spot</span></p>
+        <div class="open"><i></i>Open now — griddle's hot</div>
+      </div>
+      <div class="wcard">
+        <div class="ic">🕒</div>
+        <h4>Hours</h4>
+        <ul class="hours">
+          <li><span>Mon – Fri</span><b>11:00a – 8:30p</b></li>
+          <li><span>Saturday</span><b>11:00a – 8:30p</b></li>
+          <li><span>Sunday</span><b>Closed</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-logo">WILD <span class="g">GINGER</span></div>
+    <a class="tel" href="tel:+15015485123">(501) 548-5123</a>
+    <div class="addr">580 Dave Ward Dr · Conway, AR 72032 · Mon–Sat 11a–8:30p</div>
+    <div class="fine">Demo mockup built by Nate Witt · Fresh Signal. Real menu shown; replace logo, photos &amp; today's spot on launch.</div>
+  </div>
+  <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    Wild Ginger</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. Any photography, hours, prices, staff names, ratings and
+    reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
+    are replaced with the owner's real details if this site is built. This page is set to
+    <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+
+<div class="stickybar">
+  <a class="btn btn-order" href="tel:+15015485123">📞 Call to Order</a>
+  <button class="btn btn-chat" type="button" onclick="hxOpen('order')">💬 Assistant</button>
+</div>
+
+<div id="hx">
+  <button class="hx-fab" type="button" aria-label="Order assistant">💬</button>
+  <div class="hx-panel" role="dialog" aria-label="Order assistant">
+    <div class="hx-head"><span class="av">🔥</span><span><b>Ginger — Order Assistant</b><small>Order · Menu · Find us · 24/7</small></span></div>
+    <div class="hx-log" id="hxlog"></div>
+    <div class="hx-quick" id="hxquick"></div>
+  </div>
+</div>
+
+<!-- LocalBusiness schema (DEMO) — confirm NAP before launch -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Wild Ginger","servesCuisine":["Japanese","Hibachi"],"telephone":"+1-501-548-5123","priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"580 Dave Ward Dr","addressLocality":"Conway","addressRegion":"AR","postalCode":"72032","addressCountry":"US"},"openingHours":"Mo-Sa 11:00-20:30"}
+</script>
+
+<script>
+(function(){
+  var panel=document.querySelector('.hx-panel'),
+      fab=document.querySelector('.hx-fab'),
+      log=document.getElementById('hxlog'),
+      quick=document.getElementById('hxquick'),
+      started=false, PHONE="(501) 548-5123", TEL="+15015485123";
+  function bubble(t,who){var d=document.createElement('div');d.className='hx-msg '+(who==='me'?'hx-me':'hx-bot');d.innerHTML=t;log.appendChild(d);log.scrollTop=log.scrollHeight;}
+  function chips(list){quick.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.className='hx-chip';b.type='button';b.textContent=c.label;b.onclick=c.fn;quick.appendChild(b);});}
+  function callChip(){quick.innerHTML='';var a=document.createElement('a');a.href='tel:'+TEL;a.className='hx-chip';a.textContent='📞 Call '+PHONE;quick.appendChild(a);var b=document.createElement('button');b.className='hx-chip';b.type='button';b.textContent='Back to menu';b.onclick=M.order;quick.appendChild(b);}
+  var M={
+    order:function(){bubble("Awesome! 🍱 What sounds good — a <b>Hibachi Plate</b> (chicken, steak, shrimp or veggie, all with fried rice + veg), a <b>Combo</b>, or <b>Starters</b>?",'bot');chips([{label:'Hibachi Plates',fn:M.plates},{label:'Combos',fn:M.combos},{label:'Starters',fn:M.starters},{label:'📞 Call it in',fn:M.call}]);},
+    plates:function(){bubble("🔥 <b>Hibachi Plates</b> — all with fried rice + veg:<br>• Veggie $6.99<br>• Chicken $7.99<br>• Steak $9.99<br>• Shrimp $9.99<br>Want me to ring it in?",'bot');chips([{label:'📞 Ring it in',fn:M.call},{label:'Combos',fn:M.combos},{label:'Back',fn:M.order}]);},
+    combos:function(){bubble("🥢 <b>Combos</b> (with fried rice + veg):<br>• Steak + Shrimp $12.99<br>• Chicken + Shrimp $11.99<br>Ready in about 10–15 min.",'bot');chips([{label:'📞 Order now',fn:M.call},{label:'Plates',fn:M.plates},{label:'Back',fn:M.order}]);},
+    starters:function(){bubble("🥟 <b>Starters</b>:<br>• Spring Rolls $2.99<br>• Crab Rangoon $4.59<br>• Dumplings $4.59<br>• Wings $5.29",'bot');chips([{label:'📞 Order now',fn:M.call},{label:'Plates',fn:M.plates},{label:'Back',fn:M.order}]);},
+    where:function(){bubble("📍 We're at <b>580 Dave Ward Dr, Conway</b> (corner of Dave Ward &amp; Industrial). Open <b>Mon–Sat 11a–8:30p</b>, closed Sundays. Griddle's hot right now!",'bot');chips([{label:'🍱 Order food',fn:M.order},{label:'📞 Call us',fn:M.call}]);},
+    call:function(){bubble("You got it — tap to call and we'll have it hot in 10–15 min:",'bot');callChip();},
+    human:function(){bubble("Best to talk to the crew directly — tap to call:",'bot');callChip();}
+  };
+  function start(intent){
+    if(!started){started=true;bubble("Hey! 👋 I'm Ginger, the order assistant for <b>Wild Ginger</b>. Want to <b>order</b>, see the <b>menu</b>, or <b>find the truck</b>?",'bot');}
+    if(intent==='order'){M.order();}
+    else{chips([{label:'🍱 Order',fn:M.order},{label:'📋 Menu',fn:M.plates},{label:'📍 Find the truck',fn:M.where},{label:'📞 Talk to a human',fn:M.human}]);}
+  }
+  window.hxOpen=function(intent){panel.classList.add('open');start(intent);};
+  fab.addEventListener('click',function(){if(panel.classList.contains('open')){panel.classList.remove('open');}else{window.hxOpen();}});
+})();
+</script>
+</body>
+</html>

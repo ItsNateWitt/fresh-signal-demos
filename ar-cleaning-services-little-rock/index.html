@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AR Cleaning Services — Little Rock House &amp; Office Cleaning | Book a Clean</title>
+<meta name="description" content="Residential and commercial cleaning in Little Rock, AR. AR Cleaning Services leaves homes and offices spotless — get a free quote and book your first clean today." />
+<!--
+  DEMO MOCKUP — AR Cleaning Services, Little Rock AR
+  Archetype: E · Before/After Slider (dirty→spotless drag-reveal hero)
+  Signature: the clean-sweep drag reveal (pointer/keyboard draggable divider)
+  REAL: business name; Little Rock, AR service area; residential + commercial cleaning (per their Facebook).
+  SAMPLE-TO-REPLACE (all marked inline): phone number, exact service list & any prices,
+  hours, service-area towns, review count/rating, testimonials (written for demo),
+  team names, all photos (represented here with CSS art — swap for their real job photos).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CleaningBusiness",
+  "name":"AR Cleaning Services",
+  "areaServed":"Little Rock, Arkansas",
+  "description":"Residential and commercial cleaning serving Little Rock, AR.",
+  "address":{"@type":"PostalAddress","addressLocality":"Little Rock","addressRegion":"AR","addressCountry":"US"},
+  "telephone":"+15017795671",
+  "priceRange":"$$"
+}
+</script>
+<style>
+  :root{
+    --sky:#EAF6FB;--foam:#F7FCFE;--aqua:#1FB6C9;--aqua-dk:#0E8FA3;
+    --deep:#0B2E39;--deep-2:#123E4C;--ink:#0B2E39;--mut:#5C7480;
+    --citrus:#FFD23F;--mint:#8FE3C6;--white:#FFFFFF;
+    --grime:#6f6350;--grime-dk:#4a4234;
+    --line:rgba(11,46,57,.12);--line-inv:rgba(247,252,254,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--sky);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .disp{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.02}
+  .kicker{font-family:'Figtree';font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dk)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+  .mock{position:relative;z-index:20;background:var(--deep);color:var(--mint);text-align:center;font-size:12px;font-weight:600;letter-spacing:.01em;padding:8px 14px}
+  .mock b{color:var(--citrus)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:18;background:rgba(247,252,254,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(18px,4vw,44px);max-width:1180px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:11px}
+  .bubble{width:38px;height:38px;border-radius:12px;background:linear-gradient(150deg,var(--aqua),var(--aqua-dk));display:grid;place-items:center;box-shadow:0 6px 16px rgba(15,143,163,.32);position:relative;overflow:hidden}
+  .bubble::after{content:"";position:absolute;top:6px;left:7px;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.75)}
+  .bubble svg{width:20px;height:20px;color:#fff;position:relative}
+  .brand b{font-family:'Bricolage Grotesque';font-weight:800;font-size:18px;letter-spacing:-.01em}
+  .brand small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-top:-1px}
+  .nav-links{display:none;gap:26px;font-weight:600;font-size:14.5px}
+  .nav-links a:hover{color:var(--aqua-dk)}
+  @media(min-width:860px){.nav-links{display:flex}}
+  .navcall{display:inline-flex;align-items:center;gap:8px;background:var(--aqua);color:#fff;font-weight:700;font-size:14px;padding:11px 18px;border-radius:11px;min-height:44px;transition:background .2s,transform .14s}
+  .navcall:hover{background:var(--aqua-dk)}.navcall:active{transform:translateY(1px)}
+  .navcall svg{width:16px;height:16px}
+
+  /* hero + slider */
+  .hero{padding:clamp(28px,5vw,54px) 0 clamp(30px,5vw,60px)}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,44px);align-items:center}
+  @media(min-width:940px){.hero-grid{grid-template-columns:1.02fr 1.1fr}}
+  .hero h1{font-size:clamp(34px,6vw,60px);margin:14px 0 0}
+  .hero h1 .hl{color:var(--aqua-dk);position:relative;white-space:nowrap}
+  .hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.16em;background:var(--citrus);z-index:-1;border-radius:2px}
+  .hero p.lead{font-size:clamp(16px,2.1vw,19px);color:var(--deep-2);max-width:46ch;margin-top:16px}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;padding:15px 24px;border-radius:13px;min-height:52px;cursor:pointer;border:2px solid transparent;transition:transform .14s,background .2s,color .2s,border-color .2s}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:18px;height:18px}
+  .btn-p{background:var(--aqua);color:#fff;box-shadow:0 10px 24px rgba(15,143,163,.28)}
+  .btn-p:hover{background:var(--aqua-dk)}
+  .btn-o{background:transparent;color:var(--deep);border-color:var(--line)}
+  .btn-o:hover{border-color:var(--aqua);color:var(--aqua-dk)}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px}
+  .trust span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--deep-2)}
+  .trust svg{width:16px;height:16px;color:var(--aqua-dk)}
+
+  /* SIGNATURE: before/after clean-sweep slider */
+  .ba{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 26px 60px -22px rgba(11,46,57,.5);border:1px solid rgba(11,46,57,.08);user-select:none;touch-action:pan-y}
+  .ba .pane{position:absolute;inset:0}
+  .ba .after{background:
+      radial-gradient(120% 80% at 80% 8%,rgba(255,255,255,.9),transparent 60%),
+      radial-gradient(60% 50% at 18% 92%,rgba(143,227,198,.5),transparent 70%),
+      linear-gradient(145deg,#dff3f6,#bfe6ee 55%,#a5d9e6)}
+  .ba .before{background:
+      radial-gradient(70% 60% at 25% 30%,rgba(74,66,52,.55),transparent 60%),
+      radial-gradient(50% 40% at 78% 72%,rgba(74,66,52,.6),transparent 65%),
+      radial-gradient(35% 30% at 60% 22%,rgba(60,52,40,.5),transparent 60%),
+      linear-gradient(150deg,#8a7c62,#6f6350 60%,#544a3a);
+      clip-path:inset(0 50% 0 0)}
+  .ba .before::after{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;
+      background:repeating-radial-gradient(circle at 30% 40%,rgba(40,34,24,.5) 0 2px,transparent 2px 9px),
+                 repeating-radial-gradient(circle at 72% 66%,rgba(40,34,24,.45) 0 2px,transparent 2px 11px)}
+  .ba .lab{position:absolute;top:16px;z-index:3;font-family:'Bricolage Grotesque';font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;border-radius:999px;backdrop-filter:blur(4px)}
+  .ba .lab.b{left:16px;background:rgba(60,52,40,.72);color:#fff}
+  .ba .lab.a{right:16px;background:rgba(255,255,255,.82);color:var(--deep)}
+  .ba .ratio{display:block;width:100%;height:auto}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(11,46,57,.15);z-index:4;transform:translateX(-1.5px)}
+  .ba .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 8px 22px rgba(11,46,57,.35);display:grid;place-items:center;cursor:ew-resize;z-index:5}
+  .ba .knob svg{width:26px;height:26px;color:var(--aqua-dk)}
+  .ba .range{position:absolute;inset:0;z-index:6;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+  .ba .hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:3;font-size:12px;font-weight:600;color:var(--deep);background:rgba(255,255,255,.85);padding:6px 14px;border-radius:999px;pointer-events:none;transition:opacity .3s}
+  .ba.touched .hint{opacity:0}
+
+  /* strip */
+  .strip{background:var(--deep);color:var(--foam)}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 40px;padding:18px 24px;text-align:center}
+  .strip b{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(20px,3vw,26px);color:var(--mint);display:block}
+  .strip span{font-size:12.5px;letter-spacing:.04em;color:rgba(247,252,254,.7)}
+  .strip .u{display:flex;flex-direction:column;gap:2px}
+
+  section.pad{padding:clamp(46px,6.5vw,84px) 0}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-size:clamp(26px,4vw,42px);margin-top:10px}
+  .sec-head p{color:var(--mut);margin-top:12px;font-size:16px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
+  @media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+  .svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 18px 40px -20px rgba(11,46,57,.45)}
+  .svc .ic{width:48px;height:48px;border-radius:13px;background:var(--sky);display:grid;place-items:center;margin-bottom:16px}
+  .svc .ic svg{width:24px;height:24px;color:var(--aqua-dk)}
+  .svc h3{font-family:'Bricolage Grotesque';font-weight:700;font-size:19px}
+  .svc p{font-size:14.5px;color:var(--mut);margin-top:8px}
+  .svc ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px}
+  .svc li{display:flex;gap:9px;font-size:14px;font-weight:500;color:var(--deep-2)}
+  .svc li svg{width:16px;height:16px;color:var(--aqua);flex:none;margin-top:2px}
+  .svc.feat{background:linear-gradient(160deg,var(--deep),var(--deep-2));color:var(--foam)}
+  .svc.feat h3,.svc.feat li{color:var(--foam)}
+  .svc.feat p{color:rgba(247,252,254,.72)}
+  .svc.feat .ic{background:rgba(143,227,198,.16)}
+  .svc.feat .ic svg{color:var(--mint)}
+  .svc.feat li svg{color:var(--mint)}
+  .svc .tagd{position:absolute;top:14px;right:-30px;transform:rotate(45deg);background:var(--citrus);color:var(--deep);font-size:10px;font-weight:800;letter-spacing:.1em;padding:4px 34px;text-transform:uppercase}
+
+  /* how it works */
+  .steps{display:grid;grid-template-columns:1fr;gap:14px;margin-top:34px;counter-reset:s}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--foam);border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:'Bricolage Grotesque';font-weight:800;font-size:40px;color:var(--aqua);opacity:.28;line-height:1}
+  .step h3{font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;margin:8px 0 6px}
+  .step p{font-size:14px;color:var(--mut)}
+
+  /* reviews */
+  .reviews{background:linear-gradient(180deg,var(--foam),var(--sky))}
+  .gband{display:inline-flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 20px;margin-top:16px}
+  .gband svg{width:22px;height:22px;flex:none}
+  .gstars{display:flex;gap:2px}
+  .gstars svg{width:16px;height:16px;color:var(--citrus)}
+  .gband b{font-family:'Bricolage Grotesque';font-weight:800;font-size:19px}
+  .gband span{font-size:12.5px;color:var(--mut);font-weight:600}
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column}
+  .rev .gstars{margin-bottom:10px}
+  .rev p{font-size:14.5px;flex:1;color:var(--deep-2)}
+  .rev .who{display:flex;align-items:center;gap:11px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+  .rev .avi{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;background:var(--aqua)}
+  .rev .avi.b{background:var(--aqua-dk)}.rev .avi.c{background:var(--deep-2)}
+  .rev .who b{font-size:13.5px;display:block}
+  .rev .who small{font-size:11px;color:var(--mut);font-weight:600}
+
+  /* quote / cta */
+  .quote{background:linear-gradient(155deg,var(--deep),#0a2530)}
+  .qcard{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,44px);align-items:center;color:var(--foam)}
+  @media(min-width:900px){.qcard{grid-template-columns:1fr 1fr}}
+  .qcard h2{font-size:clamp(26px,4vw,40px)}
+  .qcard .lead{color:rgba(247,252,254,.78);margin-top:14px;font-size:16px;max-width:44ch}
+  .qcard .trust2{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+  .qcard .trust2 span{display:flex;gap:10px;align-items:center;font-size:14.5px;color:rgba(247,252,254,.88)}
+  .qcard .trust2 svg{width:18px;height:18px;color:var(--mint);flex:none}
+  form.qf{background:var(--foam);border-radius:20px;padding:clamp(22px,3.4vw,34px);color:var(--ink)}
+  form.qf .fg{margin-bottom:14px}
+  form.qf label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+  form.qf input,form.qf select{width:100%;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;font-family:'Figtree';font-size:15px;font-weight:500;min-height:50px}
+  form.qf input:focus,form.qf select:focus{outline:none;border-color:var(--aqua)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  form.qf button{width:100%;margin-top:4px}
+  .qnote{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
+  .qdone{display:none;text-align:center;padding:26px 8px}
+  .qdone.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.3,1)}
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .qdone .ck{width:64px;height:64px;border-radius:50%;background:rgba(31,182,201,.14);display:grid;place-items:center;margin:0 auto 14px}
+  .qdone .ck svg{width:32px;height:32px;color:var(--aqua-dk)}
+  .qdone h3{font-family:'Bricolage Grotesque';font-weight:800;font-size:22px}
+  .qdone p{color:var(--mut);margin-top:8px;font-size:14.5px}
+
+  footer{background:var(--deep);color:rgba(247,252,254,.66);padding:44px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:720px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  footer .brand b{color:var(--foam)}footer .brand small{color:rgba(247,252,254,.6)}
+  footer h4{font-family:'Bricolage Grotesque';font-weight:700;color:var(--mint);font-size:14px;letter-spacing:.02em;margin-bottom:12px}
+  footer a{display:block;padding:4px 0;font-size:14px}
+  footer a:hover{color:var(--mint)}
+  .foot-bot{border-top:1px solid var(--line-inv);margin-top:30px;padding-top:18px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;background:var(--deep);border-top:2px solid var(--aqua)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 8px;font-weight:700;font-size:14px;color:var(--foam)}
+  .callbar a.p{background:var(--aqua);color:#fff}
+  .callbar svg{width:16px;height:16px}
+  @media(min-width:860px){.callbar{display:none}}
+  @media(max-width:859px){body{padding-bottom:56px}}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s,transform .55s}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:3px solid var(--aqua-dk);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="mock">DEMO MOCKUP — built for <b>AR Cleaning Services</b> by Nate Witt · real: name + Little Rock service area · sample: phone, prices, reviews &amp; photos (swapped for theirs on launch)</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="AR Cleaning Services home">
+      <span class="bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10l6-4 6 4v11M9 21v-5h6v5"/></svg></span>
+      <span><b>AR Cleaning</b><small>Little Rock, AR</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#quote">Free quote</a>
+    </nav>
+    <!-- SAMPLE phone — confirm AR Cleaning's real booking number before launch -->
+    <a class="navcall" href="tel:+15017795671"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call now</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Residential &amp; commercial · Little Rock, AR</span>
+        <h1 class="disp">The <span class="hl">before</span> is theirs.<br>The <span class="hl">after</span> is ours.</h1>
+        <p class="lead">AR Cleaning Services makes Little Rock homes and offices feel brand-new — thorough, dependable, and done right the first time. Drag the slider to see it happen.</p>
+        <div class="cta">
+          <a class="btn btn-p" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Get a free quote</a>
+          <!-- SAMPLE phone -->
+          <a class="btn btn-o" href="tel:+15017795671"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call the team</a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Homes &amp; offices</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Supplies included</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Satisfaction-first</span>
+        </div>
+      </div>
+
+      <!-- SIGNATURE: before/after clean-sweep slider.
+           Both panels are CSS-art placeholders standing in for a real
+           "before" and "after" job photo — swap for AR Cleaning's own on launch. -->
+      <div class="ba reveal" id="ba" aria-label="Before and after cleaning comparison (sample images)">
+        <svg class="ratio" viewBox="0 0 4 3" aria-hidden="true"></svg>
+        <div class="pane after"><span class="lab a">After</span></div>
+        <div class="pane before" id="baBefore"><span class="lab b">Before</span></div>
+        <div class="handle" id="baHandle"></div>
+        <div class="knob" id="baKnob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6M9 6l6 6-6 6"/></svg></div>
+        <input class="range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Reveal the after — drag to compare before and after cleaning">
+        <span class="hint">Drag to reveal &nbsp;›</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <!-- SAMPLE stats — replace with AR Cleaning's real numbers -->
+      <div class="u"><b>100%</b><span>Satisfaction-first (sample)</span></div>
+      <div class="u"><b>Homes + offices</b><span>Residential &amp; commercial</span></div>
+      <div class="u"><b>Little Rock</b><span>&amp; surrounding area (sample)</span></div>
+      <div class="u"><b>Bonded feel</b><span>Insured &amp; reliable (confirm)</span></div>
+    </div>
+  </div>
+
+  <section class="pad" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">What we clean</span>
+        <h2 class="disp">One crew for the whole space</h2>
+        <p>From move-out deep cleans to a standing office schedule — pick the clean that fits, and we handle the rest. (Service list is a sample layout; AR Cleaning's real menu drops in on launch.)</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10l6-4 6 4v11M9 21v-6h6v6"/></svg></span>
+          <h3>Residential cleaning</h3>
+          <p>Recurring or one-time cleans that keep the whole house guest-ready.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Kitchens &amp; baths</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Floors, dusting, surfaces</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Weekly / biweekly / monthly</li>
+          </ul>
+        </article>
+        <article class="svc feat reveal">
+          <span class="tagd">Popular</span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7h6v14M13 21V3h6v18"/></svg></span>
+          <h3>Commercial &amp; office</h3>
+          <p>A clean workspace your team and clients notice — on a schedule that works after hours.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Offices &amp; storefronts</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Breakrooms &amp; restrooms</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Nightly, weekly or custom</li>
+          </ul>
+        </article>
+        <article class="svc reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M6 8h12l-1 13H7L6 8zM9 12v5M15 12v5"/></svg></span>
+          <h3>Deep &amp; move-out</h3>
+          <p>The reset clean — top to bottom before a move, a sale, or company.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Baseboards &amp; detail work</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Inside cabinets &amp; appliances</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Deposit-back clean</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="how" style="background:var(--foam)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">How it works</span>
+        <h2 class="disp">Booked in a day, spotless by the next</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h3>Tell us the space</h3><p>Send a few details or photos. We size up the job and send a straight-up quote — no walkthrough required.</p></div>
+        <div class="step reveal"><h3>Pick your time</h3><p>One-time or on a schedule that fits your week. We bring the supplies and the checklist.</p></div>
+        <div class="step reveal"><h3>Come home to clean</h3><p>We leave it spotless and check back that you loved it. Not right? We make it right.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE REVIEWS: written for this demo. Swap for AR Cleaning's real Facebook
+       recommendations / Google reviews (names + wording verbatim) and pull the
+       live rating + count from their profile. Do NOT publish these as real. -->
+  <section class="pad reviews" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">What Little Rock says</span>
+        <h2 class="disp">Clients who don't clean their own place anymore</h2>
+        <div class="gband" aria-label="Rating sample">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.3H12v4.5h6.5c-.1 1-.8 2.6-2.4 3.6l3.7 2.8c2.3-2 3.7-5 3.7-8.6z"/><path fill="#34A853" d="M12 24c3.2 0 6-1 7.9-2.9l-3.7-2.8c-1 .7-2.4 1.2-4.2 1.2-3.2 0-6-2.1-7-5.1L1.2 17.3C3.2 21.2 7.3 24 12 24z"/><path fill="#FBBC05" d="M5 14.4c-.2-.8-.4-1.6-.4-2.4s.2-1.6.4-2.4L1.2 6.7C.4 8.3 0 10.1 0 12s.4 3.7 1.2 5.3L5 14.4z"/><path fill="#EA4335" d="M12 4.6c2.3 0 3.8 1 4.7 1.8l3.3-3.2C18 1.2 15.2 0 12 0 7.3 0 3.2 2.8 1.2 6.7L5 9.6c1-3 3.8-5 7-5z"/></svg>
+          <div class="gstars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <b>—</b><span>live rating &amp; count pulled on launch</span>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <article class="rev reveal">
+          <div class="gstars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>They took a move-out that I was dreading and made the apartment look better than the day I moved in. Got my full deposit back.</p>
+          <div class="who"><span class="avi">JT</span><div><b>Sample Client</b><small>Little Rock · sample review</small></div></div>
+        </article>
+        <article class="rev reveal">
+          <div class="gstars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>We have them clean our office every week now. Reliable, thorough, and the team actually cares. Clients notice the difference.</p>
+          <div class="who"><span class="avi b">SM</span><div><b>Sample Client</b><small>Little Rock · sample review</small></div></div>
+        </article>
+        <article class="rev reveal">
+          <div class="gstars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>Booked a deep clean before family came in. Every baseboard, every corner. It smelled amazing and I didn't lift a finger.</p>
+          <div class="who"><span class="avi c">DR</span><div><b>Sample Client</b><small>Little Rock · sample review</small></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad quote" id="quote">
+    <div class="wrap qcard">
+      <div class="reveal">
+        <span class="kicker" style="color:var(--mint)">Free, no-pressure quote</span>
+        <h2 class="disp">Tell us the space.<br>We'll tell you the price.</h2>
+        <p class="lead">Fill this out and AR Cleaning gets back to you the same day with a straight number and the next open time.</p>
+        <div class="trust2">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Homes &amp; commercial spaces</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Supplies &amp; equipment included</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Love it or we come back</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="qf" id="qf" onsubmit="return sendQuote(event)">
+          <div id="qfBody">
+            <div class="fg"><label for="qn">Name</label><input id="qn" required placeholder="Your name"></div>
+            <div class="row2">
+              <div class="fg"><label for="qp">Phone</label><input id="qp" type="tel" required placeholder="(501) 779-5671"></div>
+              <div class="fg"><label for="qt">Property</label>
+                <select id="qt"><option>Home</option><option>Apartment</option><option>Office / commercial</option><option>Move-out / deep clean</option></select>
+              </div>
+            </div>
+            <div class="fg"><label for="qz">ZIP / area</label><input id="qz" placeholder="e.g. 72204 — Little Rock"></div>
+            <button class="btn btn-p" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Get my free quote</button>
+            <p class="qnote">Demo form — on launch this emails &amp; texts AR Cleaning your request instantly.</p>
+          </div>
+          <div class="qdone" id="qdone" role="status">
+            <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Request sent</h3>
+            <p id="qdoneTxt">On launch, AR Cleaning gets this instantly and replies the same day with your quote.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <span class="brand" style="display:inline-flex">
+        <span class="bubble" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10l6-4 6 4v11M9 21v-5h6v5"/></svg></span>
+        <span><b>AR Cleaning</b><small>Services · Little Rock, AR</small></span>
+      </span>
+      <p style="margin-top:14px;max-width:34ch;font-size:14px">Residential &amp; commercial cleaning done right the first time — for Little Rock homes and businesses.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Residential cleaning</a>
+      <a href="#services">Commercial &amp; office</a>
+      <a href="#services">Deep &amp; move-out</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <!-- SAMPLE phone -->
+      <a href="tel:+15017795671">Call: (501) 779-5671 · sample</a>
+      <a href="https://www.facebook.com/arcleanservicess/" target="_blank" rel="noopener">Facebook: AR Cleaning Services</a>
+      <a href="#quote">Request a free quote</a>
+    </div>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© <span id="yr"></span> AR Cleaning Services · Little Rock, Arkansas</span>
+    <span>Demo mockup by Nate Witt — not the live site</span>
+  </div>
+  <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    AR Cleaning Services</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. Any photography, hours, prices, staff names, ratings and
+    reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
+    are replaced with the owner's real details if this site is built. This page is set to
+    <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+
+<div class="callbar">
+  <!-- SAMPLE phone -->
+  <a href="tel:+15017795671"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call</a>
+  <a class="p" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free quote</a>
+</div>
+
+<script>
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  // SIGNATURE — before/after clean-sweep slider
+  (function(){
+    const ba=document.getElementById("ba"),before=document.getElementById("baBefore"),
+          handle=document.getElementById("baHandle"),knob=document.getElementById("baKnob"),
+          range=document.getElementById("baRange");
+    function set(v){
+      v=Math.max(0,Math.min(100,v));
+      before.style.clipPath="inset(0 "+(100-v)+"% 0 0)";
+      handle.style.left=v+"%";knob.style.left=v+"%";
+      range.value=v;
+      ba.classList.add("touched");
+    }
+    range.addEventListener("input",e=>set(+e.target.value));
+    // pointer drag anywhere on the image
+    let drag=false;
+    function fromEvent(clientX){
+      const r=ba.getBoundingClientRect();
+      set(((clientX-r.left)/r.width)*100);
+    }
+    ba.addEventListener("pointerdown",e=>{drag=true;fromEvent(e.clientX);});
+    window.addEventListener("pointermove",e=>{if(drag)fromEvent(e.clientX);});
+    window.addEventListener("pointerup",()=>drag=false);
+    set(50);
+  })();
+
+  // scroll reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  // demo quote flow
+  function sendQuote(ev){
+    ev.preventDefault();
+    const n=document.getElementById("qn").value.trim()||"there";
+    const t=document.getElementById("qt").value.toLowerCase();
+    document.getElementById("qdoneTxt").textContent=
+      `Thanks ${n} — your ${t} cleaning request is in. On launch, AR Cleaning gets this instantly and replies the same day with your quote.`;
+    document.getElementById("qfBody").style.display="none";
+    document.getElementById("qdone").classList.add("show");
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sophisticated Grooming Lounge — Upscale Men's Grooming | Conway, AR</title>
+<meta name="description" content="Conway's upscale men's grooming lounge. Precision cuts, beard sculpting and the hot-towel ritual in a room built for it. Book your appointment or call (501) 358-1695." />
+<!--
+  DEMO MOCKUP — Sophisticated Grooming Lounge, Conway AR
+  Archetype: B · Cinematic Full-Bleed (moody upscale-lounge hero, overlay type)
+  Signature: a slow cinematic light sweep across the hero.
+  REAL: business name, upscale men's grooming lounge, 1055 Sunflower Dr Ste 7 Conway AR 72034,
+        phone (501) 358-1695, Facebook, Booksy booking exists.
+  SAMPLE-TO-REPLACE (marked inline): service names/prices, barber names, hours (confirm),
+        reviews/ratings, pull-quote wording, photos (labeled stock + CSS art).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --char:#14110F;--char-2:#1E1915;--espr:#241C16;--brass:#C9A24B;--brass-lt:#E1C07E;
+    --bone:#EDE7DB;--oxblood:#6B2B2B;--smoke:#928979;--mut:#9A9082;
+    --line:rgba(237,231,219,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--char);color:var(--bone);font-family:'Barlow',system-ui,sans-serif;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,.disp{font-family:'Cinzel',Georgia,serif;font-weight:600;letter-spacing:.02em}
+  .kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--brass);font-weight:500}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)}
+  .mock{background:#0c0a08;color:var(--brass);text-align:center;font-size:12px;letter-spacing:.03em;padding:8px 14px;border-bottom:1px solid var(--line)}
+
+  /* nav */
+  nav{position:absolute;top:33px;left:0;right:0;z-index:30}
+  nav .bar{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(18px,5vw,56px);max-width:1180px;margin:0 auto}
+  nav .brand{font-family:'Cinzel';font-weight:700;font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
+  nav .brand b{color:var(--brass)}
+  nav .links{display:none;gap:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,231,219,.8)}
+  nav .links a:hover{color:var(--brass)}
+  @media(min-width:880px){nav .links{display:flex}}
+  nav .cta{border:1px solid var(--brass);color:var(--brass);padding:11px 20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;gap:8px;transition:background .25s,color .25s}
+  nav .cta:hover{background:var(--brass);color:var(--char)}
+
+  /* ---------- HERO (full-bleed) ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+  .hero .bg{position:absolute;inset:0;z-index:-2;
+    background:radial-gradient(ellipse at 70% 20%,#3a2f22 0%,#1a1512 45%,#100d0b 100%)}
+  #heroImg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;
+    filter:grayscale(.35) brightness(.55) contrast(1.05);opacity:.72}
+  .hero .grad{position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(20,17,15,.55) 0%,rgba(20,17,15,.15) 40%,rgba(20,17,15,.92) 100%)}
+  /* SIGNATURE: slow cinematic light sweep */
+  .hero .sweep{position:absolute;inset:-30% -60%;z-index:-1;pointer-events:none;
+    background:linear-gradient(105deg,transparent 40%,rgba(225,192,126,.16) 49%,rgba(237,231,219,.10) 52%,transparent 60%);
+    transform:translateX(-30%);animation:sweep 9s ease-in-out infinite}
+  @keyframes sweep{0%{transform:translateX(-40%)}50%{transform:translateX(40%)}100%{transform:translateX(-40%)}}
+  .hero .inner{position:relative;padding:0 clamp(18px,5vw,56px) clamp(52px,8vh,90px);max-width:1180px;margin:0 auto;width:100%}
+  .hero .est{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .hero .est .ln{height:1px;width:40px;background:var(--brass)}
+  .hero .est span{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass-lt)}
+  .hero h1{font-size:clamp(40px,8vw,88px);line-height:1.0;letter-spacing:.02em;text-transform:uppercase;
+    text-shadow:0 2px 30px rgba(0,0,0,.5)}
+  .hero h1 em{font-style:normal;color:var(--brass);display:block}
+  .hero p{font-size:clamp(16px,2vw,19px);color:rgba(237,231,219,.82);max-width:46ch;margin:22px 0 30px;font-weight:300}
+  .hero .row{display:flex;flex-wrap:wrap;gap:14px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow';font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;min-height:54px;transition:transform .14s,background .25s,color .25s,border-color .25s;cursor:pointer;border:1.5px solid transparent}
+  .btn svg{width:16px;height:16px}
+  .btn:active{transform:translateY(1px)}
+  .btn-fill{background:var(--brass);color:var(--char)}
+  .btn-fill:hover{background:var(--brass-lt)}
+  .btn-line{border-color:rgba(237,231,219,.4);color:var(--bone)}
+  .btn-line:hover{border-color:var(--brass);color:var(--brass)}
+  .scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(237,231,219,.5);display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrollcue .ln{width:1px;height:34px;background:linear-gradient(var(--brass),transparent)}
+
+  /* section shell */
+  section.blk{padding:clamp(56px,9vw,110px) 0;position:relative}
+  .shead{max-width:640px;margin-bottom:44px}
+  .shead h2{font-size:clamp(28px,4.6vw,50px);line-height:1.06;text-transform:uppercase;margin-top:14px}
+  .shead h2 em{font-style:normal;color:var(--brass)}
+  .shead p{font-size:15.5px;color:var(--mut);margin-top:16px}
+
+  /* services — the ledger */
+  .svc{background:var(--char-2)}
+  .ledger{border-top:1px solid var(--line)}
+  .lrow{display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line);transition:background .25s,padding-left .25s}
+  .lrow:hover{background:rgba(201,162,75,.05);padding-left:14px}
+  .lrow .no{font-family:'Cinzel';font-size:12px;color:var(--brass);letter-spacing:.1em}
+  .lrow h3{font-size:clamp(20px,2.6vw,26px);text-transform:uppercase;grid-column:1;font-weight:500;letter-spacing:.04em}
+  .lrow .pr{font-family:'Cinzel';font-size:clamp(20px,2.6vw,26px);color:var(--brass);grid-row:1/3;grid-column:2;align-self:center}
+  .lrow p{grid-column:1;font-size:14px;color:var(--mut);max-width:52ch}
+  .flag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(201,162,75,.12);color:var(--brass);padding:5px 11px;margin-top:22px}
+
+  /* the lounge / gallery — cinematic tiles */
+  .lounge .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.lounge .grid{grid-template-columns:2fr 1fr;grid-auto-rows:200px}}
+  .gcell{position:relative;overflow:hidden;border:1px solid var(--line);background:#0f0c0a}
+  .gcell .art{position:absolute;inset:0;filter:grayscale(.3) brightness(.7)}
+  .gcell .cap{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);z-index:2;text-shadow:0 1px 8px #000}
+  .gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.6))}
+  @media(min-width:720px){
+    .gcell.big{grid-row:span 2}
+  }
+  .a1{background:radial-gradient(circle at 40% 30%,#3a2f22,#161210)}
+  .a2{background:radial-gradient(circle at 60% 40%,#4a3a2a,#1a1410)}
+  .a3{background:radial-gradient(circle at 50% 50%,#2e2620,#12100e)}
+  .a4{background:radial-gradient(circle at 30% 60%,#3d2a24,#15100e)}
+
+  /* experience band */
+  .exp{background:var(--espr)}
+  .exp .grid{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:760px){.exp .grid{grid-template-columns:repeat(3,1fr)}}
+  .exp-card{border-left:1px solid var(--line);padding-left:22px}
+  .exp-card svg{width:30px;height:30px;color:var(--brass);margin-bottom:16px}
+  .exp-card h3{font-size:18px;text-transform:uppercase;letter-spacing:.05em;font-weight:500}
+  .exp-card p{font-size:14px;color:var(--mut);margin-top:10px}
+
+  /* quote */
+  .quote{text-align:center}
+  .quote .mk{font-family:'Cinzel';font-size:70px;color:var(--brass);line-height:.5}
+  .quote blockquote{font-family:'Cinzel';font-weight:400;font-size:clamp(22px,3.4vw,36px);line-height:1.3;max-width:20ch;margin:14px auto 0}
+  .quote cite{display:block;font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-top:24px}
+
+  /* book / contact */
+  .book{background:var(--char-2)}
+  .book .grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:860px){.book .grid{grid-template-columns:1.1fr .9fr}}
+  .book h2{font-size:clamp(28px,4.4vw,48px);text-transform:uppercase;line-height:1.05}
+  .book h2 em{font-style:normal;color:var(--brass)}
+  .book address{font-style:normal;font-size:16px;color:var(--bone);line-height:1.9;margin-top:20px}
+  .book .hrs{margin-top:22px;border-top:1px solid var(--line);padding-top:16px;max-width:340px}
+  .book .hrs .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+  .book .hrs div{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+  .book .hrs div span:last-child{color:var(--brass-lt);font-weight:500}
+  .book .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .bmap{border:1px solid var(--line);min-height:280px;background:
+    radial-gradient(circle at 45% 40%,rgba(201,162,75,.22),transparent 60%),
+    linear-gradient(150deg,#211b16,#14100d);display:grid;place-items:center;text-align:center}
+  .bmap .pin{width:42px;height:42px;color:var(--brass);margin:0 auto 10px}
+  .bmap b{font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  .bmap small{display:block;font-size:12px;color:var(--mut);margin-top:4px}
+
+  footer{background:#0c0a08;color:rgba(237,231,219,.55);padding:44px 0;border-top:1px solid var(--line)}
+  footer .in{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+  footer .b{font-family:'Cinzel';font-weight:700;font-size:18px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone)}
+  footer .b b{color:var(--brass)}
+  footer a{color:var(--brass)}
+  footer small{display:block;margin-top:8px;font-size:12px}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:#0c0a08;border-top:1px solid var(--brass)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
+  .callbar a.fill{background:var(--brass);color:var(--char)}
+  .callbar svg{width:15px;height:15px}
+  @media(min-width:880px){.callbar{display:none}}
+  @media(max-width:879px){body{padding-bottom:56px}}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero .sweep{display:none}}
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+</style>
+<!-- LocalBusiness schema (DEMO) — verify NAP before launch; telephone/street omitted where unverified -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Sophisticated Grooming Lounge",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Conway",
+    "addressRegion": "AR",
+    "addressCountry": "US",
+    "streetAddress": "1055 Sunflower Dr, Ste 7",
+    "postalCode": "72034"
+  },
+  "telephone": "+1-501-358-1695"
+}
+</script>
+</head>
+<body>
+<div class="mock">DEMO MOCKUP for Sophisticated Grooming Lounge · real name, Conway address &amp; phone (501) 358-1695 · sample services, prices, staff &amp; hours — swapped for the lounge's own on launch</div>
+
+<div class="hero" id="top">
+  <div class="bg"></div>
+  <!-- Stock hero (Unsplash) — replace with a real photo of the lounge on launch -->
+  <div id="heroImg"></div>
+  <div class="grad"></div>
+  <div class="sweep" aria-hidden="true"></div>
+  <nav>
+    <div class="bar">
+      <span class="brand">Sophisticated <b>Grooming</b></span>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#lounge">The Lounge</a>
+        <a href="#experience">Experience</a>
+        <a href="#book">Book</a>
+      </div>
+      <a class="cta" href="#book">Reserve a chair</a>
+    </div>
+  </nav>
+  <div class="inner">
+    <div class="est"><span class="ln"></span><span>Conway, Arkansas</span></div>
+    <h1>Grooming,<em>elevated.</em></h1>
+    <p>An upscale lounge built for the modern gentleman — precision cuts, beard sculpting, and the hot-towel ritual, unhurried, in a room that respects your time.</p>
+    <div class="row">
+      <a class="btn btn-fill" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Reserve a chair</a>
+      <a class="btn btn-line" href="tel:+15013581695"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 358-1695</a>
+    </div>
+  </div>
+  <div class="scrollcue" aria-hidden="true"><span>Scroll</span><span class="ln"></span></div>
+</div>
+
+<main>
+  <!-- SERVICES -->
+  <section class="blk svc" id="services">
+    <div class="wrap">
+      <div class="shead">
+        <span class="kicker">The menu</span>
+        <h2>Services &amp; <em>the ritual</em></h2>
+        <p>Every appointment is a seat, not a wait. Prices below are placeholders for this demo.</p>
+      </div>
+      <!-- SAMPLE services & prices — typical upscale-grooming menu; replace with the lounge's real list -->
+      <div class="ledger">
+        <div class="lrow"><span class="no">01</span><h3>The Cut</h3><span class="pr">$40</span><p>A consultation-first precision cut, finished with a straight-razor neckline and style.</p></div>
+        <div class="lrow"><span class="no">02</span><h3>Cut &amp; Beard</h3><span class="pr">$55</span><p>The full reset — cut, beard sculpt, hot-towel finish and product.</p></div>
+        <div class="lrow"><span class="no">03</span><h3>Beard Sculpt</h3><span class="pr">$30</span><p>Shaped, lined and conditioned with a warm-towel treatment.</p></div>
+        <div class="lrow"><span class="no">04</span><h3>Hot-Towel Shave</h3><span class="pr">$45</span><p>The classic straight-razor ritual — hot lather, cold finish, unhurried.</p></div>
+        <div class="lrow"><span class="no">05</span><h3>The Executive</h3><span class="pr">$75</span><p>Cut, shave, beard, and a scalp treatment — the full lounge experience.</p></div>
+      </div>
+      <span class="flag">Sample menu &amp; prices — real services on launch</span>
+    </div>
+  </section>
+
+  <!-- THE LOUNGE / GALLERY -->
+  <section class="blk lounge" id="lounge">
+    <div class="wrap">
+      <div class="shead">
+        <span class="kicker">Inside</span>
+        <h2>A room built <em>for it</em></h2>
+        <p>Low light, good leather, and a chair that's yours for the hour. These panels are sample art — real photos of the lounge drop in on launch.</p>
+      </div>
+      <div class="grid">
+        <div class="gcell big reveal"><div class="art a1"></div><span class="cap">The Lounge · sample</span></div>
+        <div class="gcell reveal"><div class="art a2"></div><span class="cap">The Chair · sample</span></div>
+        <div class="gcell reveal"><div class="art a3"></div><span class="cap">Hot-Towel Ritual · sample</span></div>
+        <div class="gcell big reveal"><div class="art a4"></div><span class="cap">Finished Work · sample</span></div>
+        <div class="gcell reveal"><div class="art a2"></div><span class="cap">The Bar · sample</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="blk exp" id="experience">
+    <div class="wrap">
+      <div class="shead">
+        <span class="kicker">The difference</span>
+        <h2>Not a barbershop.<br><em>A lounge.</em></h2>
+      </div>
+      <div class="grid">
+        <div class="exp-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 15h5"/></svg><h3>By appointment</h3><p>Book your time and it's held. No standing around, no guessing the wait.</p></div>
+        <div class="exp-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg><h3>Master-level work</h3><p>Consultation first. Straight-razor detail. A finish that holds for weeks.</p></div>
+        <div class="exp-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l-1 7a5 5 0 0 1-10 0L6 2zM8 22h8M12 14v8"/></svg><h3>Sit a while</h3><p>A relaxed room, a drink if you want one, and time that's actually yours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="blk quote">
+    <div class="wrap">
+      <div class="mk" aria-hidden="true">&ldquo;</div>
+      <!-- SAMPLE pull-quote — replace with a real review (verbatim) on launch -->
+      <blockquote>You walk out looking like the best version of yourself — and you actually enjoyed the hour.</blockquote>
+      <cite>Sample sentiment · swap for a real review</cite>
+    </div>
+  </section>
+
+  <!-- BOOK / CONTACT -->
+  <section class="blk book" id="book">
+    <div class="wrap">
+      <div class="grid">
+        <div class="reveal">
+          <span class="kicker">Reserve your chair</span>
+          <h2>Conway's grooming <em>lounge</em></h2>
+          <address>1055 Sunflower Dr, Suite 7<br>Conway, AR 72034<br><a href="tel:+15013581695" style="color:var(--brass);font-weight:600">(501) 358-1695</a></address>
+          <div class="hrs">
+            <!-- SAMPLE hours — confirm with the lounge -->
+            <div class="lbl">Hours (sample — confirm)</div>
+            <div><span>Tue – Fri</span><span>10:00a – 7:00p</span></div>
+            <div><span>Saturday</span><span>9:00a – 5:00p</span></div>
+            <div><span>Sun – Mon</span><span>Closed</span></div>
+          </div>
+          <span class="flag">Sample hours — confirm before launch</span>
+          <div class="row">
+            <a class="btn btn-fill" href="https://booksy.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book on Booksy</a>
+            <a class="btn btn-line" href="tel:+15013581695"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call the lounge</a>
+          </div>
+        </div>
+        <div class="bmap reveal" aria-hidden="true">
+          <div>
+            <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <b>Sunflower Dr · Conway, AR</b>
+            <small>Live Google Map embeds here on launch</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap in">
+    <div>
+      <div class="b">Sophisticated <b>Grooming Lounge</b></div>
+      <small>1055 Sunflower Dr, Ste 7 · Conway, AR 72034 · <a href="tel:+15013581695">(501) 358-1695</a></small>
+      <small>Upscale men's grooming · By appointment</small>
+    </div>
+    <div><a class="btn btn-line" href="https://www.facebook.com/p/Sophisticated-Grooming-Lounge-100040505006129/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>Facebook</a></div>
+  </div>
+  <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    Sophisticated Grooming Lounge</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. Any photography, hours, prices, staff names, ratings and
+    reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
+    are replaced with the owner's real details if this site is built. This page is set to
+    <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15013581695"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call</a>
+  <a class="fill" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Reserve</a>
+</div>
+
+<script>
+  // Stock hero (Unsplash, moody grooming) — replace with the lounge's own on launch.
+  document.getElementById("heroImg").style.backgroundImage=
+    "url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=70&auto=format&fit=crop')";
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

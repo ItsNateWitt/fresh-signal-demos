@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Man Cave Barbershop — Conway's Chair for Men | Book Online</title>
+<meta name="description" content="Man Cave Barbershop in Conway, AR — fades, tapers, beard work and straight-razor edges in a den built for men. Book your chair online or call (501) 428-7056. 1050 Bob Courtway Dr, Ste 102." />
+<meta name="theme-color" content="#14110C" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110C'/%3E%3Cpath d='M5 9h2v8H5zM9 9h2v8H9zM13 9h2v8h-2zM17 9h2v8h-2zM21 9h2v8h-2zM25 9h2v8h-2z' fill='%23C08A3E'/%3E%3Crect x='4' y='19' width='24' height='4' fill='%23E8A23C'/%3E%3C/svg%3E" />
+
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="Man Cave Barbershop — Conway's Chair for Men" />
+<meta property="og:description" content="Fades, tapers, beard work and straight-razor edges in a den built for men. 1050 Bob Courtway Dr, Ste 102, Conway AR. (501) 428-7056." />
+<meta property="og:image" content="assets/b2-01-man-cave-barbershop-conway/hero-den.jpg" />
+
+<!--
+  DEMO MOCKUP — Man Cave Barbershop, Conway AR
+  Archetype: C · Split Diptych (evolved) — pinned booking rail + scrolling shop, brushed-steel seam between.
+  Signature: the clipper-line seam — a toothed clipper blade rides the steel divider in lockstep with page
+             scroll; every section head's toothed rule "trims" itself in on entry.
+  REAL: business name; phone (501) 428-7056; address 1050 Bob Courtway Dr Ste 102, Conway AR 72032;
+        Booksy online booking already exists; Facebook page facebook.com/ConwayManCaveBarbershop.
+  SAMPLE-TO-REPLACE (all marked inline + in banner): hours, service prices, barber names/bios,
+        review TEXT (4.7 rating pulled from public listings — confirm live count on launch),
+        and ALL PHOTOGRAPHY (licensed stand-ins — replaced with the shop's own photos on launch).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/b2-01-man-cave-barbershop-conway/hero-den.jpg" fetchpriority="high" />
+<style>
+  :root{
+    /* palette — coal ground, bone type, brass/amber accent, oxblood action. No other hues. */
+    --coal:#14110C; --coal-2:#1D1913; --coal-3:#0C0A07;
+    --bone:#EFE7D8; --bone-2:#C9C1B3; --smoke:#938C80;
+    --brass:#C08A3E; --amber:#E8A23C;
+    --oxblood:#6E2B2B; --oxblood-2:#8A3729;
+    --line:rgba(239,231,216,.14); --line-2:rgba(239,231,216,.08);
+    --ease:cubic-bezier(.22,1,.36,1);
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--coal);color:var(--bone);font-family:'Barlow',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  /* ambient den: faint plank wood + a low amber pool of light */
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55;
+    background:
+      repeating-linear-gradient(90deg,transparent 0 168px,rgba(0,0,0,.3) 168px 170px),
+      radial-gradient(120% 90% at 72% 0,rgba(192,138,62,.09) 0,transparent 58%)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .bebas{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:.92}
+  .kicker{display:inline-block;font-family:'Oswald',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--amber);color:var(--coal);padding:12px 20px;font-family:'Oswald';font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .skip:focus{left:12px;top:12px}
+
+  .mock{position:relative;z-index:5;background:var(--coal-3);color:var(--amber);text-align:center;font-size:12px;font-weight:600;letter-spacing:.01em;padding:9px 14px;border-bottom:1px solid var(--line)}
+  .mock b{color:var(--bone);font-weight:600}
+
+  /* ================= DIPTYCH FRAME =================
+     Desktop: rail | steel seam | (hero above, shop below)
+     Mobile:  hero (full-bleed) → booking card → shop      */
+  .frame{position:relative;z-index:1;display:grid;grid-template-columns:1fr;
+    grid-template-areas:"hero" "rail" "flow"}
+  @media(min-width:1000px){
+    .frame{grid-template-columns:420px 18px 1fr;grid-template-rows:auto 1fr;
+      grid-template-areas:"rail seam hero" "rail seam flow"}
+  }
+
+  /* ---------- SIGNATURE: the clipper-line seam ---------- */
+  .seam{grid-area:seam;display:none;position:relative;overflow:hidden;
+    background:linear-gradient(90deg,#26231e,#5f574b 42%,#8a8072 50%,#453f37 58%,#22201b);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.65)}
+  @media(min-width:1000px){.seam{display:block}}
+  .seam .teeth{position:absolute;inset:-40px 0;
+    background-image:repeating-linear-gradient(180deg,rgba(239,231,216,.30) 0 2px,transparent 2px 9px);
+    mix-blend-mode:overlay}
+  /* the blade — rides the seam in lockstep with page scroll */
+  .seam .blade{position:absolute;left:-3px;right:-3px;height:34px;top:0;will-change:transform;
+    background:linear-gradient(180deg,#cfc4b2,#8d8375 40%,#3d382f);
+    box-shadow:0 0 22px 5px rgba(232,162,60,.30),0 2px 0 rgba(0,0,0,.5)}
+  .seam .blade::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:10px;
+    background:linear-gradient(180deg,#e4dac6,#7d7365);
+    clip-path:polygon(0 0,7% 100%,14% 0,21% 100%,28% 0,35% 100%,42% 0,49% 100%,56% 0,63% 100%,70% 0,77% 100%,84% 0,91% 100%,98% 0,100% 0)}
+
+  /* ---------- LEFT RAIL (pinned booking desk) ---------- */
+  .rail{grid-area:rail;position:relative;background:var(--coal-3);border-bottom:1px solid var(--line)}
+  /* leather wash — the den's actual material, held behind the pinned desk */
+  .rail .hide{position:absolute;inset:0;overflow:hidden;isolation:isolate}
+  .rail .hide img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;
+    filter:contrast(1.08) saturate(.85) brightness(.92) sepia(.25);opacity:.62}
+  .rail .hide::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(12,10,7,.62) 0%,rgba(12,10,7,.34) 45%,rgba(12,10,7,.86) 100%)}
+  .rail .hide .gr{z-index:2;opacity:.16}
+  /* the desk itself sits on solid ground so every label stays legible */
+  .railin{position:relative;z-index:1;padding:26px 26px 34px;
+    background:linear-gradient(180deg,rgba(10,9,6,.97),rgba(10,9,6,.93))}
+  @media(min-width:1000px){
+    .railin{position:sticky;top:0;max-height:100vh;overflow-y:auto;padding:26px 26px 30px;
+      box-shadow:0 26px 50px rgba(0,0,0,.55)}
+    .rail{border-bottom:0;border-right:1px solid var(--line)}
+  }
+  /* crest: compact lockup — the BIG wordmark belongs to the hero photo, not here */
+  .crest{display:none;padding-bottom:18px;border-bottom:1px solid var(--line);text-align:center}
+  @media(min-width:1000px){.crest{display:block}}
+  .crest .mk{font-family:'Oswald';font-weight:700;font-size:15px;letter-spacing:.34em;color:var(--bone);text-transform:uppercase}
+  .crest .sb{font-family:'Oswald';font-weight:500;font-size:10.5px;letter-spacing:.3em;color:var(--smoke);text-transform:uppercase;margin-top:5px}
+  .crest .sb em{font-style:normal;color:var(--brass)}
+
+  .today{padding:16px 0;border-bottom:1px solid var(--line);text-align:center}
+  .today .lbl{font-family:'Oswald';font-weight:500;font-size:10px;letter-spacing:.26em;color:var(--smoke);text-transform:uppercase}
+  .today .hrs{font-family:'Bebas Neue';font-size:28px;color:var(--bone);margin-top:5px;letter-spacing:.03em}
+  .today .open{display:inline-flex;align-items:center;gap:7px;margin-top:4px;font-family:'Oswald';font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--brass);text-transform:uppercase}
+  .today .open i{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none;
+    box-shadow:0 0 0 0 rgba(232,162,60,.6);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,162,60,.5)}70%{box-shadow:0 0 0 8px rgba(232,162,60,0)}}
+  .stamp{display:inline-block;font-family:'Oswald';font-weight:600;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brass);border:1px solid rgba(192,138,62,.45);padding:2px 6px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+
+  /* booking desk */
+  .desk{padding:18px 0 4px}
+  .desk h2{font-family:'Bebas Neue';font-size:34px;color:var(--bone);letter-spacing:.03em;margin-top:4px}
+  .desk .lead{font-size:13.5px;color:var(--bone-2);margin-top:6px}
+  .bform{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .bform .full{grid-column:1/-1}
+  .f label{display:block;font-family:'Oswald';font-weight:500;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke);margin-bottom:6px}
+  .f input,.f select{width:100%;background:#0A0906;border:1px solid var(--line);color:var(--bone);padding:12px 13px;font-family:'Barlow';font-size:16px;font-weight:500;min-height:50px;border-radius:0}
+  .f select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--amber) 50%),linear-gradient(135deg,var(--amber) 50%,transparent 50%);background-position:calc(100% - 19px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+  .f input:focus,.f select:focus{outline:none;border-color:var(--amber)}
+  .f input::placeholder{color:#6A655C}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;
+    font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+    padding:16px 18px;min-height:54px;border:0;cursor:pointer;
+    background:var(--oxblood);color:#fff;transition:background .18s,transform .14s}
+  .btn:hover{background:var(--oxblood-2)}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:16px;height:16px;flex:none}
+  .bnote{font-size:11.5px;color:var(--smoke);margin-top:9px;text-align:center;line-height:1.45}
+  /* REAL: Booksy booking already exists — the true hook */
+  .booksy{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--bone-2)}
+  .booksy b{color:var(--amber);font-weight:600}
+  /* the phone, as a physical engraved plate */
+  .plate{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:14px 12px;
+    background:linear-gradient(170deg,#D6A254,#9C6C2C 55%,#C08A3E);color:var(--coal);
+    font-family:'Bebas Neue';font-size:29px;letter-spacing:.05em;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 4px rgba(0,0,0,.3),0 4px 0 rgba(0,0,0,.45);
+    transition:transform .16s,box-shadow .16s}
+  .plate:hover,.plate:focus-visible{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 4px rgba(0,0,0,.3),0 2px 0 rgba(0,0,0,.45)}
+  .plate svg{width:19px;height:19px;flex:none;stroke-width:2.2}
+  .platelbl{font-family:'Oswald';font-weight:500;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--smoke);text-align:center;margin-top:10px}
+  .bconfirm{display:none;text-align:center;padding:26px 6px 10px}
+  .bconfirm.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.3,1)}
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .bconfirm .ck{width:58px;height:58px;border-radius:50%;background:rgba(232,162,60,.13);display:grid;place-items:center;margin:0 auto 12px}
+  .bconfirm .ck svg{width:28px;height:28px;color:var(--amber)}
+  .bconfirm h3{font-family:'Bebas Neue';font-size:30px;color:var(--bone);letter-spacing:.03em}
+  .bconfirm p{font-size:13.5px;color:var(--bone-2);margin:8px auto 0;max-width:38ch}
+
+  /* ================= PHOTO TREATMENT =================
+     one grade for every image on the page: warm-amber den.
+     grade filter + coal scrim + amber soft-light + grain = one commissioned shoot. */
+  .ph{position:relative;overflow:hidden;isolation:isolate;background:var(--coal-3)}
+  .ph img{width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.08) saturate(.85) brightness(.92) sepia(.25)}
+  .ph::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(180deg,rgba(20,17,12,.30) 0%,rgba(20,17,12,.10) 34%,rgba(20,17,12,.88) 100%),
+               radial-gradient(120% 100% at 50% 45%,transparent 30%,rgba(12,10,7,.75) 100%)}
+  .ph::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:radial-gradient(90% 70% at 50% 25%,rgba(232,162,60,.55),rgba(110,43,43,.25) 65%,transparent 100%);
+    mix-blend-mode:soft-light}
+  .gr{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.17;mix-blend-mode:overlay;
+    background-image:var(--grain);background-size:200px 200px}
+
+  /* ================= MIRROR HERO ================= */
+  .hero{grid-area:hero;position:relative}
+  .hero .stage{position:relative;height:100svh;min-height:520px}
+  @media(min-width:1000px){.hero .stage{height:min(80vh,660px);min-height:480px;border-bottom:1px solid var(--line)}}
+  .hero .stage .ph{position:absolute;inset:0}
+  .heroart{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+    text-align:center;padding:0 20px clamp(26px,4vw,46px)}
+  .wordmark{font-family:'Bebas Neue';font-size:clamp(62px,11vw,142px);line-height:.86;letter-spacing:.02em;color:var(--bone);
+    text-shadow:0 6px 40px rgba(0,0,0,.75),0 0 70px rgba(232,162,60,.18)}
+  .wordmark span{color:var(--brass)}
+  .hero .loc{font-family:'Oswald';font-weight:500;font-size:clamp(10px,1.1vw,12.5px);letter-spacing:.42em;text-transform:uppercase;color:var(--bone-2);margin-top:10px}
+  /* the etched brass address plaque — their real street, set like signage */
+  .plaque{margin-top:16px;padding:9px 18px;background:linear-gradient(170deg,#D6A254,#9A6A2A 55%,#C08A3E);color:#181206;
+    font-family:'Oswald';font-weight:600;font-size:clamp(10px,1.05vw,12px);letter-spacing:.17em;text-transform:uppercase;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 5px rgba(0,0,0,.32),0 6px 20px rgba(0,0,0,.5)}
+  .hero .body{padding:clamp(32px,4vw,52px) clamp(20px,5vw,60px) clamp(30px,4vw,44px)}
+  .hero h1{font-family:'Bebas Neue';font-size:clamp(40px,6.4vw,80px);line-height:.9;color:var(--bone);letter-spacing:.02em}
+  .hero h1 em{font-style:normal;color:var(--oxblood-2)}
+  .hero .sub{margin-top:14px;font-size:16.5px;color:var(--bone-2);max-width:54ch}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:var(--coal-2);border:1px solid var(--line);padding:8px 13px;
+    font-family:'Oswald';font-weight:500;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--bone-2)}
+  .chip svg{width:13px;height:13px;color:var(--brass);flex:none}
+
+  /* ================= RIGHT COLUMN / SHOP ================= */
+  .flow{grid-area:flow;min-width:0;position:relative}
+  .sec{position:relative;padding:clamp(48px,5.5vw,76px) clamp(20px,5vw,60px);border-top:1px solid var(--line)}
+  .head{margin-bottom:30px}
+  .head h2{font-family:'Bebas Neue';font-size:clamp(34px,4.5vw,56px);margin-top:6px;color:var(--bone);letter-spacing:.02em}
+  .head h2 span{color:var(--brass)}
+  /* toothed rule — trims itself in on entry (the seam's echo) */
+  .cline{display:block;width:0;height:15px;overflow:hidden;margin-top:16px;transition:width .7s var(--ease) .08s}
+  .cline.in{width:150px}
+  /* a comb: brass spine, steel teeth hanging off it */
+  .cline i{display:block;width:150px;height:15px;
+    background:
+      linear-gradient(90deg,var(--brass),var(--brass)) 0 0/100% 4px no-repeat,
+      repeating-linear-gradient(90deg,#a89b86 0 3px,transparent 3px 9px) 0 4px/100% 11px no-repeat}
+
+  /* the board */
+  .board{background:linear-gradient(180deg,var(--coal-3),var(--coal-2));border:1px solid var(--line);
+    padding:clamp(20px,3.2vw,36px);box-shadow:12px 12px 0 rgba(0,0,0,.4)}
+  .board .bh{text-align:center;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
+  .board .bh .bebas{font-size:29px;color:var(--amber)}
+  .board .bh small{display:block;font-family:'Oswald';font-weight:500;font-size:10px;letter-spacing:.28em;color:var(--smoke);margin-top:6px;text-transform:uppercase}
+  .row{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+  .row:last-of-type{border-bottom:0}
+  .row .nm{font-family:'Oswald';font-weight:600;font-size:16px;color:var(--bone)}
+  .row .dots{flex:1;min-width:20px;border-bottom:2px dotted rgba(147,140,128,.55);transform:translateY(-4px)}
+  .row .pr{font-family:'Oswald';font-weight:600;font-size:17px;color:var(--amber);white-space:nowrap}
+  .row .ds{flex-basis:100%;font-size:13.5px;color:var(--smoke);margin-top:-4px}
+  .note{margin-top:16px;font-size:12.5px;color:var(--smoke);line-height:1.5}
+
+  /* the den gallery — brass-plaque captions */
+  .den-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.den-grid{grid-template-columns:1fr 1fr}}
+  .den{position:relative;border:1px solid var(--line)}
+  .den .ph{aspect-ratio:4/3}
+  .den figcaption{position:absolute;left:14px;bottom:14px;z-index:6;
+    background:linear-gradient(170deg,#D6A254,#9A6A2A 60%,#C08A3E);color:#181206;
+    font-family:'Oswald';font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 4px 12px rgba(0,0,0,.5)}
+  /* one hover luxury */
+  .den .ph img{transition:transform .5s var(--ease)}
+  .den:hover .ph img,.den:focus-within .ph img{transform:scale(1.035)}
+
+  /* crew */
+  .crew{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:700px){.crew{grid-template-columns:repeat(3,1fr)}}
+  .barber{background:var(--coal-2);border:1px solid var(--line);padding:20px 18px;transition:transform .2s var(--ease),border-color .2s}
+  .barber:hover{transform:translateY(-4px);border-color:rgba(192,138,62,.5)}
+  .barber .no{font-family:'Bebas Neue';font-size:32px;color:var(--brass);line-height:1}
+  .barber h3{font-family:'Oswald';font-weight:700;font-size:17px;color:var(--bone);text-transform:uppercase;letter-spacing:.04em;margin-top:8px}
+  .barber .role{font-family:'Oswald';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--smoke);margin-top:3px}
+  .barber p{font-size:13.5px;color:var(--bone-2);margin-top:10px}
+
+  /* reviews */
+  .gbadge{display:inline-flex;align-items:center;gap:11px;background:var(--coal-2);border:1px solid var(--line);padding:10px 16px;margin-top:16px}
+  .gbadge svg{width:19px;height:19px;flex:none}
+  .gbadge b{font-family:'Bebas Neue';font-size:24px;color:var(--amber);letter-spacing:.03em}
+  .gbadge .stk{line-height:1.25}
+  .gbadge .stk span{display:block;font-family:'Oswald';font-size:11.5px;font-weight:500;color:var(--bone-2)}
+  .gbadge .stk small{font-size:10.5px;color:var(--smoke)}
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}
+  @media(min-width:820px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{position:relative;background:var(--coal-2);border:1px solid var(--line);padding:20px 18px;display:flex;flex-direction:column}
+  .rev .stars{display:flex;gap:2px;margin-bottom:10px}
+  .rev .stars svg{width:14px;height:14px;color:var(--amber)}
+  .rev p{font-size:14px;flex:1;color:var(--bone-2)}
+  .rev .who{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+  .rev .avi{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:'Oswald';font-weight:700;font-size:12px;
+    color:var(--coal);background:var(--brass);flex:none}
+  .rev .who b{font-size:12.5px;display:block;color:var(--bone);font-family:'Oswald';letter-spacing:.06em;text-transform:uppercase}
+  .rev .who small{font-size:11px;color:var(--smoke)}
+
+  /* find */
+  .findgrid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:820px){.findgrid{grid-template-columns:1.05fr .95fr}}
+  .findcard{background:var(--coal-2);border:1px solid var(--line);padding:26px}
+  .findcard h3{font-family:'Oswald';font-weight:700;font-size:18px;text-transform:uppercase;color:var(--bone);letter-spacing:.04em}
+  .findcard address{font-style:normal;font-size:15.5px;font-weight:500;color:var(--bone-2);margin-top:10px}
+  .hoursbox{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+  .hoursbox .lbl{font-family:'Oswald';font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--smoke);margin-bottom:9px}
+  .hoursbox div{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--bone-2);padding:3px 0}
+  .hoursbox div span:last-child{color:var(--bone);font-weight:600}
+  .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .telbtn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--oxblood);color:#fff;
+    font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.06em;padding:14px 20px;min-height:52px;flex:1;white-space:nowrap;
+    transition:background .18s,transform .14s}
+  .telbtn:hover{background:var(--oxblood-2)}.telbtn:active{transform:translateY(1px)}
+  .telbtn svg{width:16px;height:16px;flex:none}
+  .dirbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);color:var(--bone);
+    font-family:'Oswald';font-weight:600;font-size:13px;padding:13px 18px;min-height:52px;transition:background .2s,color .2s}
+  .dirbtn:hover{background:var(--bone);color:var(--coal)}
+  .dirbtn svg{width:15px;height:15px}
+  .mapbox{border:1px solid var(--line);min-height:250px;display:grid;place-items:center;text-align:center;padding:20px;
+    background:linear-gradient(140deg,var(--coal-2),var(--coal-3)),
+      repeating-linear-gradient(45deg,rgba(192,138,62,.05) 0 12px,transparent 12px 24px)}
+  .mapbox .pin{width:40px;height:40px;color:var(--oxblood-2);margin:0 auto 10px}
+  .mapbox b{font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone)}
+  .mapbox small{display:block;font-size:12px;color:var(--smoke);margin-top:5px}
+
+  /* ================= FRESH SIGNAL CLOSE =================
+     register shift: a letter on paper, in the middle of a dark den. */
+  #fresh-signal{background:var(--bone);color:#1E1913;border-top:1px solid var(--line);
+    padding:clamp(56px,7vw,96px) clamp(22px,6vw,60px)}
+  .fs{max-width:640px;margin:0 auto}
+  .fs .kicker{color:var(--oxblood)}
+  .fs h2{font-family:'Bebas Neue';font-size:clamp(34px,4.6vw,56px);line-height:.95;color:#191410;margin-top:12px;letter-spacing:.02em}
+  .fs .rule{height:1px;background:rgba(30,25,19,.22);margin:26px 0}
+  .fs .letter p{font-size:17px;line-height:1.65;color:#3A322A;margin-bottom:14px}
+  .fs .letter p:last-child{margin-bottom:0}
+  .fs .sign{font-family:'Bebas Neue';font-size:26px;color:var(--oxblood);letter-spacing:.05em;margin-top:22px}
+  .offer{margin-top:34px;border:1px solid rgba(30,25,19,.2);background:#FBF6EC;padding:clamp(22px,3.2vw,32px)}
+  .offer .li{display:flex;gap:16px;padding:16px 0;border-bottom:1px dashed rgba(30,25,19,.18)}
+  .offer .li:last-of-type{border-bottom:0}
+  .offer .li .amt{font-family:'Bebas Neue';font-size:30px;line-height:1;color:#191410;flex:none;width:112px;letter-spacing:.02em}
+  .offer .li .amt small{display:block;font-family:'Oswald';font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7A7065;margin-top:4px}
+  .offer .li .txt{font-size:15px;line-height:1.55;color:#3A322A}
+  .offer .li .txt b{color:#191410;font-weight:600}
+  .why{margin-top:20px;padding-top:18px;border-top:1px solid rgba(30,25,19,.16);font-size:14.5px;line-height:1.6;color:#5A5045}
+  .fsrow{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+  .fsbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--oxblood);color:#fff;
+    font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;
+    padding:17px 26px;min-height:56px;transition:background .18s,transform .14s}
+  .fsbtn:hover{background:var(--oxblood-2)}.fsbtn:active{transform:translateY(1px)}
+  .fsbtn svg{width:17px;height:17px;flex:none}
+  .fscall{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(30,25,19,.3);color:#1E1913;
+    font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;padding:16px 22px;min-height:56px;
+    transition:background .2s,color .2s}
+  .fscall:hover{background:#1E1913;color:var(--bone)}
+  .fscall svg{width:15px;height:15px}
+  .fsghost{flex-basis:100%;font-size:14px;color:#7A7065;font-style:italic}
+
+  footer{position:relative;z-index:1;background:var(--coal-3);color:var(--smoke);text-align:center;padding:36px 22px;font-size:13.5px;line-height:1.7}
+  footer .bebas{font-size:32px;color:var(--amber);display:block;margin-bottom:8px;letter-spacing:.04em}
+  footer a{color:var(--amber);font-weight:600}
+  footer .fine{display:block;margin-top:12px;font-size:11.5px;color:#6A655C}
+
+  /* sticky mobile action bar */
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--coal-3);border-top:2px solid var(--oxblood)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:8px;
+    font-family:'Oswald';font-weight:600;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--bone)}
+  .callbar a.red{background:var(--oxblood);color:#fff}
+  .callbar svg{width:16px;height:16px;flex:none}
+  @media(min-width:1000px){.callbar{display:none}}
+  @media(max-width:999px){body{padding-bottom:56px}}
+
+  /* reveal verb: SETTLE — content lowers into place like a chair being reclined */
+  .rv{opacity:0;transform:translateY(22px) scale(.988);
+    transition:opacity .62s var(--ease),transform .62s var(--ease);
+    transition-delay:calc(var(--d,0) * 75ms)}
+  .rv.in{opacity:1;transform:none}
+
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .rv{opacity:1;transform:none}
+    .cline{width:132px}
+    .seam .blade{display:none}          /* static full-width steel rule instead */
+    .seam .teeth{opacity:.5}
+  }
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+</style>
+
+<!-- LocalBusiness schema — VERIFIED NAP ONLY. Hours, prices and rating are unconfirmed and deliberately
+     omitted from structured data (never guess facts into schema). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "Man Cave Barbershop",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1050 Bob Courtway Dr, Ste 102",
+    "addressLocality": "Conway",
+    "addressRegion": "AR",
+    "postalCode": "72032",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-501-428-7056",
+  "areaServed": "Conway, Arkansas",
+  "sameAs": ["https://www.facebook.com/ConwayManCaveBarbershop"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#shop">Skip to content</a>
+
+<div class="mock">
+  <b>DEMO MOCKUP</b> — built for Man Cave Barbershop by Nate Witt · real phone (501) 428-7056, street address &amp; your Booksy booking · sample photos, hours, prices, barbers &amp; review text all swapped for your own on launch
+</div>
+
+<div class="frame">
+
+  <!-- ============ MIRROR HERO — their name, their street, their room ============ -->
+  <header class="hero" id="top">
+    <div class="stage">
+      <div class="ph" id="heroPh">
+        <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+        <img src="assets/b2-01-man-cave-barbershop-conway/hero-den.jpg"
+             alt="Man Cave Barbershop Conway AR — the den: barber chairs under warm light in a brick-walled shop"
+             width="1600" height="1063" fetchpriority="high" decoding="async" />
+        <i class="gr" aria-hidden="true"></i>
+      </div>
+      <div class="heroart">
+        <div class="wordmark" id="wm">MAN <span>CAVE</span></div>
+        <div class="loc">Barbershop · Conway, Arkansas</div>
+        <!-- REAL: verified street address, set like the brass plaque on the door -->
+        <div class="plaque" id="plq">1050 Bob Courtway Dr · Ste 102 · Conway, AR 72032</div>
+      </div>
+    </div>
+
+    <div class="body">
+      <h1>WALK IN A GUY.<br><em>WALK OUT SHARP.</em></h1>
+      <p class="sub">Man Cave keeps Conway's fades tight, necklines clean and beards honest — in a room that actually feels like it's yours. Take a chair below and it's ready when you are.</p>
+      <div class="chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Fades · Tapers · Beard work</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Straight-razor edges</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Already booking on Booksy</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ LEFT RAIL — the booking desk, pinned ============ -->
+  <aside class="rail" aria-label="Book a chair">
+    <div class="hide" aria-hidden="true">
+      <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+      <img src="assets/b2-01-man-cave-barbershop-conway/leather-chair.jpg" alt="" width="900" height="600" loading="lazy" decoding="async" />
+      <i class="gr"></i>
+    </div>
+    <div class="railin">
+      <div class="crest">
+        <div class="mk">Man Cave</div>
+        <div class="sb">Barbershop · <em>Conway, AR</em></div>
+      </div>
+
+      <!-- SAMPLE hours — replace with the shop's real hours -->
+      <div class="today">
+        <div class="lbl">Today's hours <span class="stamp">Sample</span></div>
+        <div class="hrs">9:00 AM – 7:00 PM</div>
+        <span class="open"><i></i>Chairs open now</span>
+      </div>
+
+      <div class="desk">
+        <div id="bformWrap">
+          <span class="kicker">No more "you got time today?"</span>
+          <h2>BOOK THE CHAIR</h2>
+          <p class="lead">Name, number, what you want. The shop has you on the board before you park.</p>
+          <form class="bform" onsubmit="return bookChair(event)">
+            <div class="f"><label for="bName">Name</label><input id="bName" name="name" required placeholder="Your name" autocomplete="name" /></div>
+            <div class="f"><label for="bPhone">Phone</label><input id="bPhone" name="phone" type="tel" required placeholder="(501) 555-0123" autocomplete="tel" /></div>
+            <!-- SAMPLE services — swap for Man Cave's real service list -->
+            <div class="f full"><label for="bSvc">Service <span class="stamp">Sample list</span></label>
+              <select id="bSvc"><option>The Cut</option><option>Skin Fade</option><option>Cut + Beard</option><option>Beard Trim &amp; Line</option><option>The Kid (12 &amp; under)</option><option>Line-Up / Edge</option></select></div>
+            <div class="f full"><label for="bWhen">When</label>
+              <select id="bWhen"><option>Today — first available</option><option>Today — afternoon</option><option>Today — evening</option><option>Tomorrow</option><option>This Saturday</option></select></div>
+            <div class="full">
+              <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Lock it in</button>
+              <p class="bnote">Demo flow — on launch this books your real calendar and texts the customer a confirmation.</p>
+            </div>
+          </form>
+
+          <!-- REAL: Man Cave already takes bookings on Booksy. Live link wired in on launch. -->
+          <p class="booksy">Your chair is <b>already online</b> — this is the front door for it.<br />Booksy booking stays exactly where it is.</p>
+
+          <a class="plate" href="tel:+15014287056">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>
+            (501) 428-7056
+          </a>
+          <div class="platelbl">Or just call the shop</div>
+        </div>
+
+        <div class="bconfirm" id="bConfirm" role="status">
+          <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>CHAIR'S YOURS</h3>
+          <p id="bConfirmTxt">Request received. On launch, this books the real calendar and texts both you and the shop.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ SIGNATURE: the clipper-line seam ============ -->
+  <div class="seam" id="seam" aria-hidden="true">
+    <div class="teeth" id="teeth"></div>
+    <div class="blade" id="blade"></div>
+  </div>
+
+  <!-- ============ THE SHOP ============ -->
+  <main class="flow" id="shop">
+
+    <!-- SAMPLE services & prices — a typical barbershop menu. Replace with Man Cave's real list. -->
+    <section class="sec" id="services">
+      <div class="head">
+        <span class="kicker">The Board</span>
+        <h2>SERVICES &amp; <span>PRICES</span></h2>
+        <span class="cline"><i></i></span>
+      </div>
+      <div class="board rv">
+        <div class="bh">
+          <div class="bebas">MAN CAVE</div>
+          <small>Price list · Conway, AR <span class="stamp">Sample — your real prices on launch</span></small>
+        </div>
+        <div class="row"><span class="nm">The Cut</span><span class="dots"></span><span class="pr">$25</span><span class="ds">Clipper or scissor cut, lined up, styled out the door.</span></div>
+        <div class="row"><span class="nm">Skin Fade</span><span class="dots"></span><span class="pr">$30</span><span class="ds">Blended to the skin — the one the photos are about.</span></div>
+        <div class="row"><span class="nm">Cut + Beard</span><span class="dots"></span><span class="pr">$40</span><span class="ds">Full cut with beard shape-up and straight-razor edges.</span></div>
+        <div class="row"><span class="nm">Beard Trim &amp; Line</span><span class="dots"></span><span class="pr">$20</span><span class="ds">Shaped, edged, hot-towel finish. Looks intentional.</span></div>
+        <div class="row"><span class="nm">The Kid (12 &amp; under)</span><span class="dots"></span><span class="pr">$18</span><span class="ds">Patient chairs for first cuts and picky customers.</span></div>
+        <div class="row"><span class="nm">Line-Up / Edge</span><span class="dots"></span><span class="pr">$15</span><span class="ds">Between-cut maintenance to keep it crisp.</span></div>
+      </div>
+      <p class="note">Every service and price above is a placeholder for this demo — Man Cave's real board drops in on launch.</p>
+    </section>
+
+    <!-- The den — photography. All images are licensed stand-ins, graded to the shop's palette. -->
+    <section class="sec">
+      <div class="head">
+        <span class="kicker">Inside</span>
+        <h2>NOT YOUR AVERAGE <span>WAITING ROOM</span></h2>
+        <span class="cline"><i></i></span>
+      </div>
+      <div class="den-grid">
+        <figure class="den rv" style="--d:0">
+          <div class="ph">
+            <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+            <img src="assets/b2-01-man-cave-barbershop-conway/clippers.jpg"
+                 alt="Man Cave Barbershop Conway AR — clippers cleaning up a neckline"
+                 width="1000" height="667" loading="lazy" decoding="async" />
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption>Clean necklines</figcaption>
+        </figure>
+        <figure class="den rv" style="--d:1">
+          <div class="ph">
+            <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+            <img src="assets/b2-01-man-cave-barbershop-conway/skin-fade.jpg"
+                 alt="Man Cave Barbershop Conway AR — a skin fade blended at the back"
+                 width="1000" height="667" loading="lazy" decoding="async" />
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption>Fades, blended to skin</figcaption>
+        </figure>
+        <figure class="den rv" style="--d:2">
+          <div class="ph">
+            <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+            <img src="assets/b2-01-man-cave-barbershop-conway/straight-razor.jpg"
+                 alt="Man Cave Barbershop Conway AR — a straight-razor shave with the chair reclined"
+                 width="1000" height="665" loading="lazy" decoding="async" />
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption>Straight razor, hot towel</figcaption>
+        </figure>
+        <figure class="den rv" style="--d:3">
+          <div class="ph">
+            <!-- SAMPLE PHOTO — stand-in; replace with owner's real image -->
+            <img src="assets/b2-01-man-cave-barbershop-conway/beard-work.jpg"
+                 alt="Man Cave Barbershop Conway AR — beard trim and razor edge-up"
+                 width="1000" height="667" loading="lazy" decoding="async" />
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption>Beards, kept honest</figcaption>
+        </figure>
+      </div>
+      <p class="note">Sample photography — swapped for Man Cave's real photos on launch. Same grade, same room, your chairs.</p>
+    </section>
+
+    <!-- SAMPLE barbers — placeholder names/bios. Replace with the real crew + their photos. -->
+    <section class="sec">
+      <div class="head">
+        <span class="kicker">The Chairs</span>
+        <h2>PICK YOUR <span>BARBER</span></h2>
+        <span class="cline"><i></i></span>
+      </div>
+      <div class="crew">
+        <article class="barber rv" style="--d:0">
+          <div class="no">01</div>
+          <h3>Chair One</h3>
+          <div class="role">Master Barber <span class="stamp">Sample</span></div>
+          <p>The name behind the shop. Fades, tapers and the razor work the regulars come back for.</p>
+        </article>
+        <article class="barber rv" style="--d:1">
+          <div class="no">02</div>
+          <h3>Chair Two</h3>
+          <div class="role">Barber <span class="stamp">Sample</span></div>
+          <p>Precision skin fades and designs. The chair the high-schoolers fight over.</p>
+        </article>
+        <article class="barber rv" style="--d:2">
+          <div class="no">03</div>
+          <h3>Chair Three</h3>
+          <div class="role">Barber <span class="stamp">Sample</span></div>
+          <p>Classic cuts and beard work. Ask for the hot towel — you've earned it.</p>
+        </article>
+      </div>
+      <p class="note">Placeholder crew — your barbers' real names, specialties and photos go here on launch.</p>
+    </section>
+
+    <!-- REVIEWS: the 4.7 rating comes from public aggregator listings (Yelp / Birdeye), NOT confirmed live.
+         Review TEXT below is entirely placeholder — swap for real Google reviews verbatim on launch. -->
+    <section class="sec">
+      <div class="head">
+        <span class="kicker">Word Around Conway</span>
+        <h2>GOOD VIBES, <span>REPEAT REGULARS</span></h2>
+        <span class="cline"><i></i></span>
+        <div class="gbadge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.3H12v4.5h6.5c-.1 1-.8 2.6-2.4 3.6l3.7 2.8c2.3-2 3.7-5 3.7-8.6z"/><path fill="#34A853" d="M12 24c3.2 0 6-1 7.9-2.9l-3.7-2.8c-1 .7-2.4 1.2-4.2 1.2-3.2 0-6-2.1-7-5.1L1.2 17.3C3.2 21.2 7.3 24 12 24z"/><path fill="#FBBC05" d="M5 14.4c-.2-.8-.4-1.6-.4-2.4s.2-1.6.4-2.4L1.2 6.7C.4 8.3 0 10.1 0 12s.4 3.7 1.2 5.3L5 14.4z"/><path fill="#EA4335" d="M12 4.6c2.3 0 3.8 1 4.7 1.8l3.3-3.2C18 1.2 15.2 0 12 0 7.3 0 3.2 2.8 1.2 6.7L5 9.6c1-3 3.8-5 7-5z"/></svg>
+          <b>4.7★</b>
+          <div class="stk"><span>Seen across public listings</span><small>Not yet confirmed live — we check your Google profile before this goes up</small></div>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <article class="rev rv" style="--d:0">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>Good vibes, old-school music, clean shop. Best fade I've had in Conway and it still looked right three weeks later.</p>
+          <div class="who"><span class="avi">SA</span><div><b>Sample review</b><small>Your real Google review goes here</small></div></div>
+        </article>
+        <article class="rev rv" style="--d:1">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>Very clean, very professional, and they actually take their time. Booked online, walked in, zero wait. My shop now.</p>
+          <div class="who"><span class="avi">SA</span><div><b>Sample review</b><small>Your real Google review goes here</small></div></div>
+        </article>
+        <article class="rev rv" style="--d:2">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>Finally a barbershop that feels like a place you want to hang out. Beard trim was dialed. Bringing my son next time.</p>
+          <div class="who"><span class="avi">SA</span><div><b>Sample review</b><small>Your real Google review goes here</small></div></div>
+        </article>
+      </div>
+      <p class="note">Written by nobody — these three cards are placeholders. On launch they carry your real Google reviews, word for word, with the reviewer's real name.</p>
+    </section>
+
+    <!-- FIND: address + phone are REAL and verified. Hours are SAMPLE. -->
+    <section class="sec" id="find">
+      <div class="head">
+        <span class="kicker">The Shop</span>
+        <h2>FIND THE <span>CAVE</span></h2>
+        <span class="cline"><i></i></span>
+      </div>
+      <div class="findgrid">
+        <div class="findcard rv">
+          <h3>Man Cave Barbershop</h3>
+          <address>1050 Bob Courtway Dr, Ste 102<br />Conway, AR 72032</address>
+          <div class="hoursbox">
+            <div class="lbl">Hours <span class="stamp">Sample — confirm</span></div>
+            <div><span>Mon – Fri</span><span>9:00 AM – 7:00 PM</span></div>
+            <div><span>Saturday</span><span>8:00 AM – 5:00 PM</span></div>
+            <div><span>Sunday</span><span>Closed</span></div>
+          </div>
+          <div class="cta-row">
+            <a class="telbtn" href="tel:+15014287056"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 428-7056</a>
+            <a class="dirbtn" href="https://maps.google.com/?q=Man+Cave+Barbershop+1050+Bob+Courtway+Dr+Conway+AR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+          </div>
+        </div>
+        <div class="mapbox rv" style="--d:1" aria-hidden="true">
+          <div>
+            <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <b>Bob Courtway Dr · Conway</b>
+            <small>Live Google map embeds here on launch</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRESH SIGNAL — the honest close ============ -->
+    <section id="fresh-signal" aria-label="A note from Nate Witt, who built this page">
+      <div class="fs">
+        <span class="kicker">A note from the person who built this</span>
+        <h2>THIS PAGE DOESN'T EXIST YET.<br />IT'S ALREADY YOURS.</h2>
+        <div class="rule"></div>
+        <div class="letter">
+          <p>I'm Nate. I build websites for local shops here in Central Arkansas.</p>
+          <p>I made this mockup for Man Cave before we ever spoke, because I think a room you built like that one deserves a better front door than a Facebook page. You already do the hard part — the chairs, the fades, the regulars. This is just the part that sends people to them.</p>
+          <p>Everything on this page marked <b>sample</b> — the hours, the prices, the crew, all the photos — gets replaced with your real ones. Your Booksy booking stays exactly where it is; this just points people at it.</p>
+          <p>If you want it, it's live in two or three days. If you don't, keep the link — it's yours either way.</p>
+          <div class="sign">— Nate Witt, Fresh Signal</div>
+        </div>
+
+        <div class="offer">
+          <div class="li">
+            <div class="amt">$500<small>One-time</small></div>
+            <div class="txt">The whole setup: <b>this site made real</b>, your <b>Google Business Profile fixed</b>, and a simple <b>AI assistant</b> that answers the common questions and helps people book or reach you.</div>
+          </div>
+          <div class="li">
+            <div class="amt">$99<small>Per month</small></div>
+            <div class="txt">Starting the following month — basic upkeep of the servers and services that keep it live: <b>hosting, updates, your Google page</b>. Cancel anytime.</div>
+          </div>
+          <div class="li">
+            <div class="amt">2–3<small>Days to live</small></div>
+            <div class="txt">Because it's already about <b>80% built</b> — you're looking at it.</div>
+          </div>
+          <p class="why">An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month. AI lets me build in days what used to take a team weeks — I pass that on, because I'd rather price it so it's easy to say yes and earn a long relationship.</p>
+        </div>
+
+        <div class="fsrow">
+          <a class="fsbtn" href="sms:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.9 9.9 0 0 1-4.2-.9L3 20.5l1.6-4.6A8.4 8.4 0 0 1 3.6 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8.4 8.4z"/></svg>Text Nate — (501) 757-3468</a>
+          <a class="fscall" href="tel:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Or call</a>
+          <span class="fsghost">No pressure. The demo stays yours either way.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <span class="bebas">MAN CAVE</span>
+  Barbershop · 1050 Bob Courtway Dr, Ste 102 · Conway, AR 72032 · <a href="tel:+15014287056">(501) 428-7056</a><br />
+  Walk-ins welcome when a chair's open · Book online any time
+  <span class="fine">Demo mockup by Nate Witt / Fresh Signal · <a href="sms:+15017573468">(501) 757-3468</a> · Photography shown is licensed stand-in imagery, replaced with Man Cave's own photos on launch.</span>
+  <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    Man Cave Barbershop</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. All photography is licensed sample stock imagery (Unsplash /
+    Pexels) depicting models &mdash; not the business's own premises, staff, work, or customers &mdash;
+    and is replaced with the owner's real photos if this site is built. Any hours, prices, staff names,
+    ratings and reviews marked SAMPLE are illustrative placeholders, not representations of fact.
+    This page is set to <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15014287056"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call the shop</a>
+  <a class="red" href="#bName"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book the chair</a>
+</div>
+
+<script>
+  (function(){
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* scroll reveals — verb: SETTLE */
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv, .cline').forEach(function(el){ io.observe(el); });
+
+    /* SIGNATURE — the clipper blade rides the steel seam in lockstep with page scroll */
+    var seam = document.getElementById('seam'),
+        blade = document.getElementById('blade'),
+        teeth = document.getElementById('teeth');
+    function ride(){
+      if(!seam.offsetParent) return;                    /* seam hidden on mobile */
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      blade.style.transform = 'translateY(' + (p * (seam.clientHeight - 34)) + 'px)';
+      teeth.style.backgroundPosition = '0 ' + (window.scrollY * 0.45) + 'px';
+    }
+    if(!reduce){
+      var tick = false;
+      addEventListener('scroll', function(){
+        if(!tick){ tick = true; requestAnimationFrame(function(){ ride(); tick = false; }); }
+      }, {passive:true});
+      addEventListener('resize', ride);
+      ride();
+    }
+
+    /* the one loud motion: the den resolves, the wordmark rises, the address arrives */
+    if(!reduce){
+      var ph = document.getElementById('heroPh'),
+          wm = document.getElementById('wm'),
+          plq = document.getElementById('plq');
+      ph.animate([{filter:'blur(14px) brightness(.35)', transform:'scale(1.07)'},
+                  {filter:'blur(0) brightness(1)', transform:'scale(1)'}],
+                 {duration:1400, easing:'cubic-bezier(.22,1,.36,1)', fill:'both'});
+      wm.animate([{opacity:0, transform:'translateY(26px)'},{opacity:1, transform:'none'}],
+                 {duration:900, delay:350, easing:'cubic-bezier(.22,1,.36,1)', fill:'both'});
+      plq.animate([{opacity:0, transform:'translateY(14px)'},{opacity:1, transform:'none'}],
+                  {duration:700, delay:900, easing:'cubic-bezier(.22,1,.36,1)', fill:'both'});
+    }
+  })();
+
+  function bookChair(ev){
+    ev.preventDefault();
+    var n = document.getElementById('bName').value.trim() || 'Friend';
+    var s = document.getElementById('bSvc').value;
+    var w = document.getElementById('bWhen').value.toLowerCase();
+    document.getElementById('bConfirmTxt').textContent =
+      n + ' — ' + s + ', ' + w + '. On launch this books the real calendar and texts both you and the shop.';
+    document.getElementById('bformWrap').style.display = 'none';
+    document.getElementById('bConfirm').classList.add('show');
+    return false;
+  }
+</script>
+</body>
+</html>

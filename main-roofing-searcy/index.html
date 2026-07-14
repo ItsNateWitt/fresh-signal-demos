@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Main Roofing Co. — Storm Damage to New Roof | Searcy, AR</title>
+<meta name="description" content="Family-owned Searcy, AR roofers. GAF Master Elite & HAAG-certified storm damage repair, insurance-claim help, and full roof replacement across Searcy and the greater Little Rock area. Get a free quote." />
+<!--
+  DEMO MOCKUP — Main Roofing Co., Searcy AR
+  Archetype: C · Split Diptych (pinned free-quote rail + scrolling storm-damage→new-roof
+  story). Signature = animated ridge-line divider between the two panels.
+  REAL (verified): business name; Searcy, AR; 221 W Arch Ave, Searcy, AR 72143;
+  certifications (GAF Master Elite, HAAG, CertainTeed ShingleMaster, Carlisle, Versico,
+  Duro-Last, Malarkey); services (inspection, repair, replacement, storm/insurance,
+  commercial + residential); serves Searcy + greater Little Rock; family/locally owned;
+  mission statement ("add value... relationships based on trust").
+  SAMPLE-TO-REPLACE (marked inline): phone (501) 305-0227 is directory-sourced — CONFIRM;
+  exact hours; review text & star/count numbers; project photos (CSS/SVG stand-ins).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RoofingContractor",
+  "name":"Main Roofing Co.",
+  "description":"Family-owned roofing contractor in Searcy, AR. GAF Master Elite and HAAG-certified storm damage repair, insurance-claim assistance, and full roof replacement for residential and commercial.",
+  "telephone":"+15013050227",
+  "areaServed":["Searcy AR","Little Rock AR","Central Arkansas"],
+  "address":{"@type":"PostalAddress","streetAddress":"221 W Arch Ave","addressLocality":"Searcy","addressRegion":"AR","postalCode":"72143","addressCountry":"US"},
+  "url":"https://mainroofingco.com/",
+  "priceRange":"$$"
+}
+</script>
+<style>
+  :root{
+    --storm:#23282A;--storm-2:#2E3437;--slate:#4A5459;
+    --pine:#1F3D2E;--pine-2:#2C5741;--pine-lite:#5C8A6E;
+    --bronze:#C08243;--bronze-dk:#9F6730;--bronze-lite:#E2B279;
+    --cream:#F2ECE0;--cream-2:#FAF6EE;--ink:#22201B;--mut:#6C6355;
+    --line:rgba(34,32,27,.13);--line-inv:rgba(242,236,224,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .fr{font-family:'Fraunces',Georgia,serif}
+  .kicker{font-family:'Nunito Sans';font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-dk)}
+  .mock{position:relative;z-index:5;background:var(--storm);color:var(--bronze-lite);text-align:center;font-size:12px;font-weight:700;letter-spacing:.02em;padding:8px 14px}
+
+  /* ============ DIPTYCH FRAME ============ */
+  .frame{position:relative;display:grid;grid-template-columns:1fr}
+  @media(min-width:980px){.frame{grid-template-columns:378px 22px 1fr}}
+
+  /* ---- SIGNATURE: animated ridge-line divider ---- */
+  .ridge{display:none}
+  @media(min-width:980px){
+    .ridge{display:block;position:relative;background:var(--pine);border-left:1px solid rgba(0,0,0,.2);border-right:1px solid rgba(0,0,0,.2)}
+    .ridge svg{position:sticky;top:0;height:100vh;width:22px;display:block}
+    .ridge .rl{stroke:var(--bronze-lite);stroke-width:2.4;fill:none;stroke-dasharray:10 10;animation:ridgeflow 3.4s linear infinite}
+  }
+  @keyframes ridgeflow{to{stroke-dashoffset:-40}}
+
+  /* horizontal roofline divider (mobile + section breaks) */
+  .roofdiv{height:16px;width:100%;background:
+    linear-gradient(135deg,transparent 49%,var(--bronze) 49% 51%,transparent 51%) 0 0/16px 16px repeat-x,
+    linear-gradient(45deg,transparent 49%,var(--bronze) 49% 51%,transparent 51%) 8px 0/16px 16px repeat-x;
+    opacity:.55}
+
+  /* ============ LEFT: pinned free-quote rail ============ */
+  .rail{background:var(--pine);color:var(--cream-2);position:relative}
+  .rail::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background:radial-gradient(120% 60% at 100% 0,rgba(192,130,67,.22),transparent 60%)}
+  @media(min-width:980px){.rail-stick{position:sticky;top:0;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between}}
+  .rail-inner{position:relative;z-index:2;padding:30px 28px 34px}
+  .crest{text-align:center;padding-bottom:20px;border-bottom:1px solid var(--line-inv)}
+  .crest .mk{width:56px;height:56px;margin:0 auto 12px;border:2px solid var(--bronze-lite);border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.15)}
+  .crest .mk svg{width:32px;height:32px;color:var(--bronze-lite)}
+  .crest h1{font-family:'Fraunces';font-weight:600;font-size:clamp(28px,3vw,34px);line-height:1;color:var(--cream-2)}
+  .crest h1 em{font-style:italic;color:var(--bronze-lite)}
+  .crest .sub{font-size:11.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,236,224,.62);margin-top:9px}
+  .rail .pitch{padding:20px 0;border-bottom:1px solid var(--line-inv);text-align:center}
+  .rail .pitch p{font-size:15px;color:rgba(242,236,224,.85)}
+  .rail .pitch b{color:var(--bronze-lite)}
+  /* quote card */
+  .qcard{padding:20px 0}
+  .qcard .lbl{font-family:'Fraunces';font-weight:600;font-size:19px;text-align:center;margin-bottom:4px}
+  .qcard .sml{text-align:center;font-size:12px;color:rgba(242,236,224,.6);margin-bottom:16px}
+  .qform{display:grid;gap:11px}
+  .qf label{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,236,224,.6);margin-bottom:6px}
+  .qf input,.qf select{width:100%;background:rgba(0,0,0,.18);border:1px solid var(--line-inv);color:var(--cream-2);padding:12px 13px;font-family:'Nunito Sans';font-size:15px;font-weight:600;min-height:48px;border-radius:3px}
+  .qf select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--bronze-lite) 50%),linear-gradient(135deg,var(--bronze-lite) 50%,transparent 50%);background-position:calc(100% - 18px) 55%,calc(100% - 12px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+  .qf input:focus,.qf select:focus{outline:none;border-color:var(--bronze-lite)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Nunito Sans';font-weight:800;font-size:14.5px;letter-spacing:.03em;padding:15px 22px;min-height:52px;border:2px solid transparent;cursor:pointer;border-radius:4px;transition:transform .14s,background .2s,color .2s,border-color .2s}
+  .btn svg{width:17px;height:17px;flex:none}
+  .btn:active{transform:translateY(1px)}
+  .btn-bronze{background:var(--bronze);color:#241a10}
+  .btn-bronze:hover{background:var(--bronze-lite)}
+  .btn-out{background:transparent;color:var(--cream-2);border-color:rgba(242,236,224,.4)}
+  .btn-out:hover{border-color:var(--bronze-lite);color:var(--bronze-lite)}
+  .qform .btn-bronze{width:100%;margin-top:4px}
+  .qnote{font-size:11px;color:rgba(242,236,224,.5);text-align:center;margin-top:6px}
+  .qconfirm{display:none;text-align:center;padding:14px 4px}
+  .qconfirm.show{display:block;animation:pop .5s cubic-bezier(.2,1.3,.3,1)}
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .qconfirm .ck{width:56px;height:56px;border-radius:50%;background:rgba(92,138,110,.25);display:grid;place-items:center;margin:0 auto 12px}
+  .qconfirm .ck svg{width:28px;height:28px;color:var(--pine-lite)}
+  .qconfirm h3{font-family:'Fraunces';font-weight:600;font-size:20px}
+  .qconfirm p{font-size:13px;color:rgba(242,236,224,.75);margin-top:6px}
+  .railcall{padding:18px 0 0;border-top:1px solid var(--line-inv);margin-top:4px;text-align:center}
+  .railcall a{display:inline-flex;align-items:center;gap:9px;font-family:'Fraunces';font-weight:600;font-size:20px;color:var(--bronze-lite)}
+  .railcall a svg{width:18px;height:18px}
+  .railcall small{display:block;font-size:11px;color:rgba(242,236,224,.55);margin-top:4px;letter-spacing:.02em}
+
+  /* ============ RIGHT: scrolling story ============ */
+  .flow{min-width:0;background:var(--cream)}
+  .story{position:relative;padding:clamp(40px,6vw,72px) clamp(22px,5vw,64px)}
+  .story:not(:last-child){border-bottom:1px solid var(--line)}
+
+  /* hero chapter */
+  .ch-hero{background:var(--storm);color:var(--cream-2);position:relative;overflow:hidden}
+  .ch-hero::before{content:"";position:absolute;inset:0;opacity:.9;pointer-events:none;
+    background:linear-gradient(180deg,#191d1f 0%,#2b3134 55%,#20262a 100%)}
+  .ch-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;pointer-events:none;
+    background:repeating-linear-gradient(-22deg,rgba(0,0,0,.35) 0 18px,rgba(0,0,0,.15) 18px 36px)}
+  .ch-hero .in{position:relative;z-index:2}
+  .ch-hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze-lite);border:1px solid var(--line-inv);padding:7px 13px;border-radius:40px}
+  .ch-hero h2{font-family:'Fraunces';font-weight:600;font-size:clamp(34px,6vw,60px);line-height:1.02;margin-top:20px}
+  .ch-hero h2 em{font-style:italic;color:var(--bronze-lite)}
+  .ch-hero p{font-size:clamp(15.5px,2vw,18px);color:rgba(242,236,224,.82);max-width:46ch;margin-top:16px}
+  .ch-hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  /* chapter number motif */
+  .chap{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+  .chap .n{font-family:'Fraunces';font-weight:700;font-size:clamp(34px,5vw,54px);color:var(--bronze);line-height:.8}
+  .chap .t{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+  h3.head{font-family:'Fraunces';font-weight:600;font-size:clamp(24px,3.4vw,36px);line-height:1.08}
+  h3.head em{font-style:italic;color:var(--pine-2)}
+  .story p.body{font-size:16px;color:#463f33;margin-top:14px;max-width:56ch}
+
+  /* scene panel (CSS art, not photo) */
+  .scene{position:relative;height:clamp(190px,26vw,280px);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:24px}
+  .scene .stamp{position:absolute;left:14px;top:14px;z-index:3;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(35,40,42,.72);color:var(--cream-2);padding:5px 10px;border-radius:3px}
+  .scene .cap{position:absolute;left:14px;bottom:12px;z-index:3;font-size:11px;color:var(--cream-2);opacity:.82}
+  /* scene A — storm damage */
+  .scene.damage{background:linear-gradient(180deg,#3a3f41,#4a4033)}
+  .scene.damage .roof{position:absolute;left:-4%;right:-4%;bottom:-1px;height:60%;background:repeating-linear-gradient(-20deg,#5c4a33 0 15px,#4a3a27 15px 30px);clip-path:polygon(0 40%,18% 22%,34% 46%,50% 20%,66% 44%,82% 24%,100% 46%,100% 100%,0 100%)}
+  .scene.damage .gap{position:absolute;bottom:16%;left:44%;width:46px;height:38px;background:#20262a;transform:rotate(-14deg);border-radius:2px}
+  .scene.damage .rain{position:absolute;inset:0;opacity:.4;background:repeating-linear-gradient(74deg,transparent 0 7px,rgba(210,220,225,.5) 7px 8px)}
+  /* scene B — inspection */
+  .scene.inspect{background:linear-gradient(180deg,#516066,#6d7a6e)}
+  .scene.inspect .roof{position:absolute;left:-4%;right:-4%;bottom:-1px;height:56%;background:repeating-linear-gradient(-20deg,#3c5a45 0 15px,#2f4a37 15px 30px);clip-path:polygon(0 30%,50% 0,100% 30%,100% 100%,0 100%)}
+  .scene.inspect .grid{position:absolute;bottom:6%;left:50%;transform:translateX(-50%) rotate(0deg);width:60%;height:40%;border:2px dashed rgba(226,178,121,.85);border-radius:4px}
+  .scene.inspect .pin{position:absolute;bottom:30%;left:38%;width:14px;height:14px;border-radius:50%;background:var(--bronze-lite);box-shadow:0 0 0 6px rgba(226,178,121,.25)}
+  /* scene C — new roof */
+  .scene.newroof{background:linear-gradient(180deg,#8fb7d6,#c9d9c7)}
+  .scene.newroof .sun{position:absolute;top:14%;right:12%;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle,#ffe6a8,rgba(255,230,168,0) 70%)}
+  .scene.newroof .roof{position:absolute;left:-4%;right:-4%;bottom:-1px;height:60%;background:repeating-linear-gradient(-20deg,#334a3a 0 14px,#3f5a47 14px 28px);clip-path:polygon(0 42%,50% 6%,100% 42%,100% 100%,0 100%)}
+  .scene.newroof .ridge2{position:absolute;left:8%;right:8%;top:34%;height:3px;background:var(--bronze);transform:skewY(-3deg)}
+
+  /* certifications strip — REAL */
+  .certs{background:var(--pine);color:var(--cream-2)}
+  .certs .in{position:relative;z-index:2}
+  .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+  @media(min-width:620px){.cert-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:980px){.cert-grid{grid-template-columns:repeat(4,1fr)}}
+  .cert{border:1px solid var(--line-inv);border-radius:5px;padding:16px 14px;background:rgba(0,0,0,.14)}
+  .cert .b{font-family:'Fraunces';font-weight:600;font-size:15.5px;color:var(--bronze-lite);line-height:1.1}
+  .cert .s{font-size:11.5px;color:rgba(242,236,224,.62);margin-top:5px}
+
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
+  .rev{background:var(--cream-2);border:1px solid var(--line);border-radius:6px;padding:22px 20px;display:flex;flex-direction:column}
+  .rev .stars{display:flex;gap:2px;margin-bottom:11px}
+  .rev .stars svg{width:16px;height:16px;color:var(--bronze)}
+  .rev p{font-size:15px;flex:1}
+  .rev .who{display:flex;align-items:center;gap:11px;margin-top:15px;padding-top:13px;border-top:1px dashed var(--line)}
+  .rev .avi{width:38px;height:38px;border-radius:50%;background:var(--pine-2);color:#fff;display:grid;place-items:center;font-family:'Fraunces';font-weight:600;font-size:15px;flex:none}
+  .rev .avi.a2{background:var(--bronze);color:#241a10}
+  .rev .who b{font-size:14px;display:block;font-family:'Fraunces';font-weight:600}
+  .rev .who small{font-size:11px;color:var(--mut)}
+  .rating-line{display:inline-flex;align-items:center;gap:12px;background:var(--cream-2);border:1px solid var(--line);border-radius:40px;padding:9px 18px;margin-top:14px}
+  .rating-line b{font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--pine-2)}
+  .rating-line .st{display:flex;gap:1px}.rating-line .st svg{width:14px;height:14px;color:var(--bronze)}
+  .rating-line small{font-size:11px;color:var(--mut)}
+
+  /* coverage */
+  .cov .map{position:relative;height:clamp(200px,26vw,260px);border:1px solid var(--line);border-radius:6px;margin-top:22px;background:linear-gradient(140deg,#d9e0d5,#c5d0c9);overflow:hidden}
+  .cov .map .ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:2px dashed rgba(31,61,46,.4);border-radius:50%}
+  .cov .map .r1{width:60%;padding-bottom:60%}.cov .map .r2{width:38%;padding-bottom:38%}
+  .cov .map .pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);width:34px;height:34px;color:var(--bronze-dk)}
+  .cov .map b{position:absolute;top:50%;left:50%;transform:translate(-50%,14px);font-family:'Fraunces';font-weight:600;font-size:14px;color:var(--pine-2)}
+  .cov .towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .cov .towns span{font-size:13px;font-weight:700;background:var(--cream-2);border:1px solid var(--line);border-radius:40px;padding:7px 14px}
+
+  footer{background:var(--storm);color:rgba(242,236,224,.7);padding:36px clamp(22px,5vw,64px)}
+  footer .fb b{font-family:'Fraunces';font-weight:600;font-size:21px;color:var(--cream-2);display:block}
+  footer .fb small{display:block;font-size:12px;color:var(--bronze-lite);margin-top:5px}
+  footer .fnav{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:13px;font-weight:700}
+  footer a{color:var(--bronze-lite)}
+
+  /* mobile call bar */
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--pine);border-top:2px solid var(--bronze)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-family:'Nunito Sans';font-weight:800;font-size:14px;color:var(--cream-2)}
+  .callbar a.bronze{background:var(--bronze);color:#241a10}
+  .callbar svg{width:16px;height:16px}
+  @media(min-width:980px){.callbar{display:none}}
+  @media(max-width:979px){body{padding-bottom:54px}}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:3px solid var(--bronze);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="mock">DEMO MOCKUP — built for Main Roofing Co. by Nate Witt · phone shown is directory-sourced (confirm) · sample hours, reviews &amp; photos swapped for the company's own on launch</div>
+
+<div class="frame">
+  <!-- LEFT: pinned free-quote rail -->
+  <aside class="rail">
+    <div class="rail-stick">
+      <div class="rail-inner">
+        <div class="crest">
+          <span class="mk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8"/><path d="M5 10.5V20h14v-9.5"/><path d="M10 20v-6h4v6"/></svg></span>
+          <h1 class="fr">Main<br><em>Roofing</em></h1>
+          <span class="sub">Searcy, Arkansas · Co.</span>
+        </div>
+        <div class="pitch">
+          <p>Storm come through? <b>We'll be up there before your insurer is.</b> Free inspection, honest report, roof done right.</p>
+        </div>
+        <div class="qcard" id="quote">
+          <div id="qWrap">
+            <div class="lbl fr">Free roof quote</div>
+            <div class="sml">Takes 20 seconds. We reply same day.</div>
+            <form class="qform" onsubmit="return getQuote(event)">
+              <div class="qf"><label for="qName">Name</label><input id="qName" required placeholder="Your name"></div>
+              <div class="qf"><label for="qPhone">Phone</label><input id="qPhone" type="tel" required placeholder="(501) 555-0123"></div>
+              <div class="qf"><label for="qNeed">What's going on</label><select id="qNeed"><option>Storm / hail damage</option><option>Active leak</option><option>Full roof replacement</option><option>Not sure — need inspection</option><option>Commercial roof</option></select></div>
+              <button class="btn btn-bronze" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Get my free quote</button>
+              <p class="qnote">Demo flow — on launch this reaches the office &amp; texts you a confirmation.</p>
+            </form>
+          </div>
+          <div class="qconfirm" id="qConfirm" role="status">
+            <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3 class="fr">We've got it</h3>
+            <p id="qConfirmTxt">Request received. On launch this reaches Main Roofing the same day to schedule your free inspection.</p>
+          </div>
+        </div>
+        <!-- Phone below is directory-sourced — CONFIRM before launch -->
+        <div class="railcall">
+          <a href="tel:+15013050227"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 305-0227</a>
+          <small>Call the office · Searcy, AR (confirm #)</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SIGNATURE: animated ridge-line divider -->
+  <div class="ridge" aria-hidden="true">
+    <svg viewBox="0 0 22 800" preserveAspectRatio="none">
+      <polyline class="rl" points="11,0 3,40 19,80 3,120 19,160 3,200 19,240 3,280 19,320 3,360 19,400 3,440 19,480 3,520 19,560 3,600 19,640 3,680 19,720 3,760 11,800"/>
+    </svg>
+  </div>
+
+  <!-- RIGHT: the story -->
+  <main class="flow">
+
+    <!-- HERO -->
+    <section class="story ch-hero" id="top">
+      <div class="in">
+        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px" aria-hidden="true"><path d="M16 13a5 5 0 0 0-.6-9.96A6 6 0 0 0 4 8a4 4 0 0 0 .5 8"/><path d="M8 19l-1 3M12 19l-1 3M16 19l-1 3"/></svg> Serving Searcy &amp; the greater Little Rock area</span>
+        <h2 class="fr">The storm rolled through Searcy.<br><em>Then we did.</em></h2>
+        <p>Wind, hail, a missing shingle you can't quite see from the ground. Main Roofing Co. is the family-owned, GAF Master Elite crew that inspects it, documents it for your insurer, and puts a roof back over your family that outlasts the next storm.</p>
+        <div class="cta">
+          <a class="btn btn-bronze" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Get a free quote</a>
+          <a class="btn btn-out" href="tel:+15013050227"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- CHAPTER 1 — the damage -->
+    <section class="story">
+      <div class="reveal">
+        <div class="chap"><span class="n fr">01</span><span class="t">The damage</span></div>
+        <h3 class="head fr">What the storm <em>left behind</em></h3>
+        <p class="body">After the wind and hail, most roofs don't fail all at once — they leak quietly. Lifted shingles, bruised granules, a nail pop you'd never spot from the driveway. Left alone, it becomes a ceiling stain by spring. We climb up and find it while it's still cheap to fix.</p>
+        <!-- SAMPLE scene (CSS art) — replace with a real Main Roofing storm-damage photo -->
+        <div class="scene damage">
+          <span class="stamp">Photo → SAMPLE</span>
+          <span class="rain" aria-hidden="true"></span>
+          <span class="roof" aria-hidden="true"></span>
+          <span class="gap" aria-hidden="true"></span>
+          <span class="cap">Swap for a real storm-damage inspection photo</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- CHAPTER 2 — the inspection / claim -->
+    <section class="story">
+      <div class="reveal">
+        <div class="chap"><span class="n fr">02</span><span class="t">The inspection &amp; claim</span></div>
+        <h3 class="head fr">Documented for your <em>insurance</em></h3>
+        <p class="body">Our inspectors are HAAG certified — the standard adjusters themselves are trained on. We photograph and measure every slope, write it up, and walk your insurance claim with you so nothing legitimate gets denied. You get a straight answer: repair, or replace, and why.</p>
+        <!-- SAMPLE scene (CSS art) — replace with a real inspection/measurement photo -->
+        <div class="scene inspect">
+          <span class="stamp">Photo → SAMPLE</span>
+          <span class="roof" aria-hidden="true"></span>
+          <span class="grid" aria-hidden="true"></span>
+          <span class="pin" aria-hidden="true"></span>
+          <span class="cap">Swap for a real HAAG inspection / drone-measure photo</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- CHAPTER 3 — the new roof -->
+    <section class="story">
+      <div class="reveal">
+        <div class="chap"><span class="n fr">03</span><span class="t">The new roof</span></div>
+        <h3 class="head fr">A roof that <em>outlasts the next one</em></h3>
+        <p class="body">As a GAF Master Elite contractor — a status fewer than a small share of roofers earn — we install manufacturer-backed systems, not just shingles. Clean tear-off, protected landscaping, and a crew that treats your home like the roof over their own family. Then we haul it all off and leave the yard cleaner than we found it.</p>
+        <!-- SAMPLE scene (CSS art) — replace with a real finished-roof photo -->
+        <div class="scene newroof">
+          <span class="stamp" style="background:rgba(35,40,42,.55)">Photo → SAMPLE</span>
+          <span class="sun" aria-hidden="true"></span>
+          <span class="roof" aria-hidden="true"></span>
+          <span class="ridge2" aria-hidden="true"></span>
+          <span class="cap" style="color:#2b3a2f">Swap for a real finished-roof project photo</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- CERTIFICATIONS — REAL -->
+    <section class="story certs">
+      <div class="in">
+        <span class="kicker" style="color:var(--bronze-lite)">Credentials, not claims</span>
+        <h3 class="head fr" style="color:var(--cream-2);margin-top:10px">Certified by the names on <em style="color:var(--bronze-lite)">the shingles</em></h3>
+        <div class="cert-grid">
+          <div class="cert reveal"><div class="b">GAF Master Elite</div><div class="s">Top-tier GAF contractor status</div></div>
+          <div class="cert reveal"><div class="b">HAAG Certified</div><div class="s">Residential &amp; commercial inspectors</div></div>
+          <div class="cert reveal"><div class="b">CertainTeed ShingleMaster</div><div class="s">Select ShingleMaster credential</div></div>
+          <div class="cert reveal"><div class="b">Carlisle · Versico</div><div class="s">Commercial membrane systems</div></div>
+          <div class="cert reveal"><div class="b">Duro-Last</div><div class="s">Certified commercial roofing</div></div>
+          <div class="cert reveal"><div class="b">Malarkey</div><div class="s">Authorized installer</div></div>
+          <div class="cert reveal"><div class="b">Residential &amp; Commercial</div><div class="s">Both handled in-house</div></div>
+          <div class="cert reveal"><div class="b">Insurance Claim Help</div><div class="s">Storm damage, start to finish</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- SAMPLE REVIEWS: placeholder text written for this demo. Public listings show
+         strong ratings & "professional/efficient/transparent" praise, but names,
+         ratings & counts here are NOT verbatim. Swap for real reviews + live numbers. -->
+    <section class="story" id="reviews">
+      <span class="kicker">Word around Searcy</span>
+      <h3 class="head fr" style="margin-top:10px">Neighbors who'd <em>send us up the road</em></h3>
+      <div class="rating-line" aria-label="Sample rating">
+        <b>4.9</b>
+        <div class="st"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+        <small>Sample — pull live rating &amp; count on launch</small>
+      </div>
+      <div class="rev-grid">
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>Professional, efficient, and completely transparent through the whole insurance claim. They found damage the first company missed and handled it like it was their own house.</p>
+          <div class="who"><span class="avi">BC</span><div><b>Sample · B. Callahan</b><small>Searcy · placeholder</small></div></div>
+        </article>
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+          <p>New roof after the spring hail and you'd never know a crew was here — landscaping untouched, driveway swept, done when they said. Would trust them with a commercial building too.</p>
+          <div class="who"><span class="avi a2">JP</span><div><b>Sample · J. Pruett</b><small>Greater Little Rock · placeholder</small></div></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="roofdiv" aria-hidden="true"></div>
+
+    <!-- COVERAGE -->
+    <section class="story cov">
+      <span class="kicker">Where we work</span>
+      <h3 class="head fr" style="margin-top:10px">Searcy &amp; the greater <em>Little Rock area</em></h3>
+      <p class="body">Rooted at 221 W Arch Ave in downtown Searcy, we cover White County and out into the greater Little Rock metro — residential and commercial alike.</p>
+      <div class="map reveal" aria-hidden="true">
+        <span class="ring r1"></span><span class="ring r2"></span>
+        <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <b>Searcy, AR</b>
+      </div>
+      <div class="towns">
+        <span>Searcy</span><span>Beebe</span><span>Bald Knob</span><span>Judsonia</span><span>Cabot</span><span>Jacksonville</span><span>Greater Little Rock</span><span>White County</span>
+      </div>
+    </section>
+
+    <footer id="quote-mobile">
+      <div class="fb">
+        <b class="fr">Main Roofing Co.</b>
+        <small>221 W Arch Ave, Searcy, AR 72143 · Serving Searcy &amp; greater Little Rock</small>
+      </div>
+      <nav class="fnav">
+        <a href="tel:+15013050227">Call (501) 305-0227</a>
+        <a href="#top">Free quote</a>
+        <a href="https://maps.google.com/?q=Main+Roofing+Co+221+W+Arch+Ave+Searcy+AR" target="_blank" rel="noopener">Directions</a>
+      </nav>
+      <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    Main Roofing Co.</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. Any photography, hours, prices, staff names, ratings and
+    reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
+    are replaced with the owner's real details if this site is built. This page is set to
+    <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+  </main>
+</div>
+
+<div class="callbar">
+  <a href="tel:+15013050227"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call</a>
+  <a class="bronze" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Free quote</a>
+</div>
+
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.14});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+  function getQuote(ev){
+    ev.preventDefault();
+    const n=document.getElementById("qName").value.trim()||"Neighbor";
+    const need=document.getElementById("qNeed").value.toLowerCase();
+    document.getElementById("qConfirmTxt").textContent=
+      `${n} — ${need}. On launch this reaches Main Roofing the same day to schedule your free inspection.`;
+    document.getElementById("qWrap").style.display="none";
+    document.getElementById("qConfirm").classList.add("show");
+    return false;
+  }
+</script>
+</body>
+</html>
