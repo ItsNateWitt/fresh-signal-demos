@@ -375,6 +375,14 @@
   .mw > i{color:var(--poppy) !important}
   .rack-head em, .hero .sub em{font-family:'Great Vibes',cursive;font-style:normal;
     text-transform:lowercase;color:var(--poppy);font-size:1.24em}
+  /* Great Vibes has no true italic — a synthesized oblique mangles the ampersand. */
+  .mw > i.amp{font-style:normal !important;font-weight:400 !important;color:var(--poppy) !important}
+  .mw > i{font-synthesis:none}
+  /* mobile: readable minimums + real tap targets */
+  @media(max-width:440px){
+    .nav a, .foot a{min-height:44px;display:inline-flex;align-items:center}
+    .credit, .rack-note, .cap .sm{font-size:13px}
+  }
 </style>
 </head>
 <body>

@@ -399,10 +399,13 @@
   .g-in{font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--bone);margin-top:2px}
   .g-say{font-size:17px;color:var(--bone-2);line-height:1.6;margin-top:14px;min-height:5.4em}
-  .g-slide{width:100%;margin-top:26px;-webkit-appearance:none;appearance:none;height:3px;
-    background:var(--line);outline:none;border-radius:2px}
-  .g-slide::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
-    background:var(--brass);border:3px solid var(--coal);cursor:pointer;
+  /* 44px tall hit area; the visible track stays a hairline */
+  .g-slide{width:100%;margin-top:22px;-webkit-appearance:none;appearance:none;
+    height:44px;background:transparent;outline:none;cursor:pointer}
+  .g-slide::-webkit-slider-runnable-track{height:3px;background:var(--line);border-radius:2px}
+  .g-slide::-moz-range-track{height:3px;background:var(--line);border-radius:2px}
+  .g-slide::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;
+    background:var(--brass);border:3px solid var(--coal);cursor:pointer;margin-top:-13.5px;
     box-shadow:0 4px 14px rgba(0,0,0,.5)}
   .g-slide::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--brass);
     border:3px solid var(--coal);cursor:pointer}
