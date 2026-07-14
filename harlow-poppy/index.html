@@ -425,6 +425,28 @@
   .mw > i.amp{font-family:'Great Vibes',cursive !important;color:var(--poppy) !important;font-size:1.1em}
   .mw > i{line-height:1.25 !important}
   .logo{font-size:33px !important;line-height:1.6 !important;overflow:visible}
+  /* ══ WORDMARK LAYOUT — the words were crammed: "harlow&poppy" ══
+     Lay the three parts out on a baseline with real space between them, and give
+     the ampersand room to breathe. This is spacing, not font choice. */
+  .hero h1{display:flex !important;flex-wrap:wrap;align-items:baseline;justify-content:center;
+    gap:0 .26em !important;line-height:1.15}
+  .hero h1 .amp-row{display:inline-flex !important;align-items:baseline}
+  .mw{display:inline-block}
+  .mw > i.amp{font-size:.82em !important;margin:0 .06em}
+  /* nav lockup gets the same breathing room */
+  .logo{letter-spacing:.02em !important}
+  /* the hero ampersand was small and sitting below the baseline — size it up, centre it */
+  .hero h1{align-items:center !important;gap:0 .1em !important}
+  .hero h1 .amp-row{align-items:center !important;transform:translateY(-.06em)}
+  .hero .mw > i.amp{font-size:1.02em !important;margin:0 .12em !important}
+  /* Great Vibes' '&' glyph is small inside its em box — it must be scaled up hard
+     to sit visually equal to the Allura letters beside it. */
+  .hero .mw > i.amp{font-size:1.75em !important;margin:0 .04em !important;
+    transform:translateY(.04em)}
+  .logo{font-size:34px !important}
+  /* give the ampersand air — it was colliding with the 'w' and the 'p' */
+  .hero h1{gap:0 .12em !important}
+  .hero .mw > i.amp{margin:0 .16em !important}
 </style>
 </head>
 <body>
