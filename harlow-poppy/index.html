@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex,nofollow" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Harlow &amp; Poppy Boutique — Women's Clothing in Conway, AR | Shop In-Store &amp; Online</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap" rel="stylesheet" />
 <meta name="description" content="Contemporary, trendy women's clothing, accessories &amp; gifts in Conway, AR. Shop Harlow &amp; Poppy Boutique in-store on Van Ronkle St or online — free shipping over $100." />
 <meta name="theme-color" content="#F7F1E9" />
 <meta property="og:type" content="website" />
@@ -383,6 +383,39 @@
     .nav a, .foot a{min-height:44px;display:inline-flex;align-items:center}
     .credit, .rack-note, .cap .sm{font-size:13px}
   }
+  /* ── SCRIPT WORDMARK FIX ──
+     .mw uses overflow:hidden to mask the rise-up reveal. That box was cut for
+     Bodoni; Great Vibes has tall ascenders and deep descenders, so the swashes
+     were being sliced. Open the mask up and pull it back with negative margins
+     so layout is unchanged. */
+  .mw{overflow:hidden;
+      padding:.30em .12em .34em !important;
+      margin:-.30em -.12em -.34em !important}
+  .mw > i{font-family:'Great Vibes',cursive !important;font-style:normal !important;
+      font-weight:400 !important;text-transform:lowercase !important;
+      line-height:1.18 !important;font-synthesis:none}
+  .mw > i.amp{color:var(--poppy) !important}
+  h1 .amp-row{display:block;line-height:1}
+  .logo{font-family:'Great Vibes',cursive !important;text-transform:lowercase !important;
+      font-size:31px !important;line-height:1.5 !important;font-style:normal !important;
+      overflow:visible}
+  /* ── THE WORDMARK — two faces on purpose ──
+     Letters: Pinyon Script. It matches their logo's copperplate letterforms and,
+     critically, its lowercase 'p' reads as a p — Great Vibes' looped p made
+     "poppy" read as "hoppy".
+     Ampersand: Great Vibes. Pinyon's '&' is malformed; Great Vibes has the swash
+     ampersand from their actual logo. One glyph, one exception. */
+  .mw > i, .logo{font-family:'Pinyon Script',cursive !important;font-style:normal !important;
+    font-weight:400 !important;text-transform:lowercase !important;font-synthesis:none}
+  .mw > i.amp{font-family:'Great Vibes',cursive !important;color:var(--poppy) !important;
+    font-size:1.15em}
+  .mw > i{line-height:1.2 !important}
+  .logo{font-size:31px !important;line-height:1.6 !important;overflow:visible}
+  /* the rise-mask must clear the swashes, or it slices the ascenders/descenders */
+  .mw{overflow:hidden;
+      padding:.30em .14em .34em !important;
+      margin:-.30em -.14em -.34em !important}
+  h1 .amp-row{display:block;line-height:1}
 </style>
 </head>
 <body>
