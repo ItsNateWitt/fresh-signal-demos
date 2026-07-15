@@ -109,6 +109,28 @@
   .seo{background:var(--bg)}
   .seo-grid{display:grid;grid-template-columns:1fr .85fr;gap:52px;align-items:center}
   @media(max-width:900px){.seo-grid{grid-template-columns:1fr;gap:32px}}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:36px}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:28px}}
+  .about-copy .lede{font-size:20px;color:var(--bone);margin:0 0 16px}
+  .about-copy p{font-size:16.5px;line-height:1.65;color:var(--bone-2);margin:0 0 16px}
+  .about-copy p b{color:var(--green-lt);font-weight:700}
+  .about-photo{position:relative;margin:0;border-radius:16px;overflow:hidden;border:1px solid rgba(241,238,227,.14);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);transition:transform .6s var(--ease)}
+  .about-photo:hover{transform:translateY(-4px)}
+  .about-photo img{width:100%;aspect-ratio:4/3.2;object-fit:cover;display:block;filter:contrast(1.05) saturate(1.03) brightness(.94)}
+  .about-photo figcaption{position:absolute;left:16px;bottom:14px;font-family:'JetBrains Mono',monospace;font-size:11.5px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--bone);background:rgba(10,12,7,.55);padding:6px 11px;border-radius:6px;backdrop-filter:blur(4px)}
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
+  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
+  .feat{border:1px solid rgba(241,238,227,.14);border-radius:14px;padding:26px 22px;background:var(--bg-2);
+    transition:transform .4s var(--ease),border-color .4s var(--ease)}
+  .feat:hover{transform:translateY(-5px);border-color:var(--green)}
+  .feat-ic{width:44px;height:44px;border-radius:10px;background:rgba(94,140,58,.16);color:var(--green-lt);
+    display:grid;place-items:center;margin-bottom:16px}
+  .feat-ic svg{width:22px;height:22px}
+  .feat h3{margin:0 0 8px;font-size:16.5px;color:var(--bone)}
+  .feat p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
   .phone{background:#0B0E08;border:10px solid #040602;border-radius:34px;padding:0;overflow:hidden;
     max-width:340px;margin:0 auto;box-shadow:0 34px 80px rgba(0,0,0,.5)}
   .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 14px}
@@ -267,47 +289,45 @@
 </section>
 
 <!-- ══ SIGNATURE: THE GOOGLE-SEARCH DEMO — the SEO pitch, touchable ══ -->
-<section class="seo" id="found">
+<section class="about" id="about">
   <div class="wrap">
-    <div class="lab" data-reveal>Get found</div>
-    <h2 data-reveal>When Benton searches, <span>you're who they find.</span></h2>
-    <p class="lede" data-reveal>Nobody flips a phone book for a lawn guy anymore — they google it. When a homeowner in Benton
-    types it in, the outfit with a real website gets the call. Tap a search — watch where Cockrell's lands.</p>
+    <div class="lab" data-reveal>Who we are</div>
+    <h2 data-reveal>Quality work. Honest prices. <span>Every property, every time.</span></h2>
 
-    <div class="seo-grid">
-      <div>
-        <div class="kw-row" role="group" aria-label="Try a search">
-          <button class="kw on" data-q="lawn care benton ar">lawn care benton ar</button>
-          <button class="kw" data-q="landscaping near me benton">landscaping near me benton</button>
-          <button class="kw" data-q="lawn mowing saline county">lawn mowing saline county</button>
-          <button class="kw" data-q="pressure washing bryant ar">pressure washing bryant ar</button>
-        </div>
-        <p class="seo-note">This is what a real website does that a Facebook page can't: it puts you at the
-        top when the whole county is searching for exactly what you do. That's the $79/month working while you're on the mower.</p>
+    <div class="about-grid">
+      <div class="about-copy" data-reveal>
+        <p class="lede">I'm Michael Cockrell, and Cockrell's Lawn &amp; Land is my name on the line — every mow, every bed, every job.</p>
+        <p>I built this company on one idea: a yard you're proud of shouldn't cost a fortune or take forever to get. Low cost. Fast turnaround. Real efficiency — that's not a slogan, that's how I run every property, every week.</p>
+        <p>Because a well-kept yard isn't just grass. It's the pride pulling into your own driveway. It's the Saturday you get back instead of losing it behind a mower. It's the neighbor who asks who takes care of your place. That's the difference I show up to make — for less than you'd expect, faster than you'd think.</p>
+        <p><b>Owner-operated. Quality over quantity. Every single time.</b></p>
       </div>
+      <figure class="about-photo" data-reveal style="--i:1">
+        <span class="stag">Sample</span>
+        <img src="assets/b2-04-cockrells-lawn-benton/mow.jpg" alt="Michael Cockrell mowing a lawn" loading="lazy" decoding="async">
+        <figcaption>Michael Cockrell, owner</figcaption>
+      </figure>
+    </div>
 
-      <div class="phone" data-reveal="scale">
-        <div class="ph-bar"><span class="g"></span><span class="ph-q" id="phQ">lawn care benton ar</span></div>
-        <div class="ph-body">
-          <div class="ph-stat">About 19,400 results · Benton, AR</div>
-          <div class="result you">
-            <div class="site"><span class="pin">★</span> cockrellslawnandland.com</div>
-            <div class="ttl" id="phTtl">Cockrell's Lawn &amp; Land — Lawn Care &amp; Landscaping, Benton</div>
-            <div class="snip">Owner-operated mowing, beds, tree removal &amp; pressure washing across Saline County. Free estimates.
-            ★★★★★ "Best-kept yard on the street."</div>
-            <span class="badge">You — #1 result</span>
-          </div>
-          <div class="result">
-            <div class="site">facebook.com › some other page</div>
-            <div class="ttl">A competitor's Facebook page</div>
-            <div class="snip">No service list, no estimate form — the search moves on.</div>
-          </div>
-          <div class="result">
-            <div class="site">directory.com › listings</div>
-            <div class="ttl">A directory nobody controls</div>
-            <div class="snip">Third-party page with an old number.</div>
-          </div>
-        </div>
+    <div class="feat-grid">
+      <div class="feat" data-reveal>
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6.5c0-1.9-2.2-3.5-5-3.5s-5 1.6-5 3.5 2.2 3 5 3.5c2.8.5 5 1.6 5 3.5s-2.2 3.5-5 3.5-5-1.6-5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Low cost</h3>
+        <p>A great yard shouldn't drain your wallet. Fair, honest pricing — no surprise add-ons, no games.</p>
+      </div>
+      <div class="feat" data-reveal style="--i:1">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Fast turnaround</h3>
+        <p>We show up when we say and finish what we start — your time back, on schedule, every visit.</p>
+      </div>
+      <div class="feat" data-reveal style="--i:2">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5.5v6c0 5 3.4 8.7 8 9.5 4.6-.8 8-4.5 8-9.5v-6L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3L15.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Owner-operated quality</h3>
+        <p>I'm the one on your property, not a rotating crew that's never seen your yard before.</p>
+      </div>
+      <div class="feat" data-reveal style="--i:3">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Free estimates</h3>
+        <p>A straight number before we ever crank a mower — no pressure, no obligation.</p>
       </div>
     </div>
   </div>
@@ -408,18 +428,6 @@
 
 <script>
 (function(){
-  /* the Google-search signature */
-  var DATA = {
-    "lawn care benton ar":       {t:"Cockrell's Lawn & Land — Lawn Care & Landscaping, Benton"},
-    "landscaping near me benton":{t:"Cockrell's Lawn & Land — Beds, Mulch & Cleanups, Benton"},
-    "lawn mowing saline county": {t:"Cockrell's Lawn & Land — Mowing & Edging, Saline County"},
-    "pressure washing bryant ar":{t:"Cockrell's Lawn & Land — Pressure Washing & Tree Removal"}
-  };
-  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
-  kws.forEach(function(b){b.addEventListener('click',function(){
-    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
-    var k=b.getAttribute('data-q'); q.textContent=k; if(DATA[k]) ttl.textContent=DATA[k].t;
-  });});
   /* scroll-tilt reveal (vanilla container-scroll) */
   (function(){
     var el=document.getElementById('tiltWork'); if(!el) return;
