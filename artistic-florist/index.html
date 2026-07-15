@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Artistic Florist &amp; Gifts — Searcy's Family Florist Since Day One | Searcy, AR</title>
+<meta name="description" content="Family-owned florist in Searcy, AR for fresh arrangements, weddings, sympathy flowers and gifts. Same-day local delivery. Order online or call (501) 268-4333." />
+<!--
+  DEMO MOCKUP — Artistic Florist & Gifts, Searcy AR
+  Archetype: D · Filmstrip (horizontal snap-scroll gallery of arrangements)
+  Signature: the arrangement filmstrip — snap-scrolling bloom cards with hand-drawn stem/bloom detailing.
+  REAL: business name, family-owned florist, 1233 W Beebe Capps Expy Searcy AR 72143,
+        phone (501) 268-4333, services (fresh flowers, weddings, sympathy, plants, gifts), Facebook.
+  SAMPLE-TO-REPLACE (marked inline): arrangement names/prices, hours (listed — confirm),
+        pull-quote wording, photos (CSS bloom art + labeled stock).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ivory:#FBF7F2;--paper:#FFFFFF;--plum:#442A46;--plum-dk:#2E1B30;
+    --rose:#C98B94;--rose-lt:#EAD2D4;--sage:#8B9C77;--gold:#B4894A;
+    --ink:#241A22;--mut:#7A6C74;--line:rgba(36,26,34,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,.disp{font-family:'Bodoni Moda',Georgia,serif;font-weight:500}
+  .kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(18px,5vw,56px)}
+  .mock{background:var(--plum-dk);color:var(--rose-lt);text-align:center;font-size:12px;letter-spacing:.03em;padding:8px 14px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:40;background:rgba(251,247,242,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .bar{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,5vw,56px);max-width:1200px;margin:0 auto}
+  nav .brand{font-family:'Bodoni Moda';font-size:22px;font-weight:700;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+  nav .brand svg{width:24px;height:24px}
+  nav .links{display:none;gap:30px;font-size:13.5px;letter-spacing:.02em;color:var(--plum);text-transform:uppercase}
+  nav .links a{font-size:12.5px;letter-spacing:.12em}
+  nav .links a:hover{color:var(--gold)}
+  @media(min-width:860px){nav .links{display:flex}}
+  nav .cta{background:var(--plum);color:var(--ivory);padding:11px 20px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;gap:8px}
+  nav .cta:hover{background:var(--plum-dk)}
+  nav .cta svg{width:14px;height:14px}
+
+  /* hero */
+  .hero{padding:clamp(48px,8vw,96px) 0 clamp(32px,5vw,54px);display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  @media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+  .hero .est{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .hero .est span{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
+  .hero .est .ln{height:1px;width:46px;background:var(--gold)}
+  .hero h1{font-size:clamp(44px,7vw,86px);line-height:.98;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--plum)}
+  .hero p{font-size:17px;color:var(--mut);max-width:44ch;margin:24px 0 30px}
+  .hero .row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Jost';font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:16px 26px;min-height:52px;transition:transform .14s,background .2s,color .2s,border-color .2s;cursor:pointer;border:1.5px solid transparent}
+  .btn svg{width:16px;height:16px}
+  .btn:active{transform:translateY(1px)}
+  .btn-fill{background:var(--plum);color:var(--ivory)}
+  .btn-fill:hover{background:var(--plum-dk)}
+  .btn-line{border-color:var(--plum);color:var(--plum)}
+  .btn-line:hover{background:var(--plum);color:var(--ivory)}
+
+  /* hero bloom art (CSS) */
+  .bloomart{position:relative;aspect-ratio:4/5;border-radius:200px 200px 14px 14px;overflow:hidden;
+    background:radial-gradient(circle at 50% 32%,var(--rose-lt),#f3e5e6 40%,#e9dfe6 100%);
+    border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(46,27,48,.4)}
+  .bloomart .vase{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:44%;height:34%;
+    background:linear-gradient(180deg,#efe6da,#d8c9b6);border-radius:14px 14px 40px 40px}
+  .bloomart svg{position:absolute;inset:0;width:100%;height:100%}
+  .bloomart .tag{position:absolute;left:18px;bottom:18px;background:var(--paper);border:1px solid var(--line);padding:8px 14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--plum)}
+
+  /* section head */
+  section.blk{padding:clamp(40px,6vw,72px) 0}
+  .shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:30px}
+  .shead h2{font-size:clamp(30px,4.4vw,52px);line-height:1.02}
+  .shead h2 em{font-style:italic;color:var(--plum)}
+  .shead p{font-size:14.5px;color:var(--mut);max-width:38ch}
+
+  /* SIGNATURE — FILMSTRIP */
+  .filmstrip{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 22px;
+    scrollbar-width:thin;scrollbar-color:var(--rose) transparent;margin:0 calc(-1*clamp(18px,5vw,56px));
+    padding-left:clamp(18px,5vw,56px);padding-right:clamp(18px,5vw,56px)}
+  .filmstrip::-webkit-scrollbar{height:6px}
+  .filmstrip::-webkit-scrollbar-thumb{background:var(--rose);border-radius:6px}
+  .frame{scroll-snap-align:center;flex:0 0 78%;max-width:340px;background:var(--paper);border:1px solid var(--line);
+    border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+  @media(min-width:640px){.frame{flex-basis:44%}}
+  @media(min-width:1000px){.frame{flex-basis:30%}}
+  .frame:hover{transform:translateY(-6px);box-shadow:0 24px 44px -26px rgba(46,27,48,.5)}
+  .frame .pic{aspect-ratio:1;position:relative;overflow:hidden}
+  .frame .pic svg{position:absolute;inset:0;width:100%;height:100%}
+  .frame .bd{padding:18px 20px 22px}
+  .frame h3{font-size:21px;font-weight:500}
+  .frame .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px}
+  .frame .meta .pr{font-family:'Bodoni Moda';font-weight:700;font-size:18px;color:var(--plum)}
+  .frame .meta .cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .frame p{font-size:13px;color:var(--mut);margin-top:10px}
+  .filmhint{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:10px}
+  .filmhint svg{width:26px;height:14px;color:var(--rose)}
+
+  /* occasions band */
+  .occ{background:var(--plum-dk);color:var(--ivory)}
+  .occ .kicker{color:var(--rose)}
+  .occ .shead h2{color:var(--ivory)}
+  .occ .shead h2 em{color:var(--rose)}
+  .occ .shead p{color:rgba(251,247,242,.65)}
+  .occ-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(min-width:760px){.occ-grid{grid-template-columns:repeat(4,1fr)}}
+  .occ-card{border:1px solid rgba(251,247,242,.18);border-radius:14px;padding:24px 20px;transition:background .25s,transform .2s}
+  .occ-card:hover{background:rgba(180,137,74,.12);transform:translateY(-4px)}
+  .occ-card svg{width:30px;height:30px;color:var(--rose);margin-bottom:14px}
+  .occ-card h3{font-size:18px;font-weight:500}
+  .occ-card p{font-size:12.5px;color:rgba(251,247,242,.6);margin-top:6px}
+
+  /* story + quote */
+  .story{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+  @media(min-width:880px){.story{grid-template-columns:1fr 1fr}}
+  .story h2{font-size:clamp(28px,4vw,46px);line-height:1.04}
+  .story h2 em{font-style:italic;color:var(--plum)}
+  .story p{font-size:15.5px;color:var(--mut);margin-top:18px}
+  .story .feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:12.5px;font-weight:500}
+  .pill svg{width:14px;height:14px;color:var(--sage)}
+  .qcard{background:var(--rose-lt);border-radius:20px;padding:clamp(28px,4vw,44px);position:relative}
+  .qcard .mk{font-family:'Bodoni Moda';font-size:80px;line-height:.5;color:var(--rose)}
+  .qcard blockquote{font-family:'Bodoni Moda';font-style:italic;font-size:clamp(20px,2.6vw,27px);line-height:1.3;color:var(--plum-dk);margin-top:8px}
+  .qcard cite{display:block;font-style:normal;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--plum);margin-top:20px}
+
+  /* contact */
+  .contact{background:var(--paper);border-top:1px solid var(--line)}
+  .contact .grid{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:820px){.contact .grid{grid-template-columns:1.1fr .9fr}}
+  .cinfo h2{font-size:clamp(28px,4vw,44px);line-height:1.04;margin-bottom:6px}
+  .cinfo h2 em{font-style:italic;color:var(--plum)}
+  .cinfo address{font-style:normal;font-size:16px;color:var(--ink);line-height:1.9;margin-top:18px}
+  .cinfo .hrs{margin-top:20px;border-top:1px solid var(--line);padding-top:16px;max-width:320px}
+  .cinfo .hrs .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+  .cinfo .hrs div{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+  .cinfo .hrs div span:last-child{font-weight:500}
+  .cinfo .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .cinfo .flag{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(180,137,74,.14);color:var(--gold);padding:4px 9px;border-radius:6px;margin-top:12px}
+  .cmap{border-radius:18px;min-height:260px;background:
+    radial-gradient(circle at 40% 40%,rgba(201,139,148,.35),transparent 60%),
+    linear-gradient(140deg,#e7e0d6,#d3ddcd);display:grid;place-items:center;text-align:center;border:1px solid var(--line)}
+  .cmap .pin{width:42px;height:42px;color:var(--plum);margin:0 auto 10px}
+  .cmap b{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .cmap small{display:block;font-size:12px;color:var(--mut);margin-top:4px}
+
+  footer{background:var(--plum-dk);color:rgba(251,247,242,.6);padding:40px 0}
+  footer .in{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+  footer .b{font-family:'Bodoni Moda';font-weight:700;font-size:22px;color:var(--ivory)}
+  footer a{color:var(--rose);font-weight:500}
+  footer small{display:block;margin-top:8px;font-size:12px}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--plum-dk);border-top:2px solid var(--rose)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory)}
+  .callbar a.fill{background:var(--rose);color:var(--plum-dk)}
+  .callbar svg{width:15px;height:15px}
+  @media(min-width:860px){.callbar{display:none}}
+  @media(max-width:859px){body{padding-bottom:56px}}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.filmstrip{scroll-behavior:auto}}
+
+  /* legal disclaimer — unofficial concept notice */
+  .legalnote{border-top:1px solid rgba(128,128,128,.28);margin-top:26px;padding:20px 0 4px;
+    font-size:11.5px;line-height:1.65;opacity:.72;max-width:88ch}
+  .legalnote b{font-weight:700}
+  .fgal2{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+  @media(max-width:760px){.fgal2{grid-template-columns:1fr 1fr}}
+  .fgal2 figure{margin:0;position:relative;overflow:hidden;border-radius:14px}
+  .fgal2 img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+  .fgal2 figure:hover img{transform:scale(1.06)}
+  .fgal2 figure:first-child{grid-column:span 2;grid-row:span 2}
+  .fgal2 .stag{position:absolute;top:9px;left:9px;background:rgba(68,42,70,.66);color:#fff;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
+
+  /* ══ Fresh Signal signature shared styles (injected) ══ */
+  html,body{max-width:100%;overflow-x:clip}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  [data-fs-compare]{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  [data-fs-compare] img{width:100%;height:100%;object-fit:cover;display:block}
+  [data-fs-top]{position:absolute;inset:0;width:50%;overflow:hidden}
+  [data-fs-top] img{max-width:none;height:100%;object-fit:cover}
+  [data-fs-bar]{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-1.5px);box-shadow:0 0 20px rgba(0,0,0,.5)}
+  [data-fs-item],[data-fs-pick]{cursor:pointer}
+  [data-fs-item].on,[data-fs-pick].on{outline:2px solid currentColor;outline-offset:-2px}
+  .fs-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(128,128,128,.25);font-size:15px}
+  /* mobile tap-target floor */
+  @media(max-width:440px){
+    [data-fs-item],[data-fs-pick]{min-height:46px}
+    [data-fs-level]{height:44px !important}
+  }
+</style>
+<!-- LocalBusiness schema (DEMO) — verify NAP before launch; telephone/street omitted where unverified -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Florist",
+  "name": "Artistic Florist & Gifts",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Searcy",
+    "addressRegion": "AR",
+    "addressCountry": "US",
+    "streetAddress": "1233 W Beebe Capps Expy",
+    "postalCode": "72143"
+  },
+  "telephone": "+1-501-268-4333"
+}
+</script>
+</head>
+<body>
+<div class="mock">DEMO MOCKUP for Artistic Florist &amp; Gifts · real name, Searcy address &amp; phone (501) 268-4333 · sample arrangement names, prices &amp; hours — swapped for the shop's own on launch</div>
+
+<nav>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3" fill="#C98B94"/><circle cx="7" cy="11" r="2.4" fill="#8B9C77"/><circle cx="17" cy="11" r="2.4" fill="#442A46"/><path d="M12 11v10M9 16l3 2 3-2" stroke="#8B9C77" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Artistic Florist
+    </a>
+    <div class="links">
+      <a href="#gallery">Arrangements</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="cta" href="tel:+15012684333"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call to order</a>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="est"><span class="ln"></span><span>Searcy, Arkansas · Family-owned</span></div>
+        <h1>Every bloom,<br><em>arranged by hand.</em></h1>
+        <p>Searcy's family florist for fresh arrangements, weddings, sympathy tributes and gifts — designed in-shop and delivered the same day across town.</p>
+        <div class="row">
+          <a class="btn btn-fill" href="#gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Shop arrangements</a>
+          <a class="btn btn-line" href="tel:+15012684333"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 268-4333</a>
+        </div>
+      </div>
+      <!-- CSS bloom art — replace with a real signature arrangement photo on launch -->
+      <div class="bloomart" aria-label="Signature arrangement (sample art)">
+        <svg viewBox="0 0 200 250" aria-hidden="true">
+          <path d="M100 150 C90 120 70 110 60 90 M100 150 C110 120 130 110 140 90 M100 150 V95" stroke="#8B9C77" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="100" cy="78" r="22" fill="#C98B94"/><circle cx="100" cy="78" r="9" fill="#B4894A"/>
+          <circle cx="62" cy="86" r="16" fill="#442A46"/><circle cx="62" cy="86" r="6" fill="#EAD2D4"/>
+          <circle cx="140" cy="86" r="16" fill="#EAD2D4"/><circle cx="140" cy="86" r="6" fill="#C98B94"/>
+          <circle cx="82" cy="62" r="11" fill="#8B9C77"/><circle cx="120" cy="60" r="12" fill="#B4894A"/>
+          <path d="M78 108q-16 6-24 22M124 108q16 6 24 22" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="vase"></div>
+        <span class="tag">Sample — real photo on launch</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- SIGNATURE: FILMSTRIP -->
+  <section class="blk" id="gallery">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">The work</span><h2>Arrangements from <em>Searcy's own</em></h2></div>
+      <div class="fgal2">
+        <figure class="reveal"><span class="stag">Sample</span><img src="assets/b2-18-artistic-florist-searcy/hero.jpg" alt="Floral arrangement, Artistic Florist, Searcy AR" width="900" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="reveal"><span class="stag">Sample</span><img src="assets/b2-18-artistic-florist-searcy/bouquet.jpg" alt="Bouquet, Searcy AR" width="700" height="700" loading="lazy" decoding="async"></figure>
+        <figure class="reveal"><span class="stag">Sample</span><img src="assets/b2-18-artistic-florist-searcy/arrange.jpg" alt="Floral design, Artistic Florist" width="700" height="700" loading="lazy" decoding="async"></figure>
+        <figure class="reveal"><span class="stag">Sample</span><img src="assets/b2-18-artistic-florist-searcy/hands.jpg" alt="Florist at work, Searcy AR" width="700" height="700" loading="lazy" decoding="async"></figure>
+        <figure class="reveal"><span class="stag">Sample</span><img src="assets/b2-18-artistic-florist-searcy/shop.jpg" alt="Inside Artistic Florist, Searcy AR" width="700" height="700" loading="lazy" decoding="async"></figure>
+      </div>
+      <p style="font-size:12px;color:var(--plum);opacity:.6;margin-top:12px">Sample photography — real arrangements on launch.</p>
+
+      <div class="shead">
+        <div>
+          <span class="kicker">Fresh this week</span>
+          <h2>The <em>arrangement</em> filmstrip</h2>
+        </div>
+        <p class="filmhint">Scroll <svg viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h34M28 4l8 6-8 6"/></svg> to browse</p>
+      </div>
+    </div>
+    <!-- SAMPLE arrangements — names/prices are placeholders; replace with the shop's real designs & photos -->
+    <div class="filmstrip">
+      <article class="frame">
+        <div class="pic" style="background:radial-gradient(circle at 50% 45%,#f6dfe1,#ecd7dd)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 130V70" stroke="#8B9C77" stroke-width="3"/><circle cx="100" cy="60" r="26" fill="#C98B94"/><circle cx="100" cy="60" r="10" fill="#B4894A"/><circle cx="70" cy="78" r="16" fill="#442A46"/><circle cx="130" cy="78" r="16" fill="#EAD2D4"/><path d="M82 108q-14 8-20 24M118 108q14 8 20 24" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="bd"><h3>The Searcy Blush</h3><div class="meta"><span class="cat">Signature</span><span class="pr">$65</span></div><p>Soft roses, ranunculus and eucalyptus — the everyday "just because."</p></div>
+      </article>
+      <article class="frame">
+        <div class="pic" style="background:radial-gradient(circle at 50% 45%,#efe6f0,#e4d8e6)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 132V64" stroke="#8B9C77" stroke-width="3"/><circle cx="100" cy="56" r="24" fill="#442A46"/><circle cx="100" cy="56" r="9" fill="#EAD2D4"/><circle cx="72" cy="74" r="15" fill="#C98B94"/><circle cx="128" cy="74" r="15" fill="#B4894A"/><path d="M84 106q-13 8-18 22M116 106q13 8 18 22" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="bd"><h3>Plum &amp; Ivory</h3><div class="meta"><span class="cat">Designer's Choice</span><span class="pr">$85</span></div><p>Deep and elegant — our designers' pick for anniversaries.</p></div>
+      </article>
+      <article class="frame">
+        <div class="pic" style="background:radial-gradient(circle at 50% 45%,#eef1e4,#e0e6d3)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 132V64" stroke="#8B9C77" stroke-width="3"/><circle cx="100" cy="56" r="24" fill="#8B9C77"/><circle cx="100" cy="56" r="9" fill="#B4894A"/><circle cx="72" cy="74" r="15" fill="#EAD2D4"/><circle cx="128" cy="74" r="15" fill="#C98B94"/><path d="M84 106q-13 8-18 22M116 106q13 8 18 22" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="bd"><h3>Garden Gathered</h3><div class="meta"><span class="cat">Seasonal</span><span class="pr">$70</span></div><p>Whatever's freshest that morning, gathered loose and natural.</p></div>
+      </article>
+      <article class="frame">
+        <div class="pic" style="background:radial-gradient(circle at 50% 45%,#faefe0,#f0e2cd)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 132V64" stroke="#8B9C77" stroke-width="3"/><circle cx="100" cy="56" r="24" fill="#B4894A"/><circle cx="100" cy="56" r="9" fill="#442A46"/><circle cx="72" cy="74" r="15" fill="#C98B94"/><circle cx="128" cy="74" r="15" fill="#EAD2D4"/><path d="M84 106q-13 8-18 22M116 106q13 8 18 22" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="bd"><h3>Golden Hour</h3><div class="meta"><span class="cat">Birthday</span><span class="pr">$60</span></div><p>Warm amber and cream — a bright hello for any celebration.</p></div>
+      </article>
+      <article class="frame">
+        <div class="pic" style="background:radial-gradient(circle at 50% 45%,#f1e7ea,#e6dae0)"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 134V60" stroke="#8B9C77" stroke-width="3"/><circle cx="100" cy="52" r="22" fill="#EAD2D4"/><circle cx="100" cy="52" r="8" fill="#8B9C77"/><circle cx="74" cy="72" r="14" fill="#442A46"/><circle cx="126" cy="72" r="14" fill="#C98B94"/><path d="M86 104q-12 8-16 22M114 104q12 8 16 22" stroke="#8B9C77" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="bd"><h3>With Sympathy</h3><div class="meta"><span class="cat">Tribute</span><span class="pr">$95</span></div><p>Quiet whites and greens, delivered with care to the service.</p></div>
+      </article>
+    </div>
+    <div class="wrap"><p class="cinfo flag" style="margin-top:4px">Sample arrangements &amp; prices — real designs and photos drop in on launch</p></div>
+  </section>
+
+  <!-- OCCASIONS -->
+  <section class="blk occ" id="occasions">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="kicker">What we do</span><h2>Flowers for <em>every occasion</em></h2></div>
+        <p>Verified services from Artistic Florist &amp; Gifts — same-day local delivery across Searcy.</p>
+      </div>
+      <div class="occ-grid">
+        <div class="occ-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><h3>Weddings</h3><p>Bouquets, ceremony &amp; reception florals.</p></div>
+        <div class="occ-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 8c3 0 4-2 7-2s4 2 7 2M5 14c3 0 4-2 7-2s4 2 7 2"/></svg><h3>Sympathy</h3><p>Tributes &amp; standing sprays, delivered on time.</p></div>
+        <div class="occ-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7S9 3 6.5 4.5 8.5 8 12 7zM12 7s3-4 5.5-2.5S15.5 8 12 7z"/></svg><h3>Gifts</h3><p>Plants, home decor, candles &amp; keepsakes.</p></div>
+        <div class="occ-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg><h3>Just Because</h3><p>Fresh &amp; silk designs for any day.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY + QUOTE -->
+  <section class="blk" id="story">
+    <div class="wrap">
+      <div class="story">
+        <div class="reveal">
+          <span class="kicker">Our story</span>
+          <h2>Family-owned,<br><em>Searcy-grown.</em></h2>
+          <p>Artistic Florist &amp; Gifts is a family-owned shop that's built its name on friendly, prompt service and arrangements made the way only a real florist can — by hand, with fresh flowers, for the people of Searcy.</p>
+          <div class="feats">
+            <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Same-day local delivery</span>
+            <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Family-owned &amp; operated</span>
+            <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fresh &amp; silk designs</span>
+          </div>
+        </div>
+        <!-- SAMPLE pull-quote — replace with a real Google review (verbatim) on launch -->
+        <div class="qcard reveal">
+          <div class="mk" aria-hidden="true">&ldquo;</div>
+          <blockquote>You can tell a person made this — not a machine. That's why half of Searcy calls them first when the flowers actually matter.</blockquote>
+          <cite>Sample sentiment · swap for a real review</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="blk contact" id="visit">
+    <div class="wrap">
+      <div class="grid">
+        <div class="cinfo reveal">
+          <span class="kicker">Visit the shop</span>
+          <h2>Come see us on <em>Beebe Capps</em></h2>
+          <address>1233 W Beebe Capps Expy<br>Searcy, AR 72143</address>
+          <div class="hrs">
+            <div class="lbl">Hours (listed — confirm)</div>
+            <div><span>Mon – Fri</span><span>8:00a – 5:00p</span></div>
+            <div><span>Sat – Sun</span><span>Closed</span></div>
+          </div>
+          <span class="flag">Listed hours — confirm before launch</span>
+          <div class="row">
+            <a class="btn btn-fill" href="tel:+15012684333"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>(501) 268-4333</a>
+            <a class="btn btn-line" href="https://maps.google.com/?q=Artistic+Florist+%26+Gifts+1233+W+Beebe+Capps+Searcy+AR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+          </div>
+        </div>
+        <div class="cmap reveal" aria-hidden="true">
+          <div>
+            <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <b>Searcy, Arkansas</b>
+            <small>Live Google Map embeds here on launch</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap in">
+    <div>
+      <div class="b">Artistic Florist &amp; Gifts</div>
+      <small>1233 W Beebe Capps Expy · Searcy, AR 72143 · <a href="tel:+15012684333">(501) 268-4333</a></small>
+      <small>Family-owned florist · Same-day local delivery in Searcy</small>
+    </div>
+    <div><a class="btn btn-fill" href="https://www.facebook.com/artisticflorist/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>Facebook</a></div>
+  </div>
+  <aside class="legalnote">
+    <b>Unofficial concept mockup.</b> This page is a speculative design proposal created by Nate Witt
+    (Fresh Signal). It is <b>not affiliated with, authorized by, sponsored by, or endorsed by
+    Artistic Florist & Gifts</b>. The business name, address and phone number appear for identification purposes only and
+    remain the property of their owner. Any photography, hours, prices, staff names, ratings and
+    reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
+    are replaced with the owner's real details if this site is built. This page is set to
+    <b>noindex</b> and is not listed in search engines.
+    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
+  </aside>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15012684333"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Call</a>
+  <a class="fill" href="#gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Shop flowers</a>
+</div>
+
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+<script>
+/* ============================================================
+   FRESH SIGNAL — SIGNATURE ENGINE v1
+   One reusable, data-attribute-driven library for the motion layer
+   + the 5 signature interaction patterns. Inline this into each demo
+   (demos must be self-contained — no external JS).
+
+   MOTION (auto): custom cursor · magnetic buttons · scroll reveals
+     - add [data-magnetic="0.2"] to a CTA
+     - add class="reveal" to anything that should fade up on scroll
+
+   SIGNATURES (opt-in via data attributes):
+   1. COMPARE   — drag before/after
+        <div data-fs-compare> <img>(after) <div data-fs-top><img>(before)</div> </div>
+   2. COLLECT   — tap items into a slip that texts the shop
+        <div data-fs-collect data-fs-max="3" data-fs-sms="+15015551234">
+          <button data-fs-item="American Traditional">…</button> …
+          <ul data-fs-slip></ul> <a data-fs-go>Text the shop</a>
+        </div>
+   3. TOTAL     — pick rows, live running total
+        <div data-fs-total data-fs-sum="#out">
+          <div data-fs-pick data-fs-price="40" data-fs-name="The Cut">…</div> …
+        </div>  <span id="out">$0</span>
+   4. LEVEL     — a slider that drives a readout
+        <input data-fs-level type="range" min="0" max="8">
+        (listen: element fires 'fs:level' with detail={value})
+   ============================================================ */
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- MOTION: cursor + magnetic ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'), ring = document.createElement('div');
+    dot.style.cssText = 'position:fixed;top:0;left:0;width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference';
+    ring.style.cssText = 'position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid rgba(255,255,255,.6);margin:-18px 0 0 -18px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(loop);})();
+    var HOT='a,button,input,select,textarea,[data-fs-item],[data-fs-pick],[data-fs-compare],[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='62px';ring.style.height='62px';ring.style.margin='-31px 0 0 -31px';}});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='36px';ring.style.height='36px';ring.style.margin='-18px 0 0 -18px';}});
+    document.addEventListener('mouseleave',function(){ring.style.opacity='0';});
+    document.addEventListener('mouseenter',function(){ring.style.opacity='1';});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.22; el.style.willChange='transform'; el.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ---------- MOTION: scroll reveals ---------- */
+  var rev = document.querySelectorAll('.reveal,[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) { rev.forEach(function(e){e.classList.add('in','is-in');}); }
+    else {
+      var io = new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in','is-in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(e){io.observe(e);});
+    }
+  }
+
+  /* ---------- 1. COMPARE ---------- */
+  document.querySelectorAll('[data-fs-compare]').forEach(function(c){
+    var top=c.querySelector('[data-fs-top]'), bar=c.querySelector('[data-fs-bar]');
+    if(!top) return;
+    function size(){ var img=top.querySelector('img'); if(img) img.style.width=c.clientWidth+'px'; }
+    size(); addEventListener('resize',size);
+    function put(p){p=Math.max(0,Math.min(100,p));top.style.width=p+'%';if(bar)bar.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p));}
+    function ev(e){var b=c.getBoundingClientRect();put(((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*100);}
+    var down=false;
+    c.addEventListener('mousedown',function(e){down=true;ev(e);e.preventDefault();});
+    addEventListener('mousemove',function(e){if(down)ev(e);});addEventListener('mouseup',function(){down=false;});
+    c.addEventListener('touchstart',function(e){ev(e);},{passive:true});c.addEventListener('touchmove',function(e){ev(e);},{passive:true});
+    c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');
+    c.addEventListener('keydown',function(e){var n=parseFloat(c.getAttribute('aria-valuenow'))||50;if(e.key==='ArrowLeft'){put(n-6);e.preventDefault();}if(e.key==='ArrowRight'){put(n+6);e.preventDefault();}});
+    put(52);
+  });
+
+  /* ---------- 2. COLLECT (tap → slip → SMS) ---------- */
+  document.querySelectorAll('[data-fs-collect]').forEach(function(box){
+    var MAX=parseInt(box.getAttribute('data-fs-max'))||3, sms=box.getAttribute('data-fs-sms')||'',
+        biz=box.getAttribute('data-fs-biz')||'the shop',
+        slip=box.querySelector('[data-fs-slip]'), go=box.querySelector('[data-fs-go]'),
+        items=[].slice.call(box.querySelectorAll('[data-fs-item]')), picked=[];
+    function render(){
+      if(!slip) return;
+      if(!picked.length){slip.innerHTML='<li data-empty>Nothing picked yet.</li>';if(go){go.setAttribute('aria-disabled','true');go.removeAttribute('href');}return;}
+      slip.innerHTML=''; picked.forEach(function(b){var li=document.createElement('li');li.textContent=b.getAttribute('data-fs-item');slip.appendChild(li);});
+      if(go){go.setAttribute('aria-disabled','false');go.setAttribute('href','sms:'+sms+'&body='+encodeURIComponent("Hey "+biz+" — I'd like: "+picked.map(function(b){return b.getAttribute('data-fs-item');}).join(', ')));}
+    }
+    function toggle(b){var i=picked.indexOf(b);if(i>-1){picked.splice(i,1);b.classList.remove('on');b.setAttribute('aria-pressed','false');}else if(picked.length<MAX){picked.push(b);b.classList.add('on');b.setAttribute('aria-pressed','true');}render();}
+    items.forEach(function(b){b.setAttribute('role','button');b.setAttribute('tabindex','0');b.addEventListener('click',function(){toggle(b);});b.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(b);}});});
+    render();
+  });
+
+  /* ---------- 3. TOTAL (pick rows → running sum) ---------- */
+  document.querySelectorAll('[data-fs-total]').forEach(function(box){
+    var out=document.querySelector(box.getAttribute('data-fs-sum')), listOut=box.querySelector('[data-fs-lines]'),
+        rows=[].slice.call(box.querySelectorAll('[data-fs-pick]')), chosen=[];
+    function render(){
+      var sum=0; chosen.forEach(function(r){sum+=parseFloat(r.getAttribute('data-fs-price'))||0;});
+      if(out) out.textContent='$'+sum;
+      if(listOut){ if(!chosen.length){listOut.innerHTML='<div data-empty>Tap to start.</div>';}
+        else{listOut.innerHTML='';chosen.forEach(function(r){var d=document.createElement('div');d.className='fs-line';d.innerHTML='<span>'+(r.getAttribute('data-fs-name')||'')+'</span><span>$'+(r.getAttribute('data-fs-price')||0)+'</span>';listOut.appendChild(d);});}}
+    }
+    function toggle(r){var i=chosen.indexOf(r);if(i>-1){chosen.splice(i,1);r.classList.remove('on');r.setAttribute('aria-pressed','false');}else{chosen.push(r);r.classList.add('on');r.setAttribute('aria-pressed','true');}render();}
+    rows.forEach(function(r){r.setAttribute('role','button');r.setAttribute('tabindex','0');r.addEventListener('click',function(){toggle(r);});r.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(r);}});});
+    render();
+  });
+
+  /* ---------- 4. LEVEL (slider → event) ---------- */
+  document.querySelectorAll('[data-fs-level]').forEach(function(sl){
+    function fire(){ sl.dispatchEvent(new CustomEvent('fs:level',{detail:{value:+sl.value}})); }
+    sl.addEventListener('input',fire); fire();
+  });
+
+  /* ---------- marquee auto-duplicate ---------- */
+  document.querySelectorAll('[data-fs-marquee]').forEach(function(m){var t=m.firstElementChild;if(t&&m.children.length===1)m.appendChild(t.cloneNode(true));});
+})();
+
+</script>
+</body>
+</html>
