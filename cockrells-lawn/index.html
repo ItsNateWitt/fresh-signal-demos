@@ -52,10 +52,11 @@
   .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;
     filter:contrast(1.08) saturate(1.02) brightness(.56)}
   .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.55) 0%,rgba(18,22,15,.2) 34%,rgba(18,22,15,.96) 100%)}
-  .hero-note{position:absolute;z-index:2;top:100px;right:24px;max-width:240px;background:#F1EEE3;color:#12160F;
+  .hero-note-strip{background:var(--bg-2);padding:16px 24px;display:flex;justify-content:flex-end}
+  .hero-note{max-width:340px;background:#F1EEE3;color:#12160F;
     border:2px dashed rgba(18,22,15,.25);border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.4;
-    font-family:'Mulish',sans-serif;font-weight:600;box-shadow:0 10px 24px rgba(0,0,0,.35);transform:rotate(1.5deg)}
-  @media(max-width:760px){.hero-note{top:90px;right:16px;left:16px;max-width:none;font-size:12.5px;transform:rotate(1deg)}}
+    font-family:'Mulish',sans-serif;font-weight:600;box-shadow:0 6px 16px rgba(0,0,0,.25);transform:rotate(1deg)}
+  @media(max-width:760px){.hero-note-strip{justify-content:center;padding:14px 16px}.hero-note{max-width:none;font-size:12.5px;text-align:center}}
   .hero-in{position:relative;z-index:2;padding:0 0 70px;width:100%}
   .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--green-lt);margin-bottom:18px}
   h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(46px,9vw,104px);line-height:.92;letter-spacing:.005em;margin:0 0 20px;max-width:16ch}
@@ -271,12 +272,13 @@
   </div>
 </nav>
 
+<div class="hero-note-strip"><div class="hero-note" data-reveal>Photos of your work, your logo, and yourself will go here! Whatever you like.</div></div>
+
 <header id="top">
   <!-- SAMPLE PHOTO — stand-in; replace with the crew's real job photos on launch -->
   <img class="hero-img" src="assets/b2-04-cockrells-lawn-benton/mow.jpg"
        alt="Owner mowing a residential lawn" width="1000" height="666" fetchpriority="high" />
   <div class="hero-scrim"></div>
-  <div class="hero-note" data-reveal>Photos of your work, your logo, and yourself will go here! Whatever you like.</div>
   <div class="hero-in">
     <div class="wrap">
       <div class="eyebrow" data-reveal>Lawn care &amp; landscaping · Benton, Saline County</div>
