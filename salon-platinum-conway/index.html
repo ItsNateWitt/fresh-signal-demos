@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Salon Platinum — Hair Salon in Conway, Arkansas</title>
+<meta name="description" content="Salon Platinum — a full-service hair salon on Alford Street in Conway, Arkansas. Color, cuts, blowouts, Brazilian blowouts, extensions, perms, lash extensions, waxing and makeup. Book online or call (501) 499-9941." />
+<meta name="theme-color" content="#151319" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,800;1,6..96,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151319'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23EDEBE6'%3EP%3C/text%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 (before </head>) ==== -->
+<style>
+  /* ---- Custom cursor (desktop only) ---- */
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  /* ---- Scroll reveal ---- */
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  /* ---- Hero line mask (words rise out of a clipped line) ---- */
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  /* ---- Magnetic buttons ---- */
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* ---- Before/after drag compare ---- */
+  .fs-cmp{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  .fs-cmp img,.fs-cmp .fs-cmp-half{display:block;width:100%;height:100%;object-fit:cover}
+  .fs-cmp-top{position:absolute;inset:0;width:50%;overflow:hidden}
+  .fs-cmp-top > *{width:var(--cmpw,100%);max-width:none;height:100%;object-fit:cover}
+  .fs-cmp-bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;
+    transform:translateX(-1px);box-shadow:0 0 18px rgba(0,0,0,.45)}
+  .fs-cmp-grip{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;
+    border-radius:50%;background:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;
+    color:#111;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+
+  /* ---- Marquee ---- */
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  /* ---- Parallax + counters ---- */
+  [data-parallax]{will-change:transform}
+
+  /* ---- Progress rail ---- */
+  .fs-prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:9998}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══════════════════════════════════════════════════════════════
+     SALON PLATINUM — palette derived from the NAME + the salon world:
+     platinum-blonde metal · violet toner (the purple shampoo that
+     keeps blonde cool) · champagne warmth · deep cool plum-black.
+     ══════════════════════════════════════════════════════════════ */
+  :root{
+    --ink:#151319; --ink-2:#1B1922; --panel:#211E29; --panel-2:#282433;
+    --line:rgba(237,235,230,.13);
+    --plat:#EDEBE6; --plat-2:#C6C2BA; --sheen:#FCFBF8;
+    --champ:#D8C3A0; --champ-dk:#B79A6C;
+    --violet:#B29BD6; --violet-dk:#7C67A6;
+    --mut:#948FA0;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--plat);
+    font-family:'Manrope',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:2.5px solid var(--violet);outline-offset:3px;border-radius:2px}
+  .serif{font-family:'Bodoni Moda',Georgia,serif}
+  .lab{font-family:'Manrope',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--violet)}
+  .champ{color:var(--champ)}
+
+  /* demo strip */
+  .demo{background:linear-gradient(90deg,var(--violet-dk),#5f4d84);color:#fff;
+    font-family:'Manrope',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.02em;
+    padding:9px 16px;text-align:center;line-height:1.5}
+  .demo b{font-weight:800;letter-spacing:.06em}
+
+  /* rotated editorial side-label (archetype A signature furniture) */
+  .rail{position:fixed;left:16px;top:50%;transform:translateY(-50%) rotate(180deg);
+    writing-mode:vertical-rl;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;
+    letter-spacing:.42em;text-transform:uppercase;color:rgba(237,235,230,.4);z-index:40;
+    display:flex;align-items:center;gap:16px}
+  .rail::after{content:"";height:64px;width:1px;background:linear-gradient(var(--violet),transparent)}
+  @media(max-width:1120px){.rail{display:none}}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(21,19,25,.78);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:14px}
+  .brand{display:flex;align-items:baseline;gap:9px;font-family:'Bodoni Moda',serif;white-space:nowrap}
+  .brand .b1{font-size:15px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
+  .brand .b2{font-size:23px;font-weight:700;letter-spacing:.02em}
+  .navcta{display:flex;align-items:center;gap:10px}
+  .call{display:inline-flex;align-items:center;gap:8px;color:var(--plat);font-weight:700;font-size:14.5px;
+    padding:11px 15px;border:1px solid var(--line);border-radius:40px;transition:border-color .25s,color .25s}
+  .call:hover{border-color:var(--violet);color:var(--violet)}
+  .call svg{width:15px;height:15px;flex:none}
+  .book{display:inline-flex;align-items:center;gap:8px;background:var(--plat);color:var(--ink);
+    font-weight:800;font-size:14.5px;padding:12px 20px;border-radius:40px;transition:transform .18s var(--ease),box-shadow .25s}
+  .book:hover{box-shadow:0 10px 30px rgba(178,155,214,.28)}
+  @media(max-width:640px){.brand .b1{display:none} .call span{display:none} .call{padding:11px}}
+
+  /* ═══ HERO — the oversized PLATINUM wordmark with foil sweep ═══ */
+  header{position:relative;padding:74px 0 58px;overflow:hidden}
+  .hero-amb{position:absolute;left:50%;top:34%;width:min(1100px,120vw);height:520px;
+    transform:translate(-50%,-50%);pointer-events:none;z-index:0;
+    background:radial-gradient(ellipse at center,rgba(124,103,166,.34),transparent 62%),
+              radial-gradient(ellipse at 68% 60%,rgba(216,195,160,.16),transparent 60%);
+    filter:blur(8px)}
+  header .wrap{position:relative;z-index:2}
+  .h-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .h-eyebrow .ln{height:1px;width:44px;background:var(--violet)}
+  .mark-hero{margin:0;text-align:center;line-height:.9}
+  .mark-hero .salon{display:block;font-family:'Bodoni Moda',serif;font-weight:500;font-style:italic;
+    font-size:clamp(19px,3.4vw,34px);letter-spacing:.34em;text-transform:uppercase;color:var(--plat-2);
+    margin-bottom:.06em;padding-left:.34em}
+  .foil{display:inline-block;font-family:'Bodoni Moda',serif;font-weight:800;text-transform:uppercase;
+    font-size:clamp(48px,15.4vw,232px);letter-spacing:-.015em;line-height:.82;
+    background:linear-gradient(100deg,
+      #8f8b82 0%, #b8b4ab 15%, #E4E0D9 31%, #FCFBF8 45%, #ffffff 50%, #FCFBF8 55%,
+      #DAD6CE 68%, #b8b4ab 84%, #8f8b82 100%);
+    background-size:265% 100%;background-position:46% 0;
+    -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 3px 2px rgba(0,0,0,.35));cursor:default}
+  .foil.sweep{animation:foilSweep 2s cubic-bezier(.42,0,.18,1) forwards}
+  @keyframes foilSweep{0%{background-position:150% 0}100%{background-position:46% 0}}
+  @media (prefers-reduced-motion:reduce){.foil.sweep{animation:none}}
+
+  .h-sub{max-width:52ch;margin:30px auto 0;text-align:center;font-size:clamp(17px,2vw,20px);
+    color:#D8D4DE;line-height:1.6}
+  .h-sub em{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--champ)}
+  .h-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 20px;
+    margin:26px 0 4px;font-size:13px;letter-spacing:.04em;color:var(--mut)}
+  .h-meta b{color:var(--plat);font-weight:600}
+  .h-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--violet)}
+  .h-cta{display:flex;gap:13px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 30px;
+    font-weight:800;font-size:15px;border-radius:40px;transition:transform .18s var(--ease),box-shadow .25s,border-color .25s,background .25s}
+  .btn-a{background:var(--plat);color:var(--ink)}
+  .btn-a:hover{box-shadow:0 14px 40px rgba(237,235,230,.16)}
+  .btn-b{border:1px solid rgba(237,235,230,.34);color:var(--plat)}
+  .btn-b:hover{border-color:var(--violet);color:var(--violet)}
+
+  /* marquee ribbon */
+  .ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--ink-2);padding:15px 0;margin-top:56px}
+  .ribbon .fs-mq__t{font-family:'Bodoni Moda',serif;font-style:italic;font-size:19px;color:var(--plat-2);
+    align-items:center}
+  .ribbon .star{color:var(--violet);font-style:normal;font-family:'Manrope';font-weight:800;letter-spacing:.2em;font-size:13px}
+
+  section{padding:96px 0;position:relative}
+  .sec-head{max-width:64ch}
+  h2{font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,5.4vw,60px);line-height:1.02;
+    letter-spacing:-.01em;margin:14px 0 0}
+  h2 em{font-style:italic;color:var(--champ)}
+  .lede{font-size:19px;color:#CFCBD6;max-width:56ch;margin:20px 0 0}
+
+  /* ═══ THE MENU — tier ladder (not cards) ═══ */
+  .menu{background:linear-gradient(180deg,var(--ink),var(--ink-2))}
+  .ladder{list-style:none;margin:52px 0 0;padding:0;border-top:1px solid var(--line)}
+  .tier{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:baseline;
+    padding:30px 8px;border-bottom:1px solid var(--line);position:relative;transition:padding-left .4s var(--ease)}
+  .tier::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;
+    background:linear-gradient(180deg,var(--violet),var(--champ));transition:width .4s var(--ease)}
+  .tier:hover{padding-left:26px}
+  .tier:hover::before{width:3px}
+  .tno{font-family:'Bodoni Moda',serif;font-weight:500;font-style:italic;font-size:clamp(22px,3vw,34px);
+    color:var(--violet);min-width:1.6em}
+  .tbody h3{font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(24px,3.6vw,38px);
+    margin:0 0 6px;line-height:1}
+  .tservices{margin:0;color:#CBC7D3;font-size:15.5px;letter-spacing:.01em}
+  .tprice{font-family:'Manrope';font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mut);white-space:nowrap;text-align:right}
+  .tprice b{display:block;color:var(--champ);font-weight:700}
+  @media(max-width:720px){
+    .tier{grid-template-columns:auto 1fr;gap:16px 18px;padding:24px 4px}
+    .tprice{grid-column:2;text-align:left;margin-top:4px}
+    .tier:hover{padding-left:14px}
+  }
+  .menu-note{margin-top:22px;font-size:13px;color:var(--mut);letter-spacing:.02em}
+
+  /* ═══ PROOF band ═══ */
+  .proof{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proof-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:900px){.proof-grid{grid-template-columns:1fr;gap:36px}}
+  .quote{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(26px,3.6vw,42px);line-height:1.18;
+    letter-spacing:-.005em}
+  .quote em{font-style:italic;color:var(--champ)}
+  .quote .qmark{color:var(--violet);font-size:1.1em}
+  .attr{margin-top:22px;font-size:13.5px;letter-spacing:.02em;color:var(--mut)}
+  .stars{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap}
+  .stars .rate{font-family:'Bodoni Moda',serif;font-weight:700;font-size:44px;line-height:1}
+  .stars .glyph{color:var(--violet);letter-spacing:.14em;font-size:17px}
+  .stars .rnote{font-size:12.5px;color:var(--mut);max-width:22ch;line-height:1.4}
+
+  /* art-directed imagery — platinum/violet duotone so it reads commissioned */
+  .gimg{position:relative;overflow:hidden;border-radius:14px;background:var(--panel-2)}
+  .gimg img{width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.52) contrast(1.05) brightness(.82) saturate(.92);
+    transition:transform 1s var(--ease),filter .6s}
+  .gimg::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(150deg,rgba(124,103,166,.42),rgba(216,195,160,.24) 70%);
+    mix-blend-mode:overlay}
+  .gimg::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(to top,rgba(21,19,25,.78),transparent 58%)}
+  .gimg:hover img{transform:scale(1.045);filter:grayscale(.35) contrast(1.06) brightness(.86) saturate(1)}
+  .gcap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 18px;
+    font-family:'Manrope';font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--plat)}
+  .stag{position:absolute;top:11px;left:11px;z-index:2;background:rgba(21,19,25,.62);color:var(--violet);
+    font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;border-radius:5px;
+    backdrop-filter:blur(4px)}
+  .proof-photo{aspect-ratio:4/5}
+
+  /* ═══ GALLERY ═══ */
+  .gallery .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+  .gallery .grid .gimg:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .gallery .grid .gimg{aspect-ratio:1/1}
+  .gallery .grid .gimg:nth-child(1){aspect-ratio:auto}
+  @media(max-width:820px){.gallery .grid{grid-template-columns:1fr 1fr}.gallery .grid .gimg:nth-child(1){grid-column:span 2;aspect-ratio:16/10}}
+  @media(max-width:460px){.gallery .grid{grid-template-columns:1fr 1fr;gap:10px}}
+  .gal-note{margin-top:16px;font-size:12px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase}
+
+  /* ═══ GET FOUND (first-site pitch, restrained) ═══ */
+  .found{background:linear-gradient(180deg,var(--ink-2),var(--ink))}
+  .found-grid{display:grid;grid-template-columns:1fr .92fr;gap:56px;align-items:center}
+  @media(max-width:900px){.found-grid{grid-template-columns:1fr;gap:36px}}
+  .searchcard{background:#fff;color:#202124;border-radius:16px;padding:20px 20px 24px;max-width:400px;
+    margin:0 auto;box-shadow:0 30px 70px rgba(0,0,0,.45);font-family:'Manrope',sans-serif}
+  .sc-bar{display:flex;align-items:center;gap:10px;background:#F1F3F4;border-radius:24px;padding:10px 14px;font-size:13.5px;color:#3c4043}
+  .sc-bar .g{width:15px;height:15px;border-radius:50%;flex:none;
+    background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4)}
+  .sc-stat{font-size:11px;color:#70757A;margin:14px 2px 8px}
+  .res{padding:12px;border-radius:10px;margin:6px 0}
+  .res.you{background:#F3EFFA;border:1px solid var(--violet-dk)}
+  .res .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
+  .res .site .pin{width:15px;height:15px;border-radius:50%;background:var(--violet-dk);color:#fff;font-size:9px;
+    display:grid;place-items:center;font-weight:800}
+  .res .ttl{font-size:16px;color:#1A0DAB;margin:3px 0}
+  .res.you .ttl{color:#5b3aa0;font-weight:700}
+  .res .snip{font-size:12.5px;color:#4D5156;line-height:1.42}
+  .res .badge{display:inline-block;background:#EDE7F7;color:#5b3aa0;font-size:10px;font-weight:800;
+    padding:2px 8px;border-radius:5px;margin-top:6px;letter-spacing:.04em}
+  .res.dim{opacity:.55}
+  .found ul.pts{list-style:none;padding:0;margin:26px 0 0}
+  .found ul.pts li{display:flex;gap:13px;padding:12px 0;border-bottom:1px dotted var(--line);font-size:16px;color:#D4D0DB}
+  .found ul.pts li b{color:var(--violet);flex:none;font-family:'Bodoni Moda',serif;font-style:italic}
+
+  /* ═══ VISIT ═══ */
+  .visit{background:var(--panel)}
+  .v-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+  @media(max-width:820px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--ink-2)}
+  .v-card h3{font-family:'Bodoni Moda',serif;font-weight:700;font-size:26px;margin:0 0 18px}
+  .addr{font-size:20px;line-height:1.5}
+  .addr b{color:var(--champ);font-weight:600}
+  .hrow{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+  .hrow b{font-weight:600}
+  .hrow span{color:var(--violet);font-weight:600;font-size:14px}
+  .confirm{margin-top:14px;font-size:12px;letter-spacing:.02em;color:var(--mut);
+    background:rgba(178,155,214,.08);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .socials{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+  .socials a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--plat-2);
+    border:1px solid var(--line);padding:9px 14px;border-radius:40px;transition:border-color .25s,color .25s}
+  .socials a:hover{border-color:var(--violet);color:var(--violet)}
+  .v-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+  /* ═══ FRESH SIGNAL CLOSE ═══ */
+  .fs{background:linear-gradient(180deg,var(--ink),#100e13)}
+  .letter{max-width:62ch;font-size:18.5px;line-height:1.72;color:#D9D5E0}
+  .letter .klab{font-family:'Manrope';font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--violet);margin-bottom:22px}
+  .letter p{margin:0 0 15px}
+  .letter b{color:var(--plat)}
+  .letter em{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--champ)}
+  .sig{font-family:'Bodoni Moda',serif;font-style:italic;font-size:25px;color:var(--plat);margin-top:8px}
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 0}
+  @media(max-width:700px){.offer{grid-template-columns:1fr}}
+  .oc{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--panel)}
+  .oc .amt{font-family:'Bodoni Moda',serif;font-weight:700;font-size:40px;line-height:1;color:var(--plat)}
+  .oc .amt small{display:block;font-family:'Manrope';font-weight:700;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut);margin-top:6px}
+  .oc p{font-size:14px;color:#C4C0CC;margin:12px 0 0}
+  .risk{margin-top:24px;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;
+    padding:22px 24px;font-size:16px;color:#D9D5E0}
+  .risk b{color:var(--violet)}
+
+  /* footer */
+  footer{background:#100e13;padding:44px 0 44px;border-top:1px solid var(--line);
+    font-size:14px;color:rgba(237,235,230,.6)}
+  .foot-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  .foot-mark{font-family:'Bodoni Moda',serif;font-weight:700;font-size:22px;color:var(--plat)}
+  .foot-mark span{font-weight:500;font-style:italic;color:var(--mut);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(237,235,230,.08);
+    font-size:11.5px;line-height:1.65;color:rgba(237,235,230,.4)}
+
+  /* mobile action bar */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+      background:rgba(21,19,25,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .mbar a{flex:1;text-align:center;padding:15px;font-weight:800;font-size:15px}
+    .mbar a.mcall{color:var(--plat)}
+    .mbar a.mbook{background:var(--plat);color:var(--ink);margin:8px;border-radius:40px;padding:14px}
+    footer{padding-bottom:88px}
+    section{padding:72px 0}
+    .ai-fab{bottom:78px !important}
+  }
+
+  /* ═══ AI ASSISTANT WIDGET (demo placeholder) ═══ */
+  .ai-fab{position:fixed;right:20px;bottom:22px;z-index:75;display:inline-flex;align-items:center;gap:10px;
+    background:var(--plat);color:var(--ink);font-weight:800;font-size:14px;border:0;cursor:pointer;
+    padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 12px 34px rgba(0,0,0,.4);
+    transition:transform .2s var(--ease),box-shadow .25s}
+  .ai-fab:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(178,155,214,.32)}
+  .ai-fab .av{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--violet),var(--champ));color:var(--ink);font-family:'Bodoni Moda',serif;font-weight:700;font-size:15px}
+  .ai-panel{position:fixed;right:20px;bottom:22px;z-index:76;width:min(360px,calc(100vw - 32px));
+    background:var(--ink-2);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.55);opacity:0;transform:translateY(14px) scale(.98);
+    pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-hd{display:flex;align-items:center;gap:11px;padding:16px 16px 14px;
+    background:linear-gradient(120deg,rgba(124,103,166,.28),rgba(216,195,160,.14));border-bottom:1px solid var(--line)}
+  .ai-hd .av{width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--violet),var(--champ));color:var(--ink);font-family:'Bodoni Moda',serif;font-weight:700;font-size:18px}
+  .ai-hd .who{flex:1;line-height:1.2}
+  .ai-hd .who b{font-size:15px}
+  .ai-hd .who small{display:block;color:var(--mut);font-size:11px;letter-spacing:.03em}
+  .ai-x{background:none;border:0;color:var(--mut);cursor:pointer;font-size:20px;line-height:1;padding:4px}
+  .ai-x:hover{color:var(--plat)}
+  .ai-log{padding:16px;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+  .ai-msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.5}
+  .ai-msg.bot{background:var(--panel);color:#DCD8E4;border-top-left-radius:4px;align-self:flex-start}
+  .ai-msg.me{background:var(--violet-dk);color:#fff;border-top-right-radius:4px;align-self:flex-end}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+  .ai-chip{background:none;border:1px solid var(--line);color:var(--plat-2);font-family:'Manrope';font-size:12.5px;
+    font-weight:600;padding:9px 13px;border-radius:40px;cursor:pointer;transition:border-color .2s,color .2s}
+  .ai-chip:hover{border-color:var(--violet);color:var(--violet)}
+  .ai-foot{padding:12px 16px;border-top:1px solid var(--line);font-size:10.5px;color:var(--mut);
+    letter-spacing:.04em;text-align:center}
+  .ai-foot b{color:var(--violet)}
+</style>
+</head>
+<body>
+
+<div class="fs-prog" style="background:linear-gradient(90deg,var(--violet),var(--champ))"></div>
+
+<div class="demo"><b>DEMO MOCKUP</b> — built for Salon Platinum by Nate Witt · Fresh Signal.
+  REAL: name, 900 Alford St Ste D Conway, phone (501) 499-9941, services &amp; booking. SAMPLE (swapped on launch): photography, hours &amp; reviews.</div>
+
+<div class="rail" aria-hidden="true">Salon Platinum · Conway, Arkansas</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Salon Platinum home">
+      <span class="b1">Salon</span><span class="b2">Platinum</span>
+    </a>
+    <div class="navcta">
+      <a class="call" href="tel:+15014999941" aria-label="Call Salon Platinum at (501) 499-9941">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        <span>(501) 499-9941</span>
+      </a>
+      <a class="book" href="https://www.vagaro.com/salonplatinum2" target="_blank" rel="noopener" data-magnetic="0.18">Book</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header id="top" data-hero>
+  <div class="hero-amb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="h-eyebrow" data-reveal><span class="ln"></span><span class="lab">Hair Salon · Conway, Arkansas</span><span class="ln"></span></div>
+    <h1 class="mark-hero" aria-label="Salon Platinum">
+      <span class="salon">Salon</span>
+      <span class="foil" aria-hidden="true">Platinum</span>
+    </h1>
+    <p class="h-sub" data-reveal style="--i:2">We're dedicated to giving great service — because we want <em>nothing less</em> than for you to love your hair. Color, cuts, smoothing, extensions, lashes &amp; more, all under one roof in Conway.</p>
+    <div class="h-meta" data-reveal style="--i:3">
+      <span><b>900 Alford St</b>, Suite D</span><span class="dot"></span>
+      <span>Conway, AR 72032</span><span class="dot"></span>
+      <span>Book online or <b>call</b></span>
+    </div>
+    <div class="h-cta" data-reveal style="--i:4">
+      <a class="btn btn-a" href="https://www.vagaro.com/salonplatinum2" target="_blank" rel="noopener" data-magnetic="0.2">Book an appointment</a>
+      <a class="btn btn-b" href="tel:+15014999941">Call (501) 499-9941</a>
+    </div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="fs-mq"><div class="fs-mq__t">
+      <span>Haircut &amp; styling</span><span class="star">✦</span>
+      <span>Blowouts</span><span class="star">✦</span>
+      <span>Brazilian blowouts</span><span class="star">✦</span>
+      <span>Hair extensions</span><span class="star">✦</span>
+      <span>Perms</span><span class="star">✦</span>
+      <span>Lash extensions</span><span class="star">✦</span>
+      <span>Brow &amp; facial waxing</span><span class="star">✦</span>
+      <span>Makeup</span><span class="star">✦</span>
+    </div></div>
+  </div>
+</header>
+
+<!-- ═══════════ THE MENU — tier ladder ═══════════ -->
+<section class="menu" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>The menu</div>
+      <h2 data-reveal>Everything your hair needs, <em>one chair.</em></h2>
+      <p class="lede" data-reveal>A full-service salon — from a fresh cut to lived-in color, smoothing, extensions, lashes and makeup for the day it all has to be right.</p>
+    </div>
+
+    <ol class="ladder">
+      <li class="tier" data-reveal>
+        <div class="tno">01</div>
+        <div class="tbody"><h3>Hair</h3><p class="tservices">Haircut · Hairstyling · Blowouts</p></div>
+        <div class="tprice">From consult<b>Book online</b></div>
+      </li>
+      <li class="tier" data-reveal>
+        <div class="tno">02</div>
+        <div class="tbody"><h3>Smoothing</h3><p class="tservices">Brazilian Blowouts — frizz gone, shine in, weeks of easy mornings</p></div>
+        <div class="tprice">Signature<b>Book online</b></div>
+      </li>
+      <li class="tier" data-reveal>
+        <div class="tno">03</div>
+        <div class="tbody"><h3>Texture</h3><p class="tservices">Perms — soft waves to full curl</p></div>
+        <div class="tprice">By appointment<b>Book online</b></div>
+      </li>
+      <li class="tier" data-reveal>
+        <div class="tno">04</div>
+        <div class="tbody"><h3>Extensions</h3><p class="tservices">Hair extensions — length &amp; fullness, matched to your color</p></div>
+        <div class="tprice">Consultation<b>Call to confirm</b></div>
+      </li>
+      <li class="tier" data-reveal>
+        <div class="tno">05</div>
+        <div class="tbody"><h3>Lashes &amp; Brows</h3><p class="tservices">Eyelash extensions · Eyebrow &amp; facial waxing</p></div>
+        <div class="tprice">Book separately<b>Book online</b></div>
+      </li>
+      <li class="tier" data-reveal>
+        <div class="tno">06</div>
+        <div class="tbody"><h3>Makeup</h3><p class="tservices">Makeup services — weddings, events, or a night that matters</p></div>
+        <div class="tprice">By appointment<b>Call to confirm</b></div>
+      </li>
+    </ol>
+    <p class="menu-note">Full pricing is set at your consultation and confirmed when you book — no surprises at the chair. <b style="color:var(--plat-2)">Pricing shown as sample labels; the salon's real rates go live on launch.</b></p>
+  </div>
+</section>
+
+<!-- ═══════════ PROOF ═══════════ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div>
+        <div class="lab" data-reveal>Why Platinum</div>
+        <p class="quote" data-reveal style="--i:1"><span class="qmark">“</span>We want <em>nothing less</em> than for you to love your hair.<span class="qmark">”</span></p>
+        <p class="attr" data-reveal style="--i:2">— Salon Platinum, in their own words</p>
+        <div class="stars" data-reveal style="--i:3">
+          <span class="rate serif">4.7</span>
+          <div>
+            <div class="glyph" aria-hidden="true">★★★★★</div>
+            <div class="rnote">Average across public reviews. Real client reviews wire in live on launch.</div>
+          </div>
+        </div>
+      </div>
+      <div class="gimg proof-photo" data-reveal="scale">
+        <span class="stag">Sample</span>
+        <!-- SAMPLE trade photography — replaced with the salon's own work on launch -->
+        <img src="assets/makeup.jpg" alt="Makeup artist applying lip color to a blonde client" width="1000" height="667" loading="lazy" decoding="async" />
+        <div class="gcap">The finish — hair, lash &amp; makeup in one room</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GET FOUND — first-site pitch ═══════════ -->
+<section class="found" id="found">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>Get found</div>
+      <h2 data-reveal>When Conway searches <em>“hair salon near me,”</em> you show up.</h2>
+    </div>
+    <div class="found-grid" style="margin-top:44px">
+      <div>
+        <p class="lede" style="margin-top:0" data-reveal>Right now Salon Platinum lives on Facebook and Vagaro — great for regulars, invisible to the person who just moved to Conway and is googling for a colorist tonight. A real website is the piece that puts you at the top of that search instead of a directory nobody controls.</p>
+        <ul class="pts" data-reveal style="--i:1">
+          <li><b>→</b> Own a real address on Google — not just a social page</li>
+          <li><b>→</b> Your services, your booking link, your hours — first thing they see</li>
+          <li><b>→</b> The new-in-town client finds <em>you</em>, not the salon across Oak Street</li>
+          <li><b>→</b> A 24/7 assistant that answers “are you open?” and books the chair</li>
+        </ul>
+      </div>
+      <div class="searchcard" data-reveal="scale" role="img" aria-label="Sample Google search result showing Salon Platinum ranking first for hair salon in Conway">
+        <div class="sc-bar"><span class="g"></span><span>hair salon conway ar</span></div>
+        <div class="sc-stat">About 18,400 results · Conway, AR</div>
+        <div class="res you">
+          <div class="site"><span class="pin">P</span> salonplatinumconway.com</div>
+          <div class="ttl">Salon Platinum — Hair, Color &amp; Lashes in Conway, AR</div>
+          <div class="snip">Cuts, color, Brazilian blowouts, extensions, lashes &amp; makeup on Alford Street. Book online or call (501) 499-9941.</div>
+          <span class="badge">You — top result</span>
+        </div>
+        <div class="res dim">
+          <div class="site">facebook.com › a page with no hours</div>
+          <div class="ttl">A competitor's social page</div>
+          <div class="snip">No menu, no booking link — the search moves on.</div>
+        </div>
+        <div class="res dim">
+          <div class="site">yelp.com › directory listing</div>
+          <div class="ttl">A directory nobody controls</div>
+          <div class="snip">Third-party page with old information.</div>
+        </div>
+      </div>
+    </div>
+    <p class="gal-note" style="margin-top:22px">Sample search preview — for illustration.</p>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>The work</div>
+      <h2 data-reveal>Made in the chair.</h2>
+      <p class="lede" data-reveal>A look at the room and the craft. On launch, this fills with Salon Platinum's own before-and-afters.</p>
+    </div>
+    <div class="grid">
+      <div class="gimg" data-reveal>
+        <span class="stag">Sample</span>
+        <img src="assets/styling.jpg" alt="Stylist sectioning and styling a client's hair in a salon" width="1000" height="667" loading="lazy" decoding="async" />
+        <div class="gcap">Styling · finishing</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:1">
+        <span class="stag">Sample</span>
+        <img src="assets/color.jpg" alt="Wall of professional hair color shades in a salon" width="800" height="600" loading="lazy" decoding="async" />
+        <div class="gcap">Custom color</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:2">
+        <span class="stag">Sample</span>
+        <img src="assets/lash.jpg" alt="Close-up of long eyelashes" width="800" height="600" loading="lazy" decoding="async" />
+        <div class="gcap">Lash extensions</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:3">
+        <span class="stag">Sample</span>
+        <img src="assets/space.jpg" alt="Elegant salon lounge with mirror and chandelier" width="800" height="600" loading="lazy" decoding="async" />
+        <div class="gcap">The space</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:4">
+        <span class="stag">Sample</span>
+        <img src="assets/makeup.jpg" alt="Makeup being applied to a client" width="800" height="600" loading="lazy" decoding="async" />
+        <div class="gcap">Makeup services</div>
+      </div>
+    </div>
+    <p class="gal-note">Sample photography — the salon's real work replaces every frame on launch.</p>
+  </div>
+</section>
+
+<!-- ═══════════ VISIT ═══════════ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>Come see us</div>
+      <h2 data-reveal>900 Alford Street, Suite D.</h2>
+    </div>
+    <div class="v-grid" style="margin-top:44px">
+      <div class="v-card" data-reveal>
+        <h3>Find us</h3>
+        <p class="addr"><b>900 Alford St, Suite D</b><br/>Conway, AR 72032</p>
+        <div class="v-actions">
+          <a class="btn btn-a" style="padding:13px 22px" href="https://maps.google.com/?q=Salon+Platinum+900+Alford+St+Conway+AR+72032" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-b" style="padding:13px 22px" href="tel:+15014999941">Call the salon</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/SalonPlatinumbeauty" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/salonplatinumconway" target="_blank" rel="noopener">Instagram @salonplatinumconway</a>
+          <a href="https://www.vagaro.com/salonplatinum2" target="_blank" rel="noopener">Vagaro booking</a>
+        </div>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <h3>Hours</h3>
+        <div class="hrow"><b>Tuesday – Saturday</b><span>By appointment</span></div>
+        <div class="hrow"><b>Sunday – Monday</b><span>Closed</span></div>
+        <div class="hrow"><b>Booking</b><span>Online &amp; by phone</span></div>
+        <div class="confirm">Hours vary by stylist and season — <b style="color:var(--plat-2)">please call (501) 499-9941 to confirm the day you want.</b> Exact hours lock in on launch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FRESH SIGNAL CLOSE ═══════════ -->
+<section class="fs">
+  <div class="wrap">
+    <div class="letter" data-reveal>
+      <div class="klab">A note from the guy who built this</div>
+      <p>I'm Nate — I build websites for local shops here in Central Arkansas.</p>
+      <p>I built this for Salon Platinum before we ever talked, because you clearly take pride in the work — <em>“nothing less than for you to love your hair”</em> — and yet almost nothing online is carrying that to the people searching for a salon in Conway right now. Today it's a Facebook page and a Vagaro link.</p>
+      <p>Here's the whole idea: when someone in Conway googles <b>“hair salon near me,”</b> a real website puts <em>you</em> at the top instead of a directory. Everything marked <em>sample</em> becomes your real photos, your real hours, and your real reviews.</p>
+      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
+      <div class="sig">— Nate Witt, Fresh Signal</div>
+
+      <div class="offer">
+        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile set up so you rank for “hair salon Conway,” and a simple assistant that answers hours &amp; booking 24/7.</p></div>
+        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts every month. Cancel anytime.</p></div>
+        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
+      </div>
+      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and only then do we talk money. You keep the site and the domain either way. There's no risk to you — that's the whole point.</p>
+      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--violet);font-weight:800">Nate · (501) 757-3468</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-mark"><span>Salon</span> Platinum</div>
+        <div style="margin-top:8px">900 Alford St, Suite D · Conway, AR 72032<br/>(501) 499-9941 · Book at vagaro.com/salonplatinum2</div>
+      </div>
+      <div style="text-align:right">
+        Hair · Color · Smoothing<br/>Extensions · Lashes · Makeup
+      </div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Salon Platinum. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography, hours and reviews shown are placeholders, replaced with the salon's own on launch.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="mcall" href="tel:+15014999941">Call</a>
+  <a class="mbook" href="https://www.vagaro.com/salonplatinum2" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<!-- ═══════════ AI ASSISTANT WIDGET (demo placeholder) ═══════════ -->
+<button class="ai-fab" id="aiFab" aria-expanded="false" aria-controls="aiPanel">
+  <span class="av" aria-hidden="true">P</span> Ask Platinum
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-modal="false" aria-label="Salon Platinum assistant (demo)">
+  <div class="ai-hd">
+    <span class="av" aria-hidden="true">P</span>
+    <div class="who"><b>Platinum Concierge</b><small>Answers in seconds · demo</small></div>
+    <button class="ai-x" id="aiX" aria-label="Close assistant">×</button>
+  </div>
+  <div class="ai-log" id="aiLog" aria-live="polite">
+    <div class="ai-msg bot">Hi! I'm the Salon Platinum assistant. On the live site I answer questions and help book. Tap one below to see how it works.</div>
+  </div>
+  <div class="ai-chips" id="aiChips">
+    <button class="ai-chip" data-q="What services do you offer?">Services</button>
+    <button class="ai-chip" data-q="What are your hours?">Hours</button>
+    <button class="ai-chip" data-q="How do I book?">Book</button>
+    <button class="ai-chip" data-q="Where are you located?">Location</button>
+  </div>
+  <div class="ai-foot"><b>Demo assistant</b> — sample answers. Wired to real booking &amp; FAQs on launch.</div>
+</div>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 (before </body>) ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- Custom cursor ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],.fs-cmp,input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  /* ---------- Hero line reveal on load ---------- */
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  /* ---------- Magnetic ---------- */
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  /* ---------- Before/after compare (drag + keyboard) ---------- */
+  document.querySelectorAll('.fs-cmp').forEach(function(c){
+    var top=c.querySelector('.fs-cmp-top'), bar=c.querySelector('.fs-cmp-bar');
+    if(!top||!bar) return;
+    function sizeInner(){ top.style.setProperty('--cmpw', c.clientWidth + 'px'); }
+    sizeInner(); addEventListener('resize', sizeInner);
+    function put(p){
+      p=Math.max(0,Math.min(100,p));
+      top.style.width=p+'%'; bar.style.left=p+'%';
+      c.setAttribute('aria-valuenow', Math.round(p));
+    }
+    function fromEvent(e){
+      var r=c.getBoundingClientRect();
+      var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
+      put(x/r.width*100);
+    }
+    var down=false;
+    c.addEventListener('mousedown',function(e){down=true;fromEvent(e);e.preventDefault();});
+    addEventListener('mousemove',function(e){ if(down) fromEvent(e); });
+    addEventListener('mouseup',function(){down=false;});
+    c.addEventListener('touchstart',function(e){fromEvent(e);},{passive:true});
+    c.addEventListener('touchmove',function(e){fromEvent(e);},{passive:true});
+    c.setAttribute('role','slider'); c.setAttribute('tabindex','0');
+    c.setAttribute('aria-label','Drag to compare before and after');
+    c.setAttribute('aria-valuemin','0'); c.setAttribute('aria-valuemax','100');
+    c.addEventListener('keydown',function(e){
+      var now=parseFloat(c.getAttribute('aria-valuenow'))||50;
+      if(e.key==='ArrowLeft'){ put(now-4); e.preventDefault(); }
+      if(e.key==='ArrowRight'){ put(now+4); e.preventDefault(); }
+    });
+    put(50);
+  });
+
+  /* ---------- Parallax ---------- */
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  /* ---------- Count-up ---------- */
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          (function step(ts){
+            if(!t0) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          })();
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  /* ---------- Marquee: duplicate track for seamless loop ---------- */
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  /* ---------- Scroll progress ---------- */
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+
+<!-- ═══ SIGNATURE: platinum-foil sweep across the PLATINUM wordmark ═══ -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var foil = document.querySelector('.foil');
+  if(!foil) return;
+  function sweep(){
+    if(RM) return;
+    foil.classList.remove('sweep');
+    void foil.offsetWidth;           /* reflow to restart the animation */
+    foil.classList.add('sweep');
+  }
+  requestAnimationFrame(sweep);      /* the sheen of a fresh platinum job, on load */
+  var mark = document.querySelector('.mark-hero');
+  if(mark && window.matchMedia('(hover:hover)').matches){
+    mark.addEventListener('mouseenter', sweep);   /* re-polish on hover */
+  }
+})();
+</script>
+
+<!-- ═══ AI assistant (demo placeholder) ═══ -->
+<script>
+(function(){
+  var fab=document.getElementById('aiFab'), panel=document.getElementById('aiPanel'),
+      x=document.getElementById('aiX'), log=document.getElementById('aiLog'),
+      chips=document.getElementById('aiChips');
+  if(!fab||!panel) return;
+  var ANSWERS={
+    "What services do you offer?":"We do it all: haircuts & styling, blowouts and Brazilian blowouts, hair extensions, perms, eyelash extensions, eyebrow & facial waxing, and makeup. Want me to point you to booking?",
+    "What are your hours?":"We're open Tuesday through Saturday by appointment. Hours can vary by stylist, so it's best to call (501) 499-9941 to confirm the day you'd like — or book online and pick an open time.",
+    "How do I book?":"Easiest way is online at vagaro.com/salonplatinum2 — pick your service and a time. Prefer to talk it through? Call us at (501) 499-9941.",
+    "Where are you located?":"We're at 900 Alford St, Suite D, Conway, AR 72032. Tap “Get directions” on the site and it'll map you straight to the door."
+  };
+  function open(){ panel.classList.add('open'); fab.setAttribute('aria-expanded','true'); fab.style.opacity='0'; fab.style.pointerEvents='none'; x.focus(); }
+  function close(){ panel.classList.remove('open'); fab.setAttribute('aria-expanded','false'); fab.style.opacity=''; fab.style.pointerEvents=''; fab.focus(); }
+  function add(cls,txt){ var d=document.createElement('div'); d.className='ai-msg '+cls; d.textContent=txt; log.appendChild(d); log.scrollTop=log.scrollHeight; }
+  fab.addEventListener('click',open);
+  x.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&panel.classList.contains('open')) close(); });
+  chips.addEventListener('click',function(e){
+    var b=e.target.closest('.ai-chip'); if(!b) return;
+    var q=b.getAttribute('data-q');
+    add('me',q);
+    setTimeout(function(){ add('bot', ANSWERS[q]||"On the live site I'd answer that and help you book."); }, 340);
+  });
+})();
+</script>
+
+</body>
+</html>
