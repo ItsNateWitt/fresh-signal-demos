@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Cheryl's Diner — Breakfast All Day · Home Cooking | Cabot, AR</title>
+<meta name="description" content="Cabot's corner diner on East Main — pancakes and eggs all day, burgers and blue-plate specials, and pie by the slice. Home cooking since day one." />
+<meta name="theme-color" content="#141416" />
+<link rel="preload" as="image" href="assets/b2-26-cheryls-diner-cabot/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Mulish:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141416'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23D5202F' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%231FA6A0'/%3E%3C/svg%3E" />
+<style>
+  /* Palette from a chrome-and-checkerboard diner: charcoal · cherry red · turquoise · chrome · cream */
+  :root{
+    --bg:#141416; --bg-2:#1C1C1F; --steel:#37383D;
+    --cherry:#D5202F; --cherry-lt:#F0475A; --teal:#1FA6A0; --teal-lt:#42D3CC;
+    --cream:#F6F1E7; --cream-2:#E1D7C4; --mut:#9C978B;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:'Mulish',system-ui,sans-serif;
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+  .script{font-family:'Pacifico',cursive}
+  .anton{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase}
+
+  .demo{background:var(--cherry);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11.5px;
+    letter-spacing:.04em;padding:9px 16px;text-align:center;line-height:1.5}
+  .demo b{font-weight:600}
+
+  nav{position:sticky;top:0;z-index:60;background:rgba(20,20,22,.87);backdrop-filter:blur(11px);
+    border-bottom:1px solid rgba(246,241,231,.14)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .mark{font-family:'Pacifico',cursive;font-size:24px;letter-spacing:0;text-decoration:none;white-space:nowrap;color:var(--cream)}
+  .mark span{color:var(--cherry-lt)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--cherry);color:#fff;
+    text-decoration:none;padding:11px 18px;border-radius:6px;font-weight:800;font-size:14.5px;transition:background .2s}
+  .call:hover{background:var(--cherry-lt)}
+
+  header{position:relative;min-height:84vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+    filter:contrast(1.06) saturate(1.08) brightness(.6)}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,22,.5) 0%,rgba(20,20,22,.12) 30%,rgba(20,20,22,.95) 100%)}
+  .hero-in{position:relative;z-index:2;padding:0 0 66px;width:100%}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:16px}
+  h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(46px,9.2vw,104px);line-height:.92;letter-spacing:.005em;margin:0 0 20px;max-width:15ch}
+  h1 em{font-family:'Pacifico',cursive;font-style:normal;text-transform:none;color:var(--cherry-lt);font-size:.82em}
+  .hero-sub{font-size:clamp(17px,2vw,20px);color:var(--cream-2);max-width:46ch;margin:0 0 28px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;text-decoration:none;
+    font-weight:800;font-size:15px;border-radius:6px;transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease)}
+  .btn-a{background:var(--cherry);color:#fff}
+  .btn-a:hover{background:var(--cherry-lt)}
+  .btn-b{border:1px solid rgba(246,241,231,.4);color:var(--cream)}
+  .btn-b:hover{border-color:var(--teal-lt)}
+
+  /* checkerboard divider strip */
+  .checker{height:16px;background:
+    repeating-conic-gradient(var(--cream) 0% 25%, var(--bg-2) 0% 50%) 0 / 32px 32px}
+
+  section{padding:92px 0}
+  .lab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:14px}
+  h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5.2vw,58px);line-height:1;letter-spacing:.01em;margin:0 0 18px;max-width:20ch}
+  h2 em{font-family:'Pacifico',cursive;font-style:normal;text-transform:none;color:var(--cherry-lt);font-size:.8em}
+  .lede{font-size:19px;color:var(--cream-2);max-width:56ch;margin:0 0 40px}
+
+  /* ══ SIGNATURE: the Google-search demo — the whole SEO pitch, made touchable ══ */
+  .seo{background:var(--bg-2)}
+  .seo-grid{display:grid;grid-template-columns:1fr .85fr;gap:52px;align-items:center}
+  @media(max-width:900px){.seo-grid{grid-template-columns:1fr;gap:32px}}
+  .phone{background:#0C0C0E;border:10px solid #030304;border-radius:34px;padding:0;overflow:hidden;
+    max-width:340px;margin:0 auto;box-shadow:0 34px 80px rgba(0,0,0,.5)}
+  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 14px}
+  .ph-bar .g{width:16px;height:16px;border-radius:50%;background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);flex:none}
+  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13.5px;color:#202124;font-family:'Mulish',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ph-body{background:#fff;color:#202124;padding:14px 14px 18px;min-height:330px;font-family:'Mulish',sans-serif}
+  .ph-stat{font-size:11.5px;color:#70757A;margin-bottom:12px}
+  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s,background .4s;border-radius:6px}
+  .result.you{opacity:1;background:#FDECEE;border:1px solid var(--cherry);padding:12px;margin:4px 0;box-shadow:0 4px 14px rgba(213,32,47,.18)}
+  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
+  .result .site .pin{width:14px;height:14px;border-radius:50%;background:var(--cherry);color:#fff;font-size:9px;display:grid;place-items:center;font-weight:700}
+  .result .ttl{font-size:16px;color:#1A0DAB;margin:2px 0 2px;font-weight:500}
+  .result.you .ttl{color:#0B7A3E}
+  .result .snip{font-size:12.5px;color:#4D5156;line-height:1.4}
+  .result .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-top:5px}
+  .kw-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .kw{background:transparent;border:1px solid var(--steel);color:var(--cream);font-family:'Mulish';font-weight:700;
+    font-size:14px;padding:11px 15px;border-radius:24px;cursor:pointer;min-height:46px;transition:background .2s,border-color .2s,color .2s}
+  .kw:hover{border-color:var(--teal-lt)}
+  .kw.on{background:var(--cherry);border-color:var(--cherry);color:#fff}
+  .seo-note{font-size:14px;color:var(--mut);margin-top:16px}
+
+  /* the plates */
+  .buffet{background:var(--bg)}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:800px){.bgrid{grid-template-columns:1fr 1fr}}
+  .bgrid figure{margin:0;position:relative;overflow:hidden;border-radius:12px}
+  .bgrid img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:contrast(1.05) saturate(1.07) brightness(.95);transition:transform .8s var(--ease)}
+  .bgrid figure:hover img{transform:scale(1.05)}
+  .bgrid figure:first-child{grid-column:span 2;grid-row:span 2}
+  .bgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(transparent,rgba(20,20,22,.92));
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
+  .bgrid .stag{position:absolute;top:9px;left:9px;background:rgba(20,20,22,.72);color:var(--teal-lt);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
+
+  /* the board / specials angle */
+  .order{background:var(--bg-2)}
+  .o-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:820px){.o-grid{grid-template-columns:1fr}}
+  .o-card{border:1px solid rgba(246,241,231,.16);border-radius:14px;padding:30px;background:var(--bg)}
+  .o-card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:25px;margin:0 0 10px}
+  .o-list{list-style:none;padding:0;margin:16px 0 0}
+  .o-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dotted rgba(246,241,231,.14);font-size:16px}
+  .o-list li b{color:var(--teal-lt);font-weight:800;flex:none}
+  .lang{display:inline-flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+  .lang span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;border:1px solid var(--steel);color:var(--cream-2);padding:5px 10px;border-radius:20px}
+
+  /* visit */
+  .visit{background:var(--bg)}
+  .v-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  @media(max-width:820px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid rgba(246,241,231,.16);border-radius:12px;padding:28px;background:var(--bg-2)}
+  .v-card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:24px;margin:0 0 16px}
+  .hrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dotted rgba(246,241,231,.14);font-size:15.5px}
+  .hrow b{font-weight:600;color:var(--cream)}
+  .hrow span{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--teal-lt)}
+  .addr{font-size:19px;line-height:1.55;color:var(--cream)}
+  .addr b{color:var(--cherry-lt);font-weight:700}
+  .stag2{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut);border:1px solid rgba(246,241,231,.2);padding:4px 8px;border-radius:4px}
+
+  /* fresh signal close */
+  .fs{background:var(--cream);color:var(--bg)}
+  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
+  .letter p{margin:0 0 15px}
+  .sig{font-family:'Pacifico',cursive;font-size:24px;color:var(--cherry);margin-top:6px}
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 0}
+  @media(max-width:700px){.offer{grid-template-columns:1fr}}
+  .oc{border:1px solid rgba(20,20,22,.16);border-radius:10px;padding:20px;background:#fff}
+  .oc .amt{font-family:'Anton',sans-serif;font-weight:400;font-size:38px;color:var(--bg)}
+  .oc .amt small{display:block;font-family:'Mulish';font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+  .oc p{font-size:14px;color:var(--steel);margin:8px 0 0}
+  .risk{margin-top:22px;background:var(--bg);color:var(--cream);border-radius:10px;padding:20px 22px;font-size:16px}
+  .risk b{color:var(--teal-lt)}
+
+  footer{background:var(--bg);padding:40px 0;border-top:1px solid rgba(246,241,231,.14);font-size:14px;color:rgba(246,241,231,.6)}
+  .fbot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(246,241,231,.1);font-size:11.5px;line-height:1.6;color:rgba(246,241,231,.42)}
+
+  .mbar{display:none}
+  @media(max-width:700px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--cherry)}
+    .mbar a{flex:1;text-align:center;padding:16px;text-decoration:none;font-weight:800;color:#fff;font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(255,255,255,.25);background:var(--teal)}
+    footer{padding-bottom:80px}
+    header{min-height:76vh}
+  }
+
+  /* ══ Fresh Signal signature shared styles (injected) ══ */
+  html,body{max-width:100%;overflow-x:clip}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  [data-fs-compare]{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  [data-fs-compare] img{width:100%;height:100%;object-fit:cover;display:block}
+  [data-fs-top]{position:absolute;inset:0;width:50%;overflow:hidden}
+  [data-fs-top] img{max-width:none;height:100%;object-fit:cover}
+  [data-fs-bar]{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-1.5px);box-shadow:0 0 20px rgba(0,0,0,.5)}
+  [data-fs-item],[data-fs-pick]{cursor:pointer}
+  [data-fs-item].on,[data-fs-pick].on{outline:2px solid currentColor;outline-offset:-2px}
+  .fs-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(128,128,128,.25);font-size:15px}
+  /* mobile tap-target floor */
+  @media(max-width:440px){
+    [data-fs-item],[data-fs-pick]{min-height:46px}
+    [data-fs-level]{height:44px !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>DEMO MOCKUP</b> — built for Cheryl's Diner by Nate Witt · Fresh Signal.
+  REAL: name, 211 E Main St Cabot, phone (501) 422-0834. SAMPLE (swapped on launch): photos, menu, prices, reviews.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">Cheryl's <span>Diner</span></a>
+    <a class="call" href="tel:+15014220834">(501) 422-0834</a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — stand-in; replace with the diner's real plate on launch -->
+  <img class="hero-img" src="assets/b2-26-cheryls-diner-cabot/hero.jpg"
+       alt="Stack of pancakes with fruit and coffee at a diner" width="1000" height="666" fetchpriority="high" />
+  <div class="hero-scrim"></div>
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>East Main Street · Cabot, Arkansas</div>
+      <h1 data-reveal style="--i:1">Breakfast all day.<br/><em>Pie always.</em></h1>
+      <p class="hero-sub" data-reveal style="--i:2">Cabot's corner diner — pancakes and eggs off the griddle, burgers and blue-plate specials, bottomless coffee, and pie by the slice. Pull up a stool.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="#work" data-magnetic="0.2">See the menu</a>
+        <a class="btn btn-b" href="#visit">Hours &amp; directions</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="checker" aria-hidden="true"></div>
+
+<!-- ══ SIGNATURE: THE GOOGLE-SEARCH DEMO — the SEO pitch, touchable ══ -->
+<section class="seo" id="found">
+  <div class="wrap">
+    <div class="lab" data-reveal>Get found</div>
+    <h2 data-reveal>When Cabot's hungry, <em>you're who they find.</em></h2>
+    <p class="lede" data-reveal>Everybody's got a phone, and nobody's got a phone book. When someone in
+    Cabot wants breakfast and googles it, the spot with a real website wins the booth. Tap a search — watch where Cheryl's lands.</p>
+
+    <div class="seo-grid">
+      <div>
+        <div class="kw-row" role="group" aria-label="Try a search">
+          <button class="kw on" data-q="breakfast near me cabot">breakfast near me cabot</button>
+          <button class="kw" data-q="diner cabot ar">diner cabot ar</button>
+          <button class="kw" data-q="best pancakes cabot">best pancakes cabot</button>
+          <button class="kw" data-q="lunch cabot arkansas">lunch cabot arkansas</button>
+        </div>
+        <p class="seo-note">This is what a real website does that a Facebook page can't: it puts you at the
+        top when the whole town is searching for exactly what you serve. That's the $79/month working while you're on the griddle.</p>
+      </div>
+
+      <div class="phone" data-reveal="scale">
+        <div class="ph-bar"><span class="g"></span><span class="ph-q" id="phQ">breakfast near me cabot</span></div>
+        <div class="ph-body">
+          <div class="ph-stat">About 22,600 results · Cabot, AR</div>
+          <div class="result you">
+            <div class="site"><span class="pin">★</span> cherylsdinercabot.com</div>
+            <div class="ttl" id="phTtl">Cheryl's Diner — Breakfast All Day &amp; Home Cooking</div>
+            <div class="snip">Pancakes, eggs, burgers and pie on East Main in Cabot. Open early, seven days.
+            ★★★★★ "Best breakfast in Cabot."</div>
+            <span class="badge">You — #1 result</span>
+          </div>
+          <div class="result">
+            <div class="site">facebook.com › some other place</div>
+            <div class="ttl">A competitor's Facebook page</div>
+            <div class="snip">No hours, no menu, no directions — the search moves on.</div>
+          </div>
+          <div class="result">
+            <div class="site">yelp.com › listings</div>
+            <div class="ttl">A directory nobody controls</div>
+            <div class="snip">Third-party page with old info.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE PLATES ══ -->
+<section class="buffet" id="work">
+  <div class="wrap">
+    <div class="lab" data-reveal>Off the griddle</div>
+    <h2 data-reveal>Home cooking, <em>every plate.</em></h2>
+    <p class="lede" data-reveal>Breakfast served all day, lunch done right, and something sweet waiting under the glass dome.</p>
+    <div class="bgrid">
+      <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-26-cheryls-diner-cabot/hero.jpg" alt="Pancakes with fruit and coffee" width="900" height="675" loading="lazy" decoding="async"><figcaption>Griddle cakes — powdered &amp; stacked</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/b2-26-cheryls-diner-cabot/burger.jpg" alt="Cheeseburger with onion rings" width="700" height="525" loading="lazy" decoding="async"><figcaption>The diner burger</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/b2-26-cheryls-diner-cabot/breakfast.jpg" alt="Eggs, bacon and toast breakfast plate" width="700" height="525" loading="lazy" decoding="async"><figcaption>Two eggs, any way</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/b2-26-cheryls-diner-cabot/pie.jpg" alt="Slice of pie" width="700" height="525" loading="lazy" decoding="async"><figcaption>Pie by the slice</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/b2-26-cheryls-diner-cabot/interior.jpg" alt="Retro diner counter with stools" width="700" height="525" loading="lazy" decoding="async"><figcaption>Grab a stool</figcaption></figure>
+    </div>
+    <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Sample photography — the real plates on launch.</p>
+  </div>
+</section>
+
+<!-- ══ THE BOARD ══ -->
+<section class="order" id="menu">
+  <div class="wrap">
+    <div class="lab" data-reveal>On the board</div>
+    <h2 data-reveal>The whole menu, <em>right on their phone.</em></h2>
+    <div class="o-grid">
+      <div data-reveal>
+        <p class="lede" style="margin-bottom:20px">Right now folks have to call or drive by to know what's cooking or if you're open. A real site puts your menu, your daily specials, and your hours in their hand — so they choose your booth before they leave the house.</p>
+        <div class="lang"><span>Full menu</span><span>Daily specials</span><span>Breakfast all day</span><span>Call-ahead</span></div>
+      </div>
+      <div class="o-card" data-reveal style="--i:1">
+        <h3>What the site adds</h3>
+        <ul class="o-list">
+          <li><b>→</b> Full menu with photos and prices, always current</li>
+          <li><b>→</b> Today's blue-plate special, updated in seconds</li>
+          <li><b>→</b> Real hours + one-tap call &amp; directions</li>
+          <li><b>→</b> Call-ahead &amp; large-order form for the busy crowd</li>
+          <li><b>→</b> A friendly assistant that answers "are y'all open?" at 6am</li>
+        </ul>
+        <span class="stag2" style="margin-top:16px">Sample capabilities — wired live on launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VISIT ══ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Come hungry</div>
+    <h2 data-reveal>211 East Main Street.</h2>
+    <div class="v-grid">
+      <div class="v-card" data-reveal>
+        <h3>Find us</h3>
+        <p class="addr"><b>211 E Main St</b><br/>Cabot, AR 72023</p>
+        <p style="margin:18px 0 0"><a class="btn btn-a" style="padding:13px 22px" href="https://maps.google.com/?q=Cheryls+Diner+211+E+Main+St+Cabot+AR" target="_blank" rel="noopener">Get directions</a></p>
+        <p style="margin-top:20px;font-size:15px;color:var(--cream-2)">Call: <a href="tel:+15014220834" style="color:var(--teal-lt)">(501) 422-0834</a></p>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <h3>Hours</h3>
+        <div class="hrow"><b>Monday – Saturday</b><span>6:00a – 2:00p</span></div>
+        <div class="hrow"><b>Sunday</b><span>7:00a – 1:00p</span></div>
+        <div class="hrow"><b>Breakfast</b><span>All day</span></div>
+        <span class="stag2" style="margin-top:16px">Hours from public listings — confirm &amp; lock in on launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FRESH SIGNAL CLOSE ══ -->
+<section class="fs">
+  <div class="wrap">
+    <div class="letter" data-reveal>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cherry);margin-bottom:20px">A note from the guy who built this</p>
+      <p>I'm Nate — I build websites for local spots here in Central Arkansas.</p>
+      <p>I built this for Cheryl's before we ever talked, because a good diner runs on regulars — and yet almost nothing online is helping new folks in Cabot find you. Right now it's a Facebook page.</p>
+      <p>Here's the whole idea: when somebody in Cabot googles <b>"breakfast near me,"</b> a real website puts <em>you</em> at the top instead of a Facebook page. That's booths you're not filling right now. Everything marked <em>sample</em> becomes your real photos, menu, and hours.</p>
+      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
+      <div class="sig">— Nate Witt, Fresh Signal</div>
+
+      <div class="offer">
+        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile fixed so you rank for "breakfast Cabot," and a simple assistant that answers hours &amp; directions 24/7.</p></div>
+        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts every month. Cancel anytime.</p></div>
+        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
+      </div>
+      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and
+      only then do we talk money. You keep the site and the domain either way. There's no risk to you —
+      that's the whole point.</p>
+      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--cherry);font-weight:800">Nate · (501) 757-3468</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div><span class="script" style="font-size:22px;color:var(--cream)">Cheryl's <span style="color:var(--cherry-lt)">Diner</span></span><br/>211 E Main St · Cabot, AR 72023 · (501) 422-0834</div>
+      <div style="text-align:right">Breakfast all day<br/>Open seven days</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Cheryl's Diner. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography, menu, prices and reviews shown are placeholders, replaced with the diner's own on launch.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+15014220834">Call</a>
+  <a href="https://maps.google.com/?q=Cheryls+Diner+211+E+Main+St+Cabot+AR" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  /* the Google-search signature */
+  var DATA = {
+    "breakfast near me cabot":{t:"Cheryl's Diner — Breakfast All Day & Home Cooking"},
+    "diner cabot ar":         {t:"Cheryl's Diner — Cabot's Corner Diner on East Main"},
+    "best pancakes cabot":    {t:"Cheryl's Diner — Griddle Cakes & Bottomless Coffee"},
+    "lunch cabot arkansas":   {t:"Cheryl's Diner — Burgers & Blue-Plate Specials, Cabot"}
+  };
+  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
+  kws.forEach(function(b){b.addEventListener('click',function(){
+    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    var k=b.getAttribute('data-q'); q.textContent=k; if(DATA[k]) ttl.textContent=DATA[k].t;
+  });});
+})();
+</script>
+<script>
+/* ============================================================
+   FRESH SIGNAL — SIGNATURE ENGINE v1
+   One reusable, data-attribute-driven library for the motion layer
+   + the 5 signature interaction patterns. Inline this into each demo
+   (demos must be self-contained — no external JS).
+
+   MOTION (auto): custom cursor · magnetic buttons · scroll reveals
+     - add [data-magnetic="0.2"] to a CTA
+     - add class="reveal" to anything that should fade up on scroll
+
+   SIGNATURES (opt-in via data attributes):
+   1. COMPARE   — drag before/after
+        <div data-fs-compare> <img>(after) <div data-fs-top><img>(before)</div> </div>
+   2. COLLECT   — tap items into a slip that texts the shop
+        <div data-fs-collect data-fs-max="3" data-fs-sms="+15015551234">
+          <button data-fs-item="American Traditional">…</button> …
+          <ul data-fs-slip></ul> <a data-fs-go>Text the shop</a>
+        </div>
+   3. TOTAL     — pick rows, live running total
+        <div data-fs-total data-fs-sum="#out">
+          <div data-fs-pick data-fs-price="40" data-fs-name="The Cut">…</div> …
+        </div>  <span id="out">$0</span>
+   4. LEVEL     — a slider that drives a readout
+        <input data-fs-level type="range" min="0" max="8">
+        (listen: element fires 'fs:level' with detail={value})
+   ============================================================ */
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- MOTION: cursor + magnetic ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'), ring = document.createElement('div');
+    dot.style.cssText = 'position:fixed;top:0;left:0;width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference';
+    ring.style.cssText = 'position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid rgba(255,255,255,.6);margin:-18px 0 0 -18px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(loop);})();
+    var HOT='a,button,input,select,textarea,[data-fs-item],[data-fs-pick],[data-fs-compare],[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='62px';ring.style.height='62px';ring.style.margin='-31px 0 0 -31px';}});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='36px';ring.style.height='36px';ring.style.margin='-18px 0 0 -18px';}});
+    document.addEventListener('mouseleave',function(){ring.style.opacity='0';});
+    document.addEventListener('mouseenter',function(){ring.style.opacity='1';});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.22; el.style.willChange='transform'; el.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ---------- MOTION: scroll reveals ---------- */
+  var rev = document.querySelectorAll('.reveal,[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) { rev.forEach(function(e){e.classList.add('in','is-in');}); }
+    else {
+      var io = new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in','is-in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(e){io.observe(e);});
+    }
+  }
+
+  /* ---------- 1. COMPARE ---------- */
+  document.querySelectorAll('[data-fs-compare]').forEach(function(c){
+    var top=c.querySelector('[data-fs-top]'), bar=c.querySelector('[data-fs-bar]');
+    if(!top) return;
+    function size(){ var img=top.querySelector('img'); if(img) img.style.width=c.clientWidth+'px'; }
+    size(); addEventListener('resize',size);
+    function put(p){p=Math.max(0,Math.min(100,p));top.style.width=p+'%';if(bar)bar.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p));}
+    function ev(e){var b=c.getBoundingClientRect();put(((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*100);}
+    var down=false;
+    c.addEventListener('mousedown',function(e){down=true;ev(e);e.preventDefault();});
+    addEventListener('mousemove',function(e){if(down)ev(e);});addEventListener('mouseup',function(){down=false;});
+    c.addEventListener('touchstart',function(e){ev(e);},{passive:true});c.addEventListener('touchmove',function(e){ev(e);},{passive:true});
+    c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');
+    c.addEventListener('keydown',function(e){var n=parseFloat(c.getAttribute('aria-valuenow'))||50;if(e.key==='ArrowLeft'){put(n-6);e.preventDefault();}if(e.key==='ArrowRight'){put(n+6);e.preventDefault();}});
+    put(52);
+  });
+
+  /* ---------- 2. COLLECT (tap → slip → SMS) ---------- */
+  document.querySelectorAll('[data-fs-collect]').forEach(function(box){
+    var MAX=parseInt(box.getAttribute('data-fs-max'))||3, sms=box.getAttribute('data-fs-sms')||'',
+        biz=box.getAttribute('data-fs-biz')||'the shop',
+        slip=box.querySelector('[data-fs-slip]'), go=box.querySelector('[data-fs-go]'),
+        items=[].slice.call(box.querySelectorAll('[data-fs-item]')), picked=[];
+    function render(){
+      if(!slip) return;
+      if(!picked.length){slip.innerHTML='<li data-empty>Nothing picked yet.</li>';if(go){go.setAttribute('aria-disabled','true');go.removeAttribute('href');}return;}
+      slip.innerHTML=''; picked.forEach(function(b){var li=document.createElement('li');li.textContent=b.getAttribute('data-fs-item');slip.appendChild(li);});
+      if(go){go.setAttribute('aria-disabled','false');go.setAttribute('href','sms:'+sms+'&body='+encodeURIComponent("Hey "+biz+" — I'd like: "+picked.map(function(b){return b.getAttribute('data-fs-item');}).join(', ')));}
+    }
+    function toggle(b){var i=picked.indexOf(b);if(i>-1){picked.splice(i,1);b.classList.remove('on');b.setAttribute('aria-pressed','false');}else if(picked.length<MAX){picked.push(b);b.classList.add('on');b.setAttribute('aria-pressed','true');}render();}
+    items.forEach(function(b){b.setAttribute('role','button');b.setAttribute('tabindex','0');b.addEventListener('click',function(){toggle(b);});b.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(b);}});});
+    render();
+  });
+
+  /* ---------- 3. TOTAL (pick rows → running sum) ---------- */
+  document.querySelectorAll('[data-fs-total]').forEach(function(box){
+    var out=document.querySelector(box.getAttribute('data-fs-sum')), listOut=box.querySelector('[data-fs-lines]'),
+        rows=[].slice.call(box.querySelectorAll('[data-fs-pick]')), chosen=[];
+    function render(){
+      var sum=0; chosen.forEach(function(r){sum+=parseFloat(r.getAttribute('data-fs-price'))||0;});
+      if(out) out.textContent='$'+sum;
+      if(listOut){ if(!chosen.length){listOut.innerHTML='<div data-empty>Tap to start.</div>';}
+        else{listOut.innerHTML='';chosen.forEach(function(r){var d=document.createElement('div');d.className='fs-line';d.innerHTML='<span>'+(r.getAttribute('data-fs-name')||'')+'</span><span>$'+(r.getAttribute('data-fs-price')||0)+'</span>';listOut.appendChild(d);});}}
+    }
+    function toggle(r){var i=chosen.indexOf(r);if(i>-1){chosen.splice(i,1);r.classList.remove('on');r.setAttribute('aria-pressed','false');}else{chosen.push(r);r.classList.add('on');r.setAttribute('aria-pressed','true');}render();}
+    rows.forEach(function(r){r.setAttribute('role','button');r.setAttribute('tabindex','0');r.addEventListener('click',function(){toggle(r);});r.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(r);}});});
+    render();
+  });
+
+  /* ---------- 4. LEVEL (slider → event) ---------- */
+  document.querySelectorAll('[data-fs-level]').forEach(function(sl){
+    function fire(){ sl.dispatchEvent(new CustomEvent('fs:level',{detail:{value:+sl.value}})); }
+    sl.addEventListener('input',fire); fire();
+  });
+
+  /* ---------- marquee auto-duplicate ---------- */
+  document.querySelectorAll('[data-fs-marquee]').forEach(function(m){var t=m.firstElementChild;if(t&&m.children.length===1)m.appendChild(t.cloneNode(true));});
+})();
+
+</script>
+</body>
+</html>
