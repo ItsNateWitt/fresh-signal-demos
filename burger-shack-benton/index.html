@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Burger Shack — Old-Fashioned Burgers &amp; Home Cooking | Benton, AR</title>
+<meta name="description" content="Burger Shack — a super-local, super-friendly lunch joint on S Market St in downtown Benton, AR. Old-fashioned cheeseburgers, cajun &amp; jalapeño-jack burgers, chili dogs, baskets, daily home-cooking specials and pie. Weekdays 10:30–2:30. Call (501) 778-2266." />
+<meta name="theme-color" content="#17120F" />
+<link rel="preload" as="image" href="assets/griddle.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317120F'/%3E%3Cpath d='M6 12.5c0-4 4.5-6.5 10-6.5s10 2.5 10 6.5z' fill='%23EBA829'/%3E%3Crect x='6' y='14.5' width='20' height='3.4' rx='1.7' fill='%23D6382B'/%3E%3Cpath d='M6 20c0-1.6 1.2-2.4 3-2 2 .5 3.4.5 5.2 0s3.4-.5 5.6 0c1.8.4 3.2.4 4.7-.2.9-.4 1.5.2 1.5 1.2 0 2.8-4.3 4.7-10 4.7S6 22.8 6 20z' fill='%23EBA829'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;
+    background:linear-gradient(90deg,var(--tomato),var(--mustard))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ BURGER SHACK — Split Diptych · seasoned griddle-steel + wax-paper cream, ketchup red + mustard gold, hand-chalked specials board ══ */
+  :root{
+    --griddle:#17120F; --char:#1F1712; --char2:#271D16; --char3:#221913;
+    --panel:#241B14; --panel2:#2E231A; --panel3:#382A1E;
+    --wax:#F3E7D0; --wax2:#EADCC0; --wax-ink:#241A11; --wax-line:#CBB791; --wax-mut:#6E5F44;
+    --line:rgba(243,231,208,.10); --line2:rgba(243,231,208,.17);
+    --txt:#F1E8D8; --soft:#DBCFB9; --mut:#A6937A;
+    --tomato:#D8392C; --tomato2:#EC5344; --mustard:#EDA827; --mustard2:#F6BE4A;
+    --board:#22322B; --board2:#1A2721; --chalk:#EFEADC; --chalk-soft:#C4CFBF;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--griddle);color:var(--txt);
+    font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:16.5px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--mustard);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.006em;line-height:.94;text-transform:uppercase}
+  .mono{font-family:'Space Mono',monospace}
+
+  /* type scale — strictly descending (§5.5) */
+  h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(46px,11.4vw,106px);
+    line-height:.9;letter-spacing:.004em;text-transform:uppercase;margin:0 0 24px}
+  h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(30px,6vw,54px);line-height:.98;letter-spacing:.006em;margin:0 0 18px;max-width:20ch}
+  h3{font-family:'Archivo',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;
+    font-size:clamp(20px,2.6vw,23px);line-height:1.06;margin:0}
+  .o{color:var(--tomato)}
+  .m{color:var(--mustard)}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:58ch;margin:0 0 46px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(23,18,15,.9);backdrop-filter:blur(11px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+  .mark .gg{width:36px;height:36px;flex:none}
+  .mark .txt b{font-family:'Anton',sans-serif;font-weight:400;font-size:23px;letter-spacing:.02em;
+    text-transform:uppercase;line-height:.86;display:block;color:var(--txt)}
+  .mark .txt small{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mustard);display:block;margin-top:3px}
+  .call{display:inline-flex;align-items:center;gap:9px;background:var(--tomato);color:#fff;
+    text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--tomato2)}
+  .call svg{width:15px;height:15px;flex:none}
+  .call .lbl-full{display:inline}
+
+  /* hero */
+  header{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;
+    background:var(--griddle)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;
+    filter:saturate(1.02) contrast(1.06) brightness(.66)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(23,18,15,.62) 0%,rgba(23,18,15,.2) 30%,rgba(23,18,15,.97) 100%),
+      linear-gradient(74deg,rgba(23,18,15,.78) 0%,rgba(23,18,15,0) 62%)}
+  .hero-grease{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;
+    background:repeating-linear-gradient(46deg,rgba(237,168,39,.09) 0 2px,rgba(0,0,0,0) 2px 10px)}
+  .hero-rule{position:absolute;left:0;right:0;top:0;height:5px;z-index:4;
+    background:repeating-linear-gradient(90deg,var(--tomato) 0 22px,var(--mustard) 22px 44px)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:0 0 74px}
+  .kicker{display:inline-flex;align-items:center;gap:11px;font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--mustard);margin-bottom:22px}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--tomato);flex:none;
+    box-shadow:0 0 0 4px rgba(216,57,44,.2)}
+  h1{max-width:15ch}
+  .hero-sub{font-size:clamp(16.5px,2vw,19px);color:var(--soft);max-width:52ch;margin:0 0 32px}
+  .hero-sub b{color:var(--txt);font-weight:600}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 27px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:9px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--mustard);color:#231607}
+  .btn-a:hover{background:var(--mustard2)}
+  .btn-b{border:1.5px solid rgba(243,231,208,.32);color:var(--txt)}
+  .btn-b:hover{border-color:var(--mustard);color:var(--mustard2)}
+  .btn svg{width:16px;height:16px;flex:none}
+
+  /* hero lunch-window stamp */
+  .htag{position:absolute;z-index:4;top:104px;right:26px;width:186px;transform:rotate(3deg);
+    background:var(--wax);color:var(--wax-ink);border-radius:5px;padding:16px 16px 14px;
+    box-shadow:0 20px 46px rgba(0,0,0,.5);border:1px solid rgba(0,0,0,.18)}
+  .htag::before{content:"";position:absolute;inset:6px;border:1.5px dashed var(--wax-line);border-radius:3px;pointer-events:none}
+  .htag .top{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--wax-mut);text-align:center}
+  .htag .big{font-family:'Anton',sans-serif;font-size:34px;text-align:center;line-height:.9;margin:7px 0 2px;color:#a83124}
+  .htag .sm{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    text-align:center;color:var(--wax-mut)}
+  .htag .stamp{font-family:'Anton',sans-serif;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+    color:#a83124;text-align:center;margin-top:9px;padding-top:8px;border-top:1.5px solid rgba(168,49,36,.35)}
+  @media(max-width:1040px){.htag{width:158px;top:90px}}
+  @media(max-width:640px){.htag{display:none}}
+
+  /* marquee strip */
+  .strip{background:var(--mustard);color:#2a1a05;border-top:4px solid var(--griddle);border-bottom:4px solid var(--griddle)}
+  .strip .fs-mq{padding:13px 0}
+  .strip .fs-mq__t span{font-family:'Anton',sans-serif;font-size:19px;letter-spacing:.03em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:rgba(42,26,5,.45)}
+
+  section{padding:98px 0;position:relative}
+  .lab{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--tomato);margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .lab::before{content:"";width:28px;height:2px;background:var(--tomato)}
+
+  /* ══ MENU — the board ══ */
+  .menu{background:var(--char)}
+  .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 40px}
+  @media(max-width:820px){.feat{grid-template-columns:1fr;gap:12px}}
+  .ftile{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    aspect-ratio:4/3;background:var(--panel)}
+  .ftile img{width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.05) contrast(1.05) brightness(.82);transition:transform .9s var(--ease)}
+  .ftile::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(23,18,15,.05) 0%,rgba(23,18,15,.85) 100%)}
+  .ftile:hover img{transform:scale(1.05)}
+  .ftile .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px;
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,23px);
+    text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+  .ftile .tag{position:absolute;top:11px;left:11px;z-index:3;font-family:'Space Mono',monospace;font-size:9px;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--mustard);background:rgba(23,18,15,.72);
+    padding:4px 8px;border-radius:5px}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);
+    border-radius:16px;overflow:hidden;background:var(--panel)}
+  @media(max-width:820px){.svc-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.svc-grid{grid-template-columns:1fr}}
+  .svc{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    position:relative;transition:background .25s}
+  .svc:hover{background:var(--panel2)}
+  .svc .no{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--tomato);margin-bottom:9px}
+  .svc h3{margin:0 0 6px}
+  .svc p{margin:0;font-size:14px;color:var(--mut);line-height:1.5}
+  .board-cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+    padding:24px 26px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+  .board-cta p{margin:0;font-size:16.5px;color:var(--soft);flex:1;min-width:240px}
+  .board-cta b{color:var(--txt)}
+
+  /* stat row */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px 0 0}
+  @media(max-width:640px){.stats{grid-template-columns:1fr}}
+  .stat{border:1px solid var(--line);border-radius:13px;padding:22px 20px;background:var(--panel);
+    display:flex;flex-direction:column;gap:6px}
+  .stat b{font-family:'Anton',sans-serif;font-size:34px;line-height:1;color:var(--mustard);letter-spacing:.01em}
+  .stat small{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* ══ SIGNATURE — SPLIT DIPTYCH · pinned hand-chalked board ══ */
+  .rush{background:var(--char3);border-top:1px solid var(--line)}
+  .dip{display:grid;grid-template-columns:.94fr 1.06fr;gap:52px;align-items:start}
+  @media(max-width:940px){.dip{grid-template-columns:1fr;gap:34px}}
+
+  /* the pinned chalkboard */
+  .bd-col{position:sticky;top:92px}
+  @media(max-width:940px){.bd-col{position:static;top:auto}}
+  .board{position:relative;background:
+      radial-gradient(120% 90% at 30% 15%,rgba(255,255,255,.05),rgba(255,255,255,0) 60%),
+      linear-gradient(180deg,var(--board),var(--board2));
+    color:var(--chalk);border-radius:8px;padding:26px 26px 22px;
+    box-shadow:0 30px 70px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.05);
+    border:9px solid #5a4327;outline:1px solid rgba(0,0,0,.4)}
+  .board::before{content:"";position:absolute;inset:0;border-radius:2px;pointer-events:none;
+    background:repeating-linear-gradient(122deg,rgba(255,255,255,.018) 0 3px,rgba(0,0,0,0) 3px 7px);
+    mix-blend-mode:screen}
+  .board .samp{position:absolute;top:12px;right:12px;font-family:'Space Mono',monospace;font-size:9px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-soft);border:1.4px solid rgba(239,234,220,.4);
+    padding:4px 8px;border-radius:5px;transform:rotate(3deg);background:rgba(239,234,220,.05)}
+  .bd-head{text-align:center;border-bottom:2px solid rgba(239,234,220,.3);padding-bottom:14px;margin-bottom:6px}
+  .bd-head .t{font-family:'Caveat',cursive;font-weight:700;font-size:44px;line-height:.9;color:var(--chalk);
+    text-shadow:0 1px 0 rgba(0,0,0,.3)}
+  .bd-head .sub{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--chalk-soft);margin-top:6px}
+  .bd-list{list-style:none;margin:0;padding:6px 0 0}
+  .bd-line{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:9px 0;
+    border-bottom:1px dashed rgba(239,234,220,.22)}
+  .bd-line .nm{flex:1;min-width:0;font-family:'Caveat',cursive;font-weight:600;font-size:24px;line-height:1.04;
+    color:var(--chalk);text-shadow:0 1px 1px rgba(0,0,0,.3)}
+  .bd-line .pr{margin-top:4px}
+  .bd-line .nm small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:9.5px;
+    letter-spacing:.06em;color:var(--chalk-soft);text-transform:uppercase;margin-top:1px}
+  .bd-line .pr{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--mustard2);
+    flex:none;white-space:nowrap;text-transform:uppercase}
+  .js .bd-line{opacity:0;transform:translateY(7px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .js .bd-line.on{opacity:1;transform:none}
+  .js .bd-line.on .nm{animation:chalk-write .72s steps(30,end) both}
+  .js .bd-line .pr{opacity:0;transition:opacity .3s ease .5s}
+  .js .bd-line.on .pr{opacity:1}
+  @keyframes chalk-write{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+  .bd-clock{display:flex;justify-content:space-between;align-items:center;margin-top:15px;padding-top:13px;
+    border-top:2px solid rgba(239,234,220,.3)}
+  .bd-clock .win{font-family:'Anton',sans-serif;font-size:20px;letter-spacing:.02em;color:var(--chalk)}
+  .bd-clock .day{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--chalk-soft);text-align:right}
+  .bd-stamp{margin:13px auto 0;display:table;font-family:'Anton',sans-serif;font-size:12.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:#f0d59a;border:2px solid rgba(240,213,154,.55);border-radius:6px;
+    padding:6px 12px;transform:rotate(-2deg)}
+  .bd-note{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--chalk-soft);
+    text-align:center;margin:14px 0 0;line-height:1.6}
+
+  /* the scrolling lunch-rush story */
+  .steps{margin:6px 0 0}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:26px 0;
+    border-bottom:1px solid var(--line);align-items:start}
+  .step:last-child{border-bottom:none}
+  .step .idx{font-family:'Anton',sans-serif;font-size:40px;line-height:1;color:var(--panel3);
+    -webkit-text-stroke:1px var(--tomato);position:relative}
+  .step.is-in .idx{color:var(--tomato);-webkit-text-stroke:0}
+  .step h3{margin:2px 0 8px}
+  .step p{margin:0;font-size:15.5px;color:var(--soft);max-width:46ch}
+  .step .drv{display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+    font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+  .step .drv i{width:16px;height:2px;background:var(--tomato);font-style:normal;flex:none}
+
+  /* ══ PROOF gallery ══ */
+  .proof{background:var(--char)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+  .pgrid img{width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.05) contrast(1.05) brightness(.9);transition:transform .8s var(--ease)}
+  .pgrid figure.big{grid-column:span 2;grid-row:span 2}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;
+    background:linear-gradient(transparent,rgba(23,18,15,.92));
+    font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--txt)}
+  .pgrid .stag{position:absolute;top:9px;left:9px;background:rgba(23,18,15,.72);color:var(--mustard);
+    font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.11em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px}
+  .pnote{margin-top:16px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* ══ VISIT — hours + map ══ */
+  .visit{background:var(--char3);border-top:1px solid var(--line)}
+  .v-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:stretch}
+  @media(max-width:900px){.v-grid{grid-template-columns:1fr}}
+  .v-info{display:flex;flex-direction:column;gap:16px}
+  .v-card{border:1px solid var(--line);border-radius:15px;padding:26px 26px 24px;background:var(--panel)}
+  .v-card h3{margin:0 0 16px;display:flex;align-items:center;gap:10px}
+  .v-card h3 svg{width:19px;height:19px;color:var(--tomato);flex:none}
+  .addr{font-size:clamp(17px,2.2vw,19px);line-height:1.5;margin:0}
+  .addr b{color:var(--mustard);font-weight:700}
+  .hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+  .hrow:last-child{border-bottom:none}
+  .hrow b{font-weight:600}
+  .hrow span{font-family:'Space Mono',monospace;font-size:13px;color:var(--mustard)}
+  .hrow span.closed{color:var(--mut)}
+  .confirm{margin:14px 0 0;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:8px 11px;border-radius:7px}
+  .map-card{position:relative;border-radius:15px;overflow:hidden;border:1px solid var(--line);
+    background:var(--panel);min-height:420px;box-shadow:0 24px 56px rgba(0,0,0,.4)}
+  .map-card iframe{filter:saturate(1.03) contrast(1.02)}
+  .dir{display:inline-flex;align-items:center;gap:9px;margin-top:18px;background:var(--tomato);color:#fff;
+    text-decoration:none;padding:13px 22px;border-radius:9px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .dir:hover{background:var(--tomato2)}
+  .dir svg{width:15px;height:15px}
+
+  /* ══ CALL BAND ══ */
+  .band{background:linear-gradient(120deg,var(--panel2),var(--panel));border-top:1px solid var(--line)}
+  .band .wrap{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
+  .band h2{margin:0;max-width:17ch}
+  .band .who{max-width:44ch;color:var(--soft);font-size:16.5px;margin:12px 0 0}
+  .band .big-call{display:inline-flex;align-items:center;gap:12px;background:var(--mustard);color:#231607;
+    text-decoration:none;padding:20px 30px;border-radius:12px;font-family:'Anton',sans-serif;
+    font-size:27px;letter-spacing:.02em;transition:background .2s,transform .16s var(--ease)}
+  .band .big-call:hover{background:var(--mustard2)}
+  .band .big-call svg{width:25px;height:25px}
+
+  footer{background:var(--griddle);padding:46px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(243,231,208,.6)}
+  .fcols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .fcols .disp{font-size:26px;color:var(--txt)}
+  .fcols .disp span{color:var(--tomato)}
+  .fcols .mono{font-size:13px}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(243,231,208,.42)}
+
+  /* AI assistant widget */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--tomato);color:#fff;border:none;border-radius:30px;padding:13px 18px;font-family:'Archivo',sans-serif;
+    font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.42);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--tomato2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(346px,calc(100vw - 36px));
+    background:var(--panel);border:1px solid var(--line2);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.52);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--char2);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;
+    background:var(--panel3);border:1px solid var(--line2)}
+  .ai-head .av svg{width:20px;height:20px;color:var(--mustard)}
+  .ai-head b{font-family:'Anton',sans-serif;font-size:19px;letter-spacing:.02em;text-transform:uppercase}
+  .ai-head small{display:block;font-family:'Space Mono',monospace;font-size:9.5px;color:var(--mustard);letter-spacing:.09em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--char2);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:var(--soft)}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'Space Mono',monospace;font-size:11px;color:var(--mustard);border:1px solid var(--line2);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--char2);border:1px solid var(--line2);border-radius:9px;padding:11px 13px;
+    color:var(--txt);font-family:'Archivo',sans-serif;font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--tomato);border:none;border-radius:9px;color:#fff;font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--tomato)}
+    .mbar a{flex:1;text-align:center;padding:15px;text-decoration:none;font-weight:700;color:#fff;font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(255,255,255,.28);background:var(--panel2);color:var(--txt)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+  }
+
+  /* ══ mobile breathing pass (§5.6) ══ */
+  @media(max-width:600px){
+    section{padding:58px 0}
+    .wrap{padding:0 20px}
+    header{min-height:86vh}
+    .hero-in{padding:0 0 58px}
+    h2{margin-bottom:14px}
+    .lede{margin-bottom:34px}
+    .call .lbl-full{display:none}
+    .cta{gap:11px}
+    .btn{width:100%;padding:17px 24px}
+    .board-cta .btn{width:100%}
+    .feat{gap:14px}
+    .svc{padding:20px 20px 22px}
+    .board{padding:22px 20px 20px;border-width:8px}
+    .bd-head .t{font-size:38px}
+    .band .big-call{width:100%;justify-content:center;font-size:23px;padding:18px 22px}
+    .dir{width:100%;justify-content:center}
+    .fcols{gap:16px}
+    .fcols .mono{text-align:left !important}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Burger Shack home">
+      <svg class="gg" viewBox="0 0 40 40" role="img" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#241B14" stroke="#382A1E"/>
+        <path d="M8 16c0-5 5.4-8 12-8s12 3 12 8z" fill="#EDA827"/>
+        <rect x="8" y="18.4" width="24" height="4.1" rx="2" fill="#D8392C"/>
+        <path d="M8 25c0-1.9 1.5-2.9 3.6-2.4 2.4.6 4.1.6 6.2 0s4.1-.6 6.7 0c2.2.5 3.9.5 5.7-.3 1-.5 1.8.3 1.8 1.4 0 3.3-5.2 5.6-12 5.6S8 28.6 8 25z" fill="#EDA827"/>
+      </svg>
+      <span class="txt"><b>Burger Shack</b><small>Benton, Arkansas</small></span>
+    </a>
+    <a class="call" href="tel:+15017782266">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl-full">(501) 778-2266</span>
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-rule" aria-hidden="true"></div>
+  <img class="hero-img" src="assets/griddle.jpg" alt="Cheeseburgers and beef patties cooking on a well-seasoned flat-top griddle, buns toasting alongside" width="1000" height="750" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-grease" aria-hidden="true"></div>
+
+  <!-- lunch-window stamp -->
+  <div class="htag" aria-hidden="true">
+    <div class="top">Serving lunch</div>
+    <div class="big">10:30&ndash;2:30</div>
+    <div class="sm">Monday &ndash; Friday</div>
+    <div class="stamp">Worth planning around</div>
+  </div>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Downtown Benton &middot; S Market St</div>
+      <h1 data-hero>
+        <span class="fs-line"><span>Benton's lunch&#8209;</span></span>
+        <span class="fs-line"><span>hour <span class="o">burger shack.</span></span></span>
+      </h1>
+      <p class="hero-sub" data-reveal style="--i:2">The super&#8209;local, super&#8209;friendly joint off Market Street &mdash; <b>old&#8209;fashioned cheeseburgers</b>, chili dogs, hot baskets and a home&#8209;cooking special that changes by the day. Griddle&#8209;fresh, weekdays only.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="tel:+15017782266" data-magnetic="0.2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call your order in
+        </a>
+        <a class="btn btn-b" href="#menu">See the menu</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Cheeseburgers <i>&#9670;</i></span><span>Cajun Burger <i>&#9670;</i></span><span>Jalape&ntilde;o&#8209;Jack <i>&#9670;</i></span>
+    <span>Chili Dogs <i>&#9670;</i></span><span>Onion Rings <i>&#9670;</i></span><span>Fried Pickles <i>&#9670;</i></span>
+    <span>Chili Cheese Fries <i>&#9670;</i></span><span>Home&#8209;Cooking Specials <i>&#9670;</i></span><span>Pecan Pie <i>&#9670;</i></span>
+  </div></div>
+</div>
+
+<!-- ══ MENU — THE BOARD ══ -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="lab" data-reveal>What's on the flat-top</div>
+    <h2 data-reveal>Old&#8209;fashioned burgers. <span class="o">The whole list.</span></h2>
+    <p class="lede" data-reveal>Everything comes off one griddle at lunch &mdash; burgers built the way you order them, dogs and baskets fried to order, and a home&#8209;cooking special that changes with the day. Here's what's cooking.</p>
+
+    <div class="feat">
+      <figure class="ftile" data-reveal>
+        <span class="tag">Reference photo</span>
+        <img src="assets/cheeseburger.jpg" alt="A cheeseburger with lettuce and tomato on a sesame bun, served with a basket of fries" width="900" height="600" loading="lazy" decoding="async" />
+        <figcaption class="cap">The cheeseburger</figcaption>
+      </figure>
+      <figure class="ftile" data-reveal style="--i:1">
+        <span class="tag">Reference photo</span>
+        <img src="assets/chili-fries.jpg" alt="A basket of french fries loaded with chili and shredded cheddar cheese" width="900" height="600" loading="lazy" decoding="async" />
+        <figcaption class="cap">Loaded baskets</figcaption>
+      </figure>
+      <figure class="ftile" data-reveal style="--i:2">
+        <span class="tag">Reference photo</span>
+        <img src="assets/pecan-pie.jpg" alt="A slice of pecan pie on a green-rimmed diner plate" width="900" height="600" loading="lazy" decoding="async" />
+        <figcaption class="cap">Pie counter</figcaption>
+      </figure>
+    </div>
+
+    <div class="svc-grid" data-reveal>
+      <div class="svc"><div class="no">01</div><h3>Cheeseburgers</h3><p>Regular, jumbo or double &mdash; the flat-top classic.</p></div>
+      <div class="svc"><div class="no">02</div><h3>Cajun Burger</h3><p>The cheeseburger with a little Louisiana heat.</p></div>
+      <div class="svc"><div class="no">03</div><h3>Jalape&ntilde;o&#8209;Jack Burger</h3><p>Pepper jack and jalape&ntilde;os for the ones who like it hot.</p></div>
+      <div class="svc"><div class="no">04</div><h3>Hamburger Steak</h3><p>A smothered plate when a burger won't cut it.</p></div>
+      <div class="svc"><div class="no">05</div><h3>Chili Dogs</h3><p>The classic diner dog, done the old way.</p></div>
+      <div class="svc"><div class="no">06</div><h3>Onion Rings</h3><p>Hand-battered and fried golden to order.</p></div>
+      <div class="svc"><div class="no">07</div><h3>Fried Pickles</h3><p>Crisp, tangy and gone before the burger lands.</p></div>
+      <div class="svc"><div class="no">08</div><h3>Jalape&ntilde;o Poppers</h3><p>Hot, melty and worth the napkins.</p></div>
+      <div class="svc"><div class="no">09</div><h3>Cheese Sticks</h3><p>Golden, pull-apart, straight from the fryer.</p></div>
+      <div class="svc"><div class="no">10</div><h3>Chili Cheese Fries</h3><p>Fries under chili and cheddar &mdash; the whole basket.</p></div>
+      <div class="svc"><div class="no">11</div><h3>Home&#8209;Cooking Specials</h3><p>Chicken spaghetti, meatloaf, chicken-fried steak &mdash; rotates daily.</p></div>
+      <div class="svc"><div class="no">12</div><h3>Pie</h3><p>Pecan and chocolate silk to finish the plate.</p></div>
+    </div>
+
+    <div class="board-cta" data-reveal>
+      <p>Want to know today's special before you drive over? <b>Call ahead &mdash; we'll tell you what's cooking</b> and have your order ready at the window.</p>
+      <a class="btn btn-a" href="tel:+15017782266" data-magnetic="0.18">Call (501) 778-2266</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal><b>10:30&ndash;2:30</b><small>Lunch window, every weekday</small></div>
+      <div class="stat" data-reveal style="--i:1"><b>Mon&ndash;Fri</b><small>Closed Saturday &amp; Sunday</small></div>
+      <div class="stat" data-reveal style="--i:2"><b>Super local</b><small>Old-fashioned Benton burger joint</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE — SPLIT DIPTYCH · PINNED CHALKBOARD ══ -->
+<section class="rush" id="today">
+  <div class="wrap">
+    <div class="dip">
+      <!-- PINNED: the hand-chalked specials board -->
+      <div class="bd-col">
+        <div class="board" role="img" aria-label="Sample chalkboard for Burger Shack in Benton. Lines include cheeseburgers (single, double, jumbo), cajun and jalapeño-jack burgers, chili dogs, hot baskets of onion rings, fried pickles and poppers, chili cheese fries, the daily home-cooking special, and pie. Prices are shown as 'ask' — no prices are set online. Serving 10:30 to 2:30, Monday through Friday. This is a sample board; the real daily special is posted on Facebook.">
+          <span class="samp">Sample board</span>
+          <div class="bd-head">
+            <div class="t">Today's Board</div>
+            <div class="sub">Burger Shack &middot; Benton, AR</div>
+          </div>
+          <ul class="bd-list" id="bdList">
+            <li class="bd-line" data-line="0"><span class="nm">Cheeseburgers<small>single &middot; double &middot; jumbo</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="1"><span class="nm">Cajun &amp; Jalape&ntilde;o&#8209;Jack<small>burgers with a kick</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="2"><span class="nm">Chili Dogs<small>the classic diner dog</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="3"><span class="nm">Hot Baskets<small>rings &middot; pickles &middot; poppers</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="4"><span class="nm">Chili Cheese Fries<small>+ cheese sticks</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="5"><span class="nm">Home&#8209;Cooking Special<small>rotates daily</small></span><span class="pr">ask</span></li>
+            <li class="bd-line" data-line="6"><span class="nm">Pie<small>pecan &middot; chocolate silk</small></span><span class="pr">ask</span></li>
+          </ul>
+          <div class="bd-clock">
+            <span class="win">10:30&ndash;2:30</span>
+            <span class="day">Mon &ndash; Fri<br/>lunch only</span>
+          </div>
+          <div class="bd-stamp">Worth planning lunch around</div>
+          <p class="bd-note">Sample board &mdash; the day's real special is posted fresh on Facebook. No prices are set online; just ask when you order.</p>
+        </div>
+      </div>
+
+      <!-- SCROLLING: the lunch-rush story -->
+      <div class="steps-col">
+        <div class="lab" data-reveal>How lunch runs</div>
+        <h2 data-reveal>Flat&#8209;top on at 10:30. <span class="o">Board fills up fast.</span></h2>
+        <p class="lede" data-reveal>No mystery to it. The griddle warms up, orders start coming, and the board fills in one line at a time &mdash; right up until the window closes at half past two.</p>
+
+        <div class="steps">
+          <div class="step" data-step="0" data-reveal>
+            <div class="idx">1</div>
+            <div>
+              <h3>The flat-top fires up</h3>
+              <p>Half past ten, the griddle's hot and the buns start toasting. First burgers of the day hit the steel.</p>
+              <span class="drv"><i></i>Chalks up: Cheeseburgers</span>
+            </div>
+          </div>
+          <div class="step" data-step="1" data-reveal>
+            <div class="idx">2</div>
+            <div>
+              <h3>Order it your way</h3>
+              <p>Regular, jumbo, double it up &mdash; or turn up the heat with the cajun or the jalape&ntilde;o&#8209;jack. However you like it.</p>
+              <span class="drv"><i></i>Chalks up: Cajun &amp; jalape&ntilde;o&#8209;jack</span>
+            </div>
+          </div>
+          <div class="step" data-step="2" data-reveal>
+            <div class="idx">3</div>
+            <div>
+              <h3>Dogs on the line</h3>
+              <p>Chili dogs the old-fashioned way, made to order right alongside the burgers.</p>
+              <span class="drv"><i></i>Chalks up: Chili dogs</span>
+            </div>
+          </div>
+          <div class="step" data-step="3" data-reveal>
+            <div class="idx">4</div>
+            <div>
+              <h3>Baskets out the window</h3>
+              <p>Onion rings, fried pickles and jalape&ntilde;o poppers &mdash; hand-battered and fried while you wait.</p>
+              <span class="drv"><i></i>Chalks up: Hot baskets</span>
+            </div>
+          </div>
+          <div class="step" data-step="4" data-reveal>
+            <div class="idx">5</div>
+            <div>
+              <h3>Loaded &amp; fried</h3>
+              <p>Chili cheese fries and golden cheese sticks for the table that came hungry.</p>
+              <span class="drv"><i></i>Chalks up: Chili cheese fries</span>
+            </div>
+          </div>
+          <div class="step" data-step="5" data-reveal>
+            <div class="idx">6</div>
+            <div>
+              <h3>Today's home-cooking special</h3>
+              <p>Chicken spaghetti, meatloaf, chicken-fried steak &mdash; the plate lunch changes by the day and goes up on Facebook each morning.</p>
+              <span class="drv"><i></i>Chalks up: Home-cooking special</span>
+            </div>
+          </div>
+          <div class="step" data-step="6" data-reveal>
+            <div class="idx">7</div>
+            <div>
+              <h3>Save room for pie</h3>
+              <p>Pecan and chocolate silk close it out &mdash; and then, at 2:30 sharp, the window's done for the day.</p>
+              <span class="drv"><i></i>Chalks up: Pie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROOF ══ -->
+<section class="proof" id="food">
+  <div class="wrap">
+    <div class="lab" data-reveal>Off the griddle</div>
+    <h2 data-reveal>The plates that <span class="o">fill Market Street.</span></h2>
+    <p class="lede" data-reveal>Burgers, dogs, baskets and pie &mdash; the honest weekday lunch that keeps downtown Benton coming back before the window shuts.</p>
+    <div class="pgrid">
+      <figure class="big" data-reveal><span class="stag">Reference</span><img src="assets/bacon-burger.jpg" alt="A bacon cheeseburger with lettuce and tomato served open on a white plate with fries" width="900" height="675" loading="lazy" decoding="async"><figcaption>Built to order</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Reference</span><img src="assets/chili-dogs.jpg" alt="Two chili dogs with mustard next to a plate of fried onion strings" width="700" height="500" loading="lazy" decoding="async"><figcaption>Chili dogs</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Reference</span><img src="assets/hamburger-steak.jpg" alt="A hamburger steak plate smothered in gravy with potatoes and vegetables" width="700" height="500" loading="lazy" decoding="async"><figcaption>Hamburger steak</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Reference</span><img src="assets/double.jpg" alt="A tall double cheeseburger with pickles, lettuce and melted cheese" width="700" height="500" loading="lazy" decoding="async"><figcaption>Double it up</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Reference</span><img src="assets/counter.jpg" alt="A classic American diner counter with chrome-and-blue stools and a chalkboard menu" width="700" height="500" loading="lazy" decoding="async"><figcaption>The lunch counter</figcaption></figure>
+    </div>
+    <p class="pnote">Reference photography &mdash; Burger Shack's own plates and daily specials drop in here on launch.</p>
+  </div>
+</section>
+
+<!-- ══ VISIT ══ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Find the shack</div>
+    <h2 data-reveal>On S Market St. <span class="o">Come get lunch.</span></h2>
+    <div class="v-grid">
+      <div class="v-info">
+        <div class="v-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            The shack
+          </h3>
+          <p class="addr"><b>107 S Market St</b><br/>Benton, AR 72015</p>
+          <p style="margin:14px 0 0;font-size:15.5px;color:var(--soft)">Call: <a href="tel:+15017782266" style="color:var(--mustard);font-weight:700">(501) 778-2266</a></p>
+          <a class="dir" href="https://maps.google.com/?q=107+S+Market+St,+Benton,+AR+72015" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg>
+            Get directions
+          </a>
+        </div>
+        <div class="v-card" data-reveal style="--i:1">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Hours
+          </h3>
+          <div class="hrow"><b>Monday &ndash; Friday</b><span>10:30 AM &ndash; 2:30 PM</span></div>
+          <div class="hrow"><b>Saturday &amp; Sunday</b><span class="closed">Closed</span></div>
+          <p class="confirm">Lunch-only, weekdays &mdash; hours from public listings; call ahead to confirm before you head over.</p>
+        </div>
+      </div>
+      <div class="map-card" data-reveal="scale">
+        <iframe title="Map — Burger Shack, Benton AR" src="https://www.google.com/maps?q=107+S+Market+St,+Benton,+AR+72015&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CALL BAND ══ -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2 data-reveal>Hungry before <span class="o">2:30?</span></h2>
+      <p class="who" data-reveal style="--i:1">Call your order in and we'll have it hot at the window &mdash; and we'll tell you what today's special is while we're at it.</p>
+    </div>
+    <a class="big-call" href="tel:+15017782266" data-reveal style="--i:2" data-magnetic="0.16">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 778-2266
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <span class="disp">Burger <span>Shack</span></span><br/>
+        107 S Market St &middot; Benton, AR 72015<br/>(501) 778-2266
+      </div>
+      <div style="text-align:right" class="mono">Old-fashioned burgers &amp; home cooking<br/>Mon&ndash;Fri &middot; 10:30&ndash;2:30 &middot; call to confirm</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Burger Shack. Created by Fresh Signal as a proposal. All marks belong to their owners. Reference photography shown is placeholder, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask the Shack
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Burger Shack assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+    <div><b>Shack Assistant</b><small>SAMPLE &middot; placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey &mdash; I'm the Burger Shack helper. On launch I'll tell you today's special, take your lunch order, and text it straight to the window before the 2:30 rush is over.</div>
+    <div class="ai-chips"><span>What's today's special?</span><span>Are you open now?</span><span>Can I call ahead?</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">&rarr;</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15017782266">Call (501) 778-2266</a>
+  <a href="https://maps.google.com/?q=107+S+Market+St,+Benton,+AR+72015" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- chalkboard rail + AI panel -->
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var lines = [].slice.call(document.querySelectorAll('.bd-line'));
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var total = lines.length;
+  var maxOn = -1;
+
+  function revealUpTo(n){
+    if(n <= maxOn) return;
+    maxOn = n;
+    for(var i=0;i<=n && i<total;i++){ lines[i].classList.add('on'); }
+  }
+
+  var STACKED = window.matchMedia('(max-width:940px)').matches;
+  if(RM || STACKED || !('IntersectionObserver' in window) || !steps.length){
+    lines.forEach(function(l){ l.classList.add('on'); });
+    steps.forEach(function(s){ s.classList.add('is-in'); });
+  } else {
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('is-in');
+          var idx = parseInt(en.target.getAttribute('data-step'),10);
+          if(!isNaN(idx)) revealUpTo(idx);
+        }
+      });
+    },{threshold:.4,rootMargin:'0px 0px -12% 0px'});
+    steps.forEach(function(s){ so.observe(s); });
+  }
+
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
