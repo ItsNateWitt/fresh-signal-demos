@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>The Barber District — Barbershop | Conway, AR</title>
+<meta name="description" content="The Barber District — an upscale, modern barbershop on Skyline Dr in Conway, AR. Precision haircuts, traditional hot towel shaves, beard grooming and personalized styling for men of all ages. Call (501) 273-9378." />
+<meta name="theme-color" content="#131315" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131315'/%3E%3Crect x='11.5' y='6' width='9' height='20' rx='4.5' fill='none' stroke='%23B9BEC2' stroke-width='1.4'/%3E%3Cpath d='M12 9 L20 15 M12 15 L20 21' stroke='%23C6A15B' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 12 L20 18' stroke='%238E2B2B' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;
+    background:linear-gradient(90deg,var(--brass),var(--brass2))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ THE BARBER DISTRICT — Filmstrip · charcoal + warm chrome + brass, oxblood pole-red as the single pop.
+        Signature: the backbar mirror wall — a horizontal snap-scroll of station-mirror frames, glided along a chrome clipper rail. ══ */
+  :root{
+    --ink:#131315; --ink2:#0c0c0d; --ink3:#0f0f11;
+    --panel:#19191c; --panel2:#212125; --panel3:#2a2a30;
+    --line:rgba(233,228,219,.10); --line2:rgba(233,228,219,.17);
+    --txt:#ECE7DD; --soft:#CFC9BD; --mut:#8B8A85;
+    --brass:#C6A15B; --brass2:#DBB877; --brass-d:#9C7E3F;
+    --chrome-hi:#EAEDEF; --chrome:#B9BEC2; --chrome-lo:#5C6167;
+    --red:#8E2B2B; --red2:#B23A3A;
+    --blue:#2f3d7a;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--ink);color:var(--txt);
+    font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:2px}
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .mono{font-family:'Space Mono',monospace}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(12,12,13,.86);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+  .mark .gg{width:34px;height:34px;flex:none}
+  .mark .txt b{font-family:'Fraunces',serif;font-weight:500;font-size:21px;letter-spacing:.01em;
+    line-height:.92;display:block;color:var(--txt)}
+  .mark .txt small{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--brass);display:block;margin-top:4px}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .call{display:inline-flex;align-items:center;gap:9px;color:var(--txt);
+    text-decoration:none;padding:11px 15px;border:1px solid var(--line2);border-radius:8px;font-weight:600;font-size:14px;
+    transition:border-color .2s,color .2s}
+  .call:hover{border-color:var(--brass);color:var(--brass2)}
+  .call svg{width:15px;height:15px;flex:none}
+  .book{display:inline-flex;align-items:center;gap:8px;background:var(--brass);color:#1a1305;
+    text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;font-size:14px;
+    transition:background .2s,transform .16s var(--ease)}
+  .book:hover{background:var(--brass2)}
+  .call .lbl-full{display:inline}
+
+  /* hero */
+  header{position:relative;min-height:93vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink2)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;
+    filter:grayscale(.3) brightness(.6) contrast(1.08) saturate(.85)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(12,12,13,.6) 0%,rgba(12,12,13,.2) 32%,rgba(12,12,13,.97) 100%),
+      linear-gradient(74deg,rgba(12,12,13,.74) 0%,rgba(12,12,13,0) 58%)}
+  .hero-warm{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.55;
+    background:radial-gradient(120% 90% at 78% 18%,rgba(198,161,91,.5) 0%,rgba(198,161,91,0) 55%)}
+  .hero-rule{position:absolute;left:0;right:0;top:0;height:4px;z-index:4;
+    background:repeating-linear-gradient(115deg,var(--red2) 0 14px,#eef0f1 14px 28px,var(--blue) 28px 42px)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:0 0 78px}
+  .kicker{display:inline-flex;align-items:center;gap:11px;font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--brass2);margin-bottom:24px}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--red2);flex:none;
+    box-shadow:0 0 0 4px rgba(178,58,58,.18)}
+  h1{margin:0 0 24px;font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(44px,10vw,92px);line-height:.98;letter-spacing:-.005em;max-width:15ch}
+  h1 em{font-style:italic;color:var(--brass2)}
+  .hero-sub{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:54ch;margin:0 0 34px;line-height:1.6}
+  .hero-sub b{color:var(--txt);font-weight:600}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 27px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:9px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--brass);color:#1a1305}
+  .btn-a:hover{background:var(--brass2)}
+  .btn-b{border:1.5px solid rgba(233,228,219,.32);color:var(--txt)}
+  .btn-b:hover{border-color:var(--brass);color:var(--brass2)}
+  .btn svg{width:16px;height:16px;flex:none}
+
+  /* marquee strip */
+  .strip{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .strip .fs-mq{padding:14px 0}
+  .strip .fs-mq__t span{font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:.01em;
+    display:inline-flex;align-items:center;gap:2.5rem;color:var(--soft)}
+  .strip .fs-mq__t span i{font-style:normal;color:var(--brass)}
+
+  section{padding:104px 0;position:relative}
+  .lab{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brass);margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .lab::before{content:"";width:28px;height:2px;background:var(--brass)}
+  h2{font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(28px,6vw,46px);line-height:1.02;letter-spacing:-.005em;margin:0 0 18px;max-width:20ch}
+  h2 em{font-style:italic;color:var(--brass2)}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:60ch;margin:0 0 46px;line-height:1.6}
+
+  /* ══ SERVICES ══ */
+  .board{background:var(--ink)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:720px){.svc-grid{grid-template-columns:1fr}}
+  .svc{position:relative;border:1px solid var(--line);border-radius:15px;padding:30px 28px 28px;
+    background:var(--panel);overflow:hidden;transition:border-color .25s,background .25s;isolation:isolate}
+  .svc::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;
+    background:linear-gradient(180deg,var(--brass),var(--brass-d));opacity:0;transition:opacity .3s}
+  .svc:hover{background:var(--panel2);border-color:var(--line2)}
+  .svc:hover::before{opacity:1}
+  .svc .no{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--brass);margin-bottom:14px}
+  .svc h3{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(20px,2.6vw,23px);
+    margin:0 0 9px;line-height:1.08;letter-spacing:-.005em}
+  .svc p{margin:0;font-size:15.5px;color:var(--mut);line-height:1.55}
+  .svc .price{margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--soft);display:inline-flex;align-items:center;gap:8px}
+  .svc .price i{width:6px;height:6px;border-radius:50%;background:var(--brass);font-style:normal;flex:none}
+  .board-cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+    padding:26px 28px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}
+  .board-cta p{margin:0;font-size:16.5px;color:var(--soft);flex:1;min-width:250px;line-height:1.5}
+  .board-cta b{color:var(--txt)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:44px 0 0}
+  @media(max-width:640px){.stats{grid-template-columns:1fr}}
+  .stat{border:1px solid var(--line);border-radius:14px;padding:24px 22px;background:var(--panel);
+    display:flex;flex-direction:column;gap:6px}
+  .stat b{font-family:'Fraunces',serif;font-weight:500;font-size:38px;line-height:1;color:var(--brass2)}
+  .stat small{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* ══ SIGNATURE — THE BACKBAR MIRROR WALL (filmstrip) ══ */
+  .wall{background:var(--ink3);border-top:1px solid var(--line);overflow:hidden}
+  .wall-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:38px}
+  .wall-head .txt{max-width:60ch}
+  .wall-nav{display:flex;gap:10px;flex:none}
+  .wall-nav button{width:52px;height:52px;border-radius:50%;background:var(--panel2);border:1px solid var(--line2);
+    color:var(--txt);cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s,color .2s}
+  .wall-nav button:hover{background:var(--panel3);border-color:var(--brass);color:var(--brass2)}
+  .wall-nav button svg{width:19px;height:19px}
+  .wall-nav button:disabled{opacity:.35;cursor:default}
+
+  .strip-scroll{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding:6px 0 8px;scrollbar-width:none;-ms-overflow-style:none;
+    -webkit-overflow-scrolling:touch}
+  .strip-scroll::-webkit-scrollbar{display:none}
+  .frame{flex:0 0 auto;width:min(76vw,430px);scroll-snap-align:center;position:relative}
+  /* the station mirror: a beveled chrome frame */
+  .mirror{position:relative;border-radius:10px;padding:11px;
+    background:linear-gradient(150deg,#eceff1 0%,#aab0b5 24%,#54595f 52%,#c3c8cc 74%,#7d8288 100%);
+    box-shadow:0 30px 64px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(0,0,0,.25)}
+  .mirror .glass{position:relative;border-radius:5px;overflow:hidden;aspect-ratio:4/5;background:var(--ink2);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.5)}
+  .mirror img{width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.24) contrast(1.06) brightness(.82) saturate(.9);transition:transform 1s var(--ease),filter .6s}
+  .frame:hover .mirror img{transform:scale(1.05);filter:grayscale(.05) contrast(1.08) brightness(.9) saturate(1)}
+  .mirror .glass::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(12,12,13,.05) 0%,rgba(12,12,13,.82) 100%)}
+  /* keep the pole in colour — it's the single pop */
+  .frame.pole .mirror img{filter:grayscale(0) contrast(1.05) brightness(.92) saturate(1.05)}
+  .frame.pole:hover .mirror img{filter:grayscale(0) contrast(1.08) brightness(1) saturate(1.15)}
+  .mirror .glare{position:absolute;inset:11px;border-radius:5px;pointer-events:none;z-index:3;
+    background:linear-gradient(128deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 26%)}
+  .station{position:absolute;top:20px;left:20px;z-index:4;font-family:'Space Mono',monospace;font-size:10px;
+    letter-spacing:.18em;text-transform:uppercase;color:#dfe3e5;background:rgba(12,12,13,.66);
+    border:1px solid rgba(255,255,255,.14);padding:5px 9px;border-radius:5px;backdrop-filter:blur(3px)}
+  .fcap{position:absolute;left:22px;right:22px;bottom:22px;z-index:4}
+  .fcap b{display:block;font-family:'Fraunces',serif;font-weight:500;font-size:22px;line-height:1.06;letter-spacing:-.005em}
+  .fcap small{display:block;margin-top:5px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--brass2)}
+
+  /* the chrome clipper rail (progress) */
+  .rail{position:relative;height:4px;margin:34px 0 0;border-radius:4px;
+    background:linear-gradient(180deg,#3a3d40,#1c1e20);box-shadow:inset 0 1px 1px rgba(0,0,0,.6)}
+  .rail-fill{position:absolute;top:0;left:0;height:100%;width:14%;border-radius:4px;
+    background:repeating-linear-gradient(120deg,var(--red2) 0 8px,#eef0f1 8px 16px,var(--blue) 16px 24px);
+    transition:width .12s linear}
+  .rail-knob{position:absolute;top:50%;left:14%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:6px;
+    background:linear-gradient(150deg,#eceff1,#8b9195 55%,#3a3d40);
+    box-shadow:0 6px 16px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.6);transition:left .12s linear}
+  .rail-knob::after{content:"";position:absolute;inset:7px 5px auto 5px;height:3px;border-radius:2px;
+    background:var(--brass);box-shadow:0 5px 0 #6a6f74,0 10px 0 var(--brass)}
+  .rail-note{margin-top:16px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:10px}
+  .rail-note i{width:16px;height:2px;background:var(--brass);font-style:normal}
+
+  /* ══ VISIT ══ */
+  .visit{background:var(--ink);border-top:1px solid var(--line)}
+  .v-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:stretch}
+  @media(max-width:900px){.v-grid{grid-template-columns:1fr}}
+  .v-info{display:flex;flex-direction:column;gap:16px}
+  .v-card{border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--panel)}
+  .v-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(20px,2.6vw,23px);
+    margin:0 0 16px;display:flex;align-items:center;gap:11px;letter-spacing:-.005em}
+  .v-card h3 svg{width:19px;height:19px;color:var(--brass);flex:none}
+  .addr{font-size:18.5px;line-height:1.5;margin:0}
+  .addr b{color:var(--brass2);font-weight:600}
+  .v-card .line{margin:14px 0 0;font-size:15.5px;color:var(--soft)}
+  .v-card .line a{color:var(--brass2);font-weight:700;text-decoration:none}
+  .hrow{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+  .hrow:last-of-type{border-bottom:none}
+  .hrow b{font-weight:600}
+  .hrow span{font-family:'Space Mono',monospace;font-size:12.5px;color:var(--brass2)}
+  .confirm{margin:16px 0 0;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:9px 12px;border-radius:8px;line-height:1.6}
+  .dir{display:inline-flex;align-items:center;gap:9px;margin-top:18px;background:var(--brass);color:#1a1305;
+    text-decoration:none;padding:13px 22px;border-radius:9px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .dir:hover{background:var(--brass2)}
+  .dir svg{width:15px;height:15px}
+  .map-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    background:var(--panel);min-height:420px;box-shadow:0 24px 56px rgba(0,0,0,.42)}
+  .map-card iframe{filter:grayscale(.28) contrast(1.02) brightness(.94)}
+
+  /* ══ BOOK BAND ══ */
+  .band{background:linear-gradient(120deg,var(--panel2),var(--panel));border-top:1px solid var(--line)}
+  .band .wrap{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+  .band h2{margin:0;max-width:17ch}
+  .band .who{max-width:46ch;color:var(--soft);font-size:16.5px;margin:14px 0 0;line-height:1.55}
+  .band .band-cta{display:flex;flex-direction:column;gap:12px;flex:none}
+  .band .big-book{display:inline-flex;align-items:center;gap:12px;background:var(--brass);color:#1a1305;
+    text-decoration:none;padding:20px 30px;border-radius:12px;font-family:'Fraunces',serif;font-weight:600;
+    font-size:23px;letter-spacing:-.005em;transition:background .2s,transform .16s var(--ease);justify-content:center}
+  .band .big-book:hover{background:var(--brass2)}
+  .band .big-book svg{width:22px;height:22px}
+  .band .big-call{display:inline-flex;align-items:center;gap:10px;color:var(--txt);text-decoration:none;
+    padding:14px 22px;border:1px solid var(--line2);border-radius:11px;font-weight:600;font-size:16px;justify-content:center;
+    transition:border-color .2s,color .2s}
+  .band .big-call:hover{border-color:var(--brass);color:var(--brass2)}
+  .band .big-call svg{width:17px;height:17px}
+
+  footer{background:var(--ink2);padding:50px 0 36px;border-top:1px solid var(--line);font-size:14px;color:rgba(233,228,219,.6)}
+  .fcols{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .fcols .serif{font-size:24px;color:var(--txt);font-weight:500}
+  .fcols .serif span{color:var(--brass2);font-style:italic}
+  .fbot{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(233,228,219,.42)}
+
+  /* AI assistant widget */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--brass);color:#1a1305;border:none;border-radius:30px;padding:13px 18px;font-family:'Archivo',sans-serif;
+    font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.42);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--brass2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(346px,calc(100vw - 36px));
+    background:var(--panel);border:1px solid var(--line2);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.52);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--ink3);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;
+    background:var(--panel3);border:1px solid var(--line2)}
+  .ai-head .av svg{width:20px;height:20px;color:var(--brass)}
+  .ai-head b{font-family:'Fraunces',serif;font-weight:500;font-size:17px;letter-spacing:-.005em}
+  .ai-head small{display:block;font-family:'Space Mono',monospace;font-size:9.5px;color:var(--brass2);letter-spacing:.1em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--ink3);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:var(--soft);line-height:1.5}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'Space Mono',monospace;font-size:11px;color:var(--brass2);border:1px solid var(--line2);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--ink3);border:1px solid var(--line2);border-radius:9px;padding:11px 13px;
+    color:var(--txt);font-family:'Archivo',sans-serif;font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--brass);border:none;border-radius:9px;color:#1a1305;font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--brass)}
+    .mbar a{flex:1;text-align:center;padding:15px;text-decoration:none;font-weight:700;color:#1a1305;font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(26,19,5,.28);background:var(--panel2);color:var(--txt)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+  }
+
+  /* ══ mobile-first breathing pass ══ */
+  @media(max-width:600px){
+    body{font-size:16px}
+    header{min-height:86vh}
+    .hero-in{padding:0 0 56px}
+    .kicker{margin-bottom:18px}
+    section{padding:58px 0}
+    .wrap{padding:0 20px}
+    .call .lbl-full{display:none}
+    .nav-cta{gap:8px}
+    .board-cta{flex-direction:column;align-items:stretch;text-align:center}
+    .board-cta .btn{width:100%}
+    .cta{gap:11px}
+    .cta .btn{width:100%}
+    .stats{gap:14px}
+    .wall-head{margin-bottom:26px}
+    .wall-nav{display:none}
+    .band .band-cta{width:100%}
+    .band .big-book,.band .big-call{width:100%}
+    .frame{width:82vw}
+    .fcols{gap:16px}
+  }
+</style>
+</head>
+<body id="top">
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="The Barber District home">
+      <svg class="gg" viewBox="0 0 40 40" role="img" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#19191c" stroke="#2a2a30"/>
+        <rect x="14.5" y="7.5" width="11" height="25" rx="5.5" fill="none" stroke="#B9BEC2" stroke-width="1.6"/>
+        <path d="M15.5 11.5 L24.5 18.5 M15.5 18.5 L24.5 25.5 M15.5 25.5 L24.5 32" stroke="#C6A15B" stroke-width="2.1" stroke-linecap="round"/>
+        <path d="M15.5 15 L24.5 22" stroke="#B23A3A" stroke-width="2.1" stroke-linecap="round"/>
+      </svg>
+      <span class="txt"><b>The Barber District</b><small>Conway, Arkansas</small></span>
+    </a>
+    <div class="nav-cta">
+      <a class="call" href="tel:+15012739378">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        <span class="lbl-full">(501) 273-9378</span>
+      </a>
+      <a class="book" href="https://web.getsquire.com/brands/the-barber-district" target="_blank" rel="noopener">Book online</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-rule" aria-hidden="true"></div>
+  <img class="hero-img" src="assets/hero.jpg" alt="A barber blending a fade with clippers and a comb inside The Barber District" width="800" height="1000" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-warm" aria-hidden="true"></div>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Conway, Arkansas · 201 Skyline Dr</div>
+      <h1 data-hero>
+        <span class="fs-line"><span>The Barber</span></span>
+        <span class="fs-line" style="--i:1"><span><em>District.</em></span></span>
+      </h1>
+      <p class="hero-sub" data-reveal style="--i:2">An upscale, modern barbershop where <b>classic barbering traditions</b> meet contemporary style — precision haircuts, hot towel shaves and beard grooming for <b>men of all ages</b>.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="https://web.getsquire.com/brands/the-barber-district" target="_blank" rel="noopener" data-magnetic="0.2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
+          Book your chair
+        </a>
+        <a class="btn btn-b" href="tel:+15012739378">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          (501) 273-9378
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Precision Haircuts <i>&#9670;</i></span><span>Hot Towel Shaves <i>&#9670;</i></span><span>Beard Grooming <i>&#9670;</i></span>
+    <span>Personalized Styling <i>&#9670;</i></span><span>Fades &amp; Tapers <i>&#9670;</i></span><span>Men of All Ages <i>&#9670;</i></span>
+  </div></div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section class="board" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>The service menu</div>
+    <h2 data-reveal>From fresh fades to full <em>grooming transformations.</em></h2>
+    <p class="lede" data-reveal>A modern chair grounded in classic barbering. Every service is tailored to you and booked by appointment — pricing is confirmed at booking, so you always know before you sit down.</p>
+
+    <div class="svc-grid">
+      <div class="svc" data-reveal>
+        <div class="no">01</div>
+        <h3>Precision Haircuts</h3>
+        <p>Clean lines, sharp fades and tapers cut to your face and how you wear it — the same standard whether it's a first cut or a hundredth.</p>
+        <div class="price"><i></i>Book to confirm pricing</div>
+      </div>
+      <div class="svc" data-reveal style="--i:1">
+        <div class="no">02</div>
+        <h3>Traditional Hot Towel Shaves</h3>
+        <p>The old ritual done right — hot towel, warm lather and a straight razor for the closest, most comfortable shave in the house.</p>
+        <div class="price"><i></i>Book to confirm pricing</div>
+      </div>
+      <div class="svc" data-reveal>
+        <div class="no">03</div>
+        <h3>Beard Grooming</h3>
+        <p>Shaped, lined and detailed. Whether you're keeping it full or tightening it up, the beard leaves looking as deliberate as the cut.</p>
+        <div class="price"><i></i>Book to confirm pricing</div>
+      </div>
+      <div class="svc" data-reveal style="--i:1">
+        <div class="no">04</div>
+        <h3>Personalized Styling</h3>
+        <p>Sit down, talk it through, walk out styled and ready. Advice on how to keep it looking right between visits comes with the chair.</p>
+        <div class="price"><i></i>Book to confirm pricing</div>
+      </div>
+    </div>
+
+    <div class="board-cta" data-reveal>
+      <p>Not sure which service you need? <b>Book any chair and we'll sort it out when you sit down</b> — or call the shop and just ask.</p>
+      <a class="btn btn-a" href="https://web.getsquire.com/brands/the-barber-district" target="_blank" rel="noopener" data-magnetic="0.18">Book online</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal><b><span data-count="4">4</span></b><small>Signature services, one chair</small></div>
+      <div class="stat" data-reveal style="--i:1"><b>All ages</b><small>Men of all ages welcome</small></div>
+      <div class="stat" data-reveal style="--i:2"><b>By appt.</b><small>Book online or call the shop</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE — THE BACKBAR MIRROR WALL ══ -->
+<section class="wall" id="work">
+  <div class="wrap">
+    <div class="wall-head">
+      <div class="txt">
+        <div class="lab" data-reveal>The backbar</div>
+        <h2 data-reveal>The mirror wall. <em>Slide down the row.</em></h2>
+        <p class="lede" data-reveal style="margin-bottom:0">Every station tells the same story a different way — the cut, the shave, the beard, the detail. Drag or use the arrows to glide along the chrome rail.</p>
+      </div>
+      <div class="wall-nav" aria-hidden="true">
+        <button id="wPrev" aria-label="Previous station">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="wNext" aria-label="Next station">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="strip-scroll" id="wStrip" tabindex="0" role="group" aria-label="The Barber District — station mirror gallery. Scroll or use arrow keys.">
+      <figure class="frame" data-reveal>
+        <div class="mirror">
+          <span class="station">Station 01</span>
+          <div class="glass"><img src="assets/hero.jpg" alt="A barber blending a fade with clippers and a comb" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <span class="glare" aria-hidden="true"></span>
+          <figcaption class="fcap"><b>Precision Haircuts</b><small>Fades · tapers · clean lines</small></figcaption>
+        </div>
+      </figure>
+      <figure class="frame" data-reveal style="--i:1">
+        <div class="mirror">
+          <span class="station">Station 02</span>
+          <div class="glass"><img src="assets/shave.jpg" alt="A traditional straight razor hot towel shave in progress" width="1000" height="667" loading="lazy" decoding="async"></div>
+          <span class="glare" aria-hidden="true"></span>
+          <figcaption class="fcap"><b>Hot Towel Shaves</b><small>Straight razor · warm lather</small></figcaption>
+        </div>
+      </figure>
+      <figure class="frame" data-reveal style="--i:2">
+        <div class="mirror">
+          <span class="station">Station 03</span>
+          <div class="glass"><img src="assets/beard.jpg" alt="A well-groomed grey beard shaped in profile" width="717" height="1000" loading="lazy" decoding="async"></div>
+          <span class="glare" aria-hidden="true"></span>
+          <figcaption class="fcap"><b>Beard Grooming</b><small>Shaped · lined · detailed</small></figcaption>
+        </div>
+      </figure>
+      <figure class="frame" data-reveal style="--i:3">
+        <div class="mirror">
+          <span class="station">Station 04</span>
+          <div class="glass"><img src="assets/scissors.jpg" alt="A barber's shears resting on a fine-tooth comb" width="1000" height="945" loading="lazy" decoding="async"></div>
+          <span class="glare" aria-hidden="true"></span>
+          <figcaption class="fcap"><b>Personalized Styling</b><small>The tools of the trade</small></figcaption>
+        </div>
+      </figure>
+      <figure class="frame pole" data-reveal style="--i:4">
+        <div class="mirror">
+          <span class="station">Out front</span>
+          <div class="glass"><img src="assets/pole.jpg" alt="The classic red, white and blue barber pole outside the shop" width="1000" height="1000" loading="lazy" decoding="async"></div>
+          <span class="glare" aria-hidden="true"></span>
+          <figcaption class="fcap"><b>The Barber District</b><small>Look for the pole</small></figcaption>
+        </div>
+      </figure>
+    </div>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-fill" id="railFill"></div>
+      <div class="rail-knob" id="railKnob"></div>
+    </div>
+    <p class="rail-note"><i></i>Reference photography — the shop's own chair and client photos drop in here on launch.</p>
+  </div>
+</section>
+
+<!-- ══ VISIT ══ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Find the shop</div>
+    <h2 data-reveal>On Skyline Dr. <em>Come get right.</em></h2>
+    <div class="v-grid">
+      <div class="v-info">
+        <div class="v-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            The shop
+          </h3>
+          <p class="addr"><b>201 Skyline Dr, Ste 9</b><br/>Conway, AR 72032</p>
+          <p class="line">Call: <a href="tel:+15012739378">(501) 273-9378</a></p>
+          <a class="dir" href="https://maps.google.com/?q=201+Skyline+Dr+Ste+9,+Conway,+AR+72032" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg>
+            Get directions
+          </a>
+        </div>
+        <div class="v-card" data-reveal style="--i:1">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Hours
+          </h3>
+          <div class="hrow"><b>By appointment</b><span>Book online</span></div>
+          <div class="hrow"><b>Walk-ins</b><span>Call to check</span></div>
+          <p class="confirm">Current hours aren't posted online yet — book through the calendar or call the shop and we'll get you in.</p>
+        </div>
+      </div>
+      <div class="map-card" data-reveal="scale">
+        <iframe title="Map — The Barber District, Conway AR" src="https://www.google.com/maps?q=201+Skyline+Dr+Ste+9,+Conway,+AR+72032&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOOK BAND ══ -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2 data-reveal>Ready for a <em>fresh cut?</em></h2>
+      <p class="who" data-reveal style="--i:1">Pick your time on the calendar, or call the shop and we'll set you up. First visit or hundredth — you'll leave looking like you meant it.</p>
+    </div>
+    <div class="band-cta" data-reveal style="--i:2">
+      <a class="big-book" href="https://web.getsquire.com/brands/the-barber-district" target="_blank" rel="noopener" data-magnetic="0.16">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
+        Book online
+      </a>
+      <a class="big-call" href="tel:+15012739378">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        (501) 273-9378
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <span class="serif">The Barber <span>District</span></span><br/>
+        201 Skyline Dr, Ste 9 &middot; Conway, AR 72032<br/>(501) 273-9378
+      </div>
+      <div style="text-align:right" class="mono">Precision haircuts &middot; hot towel shaves<br/>Beard grooming &middot; personalized styling</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by The Barber District. Created by Fresh Signal as a proposal. All marks belong to their owners. Reference photography shown is placeholder, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask the shop
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="The Barber District assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></span>
+    <div><b>Shop Assistant</b><small>SAMPLE · placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey — I'm The Barber District's assistant. On launch I'll answer "do you take walk-ins?", help you grab an open chair, and text the details straight to the shop.</div>
+    <div class="ai-chips"><span>Do you take walk-ins?</span><span>How do I book?</span><span>What are your hours?</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">&rarr;</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15012739378">Call (501) 273-9378</a>
+  <a href="https://web.getsquire.com/brands/the-barber-district" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- filmstrip rail + AI panel -->
+<script>
+(function(){
+  var strip = document.getElementById('wStrip');
+  var fill = document.getElementById('railFill');
+  var knob = document.getElementById('railKnob');
+  var prev = document.getElementById('wPrev');
+  var next = document.getElementById('wNext');
+
+  if(strip && fill && knob){
+    function update(){
+      var max = strip.scrollWidth - strip.clientWidth;
+      var p = max > 0 ? strip.scrollLeft / max : 0;
+      p = Math.max(0, Math.min(1, p));
+      var pct = (p * 86 + 14).toFixed(1); /* fill starts at 14% width */
+      fill.style.width = pct + '%';
+      knob.style.left = (p * 100).toFixed(1) + '%';
+      if(prev) prev.disabled = strip.scrollLeft <= 2;
+      if(next) next.disabled = strip.scrollLeft >= max - 2;
+    }
+    strip.addEventListener('scroll', function(){
+      window.requestAnimationFrame(update);
+    }, {passive:true});
+    window.addEventListener('resize', update);
+    update();
+
+    function step(dir){
+      var frame = strip.querySelector('.frame');
+      var w = frame ? frame.getBoundingClientRect().width + 26 : strip.clientWidth * 0.8;
+      strip.scrollBy({left: dir * w, behavior: 'smooth'});
+    }
+    if(prev) prev.addEventListener('click', function(){ step(-1); });
+    if(next) next.addEventListener('click', function(){ step(1); });
+  }
+
+  /* AI panel */
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary,.frame';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1300;
+          function step(ts){
+            if(t0===null) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>

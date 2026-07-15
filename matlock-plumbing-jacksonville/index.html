@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Matlock Plumbing Inc. — Family Plumbing for Central Arkansas | Jacksonville, AR · Since 2006</title>
+<meta name="description" content="Family-run plumbing serving Jacksonville and all of Central Arkansas since 2006 — repairs, installs, drain cleaning, water heaters, sewer lines and 24/7 emergencies. Father to son. Call (501) 442-0320." />
+<meta name="theme-color" content="#0F2029" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F2029'/%3E%3Crect x='6' y='7' width='20' height='4' rx='2' fill='%23C67A46'/%3E%3Crect x='6' y='14' width='20' height='4' rx='2' fill='%23E4A876'/%3E%3Crect x='6' y='21' width='14' height='4' rx='2' fill='%235EA9C6'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 36s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;
+    background:linear-gradient(90deg,var(--copper),var(--water))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ MATLOCK PLUMBING — Travel Poster · copper + water + pipe-navy world ══ */
+  :root{
+    --ink:#0A141C; --base:#0F2029; --base2:#16303B; --base3:#0B1A22;
+    --copper:#C67A46; --copper2:#E4A876; --copper3:#8E5836;
+    --water:#5EA9C6; --patina:#4F958F;
+    --porcelain:#F1EEE6; --porcelain2:#DED8CB;
+    --mut:#8FA3AA; --line:rgba(241,238,230,.14);
+    --ease:cubic-bezier(.22,1,.36,1);
+
+    --fs-h1: clamp(46px,11.2vw,104px);
+    --fs-h2: clamp(30px,6vw,58px);
+    --fs-h3: clamp(23px,3.1vw,30px);
+    --fs-lede: clamp(16.5px,2.1vw,18.5px);
+    --fs-body: 16.5px;
+    --fs-label: 11.5px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--base);color:var(--porcelain);
+    font-family:'Manrope',system-ui,sans-serif;font-size:var(--fs-body);line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--copper2);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.01em;line-height:.95;text-transform:uppercase}
+  .mono{font-family:'Space Mono',monospace}
+
+  /* demo disclosure bar */
+  .demo{background:var(--base3);color:var(--porcelain2);font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.02em;padding:9px 16px;text-align:center;line-height:1.55;border-bottom:1px solid var(--line)}
+  .demo b{color:var(--copper2)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(10,20,28,.9);backdrop-filter:blur(11px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap}
+  .mark .glyph{width:28px;height:28px;border-radius:6px;flex:none;
+    background:linear-gradient(135deg,var(--copper3),var(--copper2));position:relative;overflow:hidden}
+  .mark .glyph::before,.mark .glyph::after{content:"";position:absolute;left:5px;right:5px;height:3px;border-radius:2px;
+    background:var(--base)}
+  .mark .glyph::before{top:8px}
+  .mark .glyph::after{top:17px;right:11px}
+  .mark b{font-family:'Oswald',sans-serif;font-weight:700;font-size:23px;letter-spacing:.06em;color:var(--porcelain);text-transform:uppercase}
+  .mark b span{color:var(--copper2)}
+  .mark i{font-style:normal;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--mut);
+    display:block;margin-top:-3px}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:var(--ink);
+    text-decoration:none;padding:11px 17px;border-radius:7px;font-weight:800;font-size:14.5px;white-space:nowrap;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--copper2)}
+  .call svg{width:15px;height:15px;flex:none}
+
+  /* hero */
+  header{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--base3)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 46%;
+    filter:saturate(1.16) brightness(.6) contrast(1.06) sepia(.14)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,20,28,.66) 0%,rgba(10,20,28,.2) 32%,rgba(10,20,28,.95) 100%),
+      linear-gradient(74deg,rgba(15,32,41,.72) 0%,rgba(15,32,41,0) 60%),
+      radial-gradient(120% 90% at 82% 20%,rgba(198,122,70,.22),rgba(198,122,70,0) 55%)}
+  .hero-scan{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.4;
+    background:repeating-linear-gradient(90deg,rgba(94,169,198,.14) 0 2px,rgba(0,0,0,0) 2px 46px)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:0 0 76px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--copper2);margin-bottom:20px}
+  .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--water);flex:none}
+  h1{margin:0 0 22px;font-family:'Oswald',sans-serif;font-weight:700;
+    font-size:var(--fs-h1);line-height:.9;letter-spacing:.005em;text-transform:uppercase;max-width:15ch}
+  h1 .g{color:var(--copper2)}
+  .hero-sub{font-size:var(--fs-lede);color:#E5E0D4;max-width:54ch;margin:0 0 30px;line-height:1.6}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 27px;
+    text-decoration:none;font-weight:800;font-size:15px;border-radius:8px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--copper);color:var(--ink)}
+  .btn-a:hover{background:var(--copper2)}
+  .btn-b{border:1.5px solid rgba(241,238,230,.42);color:var(--porcelain)}
+  .btn-b:hover{border-color:var(--water);color:var(--water)}
+
+  /* postage stamp */
+  .stamp{position:absolute;z-index:4;top:104px;right:26px;width:186px;transform:rotate(5deg);
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.42))}
+  @media(max-width:960px){.stamp{width:142px;top:88px;right:16px}}
+  @media(max-width:620px){.stamp{width:94px;top:18px;right:22px;transform:rotate(-4deg)}}
+
+  /* marquee trust strip */
+  .strip{background:var(--copper);color:var(--ink);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .strip .fs-mq{padding:13px 0}
+  .strip .fs-mq__t span{font-family:'Oswald',sans-serif;font-weight:600;font-size:20px;letter-spacing:.05em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:var(--base)}
+
+  section{padding:96px 0;position:relative}
+  .lab{font-family:'Space Mono',monospace;font-size:var(--fs-label);letter-spacing:.22em;text-transform:uppercase;
+    color:var(--copper2);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .lab::before{content:"";width:26px;height:2px;background:var(--copper)}
+  h2{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:var(--fs-h2);line-height:.98;letter-spacing:.008em;margin:0 0 18px;max-width:20ch}
+  h2 .g{color:var(--copper2)}
+  .lede{font-size:var(--fs-lede);color:#D7D0C1;max-width:58ch;margin:0 0 44px;line-height:1.6}
+
+  /* stats row */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0 0}
+  @media(max-width:640px){.stats{grid-template-columns:1fr;gap:12px}}
+  .stat{border:1px solid var(--line);border-radius:12px;padding:22px 20px;background:var(--base2)}
+  .stat b{display:block;font-family:'Oswald',sans-serif;font-weight:700;font-size:52px;line-height:1;color:var(--copper2)}
+  .stat small{display:block;margin-top:6px;font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+
+  /* services as route stops */
+  .svc{background:var(--base2)}
+  .stops{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:820px){.stops{grid-template-columns:1fr}}
+  .stop{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:var(--base);min-height:296px;display:flex;align-items:flex-end}
+  .stop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.08) brightness(.56) contrast(1.05) sepia(.12);transition:transform .9s var(--ease)}
+  .stop::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,20,28,.1) 0%,rgba(10,20,28,.92) 100%)}
+  .stop:hover img{transform:scale(1.06)}
+  .stop .body{position:relative;z-index:2;padding:26px}
+  .stop .no{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--copper2)}
+  .stop h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:var(--fs-h3);letter-spacing:.02em;margin:7px 0 9px;line-height:1}
+  .stop p{margin:0;font-size:15.5px;color:#D2CBBC;max-width:40ch;line-height:1.55}
+  .stop .tag{position:absolute;top:14px;left:14px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--copper2);background:rgba(10,20,28,.74);
+    padding:4px 8px;border-radius:5px}
+  .stop.wide{grid-column:1 / -1;min-height:232px}
+
+  /* full service list chips */
+  .allsvc{margin:30px 0 0}
+  .allsvc h4{font-family:'Space Mono',monospace;font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mut);margin:0 0 14px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chips span{font-family:'Manrope';font-weight:700;font-size:13.5px;color:var(--porcelain);
+    border:1px solid var(--line);background:var(--base);padding:9px 14px;border-radius:24px}
+  .chips span::before{content:"◆";color:var(--copper);margin-right:7px;font-size:10px;vertical-align:1px}
+
+  /* ══ SIGNATURE: the copper pipe-run route map ══ */
+  .map{background:var(--base3)}
+  .pipeboard{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--ink);
+    box-shadow:0 30px 70px rgba(0,0,0,.44);margin:8px 0 30px}
+  .pipeboard svg{display:block;width:100%;height:auto}
+  .route{fill:none;stroke:url(#copperGrad);stroke-width:9;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.1s var(--ease)}
+  [data-reveal].is-in .route{stroke-dashoffset:0}
+  .route.trunk{transition-delay:.15s}
+  .route.b1{transition-delay:.7s}
+  .route.b2{transition-delay:.95s}
+  .route.b3{transition-delay:1.2s}
+  .sheen{fill:none;stroke:#F4D6AF;stroke-width:2;stroke-linecap:round;opacity:.5}
+  .fitting{fill:var(--copper3);stroke:var(--ink);stroke-width:1}
+  .joint{fill:var(--copper2);stroke:var(--ink);stroke-width:2}
+  .jointRing{fill:none;stroke:var(--water);stroke-width:1.6;opacity:.7}
+  .hub{fill:var(--water);stroke:var(--ink);stroke-width:2}
+  .townLbl{font-family:'Space Mono',monospace;font-size:12.5px;fill:var(--porcelain);letter-spacing:.04em}
+  .hubLbl{font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;fill:var(--porcelain);letter-spacing:.03em;text-transform:uppercase}
+  .hubTag{font-family:'Space Mono',monospace;font-size:10px;fill:var(--water);letter-spacing:.14em}
+  .map-legend{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--mut);display:flex;gap:18px;flex-wrap:wrap;margin-top:-14px;margin-bottom:34px}
+  .map-legend b{color:var(--copper2);font-weight:400}
+  .map-legend .lg{display:inline-flex;align-items:center;gap:7px}
+  .map-legend .sw{width:16px;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--copper3),var(--copper2))}
+  .map-legend .sd{width:9px;height:9px;border-radius:50%;background:var(--copper2)}
+  .map-legend .sh{width:9px;height:9px;border-radius:50%;background:var(--water)}
+
+  .map-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:52px;align-items:center}
+  @media(max-width:900px){.map-grid{grid-template-columns:1fr;gap:34px}}
+  .comefrom{list-style:none;padding:0;margin:24px 0 0}
+  .comefrom li{margin:0 0 15px;padding-left:28px;position:relative;font-size:16.5px;color:#D7D0C1;line-height:1.5}
+  .comefrom li::before{content:"";position:absolute;left:0;top:8px;width:15px;height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--copper3),var(--copper2))}
+  .map-card{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    background:var(--base2);box-shadow:0 30px 70px rgba(0,0,0,.4)}
+  .townrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .townrow span{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--porcelain2);border:1px solid var(--line);padding:7px 12px;border-radius:6px}
+
+  /* family story */
+  .fam{background:var(--base)}
+  .fam-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}
+  @media(max-width:880px){.fam-grid{grid-template-columns:1fr;gap:32px}}
+  .fam-photo{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 26px 60px rgba(0,0,0,.4);min-height:380px}
+  .fam-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.06) brightness(.66) contrast(1.05) sepia(.1)}
+  .fam-photo::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,20,28,.1),rgba(10,20,28,.72))}
+  .fam-photo .tag{position:absolute;bottom:14px;left:14px;z-index:2;font-family:'Space Mono',monospace;font-size:9.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--copper2);background:rgba(10,20,28,.74);
+    padding:5px 9px;border-radius:5px}
+  .fam p{font-size:17px;color:#D7D0C1;line-height:1.66;margin:0 0 15px;max-width:52ch}
+  .fam .pull{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;font-size:var(--fs-h3);
+    color:var(--porcelain);letter-spacing:.02em;line-height:1.14;margin:0 0 22px;max-width:20ch}
+  .fam .pull b{color:var(--copper2);font-weight:600}
+  .vals{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .vals span{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--water);border:1px solid var(--line);padding:8px 12px;border-radius:24px}
+
+  /* proof gallery */
+  .proof{background:var(--base2)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr}}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:12px}
+  .pgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(1.06) brightness(.82) contrast(1.04) sepia(.1);
+    transition:transform .8s var(--ease)}
+  .pgrid figure:first-child{grid-column:span 2;grid-row:span 2}
+  .pgrid figure:first-child img{aspect-ratio:auto;height:100%}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;
+    background:linear-gradient(transparent,rgba(10,20,28,.94));
+    font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--porcelain)}
+  .pgrid .stag{position:absolute;top:9px;left:9px;background:rgba(10,20,28,.74);color:var(--copper2);
+    font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
+  .pnote{margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* contact */
+  .visit{background:var(--base)}
+  .v-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:820px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--base2)}
+  .v-card h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.02em;
+    font-size:var(--fs-h3);margin:0 0 18px;line-height:1}
+  .hrow{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+  .hrow b{font-weight:700}
+  .hrow span{font-family:'Space Mono',monospace;font-size:12.5px;color:var(--copper2);text-align:right}
+  .area{font-size:19px;line-height:1.5;margin:0}
+  .area b{color:var(--copper2);font-weight:700}
+  .v-towns{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .v-towns span{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--porcelain2);
+    border:1px solid var(--line);padding:6px 10px;border-radius:6px}
+  .stag2{display:inline-block;margin-top:18px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:5px 9px;border-radius:6px}
+  .v-call{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+  footer{background:var(--base3);padding:44px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(241,238,230,.62)}
+  .fbot{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(241,238,230,.44)}
+
+  /* AI assistant widget */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--copper);color:var(--ink);border:none;border-radius:30px;padding:13px 18px;font-family:'Manrope';
+    font-weight:800;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.4);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--copper2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(340px,calc(100vw - 36px));
+    background:var(--base2);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.5);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--base3);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:34px;height:34px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--copper3),var(--copper2))}
+  .ai-head b{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;letter-spacing:.03em;text-transform:uppercase}
+  .ai-head small{display:block;font-family:'Space Mono',monospace;font-size:10px;color:var(--copper2);letter-spacing:.08em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--base);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:#D7D0C1;line-height:1.55}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'Space Mono',monospace;font-size:11px;color:var(--copper2);border:1px solid var(--line);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--base);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
+    color:var(--porcelain);font-family:'Manrope';font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--copper);border:none;border-radius:9px;color:var(--ink);font-weight:800;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+  @media(max-width:700px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--copper)}
+    .mbar a{flex:1;text-align:center;padding:16px;text-decoration:none;font-weight:800;color:var(--ink);font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(10,20,28,.32);background:var(--base2);color:var(--porcelain)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+  }
+
+  /* ══ MOBILE-FIRST BREATHING PASS (§5.6) ══ */
+  @media(max-width:600px){
+    section{padding:56px 0}
+    .wrap{padding:0 20px}
+    nav .wrap{height:60px}
+    .mark b{font-size:19px;letter-spacing:.04em}
+    .mark .glyph{width:24px;height:24px}
+    .mark i{display:none}
+    .call{padding:10px 13px;font-size:13.5px;gap:6px}
+    header{min-height:82vh}
+    .hero-in{padding:0 0 52px}
+    h2{margin-bottom:14px}
+    .lede{margin-bottom:30px}
+    .stops{gap:14px}
+    .stop{min-height:260px}
+    .stat b{font-size:44px}
+    .cta{flex-direction:column;align-items:stretch}
+    .cta .btn{width:100%}
+    .v-call{flex-direction:column;align-items:stretch}
+    .v-call .btn{width:100%}
+    .map-legend{gap:12px}
+    .fam-photo{min-height:300px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Matlock Plumbing home">
+      <span class="glyph" aria-hidden="true"></span>
+      <span><b>MATLOCK<span> PLUMBING</span></b><i>JACKSONVILLE · SINCE 2006</i></span>
+    </a>
+    <a class="call" href="tel:+15014420320">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 442-0320
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — stand-in copper pipework; replaced with Matlock's own jobs on launch -->
+  <img class="hero-img" src="assets/hero.jpg" alt="Freshly run copper water pipes with soldered elbow joints inside a wall" width="1000" height="750" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-scan" aria-hidden="true"></div>
+
+  <!-- POSTAGE-STAMP SIGNATURE MARK -->
+  <svg class="stamp" viewBox="0 0 200 210" role="img" aria-label="Postage-stamp mark: Family-run since 2006, father and son, Jacksonville Arkansas">
+    <defs><clipPath id="stampClip"><rect x="12" y="12" width="176" height="186" rx="4"/></clipPath></defs>
+    <rect x="8" y="8" width="184" height="194" rx="6" fill="#F1EEE6"
+      stroke="#0A141C" stroke-width="2" stroke-dasharray="0.01 9.6" stroke-linecap="round"/>
+    <g clip-path="url(#stampClip)">
+      <rect x="12" y="12" width="176" height="186" fill="#0F2029"/>
+      <rect x="12" y="14" width="176" height="5" fill="#C67A46"/>
+      <rect x="12" y="191" width="176" height="7" fill="#5EA9C6"/>
+      <text x="100" y="60" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="600" font-size="30" fill="#E4A876" letter-spacing="1">FAMILY-RUN</text>
+      <text x="100" y="92" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="46" fill="#F1EEE6" letter-spacing="1">SINCE 2006</text>
+      <rect x="52" y="104" width="96" height="2.5" fill="#C67A46"/>
+      <text x="100" y="132" text-anchor="middle" font-family="Space Mono,monospace" font-size="15" fill="#5EA9C6" letter-spacing="3">FATHER &amp; SON</text>
+      <text x="100" y="166" text-anchor="middle" font-family="Space Mono,monospace" font-size="10.5" fill="#8FA3AA" letter-spacing="2">JACKSONVILLE · ARKANSAS</text>
+    </g>
+  </svg>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Jacksonville, AR · Serving Central Arkansas</div>
+      <h1 data-reveal style="--i:1">Family plumbing<br/>for all of<br/><span class="g">Central Arkansas.</span></h1>
+      <p class="hero-sub" data-reveal style="--i:2">Founded by Phillip Matlock in 2006, run today by his son Michael — the same name on the truck for nearly twenty years. Repairs and installs, drain cleaning, water heaters, sewer lines and 24/7 emergencies. We come to you.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="tel:+15014420320" data-magnetic="0.2">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call (501) 442-0320
+        </a>
+        <a class="btn btn-b" href="#map">See our service area</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee trust strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Drain Cleaning <i>◆</i></span><span>Water Heaters <i>◆</i></span><span>Repairs &amp; Installs <i>◆</i></span>
+    <span>Sewer Lines <i>◆</i></span><span>Remodel Plumbing <i>◆</i></span><span>Backflow Prevention <i>◆</i></span>
+    <span>24/7 Emergency <i>◆</i></span><span>Family-Run Since 2006 <i>◆</i></span>
+  </div></div>
+</div>
+
+<!-- services -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>What we do</div>
+    <h2 data-reveal>If it carries water, <span class="g">we handle it.</span></h2>
+    <p class="lede" data-reveal>One family shop for the whole house and the whole job list — the leak at 2am, the water heater that quit, the new-construction rough-in. Here's the run.</p>
+
+    <div class="stops">
+      <div class="stop" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/valve.jpg" alt="A brass shut-off valve being fitted to a water line at a wall" width="900" height="675" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">01 · Done right the first time</div>
+          <h3>Repairs &amp; Installations</h3>
+          <p>Faucets, fixtures, valves and supply lines repaired or replaced — clean, code and built to hold.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal style="--i:1">
+        <span class="tag">Sample photo</span>
+        <img src="assets/drain.jpg" alt="A plumber clearing a drain line under a kitchen sink" width="900" height="675" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">02 · Runs clear again</div>
+          <h3>Drain Cleaning</h3>
+          <p>Slow drains and full clogs cleared — kitchen sink to main line, snaked and flushed.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/leak.jpg" alt="A close view of a dripping faucet with a water droplet forming" width="750" height="1000" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">03 · Any hour</div>
+          <h3>Leaks &amp; 24/7 Emergencies</h3>
+          <p>Drips, burst lines and after-hours trouble — call anytime and we'll get to it fast.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal style="--i:1">
+        <span class="tag">Sample photo</span>
+        <img src="assets/fixtures.jpg" alt="A finished bathroom vanity with double undermount sinks and brushed-nickel faucets" width="1000" height="750" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">04 · Rough-in to finish</div>
+          <h3>Bath &amp; Kitchen Remodels</h3>
+          <p>Remodel plumbing done to spec — sinks, faucets, fixtures and the lines behind the wall.</p>
+        </div>
+      </div>
+      <div class="stop wide" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/sewer.jpg" alt="A large sewer pipe set into a freshly excavated trench" width="1200" height="500" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">05 · The heavy work</div>
+          <h3>Sewer Lines &amp; New Construction</h3>
+          <p>Sewer line repair and replacement, plus full new-construction and commercial rough-in — the deep, buried work most shops send out.</p>
+        </div>
+      </div>
+      <div class="stop wide" data-reveal style="--i:1">
+        <span class="tag">Sample photo</span>
+        <img src="assets/hero.jpg" alt="Copper water lines with soldered joints running through a wall cavity" width="1200" height="500" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">06 · Cleaner water, hotter water</div>
+          <h3>Water Heaters, Repiping &amp; Filtration</h3>
+          <p>Water heater repair and replacement, whole-home repipes, backflow prevention and water filtration — tank or tankless, copper or PEX.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="allsvc" data-reveal>
+      <h4>The full list — one shop covers all of it</h4>
+      <div class="chips">
+        <span>Plumbing Installations</span><span>Plumbing Repairs</span><span>Drain Cleaning</span>
+        <span>Water Heater Service</span><span>Sewer Line Work</span><span>Bathroom Remodel Plumbing</span>
+        <span>Kitchen Remodel Plumbing</span><span>Backflow Prevention</span><span>Water Filtration</span>
+        <span>Emergency Service</span><span>New Construction</span><span>Commercial Plumbing</span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal><b><span data-count="19">19</span></b><small>Years serving Central AR</small></div>
+      <div class="stat" data-reveal style="--i:1"><b>24/7</b><small>Emergency line</small></div>
+      <div class="stat" data-reveal style="--i:2"><b>2</b><small>Generations, one name</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE: THE COPPER PIPE-RUN ROUTE MAP ══ -->
+<section class="map" id="map">
+  <div class="wrap">
+    <div class="lab" data-reveal>We come to you</div>
+    <h2 data-reveal>The lines run all across <span class="g">Central Arkansas.</span></h2>
+    <p class="lede" data-reveal>You don't haul the water heater to us — we bring the truck to you. Home base is Jacksonville, and the routes run out across the region every day of the week.</p>
+
+    <div class="pipeboard" data-reveal="scale">
+      <svg viewBox="0 0 1120 380" role="img" aria-label="Illustrated service-area map: copper pipe routes from Jacksonville out to Sherwood, North Little Rock, Little Rock, Maumelle, Cabot, Ward, Beebe and Lonoke">
+        <defs>
+          <linearGradient id="copperGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8E5836"/><stop offset="0.4" stop-color="#C67A46"/>
+            <stop offset="0.7" stop-color="#E4A876"/><stop offset="1" stop-color="#B06A3C"/>
+          </linearGradient>
+        </defs>
+        <!-- faint grid -->
+        <g opacity="0.5">
+          <rect x="0" y="0" width="1120" height="380" fill="#0A141C"/>
+          <g stroke="#16303B" stroke-width="1">
+            <line x1="0" y1="95" x2="1120" y2="95"/><line x1="0" y1="285" x2="1120" y2="285"/>
+            <line x1="280" y1="0" x2="280" y2="380"/><line x1="560" y1="0" x2="560" y2="380"/><line x1="840" y1="0" x2="840" y2="380"/>
+          </g>
+        </g>
+
+        <!-- COPPER PIPE ROUTES (orthogonal runs, draw on scroll) -->
+        <path class="route trunk" pathLength="1" d="M70 190 H1050"/>
+        <path class="route b1"    pathLength="1" d="M300 190 V312"/>
+        <path class="route b2"    pathLength="1" d="M410 190 V276"/>
+        <path class="route b3"    pathLength="1" d="M730 190 V312"/>
+        <!-- pipe sheen -->
+        <path class="sheen" pathLength="1" d="M74 186 H1046"/>
+
+        <!-- ELBOW / TEE FITTINGS at junctions -->
+        <g>
+          <rect class="fitting" x="292" y="181" width="16" height="18" rx="2"/>
+          <rect class="fitting" x="402" y="181" width="16" height="18" rx="2"/>
+          <rect class="fitting" x="722" y="181" width="16" height="18" rx="2"/>
+          <rect class="fitting" x="556" y="180" width="12" height="20" rx="2"/>
+        </g>
+
+        <!-- HOME BASE — Jacksonville -->
+        <circle class="hub" cx="510" cy="190" r="11"/>
+        <circle class="jointRing" cx="510" cy="190" r="17"/>
+        <text class="hubLbl" x="510" y="158" text-anchor="middle">Jacksonville</text>
+        <text class="hubTag" x="510" y="142" text-anchor="middle">◆ HOME BASE</text>
+
+        <!-- TOWN SOLDER-JOINTS -->
+        <g>
+          <circle class="joint" cx="150" cy="190" r="7"/><text class="townLbl" x="150" y="172" text-anchor="middle">Maumelle</text>
+          <circle class="joint" cx="660" cy="190" r="7"/><text class="townLbl" x="660" y="172" text-anchor="middle">Cabot</text>
+          <circle class="joint" cx="840" cy="190" r="7"/><text class="townLbl" x="840" y="172" text-anchor="middle">Ward</text>
+          <circle class="joint" cx="980" cy="190" r="7"/><text class="townLbl" x="980" y="172" text-anchor="middle">Beebe</text>
+          <circle class="joint" cx="300" cy="312" r="7"/><text class="townLbl" x="300" y="336" text-anchor="middle">Little Rock</text>
+          <circle class="joint" cx="410" cy="276" r="7"/><text class="townLbl" x="410" y="300" text-anchor="middle">Sherwood</text>
+          <circle class="joint" cx="730" cy="312" r="7"/><text class="townLbl" x="730" y="336" text-anchor="middle">Lonoke</text>
+          <circle class="joint" cx="220" cy="190" r="5.5"/><text class="townLbl" x="220" y="212" text-anchor="middle" font-size="11">N. Little Rock</text>
+        </g>
+      </svg>
+    </div>
+    <div class="map-legend" data-reveal>
+      <span class="lg"><span class="sw"></span> Copper = our routes</span>
+      <span class="lg"><span class="sd"></span> Towns we serve</span>
+      <span class="lg"><span class="sh"></span> Jacksonville home base</span>
+      <span><b>Illustrated map</b> — the live map is below</span>
+    </div>
+
+    <div class="map-grid">
+      <div>
+        <ul class="comefrom">
+          <li>Based in <b>Jacksonville</b> — a local family shop, not a national dispatch number two states away.</li>
+          <li>One name on the truck since 2006 — you get the <b>Matlocks</b>, not a rotating sub.</li>
+          <li>Out across Central Arkansas: Sherwood, North Little Rock, Cabot, Beebe, Lonoke and into Little Rock.</li>
+        </ul>
+        <div class="townrow">
+          <span>Jacksonville</span><span>Sherwood</span><span>N. Little Rock</span><span>Little Rock</span>
+          <span>Maumelle</span><span>Cabot</span><span>Ward</span><span>Beebe</span><span>Lonoke</span>
+        </div>
+      </div>
+
+      <div class="map-card" data-reveal="scale">
+        <iframe title="Map — Matlock Plumbing, Jacksonville AR" src="https://www.google.com/maps?q=Matlock+Plumbing,+Jacksonville,+AR&z=12&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- family story -->
+<section class="fam" id="family">
+  <div class="wrap">
+    <div class="lab" data-reveal>The family</div>
+    <div class="fam-grid">
+      <div class="fam-photo" data-reveal="left">
+        <span class="tag">Sample photo — Matlock's team photos go here on launch</span>
+        <img src="assets/drain.jpg" alt="A plumber at work on a job under a sink" width="900" height="675" loading="lazy" decoding="async" />
+      </div>
+      <div data-reveal="right">
+        <h2 style="max-width:16ch">Father and son. <span class="g">Same name since 2006.</span></h2>
+        <p class="pull">Phillip Matlock started it in 2006. Today his son <b>Michael</b> runs it — the handoff you'd want from the people working on your home.</p>
+        <p>Integrity, reliability and professionalism aren't a slogan here — they're the reason the same families in Central Arkansas keep calling back, year after year. When a Matlock quotes the job, a Matlock does the job.</p>
+        <div class="vals">
+          <span>Integrity</span><span>Reliability</span><span>Professionalism</span><span>Family-Owned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- proof gallery -->
+<section class="proof" id="work">
+  <div class="wrap">
+    <div class="lab" data-reveal>The work</div>
+    <h2 data-reveal>Clean joints, <span class="g">done to last.</span></h2>
+    <p class="lede" data-reveal>Good plumbing is the kind you never think about again — tight fittings, straight runs, and a fixture that just works. That's the standard on every call.</p>
+    <div class="pgrid">
+      <figure data-reveal><span class="stag">Sample</span><img src="assets/hero.jpg" alt="Copper water lines with soldered elbow joints" width="900" height="675" loading="lazy" decoding="async"><figcaption>Copper &amp; solder</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/fixtures.jpg" alt="Finished double-sink vanity" width="700" height="933" loading="lazy" decoding="async"><figcaption>Fixtures set</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/valve.jpg" alt="Brass shut-off valve fitted to a line" width="700" height="933" loading="lazy" decoding="async"><figcaption>Valves &amp; supply</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/sewer.jpg" alt="Sewer pipe in an excavated trench" width="700" height="933" loading="lazy" decoding="async"><figcaption>Sewer &amp; new work</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/leak.jpg" alt="A dripping faucet close up" width="700" height="933" loading="lazy" decoding="async"><figcaption>Leaks stopped</figcaption></figure>
+    </div>
+    <p class="pnote">Sample photography — Matlock Plumbing's own job photos go here on launch.</p>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Reach us</div>
+    <h2 data-reveal>Jacksonville-based. <span class="g">On call for Central Arkansas.</span></h2>
+    <div class="v-grid">
+      <div class="v-card" data-reveal>
+        <h3>Where we work</h3>
+        <p class="area"><b>Jacksonville, AR</b><br/>Serving all of Central Arkansas</p>
+        <div class="v-towns">
+          <span>Jacksonville</span><span>Sherwood</span><span>N. Little Rock</span><span>Little Rock</span>
+          <span>Maumelle</span><span>Cabot</span><span>Ward</span><span>Beebe</span><span>Lonoke</span>
+        </div>
+        <span class="stag2">Service area — no walk-in address; we come to you</span>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <h3>When to call</h3>
+        <div class="hrow"><b>Emergencies</b><span>24 / 7 — call anytime</span></div>
+        <div class="hrow"><b>Scheduling</b><span>Call to book a visit</span></div>
+        <div class="hrow"><b>Estimates</b><span>By phone</span></div>
+        <div class="v-call">
+          <a class="btn btn-a" style="padding:14px 24px" href="tel:+15014420320" data-magnetic="0.2">Call (501) 442-0320</a>
+          <a class="btn btn-b" href="#map">Service area</a>
+        </div>
+        <span class="stag2">Exact hours not yet confirmed — set your real schedule on launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div>
+        <span class="disp" style="font-size:26px;color:var(--porcelain)">MATLOCK <span style="color:var(--copper2)">PLUMBING</span></span><br/>
+        Family plumbing for Central Arkansas<br/>Jacksonville, AR · (501) 442-0320
+      </div>
+      <div style="text-align:right" class="mono">Family-run since 2006<br/>Father &amp; son · 24/7 emergency</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Matlock Plumbing Inc. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography and the illustrated route map shown are placeholders, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask Matlock
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Matlock Plumbing assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"></span>
+    <div><b>Matlock Assistant</b><small>SAMPLE · placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey — I'm the Matlock Plumbing assistant. On launch I'll answer "can you get to me today?", quote basics, and take emergency calls around the clock, then text the details straight to the crew.</div>
+    <div class="ai-chips"><span>I have a leak</span><span>Water heater out</span><span>Are you in my area?</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">→</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15014420320">Call (501) 442-0320</a>
+  <a href="#map">Service area</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- AI panel toggle -->
+<script>
+(function(){
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          function step(ts){
+            if(t0===null) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
