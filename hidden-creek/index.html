@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Hidden Creek Catfish — All-You-Can-Eat Catfish Buffet | Conway, AR</title>
+<meta name="description" content="Conway's all-you-can-eat catfish buffet on Hwy 64 — fried catfish, chicken tenders, frog legs and sides, creek-side seating. Thursday through Sunday." />
+<meta name="theme-color" content="#1C2622" />
+<link rel="preload" as="image" href="assets/b2-22-hidden-creek-catfish-conway/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,800;1,500&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C2622'/%3E%3Cpath d='M7 17c4-5 14-5 18 0-4 5-14 5-18 0z' fill='%23E0A73B'/%3E%3Ccircle cx='11' cy='15' r='1.6' fill='%231C2622'/%3E%3C/svg%3E" />
+<style>
+  /* Palette from a Southern creek-side fish house: cast iron · fried gold · catfish slate · creek green · cornbread */
+  :root{
+    --iron:#1C2622; --iron-2:#26332D; --slate:#3E4E48;
+    --gold:#E0A73B; --gold-lt:#F1C777; --brick:#B4472B;
+    --cream:#F5ECD8; --cream-2:#E9DCBE; --creek:#5E8A5A; --mut:#8A9088;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--iron);color:var(--cream);font-family:'Barlow',system-ui,sans-serif;
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .bit{font-family:'Bitter',Georgia,serif}
+
+  .demo{background:var(--gold);color:var(--iron);font-family:'JetBrains Mono',monospace;font-size:11.5px;
+    letter-spacing:.04em;padding:9px 16px;text-align:center;line-height:1.5}
+  .demo b{font-weight:600}
+
+  nav{position:sticky;top:0;z-index:60;background:rgba(28,38,34,.86);backdrop-filter:blur(11px);
+    border-bottom:1px solid rgba(245,236,216,.14)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .mark{font-family:'Bitter',serif;font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+  .mark span{color:var(--gold)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--iron);
+    text-decoration:none;padding:11px 18px;border-radius:6px;font-weight:700;font-size:14.5px;transition:background .2s}
+  .call:hover{background:var(--gold-lt)}
+
+  header{position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;
+    filter:contrast(1.06) saturate(1.05) brightness(.66)}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,38,34,.5) 0%,rgba(28,38,34,.15) 34%,rgba(28,38,34,.94) 100%)}
+  .hero-in{position:relative;z-index:2;padding:0 0 66px;width:100%}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:18px}
+  h1{font-family:'Bitter',serif;font-weight:800;font-size:clamp(42px,8vw,92px);line-height:.98;letter-spacing:-.02em;margin:0 0 20px;max-width:15ch}
+  h1 em{font-style:italic;color:var(--gold)}
+  .hero-sub{font-size:clamp(17px,2vw,20px);color:var(--cream-2);max-width:46ch;margin:0 0 28px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;text-decoration:none;
+    font-weight:700;font-size:15px;border-radius:6px;transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease)}
+  .btn-a{background:var(--gold);color:var(--iron)}
+  .btn-a:hover{background:var(--gold-lt)}
+  .btn-b{border:1px solid rgba(245,236,216,.4);color:var(--cream)}
+  .btn-b:hover{border-color:var(--gold)}
+
+  section{padding:92px 0}
+  .lab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  h2{font-family:'Bitter',serif;font-weight:800;font-size:clamp(30px,4.8vw,52px);line-height:1.05;letter-spacing:-.01em;margin:0 0 18px;max-width:20ch}
+  h2 em{font-style:italic;color:var(--gold)}
+  .lede{font-size:19px;color:var(--cream-2);max-width:56ch;margin:0 0 40px}
+
+  /* ══ SIGNATURE: the Google-search demo — the whole SEO pitch, made touchable ══ */
+  .seo{background:var(--iron-2)}
+  .seo-grid{display:grid;grid-template-columns:1fr .85fr;gap:52px;align-items:center}
+  @media(max-width:900px){.seo-grid{grid-template-columns:1fr;gap:32px}}
+  .phone{background:#0E1512;border:10px solid #050907;border-radius:34px;padding:0;overflow:hidden;
+    max-width:340px;margin:0 auto;box-shadow:0 34px 80px rgba(0,0,0,.5)}
+  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 14px}
+  .ph-bar .g{width:16px;height:16px;border-radius:50%;background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);flex:none}
+  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13.5px;color:#202124;font-family:'Barlow',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ph-body{background:#fff;color:#202124;padding:14px 14px 18px;min-height:330px;font-family:'Barlow',sans-serif}
+  .ph-stat{font-size:11.5px;color:#70757A;margin-bottom:12px}
+  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s,background .4s;border-radius:6px}
+  .result.you{opacity:1;background:#FEF7E6;border:1px solid var(--gold);padding:12px;margin:4px 0;box-shadow:0 4px 14px rgba(224,167,59,.2)}
+  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
+  .result .site .pin{width:14px;height:14px;border-radius:50%;background:var(--gold);color:#fff;font-size:9px;display:grid;place-items:center;font-weight:700}
+  .result .ttl{font-size:16px;color:#1A0DAB;margin:2px 0 2px;font-weight:500}
+  .result.you .ttl{color:#0B7A3E}
+  .result .snip{font-size:12.5px;color:#4D5156;line-height:1.4}
+  .result .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-top:5px}
+  .kw-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .kw{background:transparent;border:1px solid var(--slate);color:var(--cream);font-family:'Barlow';font-weight:600;
+    font-size:14px;padding:11px 15px;border-radius:24px;cursor:pointer;min-height:46px;transition:background .2s,border-color .2s,color .2s}
+  .kw:hover{border-color:var(--gold)}
+  .kw.on{background:var(--gold);border-color:var(--gold);color:var(--iron)}
+  .seo-note{font-size:14px;color:var(--mut);margin-top:16px}
+
+  /* buffet spread */
+  .buffet{background:var(--iron)}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:800px){.bgrid{grid-template-columns:1fr 1fr}}
+  .bgrid figure{margin:0;position:relative;overflow:hidden;border-radius:12px}
+  .bgrid img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:contrast(1.05) saturate(1.06) brightness(.94);transition:transform .8s var(--ease)}
+  .bgrid figure:hover img{transform:scale(1.05)}
+  .bgrid figure:first-child{grid-column:span 2;grid-row:span 2}
+  .bgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(transparent,rgba(28,38,34,.9));
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
+  .bgrid .stag{position:absolute;top:9px;left:9px;background:rgba(28,38,34,.72);color:var(--gold-lt);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
+
+  /* visit */
+  .visit{background:var(--iron-2)}
+  .v-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  @media(max-width:820px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid rgba(245,236,216,.16);border-radius:12px;padding:28px;background:var(--iron)}
+  .v-card h3{font-family:'Bitter',serif;font-weight:800;font-size:24px;margin:0 0 16px}
+  .hrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dotted rgba(245,236,216,.14);font-size:15.5px}
+  .hrow b{font-weight:600;color:var(--cream)}
+  .hrow span{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-lt)}
+  .addr{font-size:19px;line-height:1.55;color:var(--cream)}
+  .addr b{color:var(--gold);font-weight:600}
+  .stag2{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut);border:1px solid rgba(245,236,216,.2);padding:4px 8px;border-radius:4px}
+
+  /* fresh signal close */
+  .fs{background:var(--cream);color:var(--iron)}
+  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
+  .letter p{margin:0 0 15px}
+  .sig{font-family:'Bitter',serif;font-style:italic;font-size:22px;color:var(--brick);margin-top:6px}
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 0}
+  @media(max-width:700px){.offer{grid-template-columns:1fr}}
+  .oc{border:1px solid rgba(28,38,34,.16);border-radius:10px;padding:20px;background:#fff}
+  .oc .amt{font-family:'Bitter',serif;font-weight:800;font-size:34px;color:var(--iron)}
+  .oc .amt small{display:block;font-family:'Barlow';font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+  .oc p{font-size:14px;color:var(--slate);margin:8px 0 0}
+  .risk{margin-top:22px;background:var(--iron);color:var(--cream);border-radius:10px;padding:20px 22px;font-size:16px}
+  .risk b{color:var(--gold-lt)}
+
+  footer{background:var(--iron);padding:40px 0;border-top:1px solid rgba(245,236,216,.14);font-size:14px;color:rgba(245,236,216,.6)}
+  .fbot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(245,236,216,.1);font-size:11.5px;line-height:1.6;color:rgba(245,236,216,.42)}
+
+  .mbar{display:none}
+  @media(max-width:700px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--gold)}
+    .mbar a{flex:1;text-align:center;padding:16px;text-decoration:none;font-weight:700;color:var(--iron);font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(28,38,34,.25);background:var(--brick);color:#fff}
+    footer{padding-bottom:80px}
+    header{min-height:74vh}
+  }
+
+  /* ══ Fresh Signal signature shared styles (injected) ══ */
+  html,body{max-width:100%;overflow-x:clip}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  [data-fs-compare]{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  [data-fs-compare] img{width:100%;height:100%;object-fit:cover;display:block}
+  [data-fs-top]{position:absolute;inset:0;width:50%;overflow:hidden}
+  [data-fs-top] img{max-width:none;height:100%;object-fit:cover}
+  [data-fs-bar]{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-1.5px);box-shadow:0 0 20px rgba(0,0,0,.5)}
+  [data-fs-item],[data-fs-pick]{cursor:pointer}
+  [data-fs-item].on,[data-fs-pick].on{outline:2px solid currentColor;outline-offset:-2px}
+  .fs-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(128,128,128,.25);font-size:15px}
+  /* mobile tap-target floor */
+  @media(max-width:440px){
+    [data-fs-item],[data-fs-pick]{min-height:46px}
+    [data-fs-level]{height:44px !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>DEMO MOCKUP</b> — built for Hidden Creek Catfish by Nate Witt · Fresh Signal.
+  REAL: name, 393 Hwy 64 E Conway, buffet, hours, the Hidden Valley→Hidden Creek rebrand.
+  SAMPLE (swapped on launch): photos, menu prices, reviews. Phone from public listings — <b>confirm before outreach.</b></div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">Hidden Creek <span>Catfish</span></a>
+    <a class="call" href="tel:+15014261032">(501) 426-1032</a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — stand-in; replace with the restaurant's real plate on launch -->
+  <img class="hero-img" src="assets/b2-22-hidden-creek-catfish-conway/hero.jpg"
+       alt="Fried catfish plate at Hidden Creek Catfish, Conway AR" width="1500" height="1000" fetchpriority="high" />
+  <div class="hero-scrim"></div>
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>Hwy 64 East · Conway, Arkansas</div>
+      <h1 data-reveal style="--i:1">Conway's<br/><em>catfish buffet.</em></h1>
+      <p class="hero-sub" data-reveal style="--i:2">All-you-can-eat fried catfish, chicken tenders, frog legs
+      and every side that belongs beside them — right on the creek. Thursday through Sunday.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="#buffet" data-magnetic="0.2">See the buffet</a>
+        <a class="btn btn-b" href="#visit">Hours &amp; directions</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ SIGNATURE: THE GOOGLE-SEARCH DEMO — the SEO pitch, touchable ══ -->
+<section class="seo" id="found">
+  <div class="wrap">
+    <div class="lab" data-reveal>Get found</div>
+    <h2 data-reveal>When Conway searches, <em>you're who they find.</em></h2>
+    <p class="lede" data-reveal>Everybody's got a phone, and nobody's got a phone book. When someone in
+    Conway gets a craving and googles it, the restaurant with a real website wins the table. Tap a search
+    below — watch where Hidden Creek lands.</p>
+
+    <div class="seo-grid">
+      <div>
+        <div class="kw-row" role="group" aria-label="Try a search">
+          <button class="kw on" data-q="catfish buffet near me">catfish buffet near me</button>
+          <button class="kw" data-q="all you can eat conway ar">all you can eat conway ar</button>
+          <button class="kw" data-q="fish fry near conway">fish fry near conway</button>
+          <button class="kw" data-q="catfish restaurant conway">catfish restaurant conway</button>
+        </div>
+        <p class="seo-note">This is what a real website does that a Facebook page can't: it puts you at the
+        top when the whole town is searching for exactly what you sell. That's the $79/month working while
+        you're frying.</p>
+      </div>
+
+      <div class="phone" data-reveal="scale">
+        <div class="ph-bar"><span class="g"></span><span class="ph-q" id="phQ">catfish buffet near me</span></div>
+        <div class="ph-body">
+          <div class="ph-stat">About 41,300 results · Conway, AR</div>
+          <div class="result you">
+            <div class="site"><span class="pin">★</span> hiddencreekcatfish.com</div>
+            <div class="ttl" id="phTtl">Hidden Creek Catfish — All-You-Can-Eat Buffet</div>
+            <div class="snip">Fried catfish, tenders &amp; frog legs on the creek in Conway. Open Thu–Sun.
+            ★★★★★ "Best buffet in Faulkner County."</div>
+            <span class="badge">You — #1 result</span>
+          </div>
+          <div class="result">
+            <div class="site">facebook.com › some other place</div>
+            <div class="ttl">A competitor's Facebook page</div>
+            <div class="snip">No hours, no menu, no directions — the search moves on.</div>
+          </div>
+          <div class="result">
+            <div class="site">yelp.com › listings</div>
+            <div class="ttl">A directory nobody controls</div>
+            <div class="snip">Third-party page with old info.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE BUFFET ══ -->
+<section class="buffet" id="buffet">
+  <div class="wrap">
+    <div class="lab" data-reveal>The spread</div>
+    <h2 data-reveal>Fill the plate. <em>Then fill it again.</em></h2>
+    <p class="lede" data-reveal>It's a buffet — the whole point is there's always more. Here's what's
+    hitting the line.</p>
+    <div class="bgrid">
+      <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-22-hidden-creek-catfish-conway/hero.jpg" alt="Fried catfish, Hidden Creek Catfish Conway AR" width="900" height="675" loading="lazy" decoding="async"><figcaption>Fried catfish — the reason you came</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/b2-22-hidden-creek-catfish-conway/tenders.jpg" alt="Chicken tenders, Conway AR" width="700" height="525" loading="lazy" decoding="async"><figcaption>Chicken tenders</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/b2-22-hidden-creek-catfish-conway/hush.jpg" alt="Hush puppies" width="700" height="525" loading="lazy" decoding="async"><figcaption>Hush puppies &amp; sides</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/b2-22-hidden-creek-catfish-conway/spread.jpg" alt="Southern buffet spread" width="700" height="525" loading="lazy" decoding="async"><figcaption>The whole line</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/b2-22-hidden-creek-catfish-conway/creek.jpg" alt="Creek-side seating, Conway AR" width="700" height="525" loading="lazy" decoding="async"><figcaption>Eat out by the creek</figcaption></figure>
+    </div>
+    <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Sample photography — the restaurant's real plates on launch.</p>
+  </div>
+</section>
+
+<!-- ══ VISIT ══ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Come hungry</div>
+    <h2 data-reveal>393 Hwy 64 East.</h2>
+    <div class="v-grid">
+      <div class="v-card" data-reveal>
+        <h3>Find us</h3>
+        <p class="addr"><b>393 US-64 East</b><br/>Conway, AR 72032<br/>Right on the creek</p>
+        <p style="margin:18px 0 0"><a class="btn btn-a" style="padding:13px 22px" href="https://maps.google.com/?q=Hidden+Creek+Catfish+393+US-64+Conway+AR" target="_blank" rel="noopener">Get directions</a></p>
+        <p style="margin-top:20px;font-size:15px;color:var(--cream-2)">Call: <a href="tel:+15014261032" style="color:var(--gold-lt)">(501) 426-1032</a> <span class="stag2">confirm number</span></p>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <h3>Hours</h3>
+        <div class="hrow"><b>Thursday</b><span>3:45p – 7:45p</span></div>
+        <div class="hrow"><b>Friday</b><span>3:45p – 8:00p</span></div>
+        <div class="hrow"><b>Saturday</b><span>3:00p – 8:00p</span></div>
+        <div class="hrow"><b>Sunday</b><span>10:30a – 2:00p</span></div>
+        <div class="hrow"><b>Mon – Wed</b><span>Closed</span></div>
+        <span class="stag2" style="margin-top:16px">Hours from public listings — confirm &amp; lock in on launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FRESH SIGNAL CLOSE ══ -->
+<section class="fs">
+  <div class="wrap">
+    <div class="letter" data-reveal>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brick);margin-bottom:20px">A note from the guy who built this</p>
+      <p>I'm Nate — I build websites for local spots here in Central Arkansas.</p>
+      <p>I built this for Hidden Creek before we ever talked, because you've got the one thing you can't fake
+      — a buffet people drive out to Hwy 64 for — and almost nothing online to catch the folks who'd come if
+      they could just <em>find</em> you. You even changed the name to Hidden Creek and Google still half-shows
+      the old one.</p>
+      <p>Here's the whole idea: when somebody in Conway googles <b>"catfish buffet near me,"</b> a real
+      website puts <em>you</em> at the top instead of a Facebook page or a directory. That's tables you're
+      not getting right now. Everything marked <em>sample</em> becomes your real photos, menu, and hours.</p>
+      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
+      <div class="sig">— Nate Witt, Fresh Signal</div>
+
+      <div class="offer">
+        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile fixed so you rank for "catfish buffet Conway," and a simple assistant that answers hours &amp; directions 24/7.</p></div>
+        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts every month. Cancel anytime.</p></div>
+        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
+      </div>
+      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and
+      only then do we talk money. You keep the site and the domain either way. There's no risk to you —
+      that's the whole point.</p>
+      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--brick);font-weight:700">Nate · (501) 757-3468</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div><span class="bit" style="font-weight:800;font-size:20px;color:var(--cream)">Hidden Creek <span style="color:var(--gold)">Catfish</span></span><br/>393 US-64 E · Conway, AR 72032 · (501) 426-1032</div>
+      <div style="text-align:right">All-you-can-eat<br/>Thursday – Sunday</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Hidden
+    Creek Catfish. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography,
+    menu, hours and reviews shown are placeholders; phone sourced from public listings and should be confirmed.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+15014261032">Call</a>
+  <a href="https://maps.google.com/?q=Hidden+Creek+Catfish+393+US-64+Conway+AR" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  /* the Google-search signature */
+  var DATA = {
+    "catfish buffet near me":   {t:"Hidden Creek Catfish — All-You-Can-Eat Buffet"},
+    "all you can eat conway ar":{t:"Hidden Creek Catfish — Conway's AYCE Fish House"},
+    "fish fry near conway":     {t:"Hidden Creek Catfish — Fried Catfish on the Creek"},
+    "catfish restaurant conway":{t:"Hidden Creek Catfish — Conway, AR · Open Thu–Sun"}
+  };
+  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
+  kws.forEach(function(b){b.addEventListener('click',function(){
+    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    var k=b.getAttribute('data-q'); q.textContent=k; if(DATA[k]) ttl.textContent=DATA[k].t;
+  });});
+})();
+</script>
+<script>
+/* ============================================================
+   FRESH SIGNAL — SIGNATURE ENGINE v1
+   One reusable, data-attribute-driven library for the motion layer
+   + the 5 signature interaction patterns. Inline this into each demo
+   (demos must be self-contained — no external JS).
+
+   MOTION (auto): custom cursor · magnetic buttons · scroll reveals
+     - add [data-magnetic="0.2"] to a CTA
+     - add class="reveal" to anything that should fade up on scroll
+
+   SIGNATURES (opt-in via data attributes):
+   1. COMPARE   — drag before/after
+        <div data-fs-compare> <img>(after) <div data-fs-top><img>(before)</div> </div>
+   2. COLLECT   — tap items into a slip that texts the shop
+        <div data-fs-collect data-fs-max="3" data-fs-sms="+15015551234">
+          <button data-fs-item="American Traditional">…</button> …
+          <ul data-fs-slip></ul> <a data-fs-go>Text the shop</a>
+        </div>
+   3. TOTAL     — pick rows, live running total
+        <div data-fs-total data-fs-sum="#out">
+          <div data-fs-pick data-fs-price="40" data-fs-name="The Cut">…</div> …
+        </div>  <span id="out">$0</span>
+   4. LEVEL     — a slider that drives a readout
+        <input data-fs-level type="range" min="0" max="8">
+        (listen: element fires 'fs:level' with detail={value})
+   ============================================================ */
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- MOTION: cursor + magnetic ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'), ring = document.createElement('div');
+    dot.style.cssText = 'position:fixed;top:0;left:0;width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference';
+    ring.style.cssText = 'position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid rgba(255,255,255,.6);margin:-18px 0 0 -18px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),opacity .28s';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';},{passive:true});
+    (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';requestAnimationFrame(loop);})();
+    var HOT='a,button,input,select,textarea,[data-fs-item],[data-fs-pick],[data-fs-compare],[data-cursor]';
+    document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='62px';ring.style.height='62px';ring.style.margin='-31px 0 0 -31px';}});
+    document.addEventListener('mouseout',function(e){if(e.target.closest&&e.target.closest(HOT)){ring.style.width='36px';ring.style.height='36px';ring.style.margin='-18px 0 0 -18px';}});
+    document.addEventListener('mouseleave',function(){ring.style.opacity='0';});
+    document.addEventListener('mouseenter',function(){ring.style.opacity='1';});
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s=parseFloat(el.getAttribute('data-magnetic'))||.22; el.style.willChange='transform'; el.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';
+      el.addEventListener('mousemove',function(e){var b=el.getBoundingClientRect();el.style.transform='translate3d('+((e.clientX-b.left-b.width/2)*s)+'px,'+((e.clientY-b.top-b.height/2)*s)+'px,0)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ---------- MOTION: scroll reveals ---------- */
+  var rev = document.querySelectorAll('.reveal,[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) { rev.forEach(function(e){e.classList.add('in','is-in');}); }
+    else {
+      var io = new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in','is-in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(e){io.observe(e);});
+    }
+  }
+
+  /* ---------- 1. COMPARE ---------- */
+  document.querySelectorAll('[data-fs-compare]').forEach(function(c){
+    var top=c.querySelector('[data-fs-top]'), bar=c.querySelector('[data-fs-bar]');
+    if(!top) return;
+    function size(){ var img=top.querySelector('img'); if(img) img.style.width=c.clientWidth+'px'; }
+    size(); addEventListener('resize',size);
+    function put(p){p=Math.max(0,Math.min(100,p));top.style.width=p+'%';if(bar)bar.style.left=p+'%';c.setAttribute('aria-valuenow',Math.round(p));}
+    function ev(e){var b=c.getBoundingClientRect();put(((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*100);}
+    var down=false;
+    c.addEventListener('mousedown',function(e){down=true;ev(e);e.preventDefault();});
+    addEventListener('mousemove',function(e){if(down)ev(e);});addEventListener('mouseup',function(){down=false;});
+    c.addEventListener('touchstart',function(e){ev(e);},{passive:true});c.addEventListener('touchmove',function(e){ev(e);},{passive:true});
+    c.setAttribute('role','slider');c.setAttribute('tabindex','0');c.setAttribute('aria-valuemin','0');c.setAttribute('aria-valuemax','100');
+    c.addEventListener('keydown',function(e){var n=parseFloat(c.getAttribute('aria-valuenow'))||50;if(e.key==='ArrowLeft'){put(n-6);e.preventDefault();}if(e.key==='ArrowRight'){put(n+6);e.preventDefault();}});
+    put(52);
+  });
+
+  /* ---------- 2. COLLECT (tap → slip → SMS) ---------- */
+  document.querySelectorAll('[data-fs-collect]').forEach(function(box){
+    var MAX=parseInt(box.getAttribute('data-fs-max'))||3, sms=box.getAttribute('data-fs-sms')||'',
+        biz=box.getAttribute('data-fs-biz')||'the shop',
+        slip=box.querySelector('[data-fs-slip]'), go=box.querySelector('[data-fs-go]'),
+        items=[].slice.call(box.querySelectorAll('[data-fs-item]')), picked=[];
+    function render(){
+      if(!slip) return;
+      if(!picked.length){slip.innerHTML='<li data-empty>Nothing picked yet.</li>';if(go){go.setAttribute('aria-disabled','true');go.removeAttribute('href');}return;}
+      slip.innerHTML=''; picked.forEach(function(b){var li=document.createElement('li');li.textContent=b.getAttribute('data-fs-item');slip.appendChild(li);});
+      if(go){go.setAttribute('aria-disabled','false');go.setAttribute('href','sms:'+sms+'&body='+encodeURIComponent("Hey "+biz+" — I'd like: "+picked.map(function(b){return b.getAttribute('data-fs-item');}).join(', ')));}
+    }
+    function toggle(b){var i=picked.indexOf(b);if(i>-1){picked.splice(i,1);b.classList.remove('on');b.setAttribute('aria-pressed','false');}else if(picked.length<MAX){picked.push(b);b.classList.add('on');b.setAttribute('aria-pressed','true');}render();}
+    items.forEach(function(b){b.setAttribute('role','button');b.setAttribute('tabindex','0');b.addEventListener('click',function(){toggle(b);});b.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(b);}});});
+    render();
+  });
+
+  /* ---------- 3. TOTAL (pick rows → running sum) ---------- */
+  document.querySelectorAll('[data-fs-total]').forEach(function(box){
+    var out=document.querySelector(box.getAttribute('data-fs-sum')), listOut=box.querySelector('[data-fs-lines]'),
+        rows=[].slice.call(box.querySelectorAll('[data-fs-pick]')), chosen=[];
+    function render(){
+      var sum=0; chosen.forEach(function(r){sum+=parseFloat(r.getAttribute('data-fs-price'))||0;});
+      if(out) out.textContent='$'+sum;
+      if(listOut){ if(!chosen.length){listOut.innerHTML='<div data-empty>Tap to start.</div>';}
+        else{listOut.innerHTML='';chosen.forEach(function(r){var d=document.createElement('div');d.className='fs-line';d.innerHTML='<span>'+(r.getAttribute('data-fs-name')||'')+'</span><span>$'+(r.getAttribute('data-fs-price')||0)+'</span>';listOut.appendChild(d);});}}
+    }
+    function toggle(r){var i=chosen.indexOf(r);if(i>-1){chosen.splice(i,1);r.classList.remove('on');r.setAttribute('aria-pressed','false');}else{chosen.push(r);r.classList.add('on');r.setAttribute('aria-pressed','true');}render();}
+    rows.forEach(function(r){r.setAttribute('role','button');r.setAttribute('tabindex','0');r.addEventListener('click',function(){toggle(r);});r.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle(r);}});});
+    render();
+  });
+
+  /* ---------- 4. LEVEL (slider → event) ---------- */
+  document.querySelectorAll('[data-fs-level]').forEach(function(sl){
+    function fire(){ sl.dispatchEvent(new CustomEvent('fs:level',{detail:{value:+sl.value}})); }
+    sl.addEventListener('input',fire); fire();
+  });
+
+  /* ---------- marquee auto-duplicate ---------- */
+  document.querySelectorAll('[data-fs-marquee]').forEach(function(m){var t=m.firstElementChild;if(t&&m.children.length===1)m.appendChild(t.cloneNode(true));});
+})();
+
+</script>
+</body>
+</html>
