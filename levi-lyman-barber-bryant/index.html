@@ -275,39 +275,6 @@
   }
   @media (prefers-reduced-motion:reduce){.steam{display:none}}
 
-  /* ══ GET FOUND — the pitch, made touchable ══ */
-  .found{background:var(--ink)}
-  .found-grid{display:grid;grid-template-columns:1fr .82fr;gap:52px;align-items:center}
-  @media(max-width:900px){.found-grid{grid-template-columns:1fr;gap:34px}}
-  .kw-row{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0}
-  .kw{background:transparent;border:1px solid var(--line-2);color:var(--chalk);font-family:'Manrope';
-    font-weight:700;font-size:14px;padding:11px 16px;border-radius:100px;cursor:pointer;min-height:46px;
-    transition:background .2s,border-color .2s,color .2s}
-  .kw:hover{border-color:var(--metal)}
-  .kw.on{background:var(--metal);border-color:var(--metal);color:var(--ink)}
-  .found-note{font-size:14.5px;color:var(--fog);margin-top:20px;max-width:48ch}
-  .found-note b{color:var(--chalk)}
-  .phone{background:#08080A;border:9px solid #020203;border-radius:34px;overflow:hidden;
-    max-width:330px;margin:0 auto;box-shadow:0 34px 80px rgba(0,0,0,.6)}
-  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 13px}
-  .ph-bar .g{width:15px;height:15px;border-radius:50%;
-    background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);flex:none}
-  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13px;color:#202124;
-    font-family:'Manrope',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ph-body{background:#fff;color:#202124;padding:14px 14px 20px;min-height:320px;font-family:'Manrope',sans-serif}
-  .ph-stat{font-size:11.5px;color:#70757A;margin-bottom:12px}
-  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s,background .4s;border-radius:6px}
-  .result.you{opacity:1;background:#F4F1EA;border:1px solid var(--metal-dk);padding:12px;margin:4px 0;
-    box-shadow:0 4px 16px rgba(0,0,0,.1)}
-  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
-  .result .site .pin{width:15px;height:15px;border-radius:50%;background:#1A1A1D;color:var(--metal);
-    font-size:8px;display:grid;place-items:center;font-weight:700}
-  .result .ttl{font-size:15.5px;color:#1A0DAB;margin:3px 0;font-weight:600}
-  .result.you .ttl{color:#0B0B0C}
-  .result .snip{font-size:12.5px;color:#4D5156;line-height:1.42}
-  .result .badge{display:inline-block;background:#1A1A1D;color:var(--metal);font-size:10px;font-weight:700;
-    padding:2px 8px;border-radius:4px;margin-top:6px;letter-spacing:.04em}
-
   /* ══ VISIT ══ */
   .visit{background:var(--ink-2)}
   .v-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
@@ -318,25 +285,6 @@
   .v-card .addr b{color:var(--metal);font-weight:700}
   .pole-wrap{display:flex;gap:22px;align-items:center;margin-top:6px}
   .pole-ph{width:120px;height:100%;min-height:220px;object-fit:cover;border-radius:8px;flex:none}
-
-  /* ══ FRESH SIGNAL CLOSE ══ */
-  .fs{background:var(--paper);color:var(--ink)}
-  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
-  .letter .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--metal-dk);margin-bottom:20px}
-  .letter p{margin:0 0 15px}
-  .letter b{color:var(--ink)}
-  .letter em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--metal-dk)}
-  .sig{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:25px;color:var(--ink);margin-top:8px}
-  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 0}
-  @media(max-width:700px){.offer{grid-template-columns:1fr}}
-  .oc{border:1px solid rgba(12,12,13,.15);border-radius:10px;padding:22px;background:#fff}
-  .oc .amt{font-family:'Bebas Neue',Impact,sans-serif;font-size:44px;line-height:1;color:var(--ink)}
-  .oc .amt small{display:block;font-family:'Manrope';font-weight:700;font-size:12px;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--metal-dk);margin-top:4px}
-  .oc p{font-size:14px;color:#4A4A46;margin:10px 0 0}
-  .risk{margin-top:24px;background:var(--ink);color:var(--chalk);border-radius:10px;padding:22px 24px;font-size:16px}
-  .risk b{color:var(--metal)}
 
   /* footer */
   footer{background:var(--ink);padding:44px 0;border-top:1px solid var(--line);font-size:14px;color:var(--fog)}
@@ -408,7 +356,6 @@
     <div class="navlinks" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#community">Community</a>
-      <a href="#found">Get&nbsp;found</a>
       <a href="#visit">Visit</a>
     </div>
     <a class="call" href="tel:+15012130629">
@@ -544,50 +491,6 @@
   </div>
 </section>
 
-<!-- ══ GET FOUND — the Fresh Signal pitch, touchable ══ -->
-<section class="found" id="found">
-  <div class="wrap">
-    <div class="lab" data-reveal>Get found</div>
-    <h2 data-reveal>When Bryant needs a barber, <span class="serif">you're who they find.</span></h2>
-    <div class="found-grid">
-      <div>
-        <p class="lede" style="margin-bottom:0">Right now most folks find a barber by googling one on their phone. The shop with a real website — real hours, real prices, real reviews — wins the chair. Tap a search and watch where Levi Lyman lands.</p>
-        <div class="kw-row" role="group" aria-label="Try a search">
-          <button class="kw on" data-q="barber near me bryant ar">barber near me bryant ar</button>
-          <button class="kw" data-q="mens haircut bryant">mens haircut bryant</button>
-          <button class="kw" data-q="hot shave near me">hot shave near me</button>
-          <button class="kw" data-q="kids haircut bryant ar">kids haircut bryant ar</button>
-        </div>
-        <p class="found-note">A Facebook page can't do this. A real website puts you at the <b>top</b> when the whole town searches for exactly what you do — working while you're in the chair. That's the $79/month earning its keep.</p>
-      </div>
-
-      <div class="phone" data-reveal="scale">
-        <div class="ph-bar"><span class="g"></span><span class="ph-q" id="phQ">barber near me bryant ar</span></div>
-        <div class="ph-body">
-          <div class="ph-stat">About 8,400 results · Bryant, AR</div>
-          <div class="result you">
-            <div class="site"><span class="pin">★</span> levilymanbarberco.com</div>
-            <div class="ttl" id="phTtl">Levi Lyman Barber Co. — A Gentleman's Barbershop in Bryant</div>
-            <div class="snip">Fades, beard trims &amp; hot shaves on N. Reynolds Rd. All ages welcome.
-              ★★★★★ "Best cut in Saline County."</div>
-            <span class="badge">You — #1 result</span>
-          </div>
-          <div class="result">
-            <div class="site">facebook.com › a page nobody updates</div>
-            <div class="ttl">A competitor's Facebook page</div>
-            <div class="snip">No hours, no prices, no directions — the search moves on.</div>
-          </div>
-          <div class="result">
-            <div class="site">yelp.com › listings</div>
-            <div class="ttl">A directory you don't control</div>
-            <div class="snip">Old info, wrong hours, someone else's ads on top.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ VISIT ══ -->
 <section class="visit" id="visit">
   <div class="wrap">
@@ -613,28 +516,6 @@
         <div class="hrow"><b>Monday</b><span>Closed</span></div>
         <p style="margin-top:18px;font-size:15px;color:var(--fog)">Foster, senior, and military/veteran discounts honored any day we're open — just mention it in the chair.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FRESH SIGNAL CLOSE ══ -->
-<section class="fs">
-  <div class="wrap">
-    <div class="letter" data-reveal>
-      <p class="tag">A note from the guy who built this</p>
-      <p>I'm Nate — I build websites for local shops here in Central Arkansas.</p>
-      <p>I built this for Levi Lyman before we ever talked, because the craft in that chair is better than what shows up online right now. A good barbershop runs on regulars and word of mouth — but when someone new in Bryant googles <b>"barber near me,"</b> a real website is what puts <em>you</em> at the top instead of a page nobody controls.</p>
-      <p>What I love most about this shop is the discount for foster kids, seniors, and folks who served. That's not a promotion — that's character. So I gave it the same room on the page as the haircut. Everything marked <em>sample</em> becomes your real photos on launch.</p>
-      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
-      <div class="sig">— Nate Witt, Fresh Signal</div>
-
-      <div class="offer">
-        <div class="oc"><div class="amt">$250<small>One-time setup</small></div><p>The whole build: your website, your Google profile fixed so you rank for "barber Bryant," and a simple assistant that answers hours &amp; prices 24/7.</p></div>
-        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts. Cancel anytime.</p></div>
-        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it right now.</p></div>
-      </div>
-      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and only then do we talk money. You keep the site and the domain either way. No risk to you — that's the whole point.</p>
-      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--metal-dk);font-weight:800">Nate · (501) 757-3468</a></p>
     </div>
   </div>
 </section>
@@ -686,19 +567,6 @@
 <!-- page interactions -->
 <script>
 (function(){
-  /* get-found signature */
-  var DATA = {
-    "barber near me bryant ar":{t:"Levi Lyman Barber Co. — A Gentleman's Barbershop in Bryant"},
-    "mens haircut bryant":     {t:"Levi Lyman Barber Co. — Men's Cuts, Fades & Tapers · Bryant"},
-    "hot shave near me":       {t:"Levi Lyman Barber Co. — Hot Straight-Razor Shaves in Bryant"},
-    "kids haircut bryant ar":  {t:"Levi Lyman Barber Co. — Kids' Cuts (12 & under $25) · Bryant"}
-  };
-  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
-  kws.forEach(function(b){b.addEventListener('click',function(){
-    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
-    var k=b.getAttribute('data-q'); if(q)q.textContent=k; if(DATA[k]&&ttl) ttl.textContent=DATA[k].t;
-  });});
-
   /* steam: only animate while the mosaic is in view (perf + intent) */
   var steam=document.querySelector('.steam');
   if(steam && 'IntersectionObserver' in window){

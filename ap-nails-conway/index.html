@@ -83,12 +83,6 @@
   @keyframes holoShift{to{background-position:220% 0}}
   @media (prefers-reduced-motion:reduce){.holo-text{animation:none}}
 
-  /* demo banner */
-  .demo{background:linear-gradient(90deg,var(--panel),var(--ink2));color:var(--chrome);
-    font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.03em;
-    padding:9px 16px;text-align:center;line-height:1.55;border-bottom:1px solid var(--line)}
-  .demo b{color:var(--chrome-hi)}
-
   /* nav */
   nav{position:sticky;top:0;z-index:60;background:rgba(13,14,18,.82);backdrop-filter:blur(12px);
     border-bottom:1px solid rgba(198,202,211,.12)}
@@ -181,32 +175,6 @@
   .svc-card p{font-size:15.5px;color:var(--mut);margin:0}
   .svc-card .ico{position:absolute;top:24px;right:26px;width:30px;height:30px;opacity:.9}
 
-  /* get-found signature (touchable SEO) */
-  .found{background:var(--ink)}
-  .seo-grid{display:grid;grid-template-columns:1fr .86fr;gap:52px;align-items:center}
-  @media(max-width:900px){.seo-grid{grid-template-columns:1fr;gap:34px}}
-  .kw-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
-  .kw{background:transparent;border:1px solid var(--line);color:var(--text);font-family:'Manrope';font-weight:700;
-    font-size:14px;padding:11px 16px;border-radius:26px;cursor:pointer;min-height:46px;transition:background .2s,border-color .2s,color .2s}
-  .kw:hover{border-color:var(--mint)}
-  .kw.on{background:var(--holo);border-color:transparent;color:#141018}
-  .seo-note{font-size:14.5px;color:var(--mut);margin-top:20px}
-  .phone{background:#0A0B0F;border:9px solid #04050A;border-radius:36px;overflow:hidden;
-    max-width:330px;margin:0 auto;box-shadow:0 40px 90px rgba(0,0,0,.6)}
-  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 13px}
-  .ph-bar .g{width:16px;height:16px;border-radius:50%;background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);flex:none}
-  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13px;color:#202124;font-family:'Manrope';white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ph-body{background:#fff;color:#202124;padding:14px;min-height:322px;font-family:'Manrope'}
-  .ph-stat{font-size:11.5px;color:#70757A;margin-bottom:12px}
-  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s}
-  .result.you{opacity:1;background:#F4F0FB;border:1px solid var(--lilac);padding:12px;margin:4px 0;border-radius:8px;box-shadow:0 6px 18px rgba(185,167,224,.22)}
-  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
-  .result .site .pin{width:15px;height:15px;border-radius:50%;background:#7A5CC4;color:#fff;font-size:9px;display:grid;place-items:center;font-weight:700}
-  .result .ttl{font-size:16px;color:#1A0DAB;margin:3px 0;font-weight:600}
-  .result.you .ttl{color:#0B7A3E}
-  .result .snip{font-size:12.5px;color:#4D5156;line-height:1.42}
-  .result .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-top:5px}
-
   /* proof gallery */
   .work{background:var(--ink2)}
   .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -275,22 +243,6 @@
     letter-spacing:.1em;text-transform:uppercase;color:var(--mint);margin-bottom:14px}
   .badge-open .d{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(143,224,208,.18)}
 
-  /* fresh signal close */
-  .fs{background:linear-gradient(180deg,var(--ink2),var(--ink))}
-  .letter{max-width:62ch;font-size:18px;line-height:1.72;color:var(--text)}
-  .letter .kick{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);margin-bottom:22px}
-  .letter p{margin:0 0 15px;color:#D6D8E0}
-  .letter b{color:var(--text)}
-  .sig{font-family:'Bodoni Moda',serif;font-style:italic;font-size:24px;color:var(--rose);margin-top:8px}
-  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 0}
-  @media(max-width:700px){.offer{grid-template-columns:1fr}}
-  .oc{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--panel)}
-  .oc .amt{font-family:'Bodoni Moda',serif;font-weight:700;font-size:40px}
-  .oc .amt small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-top:4px}
-  .oc p{font-size:14px;color:var(--mut);margin:10px 0 0}
-  .risk{margin-top:24px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px;font-size:16px;color:#D6D8E0}
-  .risk b{color:var(--mint)}
-
   footer{background:var(--ink);padding:44px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
   .fbot{margin-top:18px;padding-top:16px;border-top:1px solid rgba(198,202,211,.1);font-size:11.5px;line-height:1.65;color:var(--steel)}
 
@@ -332,9 +284,6 @@
 </style>
 </head>
 <body id="top">
-
-<div class="demo"><b>DEMO MOCKUP</b> — built for A.P. Nails by Nate Witt · Fresh Signal.
-  REAL: name, 813 Oak St Suite 8 Conway, hours, phone (501) 327-6581. CONCEPT (swapped on launch): illustrations, sample photos, styles, quotes.</div>
 
 <nav>
   <div class="wrap">
@@ -466,48 +415,6 @@
   </div>
 </section>
 
-<!-- ══ GET FOUND — touchable SEO signature ══ -->
-<section class="found" id="found">
-  <div class="wrap">
-    <div class="lab" data-reveal>Get found</div>
-    <h2 data-reveal>When Conway searches nails, <em>you're who they find.</em></h2>
-    <p class="lede" data-reveal>Right now A.P. Nails lives on Facebook and Instagram. Great for regulars — but when someone new googles a chrome set at 8pm, a real website is what puts you at the top. Tap a search and watch.</p>
-    <div class="seo-grid">
-      <div data-reveal>
-        <div class="kw-row" role="group" aria-label="Try a search">
-          <button class="kw on" data-q="nail salon conway ar">nail salon conway ar</button>
-          <button class="kw" data-q="chrome nails near me conway">chrome nails near me</button>
-          <button class="kw" data-q="dip powder nails conway">dip powder nails conway</button>
-          <button class="kw" data-q="pedicure conway arkansas">pedicure conway arkansas</button>
-        </div>
-        <p class="seo-note">A Facebook page can't do this. A real website puts A.P. Nails at the top of Google the moment Conway searches for exactly what you do — new walk-ins finding you while you're at the table. That's the $79/month working for you.</p>
-      </div>
-      <div class="phone" data-reveal="scale" style="--i:1">
-        <div class="ph-bar"><span class="g" aria-hidden="true"></span><span class="ph-q" id="phQ">nail salon conway ar</span></div>
-        <div class="ph-body">
-          <div class="ph-stat">About 9,340 results · Conway, AR</div>
-          <div class="result you">
-            <div class="site"><span class="pin" aria-hidden="true">★</span> apnailsconway.com</div>
-            <div class="ttl" id="phTtl">A.P. Nails — Chrome, Dip &amp; Custom Nail Art in Conway</div>
-            <div class="snip">Manicures, pedicures, dip with tip &amp; chrome, and custom artwork on Oak Street. Walk-ins welcome · open six days.</div>
-            <span class="badge">You — #1 result</span>
-          </div>
-          <div class="result">
-            <div class="site">facebook.com › a page</div>
-            <div class="ttl">A competitor's Facebook page</div>
-            <div class="snip">No hours, no map, no menu — the search moves on.</div>
-          </div>
-          <div class="result">
-            <div class="site">yelp.com › listings</div>
-            <div class="ttl">A directory nobody controls</div>
-            <div class="snip">Third-party page with old info.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ PROOF GALLERY ══ -->
 <section class="work" id="work">
   <div class="wrap">
@@ -608,28 +515,6 @@
   </div>
 </section>
 
-<!-- ══ FRESH SIGNAL CLOSE ══ -->
-<section class="fs">
-  <div class="wrap">
-    <div class="letter" data-reveal>
-      <p class="kick">A note from the guy who built this</p>
-      <p>I'm Nate — I build websites for local shops here in Central Arkansas.</p>
-      <p>I built this for A.P. Nails before we ever talked, because your chrome and dip work is genuinely good — and right now the only place it lives online is Facebook and Instagram. That's fine for regulars, but new folks in Conway are googling <b>"nail salon near me"</b> and landing on somebody else.</p>
-      <p>Here's the whole idea: a real website puts <em>you</em> at the top of that search, shows your work, your hours and your styles, and lets people text you the set they want before they walk in. Everything marked <em>concept</em> becomes your real photos and prices.</p>
-      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
-      <div class="sig">— Nate Witt, Fresh Signal</div>
-
-      <div class="offer">
-        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile fixed so you rank for "nails Conway," and a simple assistant that answers hours &amp; walk-ins 24/7.</p></div>
-        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts each month. Cancel anytime.</p></div>
-        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
-      </div>
-      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and only then do we talk money. You keep the site and the domain either way — there's no risk to you.</p>
-      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--mint);font-weight:800">Nate · (501) 757-3468</a></p>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
@@ -705,19 +590,6 @@
       var t=setInterval(function(){ if(moved){clearInterval(t);return;} put(seq[i]); i++; if(i>=seq.length){clearInterval(t);} },520);
     }
   }
-
-  /* SEO search signature */
-  var DATA={
-    "nail salon conway ar":{t:"A.P. Nails — Chrome, Dip & Custom Nail Art in Conway"},
-    "chrome nails near me conway":{t:"A.P. Nails — Mirror & Holographic Chrome Sets, Conway"},
-    "dip powder nails conway":{t:"A.P. Nails — Dip With Tip & Chrome on Oak Street"},
-    "pedicure conway arkansas":{t:"A.P. Nails — Manicures, Pedicures & Walk-ins, Conway"}
-  };
-  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
-  kws.forEach(function(b){b.addEventListener('click',function(){
-    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
-    var k=b.getAttribute('data-q'); if(q)q.textContent=k; if(ttl&&DATA[k]) ttl.textContent=DATA[k].t;
-  });});
 
   /* open-now badge from real hours */
   var HOURS={0:[11,17],1:null,2:[9.5,19],3:[9.5,19],4:[9.5,19],5:[9.5,19],6:[9.5,19]};

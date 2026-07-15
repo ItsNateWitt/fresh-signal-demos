@@ -104,12 +104,6 @@
     text-transform:uppercase;color:var(--violet)}
   .champ{color:var(--champ)}
 
-  /* demo strip */
-  .demo{background:linear-gradient(90deg,var(--violet-dk),#5f4d84);color:#fff;
-    font-family:'Manrope',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.02em;
-    padding:9px 16px;text-align:center;line-height:1.5}
-  .demo b{font-weight:800;letter-spacing:.06em}
-
   /* rotated editorial side-label (archetype A signature furniture) */
   .rail{position:fixed;left:16px;top:50%;transform:translateY(-50%) rotate(180deg);
     writing-mode:vertical-rl;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;
@@ -255,31 +249,6 @@
   @media(max-width:460px){.gallery .grid{grid-template-columns:1fr 1fr;gap:10px}}
   .gal-note{margin-top:16px;font-size:12px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase}
 
-  /* ═══ GET FOUND (first-site pitch, restrained) ═══ */
-  .found{background:linear-gradient(180deg,var(--ink-2),var(--ink))}
-  .found-grid{display:grid;grid-template-columns:1fr .92fr;gap:56px;align-items:center}
-  @media(max-width:900px){.found-grid{grid-template-columns:1fr;gap:36px}}
-  .searchcard{background:#fff;color:#202124;border-radius:16px;padding:20px 20px 24px;max-width:400px;
-    margin:0 auto;box-shadow:0 30px 70px rgba(0,0,0,.45);font-family:'Manrope',sans-serif}
-  .sc-bar{display:flex;align-items:center;gap:10px;background:#F1F3F4;border-radius:24px;padding:10px 14px;font-size:13.5px;color:#3c4043}
-  .sc-bar .g{width:15px;height:15px;border-radius:50%;flex:none;
-    background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4)}
-  .sc-stat{font-size:11px;color:#70757A;margin:14px 2px 8px}
-  .res{padding:12px;border-radius:10px;margin:6px 0}
-  .res.you{background:#F3EFFA;border:1px solid var(--violet-dk)}
-  .res .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
-  .res .site .pin{width:15px;height:15px;border-radius:50%;background:var(--violet-dk);color:#fff;font-size:9px;
-    display:grid;place-items:center;font-weight:800}
-  .res .ttl{font-size:16px;color:#1A0DAB;margin:3px 0}
-  .res.you .ttl{color:#5b3aa0;font-weight:700}
-  .res .snip{font-size:12.5px;color:#4D5156;line-height:1.42}
-  .res .badge{display:inline-block;background:#EDE7F7;color:#5b3aa0;font-size:10px;font-weight:800;
-    padding:2px 8px;border-radius:5px;margin-top:6px;letter-spacing:.04em}
-  .res.dim{opacity:.55}
-  .found ul.pts{list-style:none;padding:0;margin:26px 0 0}
-  .found ul.pts li{display:flex;gap:13px;padding:12px 0;border-bottom:1px dotted var(--line);font-size:16px;color:#D4D0DB}
-  .found ul.pts li b{color:var(--violet);flex:none;font-family:'Bodoni Moda',serif;font-style:italic}
-
   /* ═══ VISIT ═══ */
   .visit{background:var(--panel)}
   .v-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
@@ -298,26 +267,6 @@
     border:1px solid var(--line);padding:9px 14px;border-radius:40px;transition:border-color .25s,color .25s}
   .socials a:hover{border-color:var(--violet);color:var(--violet)}
   .v-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-
-  /* ═══ FRESH SIGNAL CLOSE ═══ */
-  .fs{background:linear-gradient(180deg,var(--ink),#100e13)}
-  .letter{max-width:62ch;font-size:18.5px;line-height:1.72;color:#D9D5E0}
-  .letter .klab{font-family:'Manrope';font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--violet);margin-bottom:22px}
-  .letter p{margin:0 0 15px}
-  .letter b{color:var(--plat)}
-  .letter em{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--champ)}
-  .sig{font-family:'Bodoni Moda',serif;font-style:italic;font-size:25px;color:var(--plat);margin-top:8px}
-  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 0}
-  @media(max-width:700px){.offer{grid-template-columns:1fr}}
-  .oc{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--panel)}
-  .oc .amt{font-family:'Bodoni Moda',serif;font-weight:700;font-size:40px;line-height:1;color:var(--plat)}
-  .oc .amt small{display:block;font-family:'Manrope';font-weight:700;font-size:11px;letter-spacing:.1em;
-    text-transform:uppercase;color:var(--mut);margin-top:6px}
-  .oc p{font-size:14px;color:#C4C0CC;margin:12px 0 0}
-  .risk{margin-top:24px;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;
-    padding:22px 24px;font-size:16px;color:#D9D5E0}
-  .risk b{color:var(--violet)}
 
   /* footer */
   footer{background:#100e13;padding:44px 0 44px;border-top:1px solid var(--line);
@@ -379,9 +328,6 @@
 <body>
 
 <div class="fs-prog" style="background:linear-gradient(90deg,var(--violet),var(--champ))"></div>
-
-<div class="demo"><b>DEMO MOCKUP</b> — built for Salon Platinum by Nate Witt · Fresh Signal.
-  REAL: name, 900 Alford St Ste D Conway, phone (501) 499-9941, services &amp; booking. SAMPLE (swapped on launch): photography, hours &amp; reviews.</div>
 
 <div class="rail" aria-hidden="true">Salon Platinum · Conway, Arkansas</div>
 
@@ -506,48 +452,6 @@
   </div>
 </section>
 
-<!-- ═══════════ GET FOUND — first-site pitch ═══════════ -->
-<section class="found" id="found">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="lab" data-reveal>Get found</div>
-      <h2 data-reveal>When Conway searches <em>“hair salon near me,”</em> you show up.</h2>
-    </div>
-    <div class="found-grid" style="margin-top:44px">
-      <div>
-        <p class="lede" style="margin-top:0" data-reveal>Right now Salon Platinum lives on Facebook and Vagaro — great for regulars, invisible to the person who just moved to Conway and is googling for a colorist tonight. A real website is the piece that puts you at the top of that search instead of a directory nobody controls.</p>
-        <ul class="pts" data-reveal style="--i:1">
-          <li><b>→</b> Own a real address on Google — not just a social page</li>
-          <li><b>→</b> Your services, your booking link, your hours — first thing they see</li>
-          <li><b>→</b> The new-in-town client finds <em>you</em>, not the salon across Oak Street</li>
-          <li><b>→</b> A 24/7 assistant that answers “are you open?” and books the chair</li>
-        </ul>
-      </div>
-      <div class="searchcard" data-reveal="scale" role="img" aria-label="Sample Google search result showing Salon Platinum ranking first for hair salon in Conway">
-        <div class="sc-bar"><span class="g"></span><span>hair salon conway ar</span></div>
-        <div class="sc-stat">About 18,400 results · Conway, AR</div>
-        <div class="res you">
-          <div class="site"><span class="pin">P</span> salonplatinumconway.com</div>
-          <div class="ttl">Salon Platinum — Hair, Color &amp; Lashes in Conway, AR</div>
-          <div class="snip">Cuts, color, Brazilian blowouts, extensions, lashes &amp; makeup on Alford Street. Book online or call (501) 499-9941.</div>
-          <span class="badge">You — top result</span>
-        </div>
-        <div class="res dim">
-          <div class="site">facebook.com › a page with no hours</div>
-          <div class="ttl">A competitor's social page</div>
-          <div class="snip">No menu, no booking link — the search moves on.</div>
-        </div>
-        <div class="res dim">
-          <div class="site">yelp.com › directory listing</div>
-          <div class="ttl">A directory nobody controls</div>
-          <div class="snip">Third-party page with old information.</div>
-        </div>
-      </div>
-    </div>
-    <p class="gal-note" style="margin-top:22px">Sample search preview — for illustration.</p>
-  </div>
-</section>
-
 <!-- ═══════════ GALLERY ═══════════ -->
 <section class="gallery" id="work">
   <div class="wrap">
@@ -615,28 +519,6 @@
         <div class="hrow"><b>Booking</b><span>Online &amp; by phone</span></div>
         <div class="confirm">Hours vary by stylist and season — <b style="color:var(--plat-2)">please call (501) 499-9941 to confirm the day you want.</b> Exact hours lock in on launch.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ FRESH SIGNAL CLOSE ═══════════ -->
-<section class="fs">
-  <div class="wrap">
-    <div class="letter" data-reveal>
-      <div class="klab">A note from the guy who built this</div>
-      <p>I'm Nate — I build websites for local shops here in Central Arkansas.</p>
-      <p>I built this for Salon Platinum before we ever talked, because you clearly take pride in the work — <em>“nothing less than for you to love your hair”</em> — and yet almost nothing online is carrying that to the people searching for a salon in Conway right now. Today it's a Facebook page and a Vagaro link.</p>
-      <p>Here's the whole idea: when someone in Conway googles <b>“hair salon near me,”</b> a real website puts <em>you</em> at the top instead of a directory. Everything marked <em>sample</em> becomes your real photos, your real hours, and your real reviews.</p>
-      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
-      <div class="sig">— Nate Witt, Fresh Signal</div>
-
-      <div class="offer">
-        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile set up so you rank for “hair salon Conway,” and a simple assistant that answers hours &amp; booking 24/7.</p></div>
-        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts every month. Cancel anytime.</p></div>
-        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
-      </div>
-      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and only then do we talk money. You keep the site and the domain either way. There's no risk to you — that's the whole point.</p>
-      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--violet);font-weight:800">Nate · (501) 757-3468</a></p>
     </div>
   </div>
 </section>
