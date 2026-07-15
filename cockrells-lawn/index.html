@@ -16,7 +16,7 @@
   /* Palette from a well-kept property: pine shadow · fescue green · charcoal · fieldstone · harvest brass · bone */
   :root{
     --bg:#12160F; --bg-2:#191E14; --char:#232A1C; --stone:#3A4230;
-    --green:#5E8C3A; --green-lt:#83B457; --brass:#B98A3E; --brass-lt:#D6A85A;
+    --green:#5E8C3A; --green-lt:#83B457; --brass:#E1571F; --brass-lt:#F4813F;
     --bone:#F1EEE3; --bone-2:#D8D3C2; --mut:#9EA08C;
     --ease:cubic-bezier(.22,1,.36,1);
   }
@@ -40,6 +40,10 @@
   .mark{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:700;font-size:20px;letter-spacing:.02em;text-decoration:none;white-space:nowrap;line-height:1}
   .mark small{display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.22em;color:var(--mut);font-weight:400;margin-top:3px}
   .mark span{color:var(--green-lt)}
+  .mark img{height:54px;width:auto;display:block;background:#fff;border-radius:9px;padding:5px 10px}
+  /* scroll-tilt (vanilla port of the container-scroll reveal) */
+  .tiltwrap{perspective:1300px}
+  .tilt{transform-origin:50% 100%;will-change:transform}
   .call{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#0C1108;
     text-decoration:none;padding:11px 18px;border-radius:5px;font-weight:800;font-size:14.5px;transition:background .2s}
   .call:hover{background:var(--green-lt)}
@@ -87,6 +91,19 @@
   .scard.accent h3{color:#0C1108}
   .scard.accent p{color:rgba(12,17,8,.82)}
   .scard.accent .tag{background:#0C1108}
+
+  /* before/after tiles — real split BEFORE|AFTER photos (labels + Sample baked into each image) */
+  .bagrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.bagrid{grid-template-columns:1fr}}
+  .batile{background:var(--bg);border:1px solid rgba(241,238,227,.14);border-radius:12px;overflow:hidden}
+  .batile .baimg{position:relative;aspect-ratio:2/1;background:var(--char);overflow:hidden}
+  .batile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+  .batile:hover img{transform:scale(1.04)}
+  .batile .cap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px}
+  .batile .cap h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.02em;font-size:19px;margin:0}
+  .batile .cap h3 i{font-style:normal;color:var(--brass-lt)}
+  .batile .cap .sample{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);white-space:nowrap}
+  .banote{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:20px;max-width:66ch;line-height:1.7}
 
   /* ══ SIGNATURE: the Google-search demo — the whole SEO pitch, made touchable ══ */
   .seo{background:var(--bg)}
@@ -192,7 +209,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="mark" href="#top">Cockrell's <span>Lawn &amp; Land</span><small>Benton · Saline County</small></a>
+    <a class="mark" href="#top"><img src="assets/b2-04-cockrells-lawn-benton/logo.jpg" alt="Cockrell's Lawn &amp; Land" /></a>
     <a class="call" href="tel:+15012136429">(501) 213-6429</a>
   </div>
 </nav>
@@ -227,16 +244,15 @@
     <div class="lab" data-reveal>What we do</div>
     <h2 data-reveal>Everything to make it <span>look good.</span></h2>
     <p class="lede" data-reveal>One crew for the whole property — the routine cut and the bigger jobs both. We keep the list short and the work sharp. Quality, not quantity.</p>
-    <div class="sgrid">
-      <div class="scard" data-n="01" data-reveal><span class="tag"></span><h3>Mowing</h3><p>Clean, even cuts on a schedule you can count on — weekly or bi-weekly.</p></div>
-      <div class="scard" data-n="02" data-reveal style="--i:1"><span class="tag"></span><h3>Edging</h3><p>Crisp lines along every drive, walk and bed so the whole yard looks finished.</p></div>
-      <div class="scard" data-n="03" data-reveal style="--i:2"><span class="tag"></span><h3>Weed-Eating</h3><p>Fence lines, corners and tight spots the mower can't reach, trimmed clean.</p></div>
-      <div class="scard" data-n="04" data-reveal style="--i:3"><span class="tag"></span><h3>Blowing</h3><p>Every clipping blown off the drive, walk and porch. We leave it cleaner than we found it.</p></div>
-      <div class="scard" data-n="05" data-reveal style="--i:4"><span class="tag"></span><h3>Flower Beds</h3><p>Beds cleaned up, weeded, mulched and shaped so they frame the house.</p></div>
-      <div class="scard" data-n="06" data-reveal style="--i:5"><span class="tag"></span><h3>Tree Removal</h3><p>Overgrown, dead or in-the-way trees taken down and hauled off — safe and clean.</p></div>
-      <div class="scard" data-n="07" data-reveal style="--i:6"><span class="tag"></span><h3>Pressure Washing</h3><p>Drives, walks, patios and siding washed back to looking new.</p></div>
-      <div class="scard accent" data-n="08" data-reveal style="--i:7"><span class="tag"></span><h3>Free Estimates</h3><p>Tell us the property and what it needs — we'll give you a straight number, no obligation.</p></div>
+    <div class="bagrid">
+      <div class="batile" data-reveal><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-mowing.jpg" alt="Mowing before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Mowing</h3><span class="sample">Before → After</span></div></div>
+      <div class="batile" data-reveal style="--i:1"><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-edging.jpg" alt="Edging before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Edging</h3><span class="sample">Before → After</span></div></div>
+      <div class="batile" data-reveal style="--i:2"><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-weedeating.jpg" alt="Weed-eating before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Weed-Eating</h3><span class="sample">Before → After</span></div></div>
+      <div class="batile" data-reveal style="--i:3"><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-flowerbeds.jpg" alt="Flower beds before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Flower Beds</h3><span class="sample">Before → After</span></div></div>
+      <div class="batile" data-reveal style="--i:4"><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-treeremoval.jpg" alt="Tree removal before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Tree Removal</h3><span class="sample">Before → After</span></div></div>
+      <div class="batile" data-reveal style="--i:5"><div class="baimg"><img src="assets/b2-04-cockrells-lawn-benton/ba-pressurewashing.jpg" alt="Pressure washing before and after — sample" loading="lazy" decoding="async"></div><div class="cap"><h3>Pressure Washing</h3><span class="sample">Before → After</span></div></div>
     </div>
+    <p class="banote">Before &amp; after shown are samples — swapped for Cockrell's own job photos on launch. Also on every visit: blowing &amp; full clean-up, and a free estimate before we start.</p>
   </div>
 </section>
 
@@ -293,13 +309,13 @@
     <div class="lab" data-reveal>Our work</div>
     <h2 data-reveal>The difference <span>shows.</span></h2>
     <p class="lede" data-reveal>Clean cuts, healthy beds, and the bigger jobs done right. This is the standard on every property we keep.</p>
-    <div class="bgrid">
+    <div class="tiltwrap"><div class="tilt" id="tiltWork"><div class="bgrid">
       <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/mow.jpg" alt="Owner mowing a lawn" width="900" height="675" loading="lazy" decoding="async"><figcaption>Owner on every job</figcaption></figure>
       <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/lawn.jpg" alt="Freshly mowed green lawn" width="700" height="525" loading="lazy" decoding="async"><figcaption>Cut &amp; edged clean</figcaption></figure>
       <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/beds.jpg" alt="Planted and mulched flower beds" width="700" height="525" loading="lazy" decoding="async"><figcaption>Flower beds</figcaption></figure>
       <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/tree.jpg" alt="Tree removal work" width="700" height="525" loading="lazy" decoding="async"><figcaption>Tree removal</figcaption></figure>
       <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/wash.jpg" alt="Pressure washing a driveway" width="700" height="525" loading="lazy" decoding="async"><figcaption>Pressure washing</figcaption></figure>
-    </div>
+    </div></div></div>
     <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Sample photography — the crew's real job photos on launch.</p>
   </div>
 </section>
@@ -385,6 +401,17 @@
     kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
     var k=b.getAttribute('data-q'); q.textContent=k; if(DATA[k]) ttl.textContent=DATA[k].t;
   });});
+  /* scroll-tilt reveal (vanilla container-scroll) */
+  (function(){
+    var el=document.getElementById('tiltWork'); if(!el) return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.style.transform='none';return;}
+    var raf=0;
+    function upd(){var r=el.getBoundingClientRect(),vh=innerHeight||1;
+      var p=(vh-r.top)/(vh*0.85); p=p<0?0:p>1?1:p;
+      el.style.transform='rotateX('+((1-p)*16)+'deg) scale('+(0.93+p*0.07)+')';}
+    addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;upd();});},{passive:true});
+    addEventListener('resize',upd); upd();
+  })();
 })();
 </script>
 <script>
