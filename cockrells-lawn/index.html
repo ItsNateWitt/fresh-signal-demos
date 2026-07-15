@@ -184,6 +184,16 @@
 
   /* ══ Fresh Signal signature shared styles (injected) ══ */
   html,body{max-width:100%;overflow-x:clip}
+  /* scroll-mower — a mower runs the right rail top-to-bottom as you scroll, cutting a stripe behind it */
+  .mower-rail{position:fixed;top:0;right:14px;width:2px;height:100vh;z-index:40;pointer-events:none;
+    background:linear-gradient(rgba(241,238,227,.08),rgba(241,238,227,.08)) no-repeat;background-size:2px 0%}
+  .mower-wrap{position:fixed;top:0;right:0;width:46px;height:46px;z-index:41;pointer-events:none;
+    transform:translate3d(0,0,0);will-change:transform}
+  .mower-wrap svg{width:100%;height:100%;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))}
+  .mower-wheel{transform-origin:center;animation:mowspin .5s linear infinite}
+  @keyframes mowspin{to{transform:rotate(360deg)}}
+  @media (max-width:720px){.mower-rail,.mower-wrap{display:none}}
+  @media (prefers-reduced-motion: reduce){.mower-rail,.mower-wrap{display:none}}
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
   .reveal.in{opacity:1;transform:none}
   [data-fs-compare]{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
@@ -372,10 +382,22 @@
   </div>
 </section>
 
+<div class="mower-rail" aria-hidden="true"></div>
+<div class="mower-wrap" aria-hidden="true">
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="14" y="24" width="34" height="16" rx="4" fill="#E1571F"/>
+    <rect x="18" y="18" width="14" height="8" rx="2" fill="#F4813F"/>
+    <path d="M40 22 L54 8" stroke="#2b2b26" stroke-width="4" stroke-linecap="round"/>
+    <path d="M52 6 L58 12" stroke="#2b2b26" stroke-width="4" stroke-linecap="round"/>
+    <g class="mower-wheel"><circle cx="20" cy="42" r="6" fill="#161611" stroke="#83B457" stroke-width="2"/></g>
+    <g class="mower-wheel"><circle cx="42" cy="42" r="6" fill="#161611" stroke="#83B457" stroke-width="2"/></g>
+  </svg>
+</div>
+
 <footer>
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
-      <div><span class="osw" style="font-weight:700;font-size:19px;color:var(--bone)">Cockrell's <span style="color:var(--green-lt)">Lawn &amp; Land</span></span><br/>Benton · Bryant · Haskell · Saline County · (501) 213-6429</div>
+      <div><span class="osw" style="font-weight:700;font-size:19px;color:var(--bone)">Cockrell's <span style="color:var(--green-lt)">Lawn &amp; Land</span></span><br/>Benton · Bryant · Haskell · Saline County · (501) 213-6429<br/><a href="https://facebook.com/cockrellslawnland" target="_blank" rel="noopener" style="color:var(--green-lt)">facebook.com/cockrellslawnland</a></div>
       <div style="text-align:right">Quality, not quantity<br/>Don't stall — give us a call!</div>
     </div>
     <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Cockrell's Lawn &amp; Land. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography and reviews shown are placeholders, replaced with the company's own on launch.</div>
@@ -411,6 +433,27 @@
       el.style.transform='rotateX('+((1-p)*16)+'deg) scale('+(0.93+p*0.07)+')';}
     addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;upd();});},{passive:true});
     addEventListener('resize',upd); upd();
+  })();
+  /* scroll-mower — mower travels the right rail top-to-bottom over full page scroll, cutting a stripe up to its position */
+  (function(){
+    var wrap=document.querySelector('.mower-wrap'), rail=document.querySelector('.mower-rail');
+    if(!wrap||!rail||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var raf=0, cur=0;
+    function target(){
+      var doc=document.documentElement, max=(doc.scrollHeight-innerHeight)||1;
+      var p=(scrollY||doc.scrollTop)/max; return p<0?0:p>1?1:p;
+    }
+    function frame(){
+      raf=0;
+      var t=target(); cur+=(t-cur)*.12;
+      var track=innerHeight-46;
+      wrap.style.transform='translate3d(0,'+(cur*track)+'px,0)';
+      rail.style.backgroundSize='2px '+(cur*100)+'%';
+      if(Math.abs(t-cur)>.001) raf=requestAnimationFrame(frame);
+    }
+    addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(frame);},{passive:true});
+    addEventListener('resize',function(){if(!raf)raf=requestAnimationFrame(frame);});
+    frame();
   })();
 })();
 </script>
