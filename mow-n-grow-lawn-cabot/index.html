@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>MOW-N-GROW — Lawn Service &amp; Landscaping | Cabot, AR · Since 1997</title>
+<meta name="description" content="Cabot's lawn crew since 1997 — mowing, trimming, hardscaping, weed control and snow plowing. We come to you across Cabot. Call (501) 605-2991." />
+<meta name="theme-color" content="#14331F" />
+<link rel="preload" as="image" href="assets/hero-lawn.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314331F'/%3E%3Crect x='6' y='9' width='20' height='3' fill='%238BC34A'/%3E%3Crect x='6' y='15' width='20' height='3' fill='%232F7D3A'/%3E%3Crect x='6' y='21' width='20' height='3' fill='%238BC34A'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;background:linear-gradient(90deg,var(--cut),var(--cut2))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ MOW-N-GROW — Travel Poster · green + soil, mow-stripe + postage-stamp world ══ */
+  :root{
+    --ink:#0E2114; --field:#14331F; --field2:#1B4227; --field3:#0B2614;
+    --turf:#2F7D3A; --cut:#8BC34A; --cut2:#C4E38A;
+    --soil:#4B3423; --soil2:#6B4A30;
+    --kraft:#CBB78A; --paper:#F2EDDE; --paper2:#E5DCC2;
+    --mut:#9DB19C; --line:rgba(242,237,222,.16);
+    --st-dark:#173D24; --st-light:#2C6E38;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--field);color:var(--paper);
+    font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--cut);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.012em;line-height:.92}
+  .mono{font-family:'Space Mono',monospace}
+
+  /* demo disclosure bar */
+  .demo{background:var(--soil);color:var(--paper);font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.03em;padding:9px 16px;text-align:center;line-height:1.55}
+  .demo b{color:var(--cut2)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(14,33,20,.9);backdrop-filter:blur(11px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap}
+  .mark .stripes{width:26px;height:26px;border-radius:5px;flex:none;
+    background:repeating-linear-gradient(180deg,var(--cut) 0 4px,var(--turf) 4px 8px)}
+  .mark b{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:23px;letter-spacing:.03em;color:var(--paper)}
+  .mark b span{color:var(--cut)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--cut);color:var(--ink);
+    text-decoration:none;padding:11px 17px;border-radius:7px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--cut2)}
+  .call svg{width:15px;height:15px;flex:none}
+
+  /* hero */
+  header{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;
+    background:var(--field3)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;
+    filter:saturate(1.05) brightness(.72) contrast(1.04)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,38,20,.72) 0%,rgba(11,38,20,.28) 34%,rgba(11,38,20,.94) 100%),
+      linear-gradient(78deg,rgba(14,33,20,.66) 0%,rgba(14,33,20,0) 62%)}
+  /* faint mow-stripe scan over hero */
+  .hero-scan{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.5;
+    background:repeating-linear-gradient(180deg,rgba(196,227,138,.16) 0 26px,rgba(0,0,0,0) 26px 52px)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:0 0 74px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--cut2);margin-bottom:20px}
+  .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--cut);flex:none}
+  h1{margin:0 0 22px;font-family:'Bebas Neue',sans-serif;font-weight:400;
+    font-size:clamp(58px,12vw,150px);line-height:.86;letter-spacing:.01em;text-transform:uppercase;max-width:13ch}
+  h1 .g{color:var(--cut)}
+  .hero-sub{font-size:clamp(17px,2vw,20px);color:#E9E3D2;max-width:50ch;margin:0 0 30px}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 27px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:8px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--cut);color:var(--ink)}
+  .btn-a:hover{background:var(--cut2)}
+  .btn-b{border:1.5px solid rgba(242,237,222,.42);color:var(--paper)}
+  .btn-b:hover{border-color:var(--cut);color:var(--cut2)}
+
+  /* postage stamp */
+  .stamp{position:absolute;z-index:4;top:98px;right:26px;width:184px;transform:rotate(6deg);
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.4))}
+  @media(max-width:960px){.stamp{width:140px;top:84px;right:16px}}
+  @media(max-width:620px){.stamp{position:static;transform:rotate(-3deg);width:158px;margin:0 0 -30px 6px}}
+
+  /* marquee trust strip */
+  .strip{background:var(--cut);color:var(--ink);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .strip .fs-mq{padding:13px 0}
+  .strip .fs-mq__t span{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.05em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:var(--field)}
+
+  section{padding:96px 0;position:relative}
+  .lab{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--cut);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .lab::before{content:"";width:26px;height:2px;background:var(--cut)}
+  h2{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(38px,6vw,72px);line-height:.94;letter-spacing:.01em;margin:0 0 18px;max-width:20ch}
+  h2 .g{color:var(--cut)}
+  .lede{font-size:19px;color:#DAD3C0;max-width:56ch;margin:0 0 44px}
+
+  /* stats row */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0 0}
+  @media(max-width:640px){.stats{grid-template-columns:1fr;gap:10px}}
+  .stat{border:1px solid var(--line);border-radius:12px;padding:22px 20px;background:var(--field2)}
+  .stat b{display:block;font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:var(--cut)}
+  .stat small{display:block;margin-top:6px;font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+
+  /* services as route stops */
+  .svc{background:var(--field2)}
+  .stops{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:820px){.stops{grid-template-columns:1fr}}
+  .stop{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:var(--field);min-height:290px;display:flex;align-items:flex-end}
+  .stop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.02) brightness(.62) contrast(1.03);transition:transform .9s var(--ease)}
+  .stop::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,38,20,.15) 0%,rgba(11,38,20,.9) 100%)}
+  .stop:hover img{transform:scale(1.06)}
+  .stop .body{position:relative;z-index:2;padding:26px}
+  .stop .no{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--cut2)}
+  .stop h3{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:32px;letter-spacing:.02em;margin:6px 0 8px}
+  .stop p{margin:0;font-size:15.5px;color:#D5CEBB;max-width:38ch}
+  .stop .tag{position:absolute;top:14px;left:14px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--cut2);background:rgba(11,38,20,.72);
+    padding:4px 8px;border-radius:5px}
+  .stop.wide{grid-column:1 / -1;min-height:230px}
+
+  /* ══ SIGNATURE: the Cabot mow-stripe service map + postage stamp ══ */
+  .map{background:var(--field3)}
+  .map-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:center}
+  @media(max-width:900px){.map-grid{grid-template-columns:1fr;gap:34px}}
+  .map-card{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    background:var(--soil);box-shadow:0 30px 70px rgba(0,0,0,.42)}
+  .map-card svg{display:block;width:100%;height:auto}
+  .route{fill:none;stroke:var(--cut);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2s var(--ease)}
+  [data-reveal].is-in .route{stroke-dashoffset:0}
+  .route.b{stroke:var(--cut2);transition-delay:.25s}
+  .route.c{stroke:#EBF3D6;transition-delay:.5s}
+  .routeCtr{fill:none;stroke:rgba(14,33,20,.55);stroke-width:2;stroke-dasharray:2 9;stroke-linecap:round}
+  .townDot{fill:var(--paper)}
+  .townDot.on{fill:var(--cut)}
+  .townLbl{font-family:'Space Mono',monospace;font-size:13px;fill:var(--paper);letter-spacing:.04em}
+  .hub{fill:var(--cut)}
+  .map-legend{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--mut);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+  .map-legend b{color:var(--cut2);font-weight:400}
+  .comefrom li{margin:0 0 14px;padding-left:26px;position:relative;font-size:16.5px;color:#DAD3C0}
+  .comefrom li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:8px;border-radius:2px;
+    background:repeating-linear-gradient(90deg,var(--cut) 0 3px,var(--turf) 3px 6px)}
+  .comefrom{list-style:none;padding:0;margin:24px 0 0}
+
+  /* proof gallery */
+  .proof{background:var(--field)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr}}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:12px}
+  .pgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(1.03) brightness(.86) contrast(1.03);
+    transition:transform .8s var(--ease)}
+  .pgrid figure:first-child{grid-column:span 2;grid-row:span 2}
+  .pgrid figure:first-child img{aspect-ratio:auto;height:100%}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;
+    background:linear-gradient(transparent,rgba(11,38,20,.94));
+    font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper)}
+  .pgrid .stag{position:absolute;top:9px;left:9px;background:rgba(11,38,20,.72);color:var(--cut2);
+    font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
+  .pnote{margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* get found */
+  .found{background:var(--field2)}
+  .found-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  @media(max-width:860px){.found-grid{grid-template-columns:1fr;gap:30px}}
+  .kw-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+  .kw{background:transparent;border:1px solid var(--line);color:var(--paper);font-family:'DM Sans';font-weight:700;
+    font-size:14px;padding:11px 15px;border-radius:24px;cursor:pointer;min-height:46px;
+    transition:background .2s,border-color .2s,color .2s}
+  .kw:hover{border-color:var(--cut)}
+  .kw.on{background:var(--cut);border-color:var(--cut);color:var(--ink)}
+  .found-note{font-size:14.5px;color:var(--mut);margin-top:18px;max-width:46ch}
+  .phone{background:#0C0C0E;border:9px solid #030304;border-radius:32px;overflow:hidden;
+    max-width:330px;margin:0 auto;box-shadow:0 32px 74px rgba(0,0,0,.5)}
+  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 13px}
+  .ph-bar .g{width:16px;height:16px;border-radius:50%;flex:none;
+    background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4)}
+  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13px;color:#202124;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ph-body{background:#fff;color:#202124;padding:13px 13px 18px;min-height:322px}
+  .ph-stat{font-size:11px;color:#70757A;margin-bottom:11px}
+  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s}
+  .result.you{opacity:1;background:#EAF6EC;border:1px solid var(--turf);padding:12px;margin:4px 0;border-radius:8px;
+    box-shadow:0 4px 14px rgba(47,125,58,.18)}
+  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
+  .result .site .pin{width:14px;height:14px;border-radius:50%;background:var(--turf);color:#fff;font-size:9px;
+    display:grid;place-items:center;font-weight:700}
+  .result .ttl{font-size:15.5px;color:#1A0DAB;margin:3px 0;font-weight:500}
+  .result.you .ttl{color:#0B7A3E}
+  .result .snip{font-size:12px;color:#4D5156;line-height:1.42}
+  .result .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:10px;font-weight:700;
+    padding:2px 7px;border-radius:4px;margin-top:5px}
+
+  /* visit */
+  .visit{background:var(--field)}
+  .v-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:820px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--field2)}
+  .v-card h3{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;
+    font-size:27px;margin:0 0 18px}
+  .hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+  .hrow b{font-weight:500}
+  .hrow span{font-family:'Space Mono',monospace;font-size:13px;color:var(--cut2)}
+  .addr{font-size:20px;line-height:1.5}
+  .addr b{color:var(--cut);font-weight:700}
+  .stag2{display:inline-block;margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:5px 9px;border-radius:6px}
+
+  /* fresh signal close */
+  .fs{background:var(--paper);color:var(--ink)}
+  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
+  .letter p{margin:0 0 15px}
+  .letter .from{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--turf);margin-bottom:20px}
+  .letter b{color:var(--soil)}
+  .sig{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--turf);margin-top:8px;letter-spacing:.02em}
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 0}
+  @media(max-width:700px){.offer{grid-template-columns:1fr}}
+  .oc{border:1px solid rgba(14,33,20,.16);border-radius:12px;padding:22px;background:#fff}
+  .oc .amt{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--ink);line-height:.95}
+  .oc .amt small{display:block;font-family:'DM Sans';font-weight:700;font-size:12px;letter-spacing:.06em;
+    text-transform:uppercase;color:#7A6B52;margin-top:2px}
+  .oc p{font-size:14px;color:#4A4030;margin:9px 0 0}
+  .risk{margin-top:24px;background:var(--field);color:var(--paper);border-radius:12px;padding:22px 24px;font-size:16px}
+  .risk b{color:var(--cut2)}
+
+  footer{background:var(--field3);padding:44px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(242,237,222,.62)}
+  .fbot{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(242,237,222,.44)}
+
+  /* AI assistant widget placeholder */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--cut);color:var(--ink);border:none;border-radius:30px;padding:13px 18px;font-family:'DM Sans';
+    font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.4);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--cut2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(340px,calc(100vw - 36px));
+    background:var(--field2);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.5);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--field3);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:34px;height:34px;border-radius:9px;flex:none;
+    background:repeating-linear-gradient(180deg,var(--cut) 0 5px,var(--turf) 5px 10px)}
+  .ai-head b{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.03em}
+  .ai-head small{display:block;font-family:'Space Mono',monospace;font-size:10px;color:var(--cut2);letter-spacing:.08em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--field);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:#DAD3C0}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'Space Mono',monospace;font-size:11px;color:var(--cut2);border:1px solid var(--line);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--field);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
+    color:var(--paper);font-family:'DM Sans';font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--cut);border:none;border-radius:9px;color:var(--ink);font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+  @media(max-width:700px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--cut)}
+    .mbar a{flex:1;text-align:center;padding:16px;text-decoration:none;font-weight:700;color:var(--ink);font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(14,33,20,.3);background:var(--turf);color:var(--paper)}
+    footer{padding-bottom:82px}
+    header{min-height:80vh}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+    section{padding:72px 0}
+  }
+  @media(max-width:440px){
+    .kw{min-height:46px}
+    .wrap{padding:0 18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo"><b>DEMO MOCKUP</b> — built for MOW-N-GROW by Nate Witt · Fresh Signal.
+  <b>REAL:</b> name, 1282 Sunset Cir Cabot AR, phone (501) 605-2991, serving Cabot since 1997.
+  <b>SAMPLE</b> (swapped on launch): photos, service-area map, search preview.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="MOW-N-GROW home">
+      <span class="stripes" aria-hidden="true"></span>
+      <b>MOW-N-<span>GROW</span></b>
+    </a>
+    <a class="call" href="tel:+15016052991">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 605-2991
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — stand-in; replaced with MOW-N-GROW's real lawns on launch -->
+  <img class="hero-img" src="assets/hero-lawn.jpg" alt="A freshly cut, deep-green residential lawn with crisp edges beside a brick home" width="1000" height="750" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-scan" aria-hidden="true"></div>
+
+  <!-- POSTAGE-STAMP SIGNATURE MARK -->
+  <svg class="stamp" viewBox="0 0 200 210" role="img" aria-label="Postage-stamp mark: Serving Cabot since 1997">
+    <defs>
+      <clipPath id="stampClip"><rect x="12" y="12" width="176" height="186" rx="4"/></clipPath>
+    </defs>
+    <rect x="8" y="8" width="184" height="194" rx="6" fill="#F2EDDE"
+      stroke="#0E2114" stroke-width="2" stroke-dasharray="0.01 9.6" stroke-linecap="round"/>
+    <g clip-path="url(#stampClip)">
+      <rect x="12" y="12" width="176" height="186" fill="#1B4227"/>
+      <g>
+        <rect x="12" y="12" width="176" height="15.5" fill="#2C6E38"/>
+        <rect x="12" y="43" width="176" height="15.5" fill="#2C6E38"/>
+        <rect x="12" y="74" width="176" height="15.5" fill="#2C6E38"/>
+        <rect x="12" y="105" width="176" height="15.5" fill="#2C6E38"/>
+        <rect x="12" y="136" width="176" height="15.5" fill="#2C6E38"/>
+        <rect x="12" y="167" width="176" height="15.5" fill="#2C6E38"/>
+      </g>
+      <text x="100" y="70" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="42" fill="#C4E38A" letter-spacing="1">SERVING</text>
+      <text x="100" y="112" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="54" fill="#F2EDDE" letter-spacing="1">CABOT</text>
+      <text x="100" y="150" text-anchor="middle" font-family="Space Mono,monospace" font-size="15" fill="#C4E38A" letter-spacing="2">SINCE 1997</text>
+      <rect x="60" y="166" width="80" height="2.5" fill="#8BC34A"/>
+      <text x="100" y="186" text-anchor="middle" font-family="Space Mono,monospace" font-size="10" fill="#9DB19C" letter-spacing="2">CABOT · ARKANSAS</text>
+    </g>
+  </svg>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Cabot, Arkansas · Family lawn crew since 1997</div>
+      <h1 data-reveal style="--i:1">Cabot's lawn,<br/><span class="g">done right.</span></h1>
+      <p class="hero-sub" data-reveal style="--i:2">Nearly thirty years cutting, edging and shaping the yards of Cabot — mowing and trimming, hardscaping, weed control, and snow when winter hits. We come to you.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="tel:+15016052991" data-magnetic="0.2">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call for an estimate
+        </a>
+        <a class="btn btn-b" href="#map">See our service area</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee trust strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Mowing &amp; Trimming <i>◆</i></span><span>Hardscaping <i>◆</i></span><span>Weed Control <i>◆</i></span>
+    <span>Snow Plowing <i>◆</i></span><span>Full-Service Residential <i>◆</i></span><span>Serving Cabot Since 1997 <i>◆</i></span>
+  </div></div>
+</div>
+
+<!-- services -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>What we do</div>
+    <h2 data-reveal>Every job, <span class="g">start to edge.</span></h2>
+    <p class="lede" data-reveal>One local crew for the whole property — the weekly cut, the clean lines, the stonework, and the snow when it comes. Here's the run.</p>
+
+    <div class="stops">
+      <div class="stop" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/mowing.jpg" alt="A person on a riding mower cutting a residential lawn" width="900" height="600" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">01 · Weekly &amp; one-time</div>
+          <h3>Mowing &amp; Trimming</h3>
+          <p>Clean, even cuts with crisp trim lines around beds, fences and walkways — every visit, on schedule.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal style="--i:1">
+        <span class="tag">Sample photo</span>
+        <img src="assets/hardscape.jpg" alt="A brick paver walkway laid in a running-bond pattern" width="900" height="600" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">02 · Built to last</div>
+          <h3>Hardscaping</h3>
+          <p>Paver walkways, patios and borders that shape the yard and hold up season after season.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/shaping.jpg" alt="A neatly shaped, sculpted evergreen shrub on a manicured lawn" width="900" height="600" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">03 · Kept in check</div>
+          <h3>Weed Control</h3>
+          <p>Treated beds and borders so the grass wins and the weeds don't take the yard back.</p>
+        </div>
+      </div>
+      <div class="stop" data-reveal style="--i:1">
+        <span class="tag">Sample photo</span>
+        <img src="assets/snow.jpg" alt="A cleanly plowed path cut between deep snowbanks in a neighborhood" width="900" height="600" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">04 · When winter hits</div>
+          <h3>Snow Plowing</h3>
+          <p>Drives and lots cleared fast when the weather turns — the same crew you already trust.</p>
+        </div>
+      </div>
+      <div class="stop wide" data-reveal>
+        <span class="tag">Sample photo</span>
+        <img src="assets/curb.jpg" alt="A tidy home with blooming beds and a maintained lawn showing full-service curb appeal" width="1200" height="500" loading="lazy" decoding="async" />
+        <div class="body">
+          <div class="no">05 · The whole property</div>
+          <h3>Full-Service Residential Lawn Care</h3>
+          <p>Mow, trim, edge, beds, weeds and cleanup — one call keeps the whole yard looking cared-for all season.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat" data-reveal><b><span data-count="29">29</span></b><small>Years serving Cabot</small></div>
+      <div class="stat" data-reveal style="--i:1"><b><span data-count="5">5</span></b><small>Core services, one crew</small></div>
+      <div class="stat" data-reveal style="--i:2"><b>Mon–Sat</b><small>Call for scheduling</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE: THE CABOT MOW-STRIPE SERVICE MAP ══ -->
+<section class="map" id="map">
+  <div class="wrap">
+    <div class="lab" data-reveal>We come to you</div>
+    <h2 data-reveal>The route runs <span class="g">right through Cabot.</span></h2>
+    <p class="lede" data-reveal>You don't bring the yard to us — we bring the crew to the yard. Home base is Sunset Circle, and the routes stripe out across town all week long.</p>
+
+    <div class="map-grid">
+      <div>
+        <ul class="comefrom">
+          <li>Based right here on <b style="color:var(--cut)">1282 Sunset Cir</b>, Cabot — not a franchise two counties over.</li>
+          <li>Weekly routes mean your street gets hit on a rhythm, not whenever someone remembers.</li>
+          <li>One truck, one crew, one number to call — the same faces on your lawn since the '90s.</li>
+        </ul>
+        <div class="map-legend">
+          <span><b>▬</b> Mow-stripe route</span>
+          <span><b>◉</b> Home base</span>
+          <span><b>○</b> Neighborhood stop</span>
+        </div>
+        <p class="found-note" style="margin-top:16px">Service-area map is a sample layout — we'll draw your real routes and coverage radius on launch.</p>
+      </div>
+
+      <div class="map-card" data-reveal="scale">
+        <svg viewBox="0 0 640 480" role="img" aria-label="Stylized map of Cabot, Arkansas. Home base at Sunset Circle with mow-stripe routes reaching neighborhood stops across town.">
+          <!-- field: mow stripes -->
+          <rect width="640" height="480" fill="#173D24"/>
+          <g>
+            <rect y="0" width="640" height="40" fill="#2C6E38"/>
+            <rect y="80" width="640" height="40" fill="#2C6E38"/>
+            <rect y="160" width="640" height="40" fill="#2C6E38"/>
+            <rect y="240" width="640" height="40" fill="#2C6E38"/>
+            <rect y="320" width="640" height="40" fill="#2C6E38"/>
+            <rect y="400" width="640" height="40" fill="#2C6E38"/>
+          </g>
+          <!-- soft vignette -->
+          <rect width="640" height="480" fill="url(#mg)" opacity="0.0"/>
+          <!-- a hint of the main highway crossing town -->
+          <path d="M40 360 Q 300 300 610 120" fill="none" stroke="rgba(203,183,138,.28)" stroke-width="12" stroke-linecap="round"/>
+          <text x="470" y="150" font-family="Space Mono,monospace" font-size="12" fill="rgba(242,237,222,.5)" transform="rotate(-19 470 150)">HWY 5 / MAIN</text>
+
+          <!-- routes (drawn on scroll) -->
+          <path class="route"   pathLength="1" d="M320 250 C 240 250 190 160 130 120"/>
+          <path class="route b" pathLength="1" d="M320 250 C 430 250 500 190 560 150"/>
+          <path class="route c" pathLength="1" d="M320 250 C 300 330 250 380 150 400"/>
+          <path class="route"   pathLength="1" d="M320 250 C 400 320 470 360 520 400"/>
+          <path class="route b" pathLength="1" d="M320 250 C 340 170 350 120 380 70"/>
+
+          <!-- centerline dashes over routes -->
+          <path class="routeCtr" d="M320 250 C 240 250 190 160 130 120"/>
+          <path class="routeCtr" d="M320 250 C 430 250 500 190 560 150"/>
+          <path class="routeCtr" d="M320 250 C 300 330 250 380 150 400"/>
+          <path class="routeCtr" d="M320 250 C 400 320 470 360 520 400"/>
+          <path class="routeCtr" d="M320 250 C 340 170 350 120 380 70"/>
+
+          <!-- town stops -->
+          <g>
+            <circle class="townDot" cx="130" cy="120" r="7"/><text class="townLbl" x="118" y="106" text-anchor="end">Northgate</text>
+            <circle class="townDot" cx="560" cy="150" r="7"/><text class="townLbl" x="572" y="146">Greystone</text>
+            <circle class="townDot" cx="150" cy="400" r="7"/><text class="townLbl" x="162" y="418">Mountain Springs</text>
+            <circle class="townDot" cx="520" cy="400" r="7"/><text class="townLbl" x="508" y="418" text-anchor="end">Magness Creek</text>
+            <circle class="townDot" cx="380" cy="70" r="7"/><text class="townLbl" x="392" y="66">Ward Line</text>
+          </g>
+
+          <!-- home base hub -->
+          <circle cx="320" cy="250" r="17" fill="#0E2114"/>
+          <circle class="hub" cx="320" cy="250" r="11"/>
+          <circle cx="320" cy="250" r="4.5" fill="#0E2114"/>
+          <rect x="238" y="272" width="164" height="30" rx="6" fill="#0E2114"/>
+          <text x="320" y="292" text-anchor="middle" font-family="Space Mono,monospace" font-size="13" fill="#C4E38A" letter-spacing="1">1282 SUNSET CIR</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- proof gallery -->
+<section class="proof" id="work">
+  <div class="wrap">
+    <div class="lab" data-reveal>The work</div>
+    <h2 data-reveal>Cut lines you can <span class="g">see from the road.</span></h2>
+    <p class="lede" data-reveal>A cared-for yard reads instantly — even edges, clean beds, and stripes that say somebody who knows what they're doing was here.</p>
+    <div class="pgrid">
+      <figure data-reveal><span class="stag">Sample</span><img src="assets/stripes.jpg" alt="A wide lawn cut with sweeping curved mowing lines" width="900" height="675" loading="lazy" decoding="async"><figcaption>Shaped &amp; striped</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/mowing.jpg" alt="Riding mower cutting a green residential lawn" width="700" height="933" loading="lazy" decoding="async"><figcaption>The weekly cut</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/hardscape.jpg" alt="Brick paver walkway close up" width="700" height="933" loading="lazy" decoding="async"><figcaption>Paver work</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/shaping.jpg" alt="Neatly sculpted evergreen shrub" width="700" height="933" loading="lazy" decoding="async"><figcaption>Trimmed &amp; shaped</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/curb.jpg" alt="Home with maintained beds and lawn" width="700" height="933" loading="lazy" decoding="async"><figcaption>Full curb appeal</figcaption></figure>
+    </div>
+    <p class="pnote">Sample photography — MOW-N-GROW's own before/after shots go here on launch.</p>
+  </div>
+</section>
+
+<!-- get found -->
+<section class="found" id="found">
+  <div class="wrap">
+    <div class="found-grid">
+      <div>
+        <div class="lab" data-reveal>Get found</div>
+        <h2 data-reveal>When Cabot searches, <span class="g">you're who they find.</span></h2>
+        <p class="lede" data-reveal style="margin-bottom:20px">Right now a search for your own name lands on <b style="color:var(--cut2)">mowngrow.com — a for-sale parking page you don't even own</b>. Nearly thirty years of reputation, and a stranger's ad is holding your address online.</p>
+        <div class="kw-row" role="group" aria-label="Try a search" data-reveal>
+          <button class="kw on" data-q="lawn service cabot ar">lawn service cabot ar</button>
+          <button class="kw" data-q="lawn mowing near me cabot">mowing near me cabot</button>
+          <button class="kw" data-q="landscaping cabot arkansas">landscaping cabot</button>
+          <button class="kw" data-q="snow plowing cabot ar">snow plowing cabot</button>
+        </div>
+        <p class="found-note">A real website — one you own — puts <b>MOW-N-GROW</b> at the top when the whole town is searching for exactly what you do. That's the $79/month working while you're on the mower.</p>
+      </div>
+
+      <div class="phone" data-reveal="scale">
+        <div class="ph-bar"><span class="g" aria-hidden="true"></span><span class="ph-q" id="phQ">lawn service cabot ar</span></div>
+        <div class="ph-body">
+          <div class="ph-stat">About 9,400 results · Cabot, AR</div>
+          <div class="result you">
+            <div class="site"><span class="pin" aria-hidden="true">★</span> mowngrow.com</div>
+            <div class="ttl" id="phTtl">MOW-N-GROW — Lawn Service &amp; Landscaping, Cabot AR</div>
+            <div class="snip">Mowing, trimming, hardscaping, weed control &amp; snow plowing. Serving Cabot since 1997. Call (501) 605-2991.</div>
+            <span class="badge">You — #1 result</span>
+          </div>
+          <div class="result">
+            <div class="site">facebook.com › a competitor</div>
+            <div class="ttl">Another lawn guy's Facebook page</div>
+            <div class="snip">No hours, no service list, no way to call — the search moves on.</div>
+          </div>
+          <div class="result">
+            <div class="site">a national directory</div>
+            <div class="ttl">A listing site nobody controls</div>
+            <div class="snip">Old info and three ads before your number.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- visit -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Reach us</div>
+    <h2 data-reveal>Based in Cabot. <span class="g">On call all week.</span></h2>
+    <div class="v-grid">
+      <div class="v-card" data-reveal>
+        <h3>Home base</h3>
+        <p class="addr"><b>1282 Sunset Cir</b><br/>Cabot, AR 72023</p>
+        <p style="margin:20px 0 0"><a class="btn btn-a" style="padding:13px 22px" href="https://maps.google.com/?q=1282+Sunset+Cir+Cabot+AR+72023" target="_blank" rel="noopener">Get directions</a></p>
+        <p style="margin-top:18px;font-size:15px;color:#DAD3C0">Call: <a href="tel:+15016052991" style="color:var(--cut2);font-weight:700">(501) 605-2991</a></p>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <h3>Hours</h3>
+        <div class="hrow"><b>Monday – Saturday</b><span>Call to schedule</span></div>
+        <div class="hrow"><b>Sunday</b><span>Closed</span></div>
+        <div class="hrow"><b>Estimates</b><span>Free · by phone</span></div>
+        <span class="stag2">Hours not yet confirmed — set your real schedule on launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- fresh signal close -->
+<section class="fs">
+  <div class="wrap">
+    <div class="letter" data-reveal>
+      <p class="from">A note from the guy who built this</p>
+      <p>I'm Nate — I build websites for local outfits here in Central Arkansas.</p>
+      <p>I built this for MOW-N-GROW before we ever talked, because you've earned nearly thirty years in Cabot and yet there's almost nothing online carrying that reputation. Right now it's a Facebook page — and <b>mowngrow.com is a parked for-sale page you don't even own.</b> A stranger is squatting on your name.</p>
+      <p>Here's the whole idea: when somebody in Cabot googles <b>"lawn service near me,"</b> a real website — one you own — puts <em>you</em> at the top instead of a competitor. That's yards you're not booking right now. Everything marked <em>sample</em> becomes your real photos, your real routes, your real hours.</p>
+      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
+      <div class="sig">— Nate Witt, Fresh Signal</div>
+
+      <div class="offer">
+        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile fixed so you rank for "lawn service Cabot," and a simple assistant that answers questions &amp; takes estimate requests 24/7.</p></div>
+        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh photos, reviews &amp; posts every month. Cancel anytime.</p></div>
+        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
+      </div>
+      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and only then do we talk money. You keep the site and the domain either way. There's no risk to you — that's the whole point.</p>
+      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--turf);font-weight:700">Nate · (501) 757-3468</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div>
+        <span class="disp" style="font-size:26px;color:var(--paper)">MOW-N-<span style="color:var(--cut)">GROW</span></span><br/>
+        Lawn Service &amp; Landscaping<br/>1282 Sunset Cir · Cabot, AR 72023 · (501) 605-2991
+      </div>
+      <div style="text-align:right" class="mono" >Serving Cabot since 1997<br/>Mon–Sat · Call for scheduling</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by MOW-N-GROW. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography and service-area map shown are placeholders, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask MOW-N-GROW
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="MOW-N-GROW assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"></span>
+    <div><b>MOW-N-GROW Assistant</b><small>SAMPLE · placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey — I'm the MOW-N-GROW assistant. On launch I'll answer estimates, scheduling and "can you get to my yard this week?" around the clock, then text the details straight to the crew.</div>
+    <div class="ai-chips"><span>Get an estimate</span><span>Are you in my area?</span><span>Snow plowing?</span></div>
+    <div class="ai-input">
+      <input type="text" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">→</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15016052991">Call (501) 605-2991</a>
+  <a href="https://maps.google.com/?q=1282+Sunset+Cir+Cabot+AR+72023" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- the Google-search signature toggle + AI panel -->
+<script>
+(function(){
+  var DATA = {
+    "lawn service cabot ar":     {t:"MOW-N-GROW — Lawn Service & Landscaping, Cabot AR"},
+    "lawn mowing near me cabot": {t:"MOW-N-GROW — Weekly Mowing & Trimming in Cabot"},
+    "landscaping cabot arkansas":{t:"MOW-N-GROW — Hardscaping & Landscaping, Cabot AR"},
+    "snow plowing cabot ar":     {t:"MOW-N-GROW — Snow Plowing When Cabot Needs It"}
+  };
+  var kws=[].slice.call(document.querySelectorAll('.kw')),
+      q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
+  kws.forEach(function(b){b.addEventListener('click',function(){
+    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    var k=b.getAttribute('data-q'); if(q) q.textContent=k; if(ttl && DATA[k]) ttl.textContent=DATA[k].t;
+  });});
+
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          (function step(ts){
+            if(!t0) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          })();
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
