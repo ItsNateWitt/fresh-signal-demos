@@ -171,6 +171,34 @@
     font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
   .bgrid .stag{position:absolute;top:9px;left:9px;background:rgba(18,22,15,.72);color:var(--green-lt);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
 
+  /* service-area map */
+  .map-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;margin-top:34px}
+  @media(max-width:900px){.map-grid{grid-template-columns:1fr;gap:26px}}
+  .map-wrap{position:relative;border:1px solid rgba(241,238,227,.14);border-radius:18px;background:radial-gradient(ellipse 80% 70% at 50% 45%,rgba(94,140,58,.14),transparent 70%),var(--bg-2);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);padding:8px}
+  .svc-map{display:block;width:100%;height:auto}
+  .map-ring{fill:none;stroke:rgba(131,180,87,.28);stroke-width:1;stroke-dasharray:5 6}
+  .map-ring-out{stroke:rgba(131,180,87,.45);stroke-width:1.4;stroke-dasharray:2 7;animation:mapbreathe 4.5s ease-in-out infinite}
+  @keyframes mapbreathe{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.015)}}
+  .map-ring-lbl{fill:var(--mut);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-anchor:middle}
+  .map-pin{cursor:pointer;outline:none}
+  .map-dot{fill:var(--green-lt);stroke:var(--bg);stroke-width:3}
+  .map-pin-hq .map-dot{fill:var(--brass);r:9}
+  .map-pulse{fill:none;stroke:var(--green-lt);stroke-width:1.5;opacity:0;transform-origin:center;animation:mappulse 2.6s ease-out infinite}
+  .map-pin-hq .map-pulse{stroke:var(--brass)}
+  .map-pin:nth-of-type(2) .map-pulse{animation-delay:.4s}
+  .map-pin:nth-of-type(3) .map-pulse{animation-delay:.8s}
+  .map-pin:nth-of-type(4) .map-pulse{animation-delay:1.2s}
+  @keyframes mappulse{0%{opacity:.65;transform:scale(.6)}100%{opacity:0;transform:scale(2.4)}}
+  .map-lbl{fill:var(--bone);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;text-anchor:middle;font-weight:700}
+  .map-pin-hq .map-lbl{fill:var(--brass-lt)}
+  .map-pin:hover .map-dot,.map-pin:focus-visible .map-dot,.map-pin.on .map-dot{fill:var(--brass-lt)}
+  .map-card{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(10,12,7,.78);backdrop-filter:blur(6px);
+    border:1px solid rgba(241,238,227,.14);border-radius:12px;padding:14px 16px;pointer-events:none;
+    transition:opacity .3s var(--ease),transform .3s var(--ease)}
+  .mc-name{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--green-lt);font-size:15px;margin-bottom:4px}
+  .mc-line{color:var(--bone-2);font-size:14px;line-height:1.4}
+
   /* why band */
   .why{background:var(--bg)}
   .w-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
@@ -340,20 +368,64 @@
   </div>
 </section>
 
-<!-- ══ OUR WORK ══ -->
+<!-- ══ SERVICE AREA MAP ══ -->
 <section class="work" id="work">
   <div class="wrap">
-    <div class="lab" data-reveal>Our work</div>
-    <h2 data-reveal>The difference <span>shows.</span></h2>
-    <p class="lede" data-reveal>Clean cuts, healthy beds, and the bigger jobs done right. This is the standard on every property we keep.</p>
-    <div class="tiltwrap"><div class="tilt" id="tiltWork"><div class="bgrid">
-      <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/mow.jpg" alt="Owner mowing a lawn" width="900" height="675" loading="lazy" decoding="async"><figcaption>Owner on every job</figcaption></figure>
-      <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/lawn.jpg" alt="Freshly mowed green lawn" width="700" height="525" loading="lazy" decoding="async"><figcaption>Cut &amp; edged clean</figcaption></figure>
-      <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/beds.jpg" alt="Planted and mulched flower beds" width="700" height="525" loading="lazy" decoding="async"><figcaption>Flower beds</figcaption></figure>
-      <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/tree.jpg" alt="Tree removal work" width="700" height="525" loading="lazy" decoding="async"><figcaption>Tree removal</figcaption></figure>
-      <figure data-reveal style="--i:4"><span class="stag">Sample</span><img src="assets/b2-04-cockrells-lawn-benton/wash.jpg" alt="Pressure washing a driveway" width="700" height="525" loading="lazy" decoding="async"><figcaption>Pressure washing</figcaption></figure>
-    </div></div></div>
-    <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Sample photography — the crew's real job photos on launch.</p>
+    <div class="lab" data-reveal>Where we work</div>
+    <h2 data-reveal>50 square miles. <span>One standard.</span></h2>
+    <p class="lede" data-reveal>Benton, Bryant, Haskell, Bauxite and everything between — every property gets the same impeccable standard, no matter which side of the county you're on. Tap a town.</p>
+
+    <div class="map-grid">
+      <div class="map-wrap" id="tiltWork" data-reveal>
+        <svg class="svc-map" viewBox="0 0 600 600" role="img" aria-label="Cockrell's Lawn &amp; Land service area map centered on Benton, AR">
+          <circle class="map-ring map-ring-out" cx="300" cy="300" r="230"></circle>
+          <circle class="map-ring" cx="300" cy="300" r="150"></circle>
+          <circle class="map-ring" cx="300" cy="300" r="70"></circle>
+          <text class="map-ring-lbl" x="300" y="236">~50 SQ MI</text>
+
+          <g class="map-pin map-pin-hq" tabindex="0" role="button" aria-expanded="false" data-name="Benton" data-line="Home base — every job starts and ends here." transform="translate(300,300)">
+            <circle class="map-pulse" r="14"></circle>
+            <circle class="map-dot" r="8"></circle>
+            <text class="map-lbl" y="-20">BENTON · HQ</text>
+          </g>
+
+          <g class="map-pin" tabindex="0" role="button" aria-expanded="false" data-name="Bryant" data-line="Same crew, same standard — no second-tier service outside city limits." transform="translate(469,197)">
+            <circle class="map-pulse" r="10"></circle>
+            <circle class="map-dot" r="6"></circle>
+            <text class="map-lbl" y="-16">BRYANT</text>
+          </g>
+
+          <g class="map-pin" tabindex="0" role="button" aria-expanded="false" data-name="Haskell" data-line="Just down the road — free estimates, same-week scheduling." transform="translate(306,384)">
+            <circle class="map-pulse" r="10"></circle>
+            <circle class="map-dot" r="6"></circle>
+            <text class="map-lbl" y="24">HASKELL</text>
+          </g>
+
+          <g class="map-pin" tabindex="0" role="button" aria-expanded="false" data-name="Bauxite" data-line="Covered end to end — mowing through tree removal, one call." transform="translate(396,415)">
+            <circle class="map-pulse" r="10"></circle>
+            <circle class="map-dot" r="6"></circle>
+            <text class="map-lbl" y="24">BAUXITE</text>
+          </g>
+        </svg>
+        <div class="map-card" id="mapCard">
+          <div class="mc-name">Benton</div>
+          <div class="mc-line">Home base — every job starts and ends here.</div>
+        </div>
+      </div>
+
+      <div class="map-copy" data-reveal style="--i:1">
+        <ul class="w-list">
+          <li><b>01</b> One owner, one crew — the same hands on every property in the footprint, every time.</li>
+          <li><b>02</b> No far-corner discount on quality — Bauxite gets the same finish as the block next to home base.</li>
+          <li><b>03</b> Free estimates anywhere in Saline County, usually scheduled the same week.</li>
+          <li><b>04</b> Residential and commercial, across all four towns.</li>
+        </ul>
+        <div class="chips" style="margin-top:18px">
+          <span>Benton</span><span>Bryant</span><span>Haskell</span><span>Bauxite</span><span>Saline County</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)">Illustrative service area — call to confirm your address is covered.</p>
   </div>
 </section>
 
@@ -517,6 +589,24 @@
       },{threshold:0}).observe(section);
     } else start();
     addEventListener('resize',function(){ if(running) resize(); });
+  })();
+  /* service-area map — click/hover a pin to show its card */
+  (function(){
+    var pins=[].slice.call(document.querySelectorAll('.map-pin')), card=document.getElementById('mapCard');
+    if(!pins.length||!card) return;
+    var nameEl=card.querySelector('.mc-name'), lineEl=card.querySelector('.mc-line');
+    function setActive(pin){
+      pins.forEach(function(p){p.classList.remove('on');p.setAttribute('aria-expanded','false');});
+      pin.classList.add('on'); pin.setAttribute('aria-expanded','true');
+      nameEl.textContent=pin.getAttribute('data-name');
+      lineEl.textContent=pin.getAttribute('data-line');
+    }
+    pins.forEach(function(pin){
+      pin.addEventListener('mouseenter',function(){setActive(pin);});
+      pin.addEventListener('click',function(){setActive(pin);});
+      pin.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();setActive(pin);}});
+    });
+    setActive(pins[0]);
   })();
 })();
 </script>
