@@ -683,7 +683,7 @@
     <div class="ai-msg">Hey — I'm the MOW-N-GROW assistant. On launch I'll answer estimates, scheduling and "can you get to my yard this week?" around the clock, then text the details straight to the crew.</div>
     <div class="ai-chips"><span>Get an estimate</span><span>Are you in my area?</span><span>Snow plowing?</span></div>
     <div class="ai-input">
-      <input type="text" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
       <button type="button" disabled aria-label="Send (disabled in demo)">→</button>
     </div>
     <div class="ai-note">Wired live on launch — this is a preview</div>
@@ -817,12 +817,13 @@
           var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
           var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
           var t0=null, dur=1400;
-          (function step(ts){
-            if(!t0) t0=ts;
+          function step(ts){
+            if(t0===null) t0=ts;
             var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
             el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
             if(p<1) requestAnimationFrame(step);
-          })();
+          }
+          requestAnimationFrame(step);
           cio.unobserve(el);
         });
       },{threshold:.5});

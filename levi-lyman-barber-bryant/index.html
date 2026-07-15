@@ -132,7 +132,8 @@
   @media(max-width:900px){.navlinks{display:none}}
   .call{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--chalk);
     text-decoration:none;padding:10px 17px;border:1px solid var(--line-2);border-radius:3px;
-    font-weight:700;font-size:14px;letter-spacing:.01em;transition:border-color .2s,background .2s,color .2s}
+    font-weight:700;font-size:14px;letter-spacing:.01em;white-space:nowrap;
+    transition:border-color .2s,background .2s,color .2s}
   .call:hover{border-color:var(--metal);color:var(--metal)}
   .call svg{width:15px;height:15px}
 
@@ -382,6 +383,13 @@
     header{min-height:82vh}
     section{padding:78px 0}
   }
+  @media(max-width:430px){
+    nav .wrap{height:62px}
+    .mark .lm{font-size:22px}
+    .mark .co{font-size:13px}
+    .call{padding:9px 13px;font-size:13px;gap:6px}
+    .call svg{width:13px;height:13px}
+  }
 </style>
 </head>
 <body>
@@ -507,8 +515,8 @@
         <span class="veil" aria-hidden="true"></span>
         <div class="body">
           <div class="kicker">The detail</div>
-          <h3>Straight-Razor Finish</h3>
-          <p>Clean neckline, sharp edges. The little pass that makes the whole cut look tailored.</p>
+          <h3>Every Edge, Detailed</h3>
+          <p>Clean neckline, crisp lines, no strays. The little passes that make the whole cut look tailored.</p>
         </div>
       </article>
 
