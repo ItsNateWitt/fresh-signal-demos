@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Finer Things Resale — 33 Years of the Hunt | Benton, AR</title>
+<meta name="description" content="Family-owned resale in Benton, Arkansas for over 33 years — vintage games, records, antiques, books, toys, and clothing for the whole family. Inventory changes daily. Call (501) 778-1993." />
+<meta name="theme-color" content="#E8DBBF" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23241F17'/%3E%3Cg%3E%3Cpath d='M9 8h11l6 6v9a1.5 1.5 0 0 1-1.5 1.5H9A1.5 1.5 0 0 1 7.5 23V9.5A1.5 1.5 0 0 1 9 8z' fill='%23E8DBBF'/%3E%3Ccircle cx='12' cy='12.5' r='1.7' fill='%23241F17'/%3E%3Cpath d='M18 13l7 7' stroke='%23B23A22' stroke-width='2.4' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  /* ---- Custom cursor (desktop only) ---- */
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  /* ---- Scroll reveal ---- */
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  /* ---- Hero line mask (words rise out of a clipped line) ---- */
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  /* ---- Magnetic buttons ---- */
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* ---- Before/after drag compare ---- */
+  .fs-cmp{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  .fs-cmp img,.fs-cmp .fs-cmp-half{display:block;width:100%;height:100%;object-fit:cover}
+  .fs-cmp-top{position:absolute;inset:0;width:50%;overflow:hidden}
+  .fs-cmp-top > *{width:var(--cmpw,100%);max-width:none;height:100%;object-fit:cover}
+  .fs-cmp-bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;
+    transform:translateX(-1px);box-shadow:0 0 18px rgba(0,0,0,.45)}
+  .fs-cmp-grip{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;
+    border-radius:50%;background:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;
+    color:#111;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+
+  /* ---- Marquee ---- */
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 32s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  /* ---- Parallax + counters ---- */
+  [data-parallax]{will-change:transform}
+
+  /* ---- Progress rail ---- */
+  .fs-prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:9998}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ============================================================
+     FINER THINGS RESALE — Benton, AR · Archetype F · Bento Mosaic
+     Subject world: the resale HUNT — manila price tags on strings,
+       cartridge grey, record-sleeve kraft, receipt-tape red, the shelf.
+       The name "Finer Things" is genteel; the goods are Sega carts and
+       vinyl and toys — that tension (elegant serif over thrift world) IS
+       the design. Everything is a finer thing if you look for it.
+     Palette: MANILA price-tag paper ground (light — the one real risk in
+       a mostly-dark portfolio) · warm INK · thrift RED register-ink accent
+       · vintage TEAL price-sticker · KRAFT record-sleeve brown.
+     Type: Fraunces (the elegant voice — wordmark, heros) · DM Sans (goods
+       labels + body) · JetBrains Mono (price tags, SKUs, register tape).
+     Signature: the TAG-FLIP WALL — bento tiles are manila price tags on
+       strings that swing idle and FLIP on hover/tap to show what's inside;
+       a register-tape marquee ("INVENTORY CHANGES DAILY") runs between rows.
+     ============================================================ */
+  :root{
+    --paper:#E8DBBF; --paper-2:#DDCDA6; --paper-3:#D3C097;
+    --card:#F3E9D2; --card-2:#ECDFC2; --receipt:#FBF6EA;
+    --ink:#241F17; --ink-2:#332C20; --ink-soft:#5A5140;
+    --grey:#8A8272; --grey-2:#A69C86;
+    --line:rgba(36,31,23,.15); --line-2:rgba(36,31,23,.28); --line-3:rgba(36,31,23,.5);
+    --pop:#B23A22; --pop-dk:#8C2C17; --pop-lt:#CB5334;
+    --teal:#2C6E63; --teal-dk:#1E5049;
+    --kraft:#A9793F; --kraft-dk:#7E5527;
+    --gold:#B78A3C;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    background-image:
+      radial-gradient(140% 90% at 50% -10%, rgba(255,250,238,.6), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23p)' opacity='.05'/%3E%3C/svg%3E");}
+  html,body{max-width:100%;overflow-x:clip}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .redtext{color:var(--pop)}
+  .tealtext{color:var(--teal)}
+
+  /* section scaffolding */
+  section{padding:100px 0;position:relative}
+  .lab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--pop);margin-bottom:16px;display:flex;align-items:center;gap:11px;font-weight:500}
+  .lab::before{content:"";width:26px;height:1px;background:var(--pop);opacity:.7}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;
+    font-size:clamp(28px,6vw,46px);line-height:1.04;letter-spacing:-.01em;margin:0 0 18px;max-width:20ch}
+  h2 em{font-style:italic;color:var(--pop);font-weight:600}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--ink-soft);max-width:60ch;margin:0 0 44px;line-height:1.6}
+
+  /* ---- price-tag texture (shared) ---- */
+  .tagpaper{
+    background-color:#EEDFBE;
+    background-image:
+      linear-gradient(180deg, rgba(255,252,244,.5), rgba(0,0,0,.04)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+  }
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(232,219,191,.9);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:14px}
+  .mark{display:flex;align-items:baseline;gap:9px;text-decoration:none;white-space:nowrap}
+  .mark .fm{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:25px;letter-spacing:-.01em;color:var(--ink)}
+  .mark .fm em{font-style:italic}
+  .mark .co{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:var(--pop);text-transform:uppercase;font-weight:500}
+  @media(max-width:560px){.mark .co{display:none}}
+  .navlinks{display:flex;gap:28px;font-size:13.5px;letter-spacing:.01em}
+  .navlinks a{text-decoration:none;color:var(--ink-soft);font-weight:600;transition:color .2s}
+  .navlinks a:hover{color:var(--pop)}
+  @media(max-width:900px){.navlinks{display:none}}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);
+    text-decoration:none;padding:11px 17px;border:1px solid var(--ink);border-radius:4px;
+    font-weight:700;font-size:14px;letter-spacing:.01em;white-space:nowrap;
+    transition:background .2s,color .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--pop);border-color:var(--pop);color:#fff}
+  .call svg{width:15px;height:15px}
+
+  /* hero */
+  header{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:#161009}
+  .hero-img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:50% 45%;
+    filter:saturate(.78) contrast(1.05) brightness(.82) sepia(.2)}
+  .hero-scrim{position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(22,16,9,.62) 0%,rgba(22,16,9,.3) 34%,rgba(22,16,9,.72) 72%,#191108 100%)}
+  .hero-scrim2{position:absolute;inset:0;background:
+    radial-gradient(120% 78% at 22% 92%,rgba(178,58,34,.24),transparent 58%)}
+  .hero-grain{position:absolute;inset:0;opacity:.14;pointer-events:none;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+  .hero-rule{position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--pop),var(--kraft) 60%,var(--teal));opacity:.95}
+  .hero-in{position:relative;z-index:2;padding:0 0 74px;width:100%}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:#E8C7A0;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:500}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--pop-lt);opacity:.85}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#F6ECD8;
+    font-size:clamp(44px,10vw,92px);line-height:.98;letter-spacing:-.015em;margin:0 0 22px}
+  h1 em{font-style:italic;color:#E9B98A;font-weight:500}
+  h1 .sub{display:block;font-family:'DM Sans',sans-serif;font-weight:500;font-style:normal;
+    font-size:clamp(16.5px,2.3vw,20px);letter-spacing:0;color:#E4D3B6;margin-top:20px;line-height:1.42;max-width:30ch}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 26px;
+    text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.01em;border-radius:4px;
+    transition:background .2s var(--ease),border-color .2s,color .2s,transform .16s var(--ease)}
+  .btn-a{background:var(--pop);color:#fff}
+  .btn-a:hover{background:var(--pop-lt)}
+  .btn-b{border:1px solid rgba(246,236,216,.34);color:#F6ECD8}
+  .btn-b:hover{border-color:#E9B98A;color:#E9B98A}
+  .hero-meta{position:absolute;right:24px;bottom:76px;z-index:2;writing-mode:vertical-rl;
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+    color:rgba(246,236,216,.5)}
+  @media(max-width:900px){.hero-meta{display:none}}
+
+  /* ---- register-tape marquee ---- */
+  .tape{background:var(--receipt);position:relative;padding:14px 0;overflow:hidden;
+    border-top:2px dashed var(--line-2);border-bottom:2px dashed var(--line-2)}
+  .tape .fs-mq__t{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;letter-spacing:.18em;
+    color:var(--pop);align-items:center;text-transform:uppercase}
+  .tape .dot{color:var(--teal);font-weight:700}
+  .tape .amt{color:var(--ink-soft)}
+
+  /* ══ THE TAG-FLIP WALL — the bento mosaic ══ */
+  .wall{background:var(--paper-2);position:relative;
+    background-image:
+      linear-gradient(180deg, rgba(255,250,238,.5), transparent 30%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23p)' opacity='.06'/%3E%3C/svg%3E");}
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(150px,auto);gap:16px;
+    position:relative;z-index:2;grid-auto-flow:dense}
+
+  /* a tag = a price tag on a string that flips */
+  .tag{position:relative;perspective:1200px;background:none;border:none;padding:0;margin:0;
+    font-family:inherit;text-align:left;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}
+  .tag .hole{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;
+    background:var(--paper-2);box-shadow:inset 0 1px 2px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.5);z-index:6}
+  .tag .string{position:absolute;top:-16px;left:50%;width:2px;height:26px;background:linear-gradient(180deg,var(--pop-dk),var(--pop));
+    transform-origin:top center;transform:translateX(-1px) rotate(-6deg);z-index:5;border-radius:2px}
+  .tag{display:block;width:100%;height:100%;min-height:inherit}
+  .tag .inner{display:block;position:relative;width:100%;height:100%;min-height:inherit;transition:transform .7s var(--ease);
+    transform-style:preserve-3d}
+  .tag.is-flip .inner{transform:rotateY(180deg)}
+  .tface{position:absolute;inset:0;border-radius:10px;overflow:hidden;backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;border:1px solid var(--line-2);
+    box-shadow:0 10px 26px -14px rgba(36,31,23,.5)}
+  .tface.front{display:flex;flex-direction:column;justify-content:flex-end}
+  .tface.back{transform:rotateY(180deg);background:var(--ink);color:var(--card);
+    display:flex;flex-direction:column;justify-content:center;padding:24px}
+  .tface .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:34px;height:16px;
+    background:var(--paper-2);border-radius:0 0 40% 40%;z-index:4;box-shadow:0 1px 2px rgba(0,0,0,.18)}
+  .tag-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(.8) contrast(1.03) sepia(.22) brightness(.96)}
+  .tag-veil{position:absolute;inset:0;z-index:1;background:
+    linear-gradient(180deg,rgba(30,22,12,.05) 0%,rgba(30,22,12,.34) 44%,rgba(24,17,9,.9) 100%)}
+  .tface .body{display:block}
+  .front .body{position:relative;z-index:2;padding:22px}
+  .front.tagpaper .body,.front.plain .body{color:var(--ink)}
+  .front .body .kicker,.front .body h3,.front .body p{color:#F6ECD8}
+  .front.tagpaper .body .kicker{color:var(--pop)}
+  .front.tagpaper .body h3{color:var(--ink)}
+  .front.tagpaper .body p{color:var(--ink-soft)}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;margin-bottom:8px;display:flex;gap:8px;align-items:center;font-weight:500}
+  .tag h3{font-family:'DM Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;
+    font-size:clamp(20px,2.6vw,23px);line-height:1.02;margin:0 0 6px}
+  .tag .peek{font-size:14px;line-height:1.45;margin:0}
+  .pricebadge{position:absolute;top:14px;right:14px;z-index:3;font-family:'JetBrains Mono',monospace;
+    font-size:11px;font-weight:700;letter-spacing:.02em;color:#fff;background:var(--teal);
+    padding:5px 9px;border-radius:3px;transform:rotate(3deg);box-shadow:0 4px 12px rgba(0,0,0,.28)}
+  .flip-hint{position:absolute;bottom:12px;right:14px;z-index:3;font-family:'JetBrains Mono',monospace;
+    font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,236,216,.72);
+    display:flex;align-items:center;gap:5px;pointer-events:none;transition:opacity .3s}
+  .front.tagpaper .flip-hint{color:var(--grey)}
+  .tag.is-flip .flip-hint{opacity:0}
+  /* back content */
+  .back .kicker{color:var(--pop-lt);margin-bottom:12px}
+  .back h4{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px;margin:0 0 12px;line-height:1.15;color:#FBF3E1}
+  .back ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+  .back li{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.02em;color:var(--card);
+    border:1px solid rgba(246,236,216,.24);border-radius:100px;padding:5px 11px;background:rgba(246,236,216,.05)}
+  .back .backnote{margin:14px 0 0;font-size:13px;color:var(--paper-3);line-height:1.4}
+
+  /* desktop hover flips; touch handled by JS click */
+  @media (hover:hover) and (pointer:fine){
+    .tag:hover .inner, .tag:focus-visible .inner{transform:rotateY(180deg)}
+    .tag:hover .flip-hint{opacity:0}
+  }
+
+  /* spans */
+  .t-games{grid-column:span 3;grid-row:span 2;min-height:328px}
+  .t-records{grid-column:span 3;min-height:180px}
+  .t-toys{grid-column:span 3;min-height:180px}
+  .t-antiques{grid-column:span 2;grid-row:span 2;min-height:328px}
+  .t-books{grid-column:span 2;min-height:180px}
+  .t-clothing{grid-column:span 2;min-height:180px}
+
+  /* feature (non-flip) tiles */
+  .feat{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line-2);
+    box-shadow:0 10px 26px -16px rgba(36,31,23,.4)}
+  .f-stamp{grid-column:span 2;grid-row:span 2;min-height:328px;background:var(--card);
+    display:flex;align-items:center;justify-content:center;padding:30px 26px}
+  .f-ship{grid-column:span 4;background:var(--ink);color:var(--card);display:flex;align-items:center}
+  .f-hours{grid-column:span 6;background:var(--card);padding:0}
+
+  /* the 33-year layaway-card stamp */
+  .stamp{position:relative;text-align:center;color:var(--pop);border:3px solid var(--pop);
+    border-radius:8px;padding:22px 20px;transform:rotate(-4deg);
+    box-shadow:inset 0 0 0 1px rgba(178,58,34,.4);
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='90' height='90' filter='url(%23r)'/%3E%3C/svg%3E");
+    -webkit-mask-mode:luminance;mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='90' height='90' filter='url(%23r)'/%3E%3C/svg%3E")}
+  .stamp .top{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+  .stamp .num{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(60px,9vw,82px);line-height:.9;margin:6px 0 2px;font-style:italic}
+  .stamp .yr{font-family:'DM Sans';font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:15px}
+  .stamp .bot{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-top:10px;opacity:.85}
+  .f-stamp .stamp-wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .f-stamp .est{max-width:26ch;text-align:center;
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.18em;line-height:1.6;text-transform:uppercase;color:var(--grey)}
+
+  /* shipping tile */
+  .f-ship .body{padding:30px 34px}
+  .f-ship .kicker{color:var(--pop-lt);margin-bottom:10px}
+  .f-ship h3{font-family:'Fraunces',Georgia,serif;font-weight:600;text-transform:none;letter-spacing:-.01em;
+    font-size:clamp(21px,2.8vw,27px);line-height:1.1;margin:0 0 10px;color:#FBF3E1}
+  .f-ship p{margin:0;font-size:15px;color:var(--paper-3);max-width:52ch;line-height:1.5}
+  .f-ship .box{flex:none;width:120px;align-self:stretch;position:relative;overflow:hidden;
+    background:
+      repeating-linear-gradient(135deg, rgba(169,121,63,.9) 0 14px, rgba(126,85,39,.9) 14px 28px);
+    display:grid;place-items:center;border-right:1px solid rgba(246,236,216,.15)}
+  .f-ship .box span{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:#2b1e10;
+    background:var(--receipt);padding:5px 8px;transform:rotate(-8deg);text-transform:uppercase;font-weight:700;border-radius:2px}
+  @media(max-width:560px){.f-ship .box{display:none}}
+
+  /* hours strip tile */
+  .f-hours{display:flex;align-items:stretch;flex-wrap:wrap}
+  .hcol{flex:1 1 240px;padding:26px 28px;border-right:1px solid var(--line)}
+  .hcol:last-child{border-right:none}
+  .hcol .kicker{color:var(--pop);margin-bottom:14px}
+  .hrow{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dotted var(--line-2);font-size:15px}
+  .hrow:last-child{border-bottom:none}
+  .hrow b{font-weight:600;color:var(--ink)}
+  .hrow span{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--teal-dk)}
+  .hcol .addr{font-size:16px;line-height:1.55;color:var(--ink)}
+  .hcol .addr b{color:var(--pop);font-weight:700}
+  .hcol .mapbtn{margin-top:14px;display:inline-flex}
+
+  .wallnote{margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--grey);position:relative;z-index:2}
+
+  @media(max-width:860px){
+    .bento{grid-template-columns:repeat(2,1fr);gap:14px}
+    .t-games{grid-column:span 2;grid-row:auto;min-height:260px}
+    .t-records,.t-toys{grid-column:span 1;min-height:172px}
+    .t-antiques{grid-column:span 2;grid-row:auto;min-height:260px}
+    .t-books,.t-clothing{grid-column:span 1;min-height:172px}
+    .f-stamp{grid-column:span 2;grid-row:auto;min-height:280px}
+    .f-ship{grid-column:span 2}
+    .f-hours{grid-column:span 2;flex-direction:column}
+    .hcol{border-right:none;border-bottom:1px solid var(--line)}
+    .hcol:last-child{border-bottom:none}
+  }
+
+  /* ══ THE HUNT — story / anchors ══ */
+  .hunt{background:var(--paper)}
+  .h-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  @media(max-width:860px){.h-grid{grid-template-columns:1fr;gap:34px}}
+  .anchors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media(max-width:420px){.anchors{grid-template-columns:1fr}}
+  .anchor{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 22px 20px}
+  .anchor .n{font-family:'Fraunces',Georgia,serif;font-weight:700;font-style:italic;font-size:clamp(34px,5vw,46px);
+    line-height:.95;color:var(--pop)}
+  .anchor .t{font-family:'DM Sans';font-weight:700;font-size:15.5px;margin-top:6px;color:var(--ink)}
+  .anchor .d{font-size:13.5px;color:var(--ink-soft);margin-top:3px;line-height:1.45}
+  .h-photo{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line-2);
+    aspect-ratio:4/5;box-shadow:0 26px 50px -30px rgba(36,31,23,.6)}
+  .h-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.04) sepia(.16)}
+  .h-photo .cap{position:absolute;left:16px;bottom:16px;z-index:2;font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#F6ECD8;
+    background:rgba(24,17,9,.6);backdrop-filter:blur(4px);padding:7px 12px;border-radius:100px}
+  .h-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(24,17,9,.5))}
+  .huntquote{font-family:'Fraunces',Georgia,serif;font-weight:500;font-style:italic;
+    font-size:clamp(19px,2.6vw,24px);line-height:1.4;color:var(--ink);margin:0 0 26px;max-width:26ch}
+
+  /* ══ VISIT + MAP ══ */
+  .visit{background:var(--card-2)}
+  .v-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:stretch}
+  @media(max-width:860px){.v-grid{grid-template-columns:1fr}}
+  .v-cards{display:flex;flex-direction:column;gap:16px}
+  .v-card{border:1px solid var(--line);border-radius:12px;padding:26px 28px;background:var(--card)}
+  .v-card h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);
+    letter-spacing:-.01em;margin:0 0 14px}
+  .v-card .big{font-family:'Fraunces',Georgia,serif;font-weight:700;font-style:italic;font-size:clamp(26px,4vw,34px);
+    letter-spacing:-.01em;color:var(--pop);text-decoration:none;display:inline-block}
+  .v-card .addr{font-size:16.5px;line-height:1.55;color:var(--ink);margin-top:4px}
+  .v-card .addr b{color:var(--ink)}
+  .v-note{font-size:14.5px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
+  .mapframe{border:1px solid var(--line-2);border-radius:12px;overflow:hidden;min-height:420px;position:relative;background:var(--paper)}
+  .mapframe::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(178,58,34,.16);border-radius:12px}
+
+  /* footer */
+  footer{background:var(--ink);color:var(--paper-3);padding:46px 0;border-top:3px solid var(--pop);font-size:14px}
+  .frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+  .frow .serif{font-family:'Fraunces',Georgia,serif;font-size:25px;letter-spacing:-.01em;color:var(--card);font-weight:600}
+  .frow .serif em{font-style:italic}
+  .fbot{margin-top:22px;padding-top:16px;border-top:1px solid rgba(246,236,216,.15);font-size:11.5px;line-height:1.65;color:var(--grey-2)}
+
+  /* AI assistant widget */
+  .ai-fab{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;align-items:center;gap:10px;
+    background:var(--pop);color:#fff;border:none;border-radius:100px;padding:13px 18px 13px 15px;
+    font-family:'DM Sans';font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 12px 34px rgba(36,31,23,.4);
+    transition:transform .2s var(--ease),background .2s}
+  .ai-fab:hover{background:var(--pop-lt);transform:translateY(-2px)}
+  .ai-fab .ico{width:26px;height:26px;border-radius:50%;background:#fff;color:var(--pop);
+    display:grid;place-items:center;font-size:15px;flex:none;font-weight:700}
+  .ai-panel{position:fixed;right:20px;bottom:78px;z-index:81;width:min(340px,calc(100vw - 40px));
+    background:var(--card);border:1px solid var(--line-2);border-radius:14px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(36,31,23,.4);display:none}
+  .ai-panel.open{display:block}
+  .ai-head{background:var(--ink);color:var(--card);padding:15px 18px;display:flex;align-items:center;gap:11px}
+  .ai-head .av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--pop),var(--kraft));flex:none}
+  .ai-head b{font-size:15px}
+  .ai-head span{display:block;font-size:11.5px;color:#E9B98A}
+  .ai-msgs{padding:16px;display:flex;flex-direction:column;gap:10px}
+  .ai-bub{max-width:82%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.5}
+  .ai-bub.bot{background:var(--card-2);color:var(--ink);border-bottom-left-radius:4px;align-self:flex-start;border:1px solid var(--line)}
+  .ai-bub.me{background:var(--pop);color:#fff;border-bottom-right-radius:4px;align-self:flex-end;font-weight:600}
+  .ai-foot{padding:12px 16px 16px;border-top:1px solid var(--line)}
+  .ai-foot .stub{background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:11px 16px;
+    font-size:13px;color:var(--grey);display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .ai-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--pop);text-transform:uppercase;white-space:nowrap}
+
+  /* mobile bottom bar */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--card);
+      border-top:1px solid var(--line-2)}
+    .mbar a{flex:1;text-align:center;padding:15px;text-decoration:none;font-weight:700;color:var(--ink);font-size:15px}
+    .mbar a+a{border-left:1px solid var(--line-2)}
+    .mbar a.primary{background:var(--pop);color:#fff}
+    footer{padding-bottom:86px}
+    .ai-fab{bottom:74px}
+    .ai-panel{bottom:132px}
+    header{min-height:84vh}
+    section{padding:58px 0}
+    .wrap{padding:0 20px}
+    .hero-in{padding-bottom:60px}
+    .lede{margin-bottom:36px}
+    .hero-cta .btn{width:100%}
+  }
+  @media(max-width:430px){
+    nav .wrap{height:64px}
+    .mark .fm{font-size:21px}
+    .call{padding:10px 13px;font-size:13px;gap:6px}
+    .call svg{width:13px;height:13px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .tag .inner{transition:none}
+    .tag.is-flip .inner{transform:rotateY(180deg)}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Finer Things Resale home">
+      <span class="fm">Finer&nbsp;<em>Things</em></span><span class="co">Resale</span>
+    </a>
+    <div class="navlinks" aria-label="Primary">
+      <a href="#shelves">The Shelves</a>
+      <a href="#hunt">The Hunt</a>
+      <a href="#ship">Shipping</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="call" href="tel:+15017781993">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (501) 778-1993
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — art-directed stand-in (a table of finds, graded warm); swapped for the shop's own shelves on launch -->
+  <img class="hero-img" src="assets/hero.jpg"
+       alt="A table of vintage finds — brass, trinkets and treasures laid out for a browsing shopper" width="1000" height="667" fetchpriority="high" />
+  <div class="hero-scrim"></div>
+  <div class="hero-scrim2" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-rule" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>Benton, Arkansas <span aria-hidden="true">·</span> Family-owned resale since the early '90s</div>
+      <h1 data-hero>
+        <span class="fs-line"><span>One of a kind,</span></span>
+        <span class="fs-line"><span><em>every single day.</em></span></span>
+        <span class="sub fs-line" style="--i:1"><span>Vintage games, records, antiques, books, toys and clothing for the whole family — dug up, priced fair, and turned over daily.</span></span>
+      </h1>
+      <div class="hero-cta" data-reveal style="--i:2">
+        <a class="btn btn-a" href="tel:+15017781993" data-magnetic="0.2">Call the shop — (501) 778-1993</a>
+        <a class="btn btn-b" href="#shelves">See what's on the shelves</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-meta" aria-hidden="true">33 years on I-30 · Benton, AR</div>
+</header>
+
+<!-- register-tape marquee -->
+<div class="tape" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Inventory changes daily</span><span class="dot">✦</span><span>New finds every week</span><span class="dot">✦</span>
+    <span>Nintendo · PlayStation · Xbox · Sega</span><span class="dot">✦</span><span>Records &amp; DVDs</span><span class="dot">✦</span>
+    <span>Antiques &amp; collectibles</span><span class="dot">✦</span><span>Vintage clothing, all sizes</span><span class="dot">✦</span>
+    <span>Books ship Media Mail</span><span class="dot">✦</span><span class="amt">Over 33 years in Benton</span><span class="dot">✦</span>
+  </div></div>
+</div>
+
+<!-- ══ THE TAG-FLIP WALL — shelves as price tags ══ -->
+<section class="wall" id="shelves">
+  <div class="wrap">
+    <div class="lab" data-reveal>The shelves</div>
+    <h2 data-reveal>Six aisles of finds — and <em>every tag hides a story.</em></h2>
+    <p class="lede" data-reveal>Tap any tag to see what's usually on that shelf. What's shown is the kind of thing we carry — the actual finds turn over daily, so no two trips look the same.</p>
+
+    <div class="bento">
+      <!-- GAMES — headline, photo -->
+      <button class="tag t-games" data-reveal aria-label="Games — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <img class="tag-photo" src="assets/games.jpg" alt="A grey cartridge-style retro video game on a shelf" loading="lazy" width="1000" height="750" />
+            <span class="tag-veil" aria-hidden="true"></span>
+            <span class="pricebadge" aria-hidden="true">RETRO</span>
+            <span class="body">
+              <span class="kicker">Aisle 01</span>
+              <h3>Vintage Games</h3>
+              <p class="peek">Carts and consoles — the ones you grew up on.</p>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap to flip ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>Four generations of consoles, tested and shelved.</h4>
+            <ul>
+              <li>Nintendo</li><li>PlayStation</li><li>Xbox</li><li>Sega</li><li>Cartridges</li><li>Controllers</li>
+            </ul>
+            <p class="backnote">Stock rotates constantly — call ahead if you're hunting a specific title.</p>
+          </span>
+        </span>
+      </button>
+
+      <!-- RECORDS — photo -->
+      <button class="tag t-records" data-reveal style="--i:1" aria-label="Records — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <img class="tag-photo" src="assets/records.jpg" alt="Close-up of vinyl records in a crate" loading="lazy" width="1000" height="750" />
+            <span class="tag-veil" aria-hidden="true"></span>
+            <span class="body">
+              <span class="kicker">Aisle 02</span>
+              <h3>Records &amp; DVDs</h3>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>Crates to flip through.</h4>
+            <ul><li>Vinyl LPs</li><li>45s</li><li>DVDs</li><li>Board games</li></ul>
+          </span>
+        </span>
+      </button>
+
+      <!-- TOYS — photo -->
+      <button class="tag t-toys" data-reveal style="--i:2" aria-label="Toys — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <img class="tag-photo" src="assets/toys.jpg" alt="A pair of vintage tin toy cars" loading="lazy" width="1000" height="750" />
+            <span class="tag-veil" aria-hidden="true"></span>
+            <span class="body">
+              <span class="kicker">Aisle 03</span>
+              <h3>Toys</h3>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>From tin cars to plush.</h4>
+            <ul><li>Vintage toys</li><li>Collectible figures</li><li>Stuffed animals</li></ul>
+          </span>
+        </span>
+      </button>
+
+      <!-- ANTIQUES — big, photo -->
+      <button class="tag t-antiques" data-reveal style="--i:1" aria-label="Antiques and collectibles — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <img class="tag-photo" src="assets/antiques.jpg" alt="A table of brass and trinket antiques laid out" loading="lazy" width="1000" height="667" />
+            <span class="tag-veil" aria-hidden="true"></span>
+            <span class="pricebadge" aria-hidden="true">ONE-OFF</span>
+            <span class="body">
+              <span class="kicker">Aisle 04</span>
+              <h3>Antiques &amp; Collectibles</h3>
+              <p class="peek">The treasures worth the drive — here today, gone tomorrow.</p>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap to flip ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>Somebody's history, waiting for a second home.</h4>
+            <ul><li>Antiques</li><li>Collectibles</li><li>Glassware</li><li>Brass &amp; decor</li><li>Oddities</li></ul>
+            <p class="backnote">Because it's resale, the good ones are one of one. When it's gone, it's gone.</p>
+          </span>
+        </span>
+      </button>
+
+      <!-- BOOKS — photo -->
+      <button class="tag t-books" data-reveal style="--i:2" aria-label="Books — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <img class="tag-photo" src="assets/books.jpg" alt="Shelves packed with used books" loading="lazy" width="1000" height="1333" />
+            <span class="tag-veil" aria-hidden="true"></span>
+            <span class="body">
+              <span class="kicker">Aisle 05</span>
+              <h3>Books</h3>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>Shelves to lose an hour in.</h4>
+            <ul><li>Paperbacks</li><li>Hardcovers</li><li>Kids' books</li><li>Ships Media Mail</li></ul>
+          </span>
+        </span>
+      </button>
+
+      <!-- CLOTHING — tag only -->
+      <button class="tag t-clothing" data-reveal style="--i:3" aria-label="Clothing — flip for what's inside">
+        <span class="string" aria-hidden="true"></span>
+        <span class="inner">
+          <span class="tface front tagpaper">
+            <span class="notch" aria-hidden="true"></span><span class="hole" aria-hidden="true"></span>
+            <span class="pricebadge" aria-hidden="true">ALL SIZES</span>
+            <span class="body">
+              <span class="kicker">Aisle 06</span>
+              <h3>Clothing</h3>
+              <p class="peek">For the whole family.</p>
+            </span>
+            <span class="flip-hint" aria-hidden="true">Tap ⟳</span>
+          </span>
+          <span class="tface back">
+            <span class="kicker">On this shelf</span>
+            <h4>Racks for everybody.</h4>
+            <ul><li>Men's</li><li>Women's</li><li>Kids'</li><li>Vintage</li><li>All sizes</li></ul>
+          </span>
+        </span>
+      </button>
+
+      <!-- 33-YEAR STAMP (feature) -->
+      <div class="feat f-stamp" data-reveal>
+        <div class="stamp-wrap">
+          <div class="stamp" role="img" aria-label="Over 33 years in business">
+            <div class="top">Serving Benton</div>
+            <div class="num">33</div>
+            <div class="yr">Years &amp; counting</div>
+            <div class="bot">Family owned · Resale</div>
+          </div>
+          <div class="est">Trading in this town since the early '90s</div>
+        </div>
+      </div>
+
+      <!-- SHIPPING (feature) -->
+      <div class="feat f-ship" data-reveal>
+        <div class="box" aria-hidden="true"><span>Media Mail</span></div>
+        <div class="body">
+          <div class="kicker">Can't make the drive?</div>
+          <h3>Books and movies ship.</h3>
+          <p>Found something online you want mailed? Books and videos go out Media Mail — call the shop and we'll get it in the box.</p>
+        </div>
+      </div>
+
+      <!-- HOURS + CONTACT STRIP (feature) -->
+      <div class="feat f-hours" data-reveal>
+        <div class="hcol">
+          <div class="kicker">Hours</div>
+          <div class="hrow"><b>Open week &amp; weekend</b><span>Call to confirm</span></div>
+          <div class="hrow"><b>Today's hours</b><span>See Facebook</span></div>
+          <div class="hrow"><b>Best bet</b><span>Call ahead</span></div>
+        </div>
+        <div class="hcol">
+          <div class="kicker">Where to find us</div>
+          <p class="addr"><b>17916B Interstate 30</b><br/>Benton, AR 72019</p>
+        </div>
+        <div class="hcol">
+          <div class="kicker">Ask what's in</div>
+          <p class="addr" style="font-size:15px;color:var(--ink-soft)">Hunting something specific? Call and we'll check the floor for you.</p>
+          <a class="btn btn-a mapbtn" style="padding:11px 18px;font-size:14px" href="tel:+15017781993">Call (501) 778-1993</a>
+        </div>
+      </div>
+    </div>
+    <p class="wallnote">Photos are illustrative of the categories we carry — your visit's finds change daily.</p>
+  </div>
+</section>
+
+<!-- ══ THE HUNT ══ -->
+<section class="hunt" id="hunt">
+  <div class="wrap">
+    <div class="lab" data-reveal>The hunt</div>
+    <div class="h-grid">
+      <div class="h-copy" data-reveal>
+        <h2 style="max-width:16ch">A little bit of everything, <em>and it's never the same twice.</em></h2>
+        <p class="huntquote">"A family-owned resale shop serving customers for over 33 years."</p>
+        <p class="lede" style="margin-bottom:26px">That's not a slogan — it's three decades of Benton bringing us their finds and hauling home somebody else's. Sega carts next to antiques, a crate of vinyl by a rack of clothes. The fun is you never know what walked in this morning.</p>
+        <div class="anchors">
+          <div class="anchor">
+            <div class="n"><span data-count="33">33</span>+</div>
+            <div class="t">Years in Benton</div>
+            <div class="d">Family-owned since the early '90s.</div>
+          </div>
+          <div class="anchor">
+            <div class="n">Daily</div>
+            <div class="t">Fresh inventory</div>
+            <div class="d">New finds hit the floor all week.</div>
+          </div>
+          <div class="anchor">
+            <div class="n">All</div>
+            <div class="t">Ages &amp; sizes</div>
+            <div class="d">Clothing and finds for the whole family.</div>
+          </div>
+          <div class="anchor">
+            <div class="n">Ship</div>
+            <div class="t">Media Mail</div>
+            <div class="d">Books and videos mail out to you.</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-photo" data-reveal style="--i:1">
+        <img src="assets/antiques.jpg" alt="A spread of brass, trinkets and vintage finds on a resale table" loading="lazy" width="1000" height="667" />
+        <span class="cap">The hunt · finds change daily</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SHIPPING band (light restatement, honest) ══ -->
+<section class="ship" id="ship" style="background:var(--ink);color:var(--card)">
+  <div class="wrap">
+    <div class="lab" data-reveal style="color:var(--pop-lt)"><span style="background:var(--pop-lt)"></span>Shipping</div>
+    <h2 data-reveal style="color:#FBF3E1">Too far to browse in person? <em style="color:#E9B98A">We can still box it up.</em></h2>
+    <p class="lede" data-reveal style="color:var(--paper-3);max-width:56ch">Spot a book, a movie, or a find you can't stop thinking about? Give the shop a call — books and videos go out by Media Mail, so a Benton treasure can land on your porch anywhere.</p>
+    <p data-reveal style="--i:1"><a class="btn btn-a" style="padding:15px 26px" href="tel:+15017781993" data-magnetic="0.2">Call to ask about shipping — (501) 778-1993</a></p>
+  </div>
+</section>
+
+<!-- ══ VISIT + MAP ══ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Come dig</div>
+    <h2 data-reveal>Right off Interstate 30 <em>in Benton.</em></h2>
+    <div class="v-grid">
+      <div class="v-cards" data-reveal>
+        <div class="v-card">
+          <h3>Call the shop</h3>
+          <a class="big" href="tel:+15017781993">(501) 778-1993</a>
+          <p class="addr">Ask what just came in, hold something aside, or check on shipping a find.</p>
+        </div>
+        <div class="v-card">
+          <h3>Find the door</h3>
+          <p class="addr"><b>17916B Interstate 30</b><br/>Benton, AR 72019</p>
+          <p class="v-note">Open through the week and weekend — hours shift, so call ahead or check our Facebook for today before you drive out.</p>
+        </div>
+        <div class="v-card">
+          <h3>Hours</h3>
+          <div class="hrow"><b>Weekdays &amp; weekend</b><span>Call to confirm</span></div>
+          <div class="hrow"><b>Today's hours</b><span>See Facebook</span></div>
+          <p class="v-note">We keep the current week's hours posted on Facebook — a quick call is always the surest bet.</p>
+        </div>
+      </div>
+      <div class="mapframe" data-reveal style="--i:1">
+        <iframe title="Map — Finer Things Resale, Benton AR" src="https://www.google.com/maps?q=17916B+Interstate+30,+Benton,+AR+72019&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <div>
+        <span class="serif">Finer <em>Things</em> Resale</span><br/>
+        Benton, AR · 17916B Interstate 30 · (501) 778-1993
+      </div>
+      <div style="text-align:right;color:var(--grey-2)">Family-owned resale · Over 33 years<br/>Inventory changes daily</div>
+    </div>
+    <div class="fbot">
+      Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Finer Things Resale.
+      Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography shown is
+      illustrative of the categories carried and is replaced with the shop's own on launch.
+    </div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-fab" id="aiFab" aria-expanded="false" aria-controls="aiPanel">
+  <span class="ico" aria-hidden="true">✦</span> Ask what's in stock
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Finer Things Resale assistant">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"></span>
+    <div><b>The Front Counter</b><span>Answers in seconds · 24/7</span></div>
+  </div>
+  <div class="ai-msgs">
+    <div class="ai-bub bot">Hey — thanks for stopping by Finer Things Resale. Looking for something in particular?</div>
+    <div class="ai-bub me">Y'all have any N64 games right now?</div>
+    <div class="ai-bub bot">Our game shelf turns over daily, so let me grab your number and I'll have someone check the floor and text you back before you drive out.</div>
+  </div>
+  <div class="ai-foot">
+    <div class="stub"><span>Type a question…</span><span class="ai-tag">Demo · wired live on launch</span></div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a class="primary" href="tel:+15017781993">Call the shop</a>
+  <a href="#shelves">The shelves</a>
+</div>
+
+<div class="fs-prog" style="background:linear-gradient(90deg,var(--pop),var(--kraft) 60%,var(--teal))" aria-hidden="true"></div>
+
+<!-- page interactions -->
+<script>
+(function(){
+  /* TAG FLIP: click/tap/keyboard toggles the flip on touch + as a fallback; desktop hover handled in CSS */
+  document.querySelectorAll('.tag').forEach(function(t){
+    t.addEventListener('click',function(){ t.classList.toggle('is-flip'); });
+    t.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); t.classList.toggle('is-flip'); }
+    });
+  });
+
+  /* AI assistant placeholder toggle */
+  var fab=document.getElementById('aiFab'), panel=document.getElementById('aiPanel');
+  if(fab&&panel){
+    fab.addEventListener('click',function(){
+      var open=panel.classList.toggle('open');
+      fab.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&panel.classList.contains('open')){panel.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.focus();}
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- Custom cursor ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],.fs-cmp,input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  /* ---------- Hero line reveal on load ---------- */
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  /* ---------- Magnetic ---------- */
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  /* ---------- Parallax ---------- */
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  /* ---------- Count-up ---------- */
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          (function step(ts){
+            if(!t0) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          })();
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  /* ---------- Marquee: duplicate track for seamless loop ---------- */
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  /* ---------- Scroll progress ---------- */
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
