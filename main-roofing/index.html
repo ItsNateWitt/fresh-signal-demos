@@ -48,7 +48,6 @@
   a{color:inherit;text-decoration:none}
   .fr{font-family:'Fraunces',Georgia,serif}
   .kicker{font-family:'Nunito Sans';font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-dk)}
-  .mock{position:relative;z-index:5;background:var(--storm);color:var(--bronze-lite);text-align:center;font-size:12px;font-weight:700;letter-spacing:.02em;padding:8px 14px}
 
   /* ============ DIPTYCH FRAME ============ */
   .frame{position:relative;display:grid;grid-template-columns:1fr}
@@ -188,11 +187,7 @@
   .rating-line small{font-size:11px;color:var(--mut)}
 
   /* coverage */
-  .cov .map{position:relative;height:clamp(200px,26vw,260px);border:1px solid var(--line);border-radius:6px;margin-top:22px;background:linear-gradient(140deg,#d9e0d5,#c5d0c9);overflow:hidden}
-  .cov .map .ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:2px dashed rgba(31,61,46,.4);border-radius:50%}
-  .cov .map .r1{width:60%;padding-bottom:60%}.cov .map .r2{width:38%;padding-bottom:38%}
-  .cov .map .pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);width:34px;height:34px;color:var(--bronze-dk)}
-  .cov .map b{position:absolute;top:50%;left:50%;transform:translate(-50%,14px);font-family:'Fraunces';font-weight:600;font-size:14px;color:var(--pine-2)}
+  .cov .map{position:relative;min-height:420px;border:1px solid var(--line);border-radius:6px;margin-top:22px;overflow:hidden}
   .cov .towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
   .cov .towns span{font-size:13px;font-weight:700;background:var(--cream-2);border:1px solid var(--line);border-radius:40px;padding:7px 14px}
 
@@ -255,8 +250,6 @@
 </style>
 </head>
 <body>
-<div class="mock">DEMO MOCKUP — built for Main Roofing Co. by Nate Witt · phone shown is directory-sourced (confirm) · sample hours, reviews &amp; photos swapped for the company's own on launch</div>
-
 <div class="frame">
   <!-- LEFT: pinned free-quote rail -->
   <aside class="rail">
@@ -438,10 +431,8 @@
       <span class="kicker">Where we work</span>
       <h3 class="head fr" style="margin-top:10px">Searcy &amp; the greater <em>Little Rock area</em></h3>
       <p class="body">Rooted at 221 W Arch Ave in downtown Searcy, we cover White County and out into the greater Little Rock metro — residential and commercial alike.</p>
-      <div class="map reveal" aria-hidden="true">
-        <span class="ring r1"></span><span class="ring r2"></span>
-        <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <b>Searcy, AR</b>
+      <div class="map reveal">
+        <iframe title="Map — Main Roofing Co., Searcy AR" src="https://www.google.com/maps?q=221+W+Arch+Ave%2C+Searcy%2C+AR+72143&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
       </div>
       <div class="towns">
         <span>Searcy</span><span>Beebe</span><span>Bald Knob</span><span>Judsonia</span><span>Cabot</span><span>Jacksonville</span><span>Greater Little Rock</span><span>White County</span>
@@ -466,7 +457,6 @@
     reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
     are replaced with the owner's real details if this site is built. This page is set to
     <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
   </main>
