@@ -74,9 +74,7 @@
   .skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--ink);color:var(--paper);padding:12px 18px;font-size:13px}
   .skip:focus{left:8px;top:8px}
 
-  /* ---------- honesty banner + real free-ship announcement ---------- */
-  .mock{position:relative;z-index:30;background:var(--ink);color:var(--paper);text-align:center;font-size:12px;letter-spacing:.01em;padding:9px 14px;line-height:1.45}
-  .mock b{color:var(--mauve);font-weight:600}
+  /* ---------- real free-ship announcement ---------- */
   .announce{background:var(--poppy);color:#fff;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:8px 14px}
   .announce a{border-bottom:1px solid rgba(255,255,255,.5)}
 
@@ -239,28 +237,6 @@
   .sc p{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:17px;line-height:1.5;flex:1}
   .sc .who{margin-top:18px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--poppy)}
   .sc .who span{display:block;color:var(--mut);margin-top:4px;letter-spacing:.08em}
-
-  /* ---------- FRESH SIGNAL CLOSE ---------- */
-  .fs{padding:clamp(64px,9vw,130px) 0;border-top:1px solid var(--line)}
-  .fs-in{max-width:760px;margin:0 auto}
-  .fs h2{margin-top:14px;font-size:clamp(30px,4.2vw,50px);max-width:16ch}
-  .fs h2 em{color:var(--poppy)}
-  .fs .letter{margin-top:clamp(24px,3vw,34px);font-size:16.5px;line-height:1.75;color:var(--ink-2);max-width:60ch}
-  .fs .letter p + p{margin-top:14px}
-  .offer{background:var(--plum);color:var(--paper);padding:clamp(26px,3.4vw,42px);margin-top:clamp(30px,3.6vw,44px)}
-  .offer .o{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;padding:18px 0;border-bottom:1px solid var(--line-inv);align-items:baseline}
-  .offer .o:first-of-type{padding-top:0}
-  .offer .o:last-of-type{border-bottom:0}
-  .offer .amt{font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(22px,2.6vw,30px);font-weight:500;white-space:nowrap}
-  .offer .amt.hl{color:var(--mauve)}
-  .offer .txt{font-size:14.5px;line-height:1.65;color:rgba(247,241,233,.74)}
-  .offer .why{margin-top:22px;padding-top:20px;border-top:1px solid var(--line-inv);font-family:'Bodoni Moda',Georgia,serif;
-    font-style:italic;font-size:15.5px;line-height:1.65;color:rgba(247,241,233,.82)}
-  .fs .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:clamp(26px,3vw,36px)}
-  .fs .ghost{font-size:13px;color:var(--mut)}
-  .fs .telalt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    border-bottom:1px solid var(--line);padding-bottom:3px}
-  .fs .telalt:hover{border-color:var(--poppy);color:var(--poppy)}
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--ink);color:rgba(247,241,233,.66);padding:clamp(46px,6vw,72px) 0 30px;margin-bottom:0}
@@ -460,7 +436,6 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="mock">DEMO MOCKUP — built for <b>Harlow &amp; Poppy Boutique</b> by Nate Witt · real: address, phone, hours &amp; the free-shipping offer · <b>sample photos</b> and sample reviews — replaced with your own on launch · no product prices are shown, because I won't guess at yours</div>
 <!-- REAL: free shipping over $100 is stated on the shop's own site banner. -->
 <div class="announce">Free shipping over $100 — shop in-store or at <a href="https://www.harlowandpoppy.com/" target="_blank" rel="noopener">harlowandpoppy.com</a></div>
 
@@ -753,44 +728,6 @@
     </div>
   </section>
 
-  <!-- ===== FRESH SIGNAL CLOSE ===== -->
-  <section class="fs" id="fresh-signal">
-    <div class="wrap">
-      <div class="fs-in">
-        <div class="rv">
-          <span class="kicker">A note from the person who built this</span>
-          <h2 class="serif">This page doesn't exist yet. It's <em>already yours.</em></h2>
-        </div>
-        <div class="letter rv s1">
-          <p>I'm Nate. I build websites for local shops here in Central Arkansas. I made this mockup for Harlow &amp; Poppy before we ever spoke, because I think a boutique with your eye deserves a better front door than a Facebook page.</p>
-          <p>Everything marked "sample" — the photos, the reviews — gets replaced with your real ones. I didn't put a single price on this page, because I'm not going to guess at yours. If you want it, it's live in 2–3 days. If you don't, keep the link. It's yours either way.</p>
-        </div>
-
-        <div class="offer rv s2">
-          <div class="o">
-            <span class="amt hl">$250 one-time</span>
-            <span class="txt">The whole setup: this site made real, your Google Business Profile fixed so people find the shop instead of Yelp, and a simple AI assistant that answers common questions and points people to the store or the online shop.</span>
-          </div>
-          <div class="o">
-            <span class="amt">$79/month</span>
-            <span class="txt">Starting the following month. Basic upkeep of the servers and services that keep it live — hosting, updates, your Google page. Cancel anytime.</span>
-          </div>
-          <div class="o">
-            <span class="amt">2–3 days</span>
-            <span class="txt">That's how long it takes to go live, because it's already 80% built. You're looking at it.</span>
-          </div>
-          <p class="why">An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month. AI lets me build in days what used to take a team weeks — I pass that on, because I'd rather price it so it's easy to say yes and earn a long relationship.</p>
-        </div>
-
-        <div class="cta-row rv s3">
-          <a class="btn btn-p" href="sms:+15017573468">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.9 9.9 0 0 1-4.2-1L3 20l1.3-4.3A8.2 8.2 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4z"/></svg>Text Nate — (501) 757-3468</a>
-          <a class="telalt" href="tel:+15017573468">or call (501) 757-3468</a>
-          <span class="ghost">No pressure. The demo stays yours either way.</span>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -817,7 +754,6 @@
     </div>
     <div class="fbot">
       <span>© <span id="yr"></span> Harlow &amp; Poppy Boutique · Conway, Arkansas</span>
-      <span>Demo mockup by Nate Witt — not the live site · sample photos &amp; reviews</span>
     </div>
   </div>
   <aside class="legalnote">
@@ -829,7 +765,6 @@
     and is replaced with the owner's real photos if this site is built. Any hours, prices, staff names,
     ratings and reviews marked SAMPLE are illustrative placeholders, not representations of fact.
     This page is set to <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
