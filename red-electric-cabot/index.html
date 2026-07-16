@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Red Electric — Master Electrician | Cabot, AR</title>
+<meta name="description" content="Red Electric — a family-run master electrician serving Cabot, AR and Central Arkansas. Residential and commercial electrical contracting, any size job. Licensed, bonded and insured. Call (501) 988-1026." />
+<meta name="theme-color" content="#0E0B0A" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0B0A'/%3E%3Cpath d='M17.4 5 L9 17.5 h5.2 L13 27 L22 13.5 h-5.2 Z' fill='%23E23A2E'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;
+    background:linear-gradient(90deg,var(--red),var(--copper))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ RED ELECTRIC — Spec Sheet (G) · warm charcoal enclosure, live-current red + energized copper, breaker-panel hero ══ */
+  :root{
+    --ink:#0E0B0A; --ink2:#141010; --ink3:#0A0807;
+    --panel:#1A1413; --panel2:#231A18; --panel3:#2E2320;
+    --line:rgba(240,224,214,.10); --line2:rgba(240,224,214,.18);
+    --grid:rgba(201,128,62,.08);
+    --txt:#F4ECE7; --soft:#CDBCB2; --mut:#8C7A6F;
+    --red:#E23A2E; --red2:#FF5646; --on-red:#FFF3EF;
+    --copper:#C9803E; --copper2:#E5A25C;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --energy:0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--ink);color:var(--txt);
+    font-family:'Figtree',system-ui,-apple-system,sans-serif;font-size:16.5px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--copper2);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* ambient copper current wash */
+  .ambient{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:soft-light;
+    background:radial-gradient(120% 90% at 80% 6%, rgba(226,58,46,.26), rgba(0,0,0,0) 60%);
+    transition:background .3s linear}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(10,8,7,.9);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+  .mark .gg{width:38px;height:38px;flex:none}
+  .mark .txt b{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;letter-spacing:.02em;
+    line-height:.92;display:block;color:var(--txt)}
+  .mark .txt b i{font-style:normal;color:var(--red2)}
+  .mark .txt small{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--copper2);display:block;margin-top:3px}
+  .call{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:var(--on-red);
+    text-decoration:none;padding:12px 18px;border-radius:9px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--red2)}
+  .call svg{width:15px;height:15px;flex:none}
+  .call .lbl-full{display:inline}
+
+  /* hero */
+  header{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink2)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;
+    filter:grayscale(.16) brightness(.4) contrast(1.12) saturate(.72) sepia(.2) hue-rotate(-12deg)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,8,7,.66) 0%,rgba(10,8,7,.24) 30%,rgba(10,8,7,.97) 100%),
+      linear-gradient(74deg,rgba(10,8,7,.82) 0%,rgba(10,8,7,0) 60%)}
+  .hero-grid{position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background:
+      linear-gradient(var(--grid) 1px,transparent 1px) 0 0/100% 46px,
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/46px 100%;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,0) 70%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,0) 70%)}
+  .hero-rule{position:absolute;left:0;right:0;top:0;height:3px;z-index:4;
+    background:linear-gradient(90deg,var(--red) 0%,var(--red2) 30%,var(--copper2) 66%,var(--copper) 100%)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:118px 0 70px}
+  .hero-grid-l{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+  @media(max-width:900px){.hero-grid-l{grid-template-columns:1fr;gap:34px}}
+
+  .kicker{display:inline-flex;align-items:center;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--copper2);margin-bottom:22px}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--red);flex:none;
+    box-shadow:0 0 0 4px rgba(226,58,46,.16)}
+  h1{margin:0 0 22px;font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:clamp(44px,10vw,92px);line-height:.96;letter-spacing:-.02em;max-width:14ch}
+  h1 .c{color:var(--red2)}
+  .hero-sub{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:52ch;margin:0 0 30px}
+  .hero-sub b{color:var(--txt);font-weight:600}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:10px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--red);color:var(--on-red)}
+  .btn-a:hover{background:var(--red2)}
+  .btn-b{border:1.5px solid rgba(240,224,214,.32);color:var(--txt)}
+  .btn-b:hover{border-color:var(--copper2);color:var(--copper2)}
+  .btn svg{width:16px;height:16px;flex:none}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .hero-badges span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--soft);border:1px solid var(--line2);padding:7px 11px;border-radius:20px;background:rgba(10,8,7,.4)}
+  .hero-badges span b{color:var(--copper2);font-weight:600}
+
+  /* ══ SIGNATURE — breaker panel that energizes ══ */
+  .panel-card{position:relative;justify-self:end;width:min(380px,100%);
+    background:linear-gradient(180deg,rgba(35,26,24,.82),rgba(20,16,15,.86));
+    border:1px solid var(--line2);border-radius:16px;padding:20px 20px 16px;
+    box-shadow:0 30px 70px rgba(0,0,0,.55);backdrop-filter:blur(7px)}
+  @media(max-width:900px){.panel-card{justify-self:center;width:min(400px,100%)}}
+  .panel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .panel-top .live{display:inline-flex;align-items:center;gap:7px;color:var(--copper2)}
+  .panel-top .live i{width:7px;height:7px;border-radius:50%;background:var(--mut);font-style:normal;transition:background .3s,box-shadow .3s}
+  .panel-card.live .panel-top .live i{background:var(--red);box-shadow:0 0 0 3px rgba(226,58,46,.18)}
+  .panel-enc{position:relative;border:1px solid var(--line2);border-radius:11px;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(46,35,32,.6),rgba(14,11,10,.6)),
+      repeating-linear-gradient(180deg,rgba(255,255,255,.014) 0 2px,transparent 2px 4px);
+    padding:16px 14px}
+  .bus{position:absolute;top:14px;bottom:14px;left:50%;width:8px;transform:translateX(-50%);border-radius:3px;
+    background:linear-gradient(180deg,#6a4322,#4a2c16);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.4);overflow:hidden}
+  .bus::after{content:"";position:absolute;left:0;right:0;height:40%;
+    background:linear-gradient(180deg,rgba(0,0,0,0),var(--copper2),rgba(0,0,0,0));opacity:0;
+    transform:translateY(calc(var(--flow,-40%)));transition:opacity .4s}
+  .panel-card.live .bus::after{opacity:.85}
+  .rows{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+  @media(max-width:420px){.rows{gap:8px 20px}}
+  .brkr{display:flex;align-items:center;gap:9px;background:var(--ink3);border:1px solid var(--line);
+    border-radius:7px;padding:8px 9px;position:relative;transition:border-color .3s,background .3s,box-shadow .3s}
+  .brkr.r{flex-direction:row-reverse;text-align:right}
+  .brkr .sw{width:16px;height:26px;flex:none;border-radius:4px;background:#2a201d;border:1px solid rgba(0,0,0,.5);
+    position:relative;box-shadow:inset 0 0 4px rgba(0,0,0,.6)}
+  .brkr .sw::after{content:"";position:absolute;left:2px;right:2px;height:9px;border-radius:2px;
+    background:linear-gradient(180deg,#5a4a44,#332723);bottom:2px;transition:bottom .35s var(--ease),background .35s}
+  .brkr .bl{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+  .brkr .bl b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.01em;
+    color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .3s}
+  .brkr .bl small{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+  .brkr .amp{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:var(--mut);flex:none}
+  .brkr.r .amp{margin-left:0;margin-right:auto}
+  .brkr.on{border-color:rgba(201,128,62,.5);background:linear-gradient(180deg,rgba(201,128,62,.12),var(--ink3));
+    box-shadow:0 0 16px rgba(201,128,62,.14)}
+  .brkr.on .sw::after{bottom:13px;background:linear-gradient(180deg,var(--copper2),var(--copper))}
+  .brkr.on .bl b{color:var(--txt)}
+  .brkr.main{grid-column:1 / -1;justify-content:center;background:var(--panel2);border-color:var(--line2)}
+  .brkr.main .bl b{font-size:12.5px;letter-spacing:.06em;color:var(--txt)}
+  .brkr.main.on{border-color:var(--red);background:linear-gradient(180deg,rgba(226,58,46,.16),var(--panel2));
+    box-shadow:0 0 20px rgba(226,58,46,.2)}
+  .brkr.main.on .sw::after{background:linear-gradient(180deg,var(--red2),var(--red))}
+  .panel-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:13px;
+    border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+  .panel-foot b{color:var(--copper2);font-weight:600}
+  .panel-hint{text-align:center;margin:11px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
+  /* marquee strip */
+  .strip{background:var(--red);color:var(--on-red);border-top:3px solid var(--ink2);border-bottom:3px solid var(--ink2);
+    position:relative;z-index:2}
+  .strip .fs-mq{padding:13px 0}
+  .strip .fs-mq__t span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;letter-spacing:.02em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:rgba(26,8,6,.42)}
+
+  section{padding:100px 0;position:relative;z-index:2}
+  .lab{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--copper2);margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .lab::before{content:"";width:28px;height:2px;background:var(--red)}
+  h2{font-family:'Space Grotesk',sans-serif;font-weight:600;
+    font-size:clamp(28px,6vw,46px);line-height:1.03;letter-spacing:-.018em;margin:0 0 18px;max-width:20ch}
+  h2 .c{color:var(--red2)}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:60ch;margin:0 0 44px}
+
+  /* ══ SPEC SHEET — the circuit directory ══ */
+  .spec{background:var(--ink2)}
+  .sheet{border:1px solid var(--line2);border-radius:16px;overflow:hidden;background:var(--panel);
+    box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .sheet-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:16px 22px;background:var(--ink3);border-bottom:1px solid var(--line2);
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .sheet-head b{color:var(--copper2);font-weight:600}
+  .srow{display:grid;grid-template-columns:1.35fr 1.5fr .9fr;gap:0;border-bottom:1px solid var(--line);
+    transition:background .22s}
+  .srow:last-child{border-bottom:none}
+  .srow:hover{background:var(--panel2)}
+  .srow > div{padding:20px 22px}
+  .srow .sc-name{display:flex;flex-direction:column;gap:5px;border-right:1px solid var(--line)}
+  .srow .sc-name .no{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--copper2)}
+  .srow .sc-name h3{font-family:'Space Grotesk',sans-serif;font-weight:600;
+    font-size:clamp(20px,2.6vw,23px);margin:0;line-height:1.05;letter-spacing:-.01em}
+  .srow .sc-desc{color:var(--soft);font-size:15px;border-right:1px solid var(--line);display:flex;align-items:center}
+  .srow .sc-tag{display:flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.06em;color:var(--copper2);text-transform:uppercase}
+  .srow.hot .sc-tag{color:var(--red2)}
+  @media(max-width:720px){
+    .srow{grid-template-columns:1fr}
+    .srow > div{padding:16px 20px}
+    .srow .sc-name{border-right:none;border-bottom:1px solid var(--line);padding-bottom:14px}
+    .srow .sc-desc{border-right:none}
+    .srow .sc-tag{padding-top:0;padding-bottom:18px}
+  }
+  .sheet-note{margin:18px 2px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut)}
+  .sheet-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+    padding:22px 24px;border:1px solid var(--line2);border-radius:14px;background:var(--panel)}
+  .sheet-cta p{margin:0;font-size:16px;color:var(--soft);flex:1;min-width:240px}
+  .sheet-cta b{color:var(--txt)}
+
+  /* ══ LOAD SCHEDULE — residential / commercial (two mains) ══ */
+  .load{background:var(--ink3);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .load-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media(max-width:760px){.load-grid{grid-template-columns:1fr}}
+  .lc{border:1px solid var(--line2);border-radius:15px;padding:28px 26px;background:var(--panel);
+    position:relative;overflow:hidden;transition:border-color .25s,transform .25s var(--ease)}
+  .lc:hover{border-color:rgba(201,128,62,.4);transform:translateY(-3px)}
+  .lc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--copper)}
+  .lc.res::before{background:var(--copper)}
+  .lc.com::before{background:var(--red)}
+  .lc .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+  .lc h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);
+    margin:8px 0 12px;letter-spacing:-.01em}
+  .lc p{margin:0;color:var(--soft);font-size:15.5px}
+  .lc ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .lc ul li{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--soft);
+    border:1px solid var(--line2);padding:6px 11px;border-radius:8px}
+
+  /* ══ PROOF gallery ══ */
+  .proof{background:var(--ink)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr;grid-auto-rows:190px}}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:13px;border:1px solid var(--line)}
+  .pgrid img{width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.2) contrast(1.06) brightness(.8) saturate(.78) sepia(.14) hue-rotate(-10deg);
+    transition:transform .8s var(--ease)}
+  .pgrid figure::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;
+    background:linear-gradient(140deg,rgba(226,58,46,.18),rgba(201,128,62,.12))}
+  .pgrid figure.big{grid-column:span 2;grid-row:span 2}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;z-index:2;
+    background:linear-gradient(transparent,rgba(10,8,7,.92));
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt)}
+  .pgrid .stag{position:absolute;top:9px;left:9px;z-index:2;background:rgba(10,8,7,.72);color:var(--copper2);
+    font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px}
+  .pnote{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* ══ CREDENTIALS — etched panel plates ══ */
+  .creds{background:var(--ink2);border-top:1px solid var(--line)}
+  .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:820px){.cred-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.cred-grid{grid-template-columns:1fr}}
+  .cred{border:1px solid var(--line);border-radius:14px;padding:24px 22px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    display:flex;flex-direction:column;gap:8px;transition:border-color .25s,transform .25s var(--ease);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+  .cred:hover{border-color:var(--line2);transform:translateY(-3px)}
+  .cred .ic{width:34px;height:34px;color:var(--copper2);margin-bottom:4px}
+  .cred b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);line-height:1.02;
+    color:var(--txt)}
+  .cred small{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);line-height:1.5}
+  /* the family / master signature row — full weight */
+  .disc{margin-top:16px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+    padding:26px 28px;border:1px solid var(--red);border-radius:16px;
+    background:linear-gradient(120deg,rgba(226,58,46,.12),rgba(201,128,62,.03))}
+  @media(max-width:680px){.disc{grid-template-columns:1fr;gap:16px;text-align:left}}
+  .disc .badge{width:56px;height:56px;flex:none;color:var(--red2)}
+  .disc h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);margin:0 0 6px;
+    letter-spacing:-.01em}
+  .disc p{margin:0;color:var(--soft);font-size:15.5px;max-width:56ch}
+  .disc .who{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--copper2);white-space:nowrap}
+
+  /* ══ SERVICE AREA — map ══ */
+  .area{background:var(--ink3);border-top:1px solid var(--line)}
+  .a-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:stretch}
+  @media(max-width:900px){.a-grid{grid-template-columns:1fr}}
+  .a-info{display:flex;flex-direction:column;gap:16px}
+  .a-card{border:1px solid var(--line);border-radius:15px;padding:26px;background:var(--panel)}
+  .a-card h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);
+    margin:0 0 16px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+  .a-card h3 svg{width:19px;height:19px;color:var(--copper2);flex:none}
+  .a-lead{font-size:17px;line-height:1.55;margin:0;color:var(--soft)}
+  .a-lead b{color:var(--copper2);font-weight:700}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+  .towns span{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:var(--soft);
+    border:1px solid var(--line2);padding:7px 12px;border-radius:8px}
+  .emerg{display:flex;align-items:center;gap:14px}
+  .emerg .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;line-height:1;color:var(--copper2)}
+  .emerg small{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+  .confirm{margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:9px 12px;border-radius:8px}
+  .dir{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:var(--on-red);
+    text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease);align-self:flex-start}
+  .dir:hover{background:var(--red2)}
+  .dir svg{width:15px;height:15px}
+  .map-card{position:relative;border-radius:15px;overflow:hidden;border:1px solid var(--line2);
+    background:var(--panel);min-height:440px;box-shadow:0 24px 56px rgba(0,0,0,.45)}
+  .map-card iframe{filter:grayscale(.3) contrast(1.05) brightness(.86) sepia(.1)}
+
+  /* ══ CALL BAND ══ */
+  .band{background:linear-gradient(120deg,var(--panel2),var(--panel));border-top:1px solid var(--line)}
+  .band .wrap{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
+  .band h2{margin:0;max-width:18ch}
+  .band .who{max-width:46ch;color:var(--soft);font-size:16px;margin:12px 0 0}
+  .band .big-call{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:var(--on-red);
+    text-decoration:none;padding:20px 30px;border-radius:13px;font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:25px;letter-spacing:-.01em;transition:background .2s,transform .16s var(--ease)}
+  .band .big-call:hover{background:var(--red2)}
+  .band .big-call svg{width:25px;height:25px}
+
+  footer{background:var(--ink3);padding:46px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(240,224,214,.6);
+    position:relative;z-index:2}
+  .fcols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .fcols .disp{font-size:24px;color:var(--txt)}
+  .fcols .disp span{color:var(--red2)}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(240,224,214,.42)}
+
+  /* AI assistant widget placeholder */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--red);color:var(--on-red);border:none;border-radius:30px;padding:13px 18px;
+    font-family:'Figtree',sans-serif;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.42);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--red2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(346px,calc(100vw - 36px));
+    background:var(--panel);border:1px solid var(--line2);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.52);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--ink3);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;
+    background:var(--panel3);border:1px solid var(--line2)}
+  .ai-head .av svg{width:20px;height:20px;color:var(--copper2)}
+  .ai-head b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:.01em}
+  .ai-head small{display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--copper2);letter-spacing:.1em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--ink3);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:var(--soft)}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--copper2);border:1px solid var(--line2);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--ink3);border:1px solid var(--line2);border-radius:9px;padding:11px 13px;
+    color:var(--txt);font-family:'Figtree',sans-serif;font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--red);border:none;border-radius:9px;color:var(--on-red);font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+
+  /* ══ MOBILE-FIRST BREATHING PASS ══ */
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--red)}
+    .mbar a{flex:1;text-align:center;padding:15px;text-decoration:none;font-weight:700;color:var(--on-red);font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(26,8,6,.24);background:var(--panel2);color:var(--txt)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+    header{min-height:auto}
+    .hero-in{padding:104px 0 60px}
+    .call .lbl-full{display:none}
+  }
+  @media(max-width:600px){
+    section{padding:56px 0}
+    .wrap{padding:0 20px}
+    h2{margin-bottom:14px}
+    .lede{margin-bottom:30px}
+    .cta{flex-direction:column;align-items:stretch}
+    .cta .btn{width:100%}
+    .sheet-cta .btn{width:100%}
+    .pgrid{grid-auto-rows:170px;gap:14px}
+    .panel-card{width:100%;padding:18px}
+    .emerg .big{font-size:28px}
+  }
+</style>
+</head>
+<body>
+<div class="ambient" id="ambient" aria-hidden="true"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Red Electric home">
+      <svg class="gg" viewBox="0 0 40 40" role="img" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#1A1413" stroke="#2E2320"/>
+        <path d="M22 7 L11 22 h6.4 L15.5 33 L29 17 h-6.4 Z" fill="#E23A2E"/>
+      </svg>
+      <span class="txt"><b>RED<i> ELECTRIC</i></b><small>Cabot, Arkansas · Master Electrician</small></span>
+    </a>
+    <a class="call" href="tel:+15019881026">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl-full">(501) 988-1026</span>
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-rule" aria-hidden="true"></div>
+  <img class="hero-img" src="assets/hero.jpg" alt="An open electrical service panel with rows of breakers and neatly run colored wiring" width="1152" height="2048" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="hero-grid-l">
+        <div>
+          <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Cabot, AR · Master electrician</div>
+          <h1 data-hero>
+            <span class="fs-line"><span>Wired right,</span></span>
+            <span class="fs-line"><span><span class="c">the first time.</span></span></span>
+          </h1>
+          <p class="hero-sub" data-reveal style="--i:2">Red Electric is a family-run master electrician serving Cabot and Central Arkansas — <b>residential and commercial contracting, any size job.</b> Licensed, bonded and insured, with three decades on the tools.</p>
+          <div class="cta" data-reveal style="--i:3">
+            <a class="btn btn-a" href="tel:+15019881026" data-magnetic="0.2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+              Call for an estimate
+            </a>
+            <a class="btn btn-b" href="#services">See what we wire</a>
+          </div>
+          <div class="hero-badges" data-reveal style="--i:4">
+            <span><b>30+</b> years on the tools</span>
+            <span>Family-owned</span>
+            <span>Licensed · Bonded · Insured</span>
+          </div>
+        </div>
+
+        <!-- SIGNATURE: breaker panel that energizes -->
+        <div class="panel-card" id="panelCard" data-reveal="scale" style="--i:2">
+          <div class="panel-top">
+            <span>Service panel · Red Electric</span>
+            <span class="live"><i aria-hidden="true"></i>Energized</span>
+          </div>
+          <div class="panel-enc">
+            <div class="bus" id="bus" aria-hidden="true"></div>
+            <div class="rows" aria-hidden="true">
+              <div class="brkr main"><span class="sw"></span><span class="bl"><b>MAIN · SERVICE</b></span><span class="amp">200</span></div>
+              <div class="brkr"><span class="sw"></span><span class="bl"><b>Panel Upgrades</b><small>Service</small></span><span class="amp">40</span></div>
+              <div class="brkr r"><span class="sw"></span><span class="bl"><b>Wiring &amp; Rewires</b><small>Circuits</small></span><span class="amp">30</span></div>
+              <div class="brkr"><span class="sw"></span><span class="bl"><b>Lighting</b><small>Fixtures</small></span><span class="amp">15</span></div>
+              <div class="brkr r"><span class="sw"></span><span class="bl"><b>Outlets &amp; Switches</b><small>Devices</small></span><span class="amp">20</span></div>
+              <div class="brkr"><span class="sw"></span><span class="bl"><b>Troubleshoot</b><small>Repair</small></span><span class="amp">20</span></div>
+              <div class="brkr r"><span class="sw"></span><span class="bl"><b>Remodels</b><small>New build</small></span><span class="amp">50</span></div>
+            </div>
+          </div>
+          <div class="panel-foot">
+            <span>Residential · Commercial</span>
+            <span id="energyPct">Powering up · <b>0%</b></span>
+          </div>
+          <p class="panel-hint">Scroll — watch the panel come alive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Panel Upgrades <i>&#9670;</i></span><span>Wiring &amp; Rewires <i>&#9670;</i></span><span>Lighting &amp; Fixtures <i>&#9670;</i></span>
+    <span>Outlets &amp; Switches <i>&#9670;</i></span><span>Troubleshooting <i>&#9670;</i></span><span>New Construction <i>&#9670;</i></span>
+    <span>Residential <i>&#9670;</i></span><span>Commercial <i>&#9670;</i></span><span>Licensed · Bonded · Insured <i>&#9670;</i></span>
+  </div></div>
+</div>
+
+<!-- ══ SPEC SHEET — CIRCUIT DIRECTORY ══ -->
+<section class="spec" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>What we wire</div>
+    <h2 data-reveal>The panel, <span class="c">labeled.</span></h2>
+    <p class="lede" data-reveal>A master electrician handles the whole board — from a single dead outlet to a full service upgrade or a commercial build-out. One family shop that traces the fault to the cause, does it to code, and leaves it right.</p>
+
+    <div class="sheet" data-reveal>
+      <div class="sheet-head">
+        <span>Circuit directory &mdash; <b>Red Electric</b></span>
+        <span>Residential &middot; Commercial &middot; Any size</span>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">01</span><h3>Panel &amp; Service Upgrades</h3></div>
+        <div class="sc-desc">Breaker panels, service changes and added circuits &mdash; sized right so the whole house has the capacity it needs.</div>
+        <div class="sc-tag">Service</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">02</span><h3>Wiring &amp; Rewires</h3></div>
+        <div class="sc-desc">New wiring runs and full rewires for older homes &mdash; clean, labeled, and pulled to code.</div>
+        <div class="sc-tag">Circuits</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">03</span><h3>Lighting &amp; Fixtures</h3></div>
+        <div class="sc-desc">Interior, exterior and can lighting, ceiling fans and fixture swaps &mdash; mounted level and wired safe.</div>
+        <div class="sc-tag">Fixtures</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">04</span><h3>Outlets, Switches &amp; Circuits</h3></div>
+        <div class="sc-desc">Added receptacles, dedicated circuits, switches and GFCI protection where the code &mdash; and the job &mdash; calls for it.</div>
+        <div class="sc-tag">Devices</div>
+      </div>
+      <div class="srow hot">
+        <div class="sc-name"><span class="no">05</span><h3>Troubleshooting &amp; Repair</h3></div>
+        <div class="sc-desc">Something tripping, flickering or dead? We trace it back to the cause instead of guessing at the symptom.</div>
+        <div class="sc-tag">Diagnose</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">06</span><h3>New Construction &amp; Remodels</h3></div>
+        <div class="sc-desc">Rough-in to trim-out for new builds and remodels, residential and commercial &mdash; jobs of any size.</div>
+        <div class="sc-tag">Build</div>
+      </div>
+    </div>
+    <p class="sheet-note">Not sure which circuit your job falls under? That is exactly what the estimate call is for &mdash; scope confirmed before any work.</p>
+
+    <div class="sheet-cta" data-reveal>
+      <p>Got a job in mind &mdash; big or small? <b>Tell us what it is and we'll spec it straight.</b> No guesswork, no runaround.</p>
+      <a class="btn btn-a" href="tel:+15019881026" data-magnetic="0.18">Call (501) 988-1026</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LOAD SCHEDULE — residential / commercial ══ -->
+<section class="load" id="load">
+  <div class="wrap">
+    <div class="lab" data-reveal>Two mains, one shop</div>
+    <h2 data-reveal>Home or business &mdash; <span class="c">we carry the load.</span></h2>
+    <p class="lede" data-reveal>Red Electric contracts both sides of the meter. The same master electrician who wires your kitchen remodel wires the storefront down the road.</p>
+    <div class="load-grid">
+      <div class="lc res" data-reveal>
+        <span class="tag">Main 01</span>
+        <h3>Residential</h3>
+        <p>Homes across Cabot and Central Arkansas &mdash; upgrades, rewires, lighting, added circuits and the small fixes that keep a house safe and steady.</p>
+        <ul><li>Panel upgrades</li><li>Rewires</li><li>Lighting</li><li>Repairs</li></ul>
+      </div>
+      <div class="lc com" data-reveal style="--i:1">
+        <span class="tag">Main 02</span>
+        <h3>Commercial</h3>
+        <p>Shops, offices and build-outs &mdash; new construction rough-in through trim-out, plus service work that gets the doors open on schedule.</p>
+        <ul><li>Build-outs</li><li>New construction</li><li>Service work</li><li>Any size job</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROOF ══ -->
+<section class="proof" id="work">
+  <div class="wrap">
+    <div class="lab" data-reveal>On the job</div>
+    <h2 data-reveal>Panels, circuits and <span class="c">clean runs.</span></h2>
+    <p class="lede" data-reveal>The work behind the wall plate &mdash; service panels, device installs, conduit and meter work, done the way a master electrician signs off on it.</p>
+    <div class="pgrid">
+      <figure class="big" data-reveal><span class="stag">Reference</span><img src="assets/hero.jpg" alt="An open service panel with rows of breakers and neatly landed colored wiring" width="900" height="1200" loading="lazy" decoding="async"><figcaption>Service panels &amp; breakers</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Reference</span><img src="assets/outlet.jpg" alt="An electrician in a hard hat installing a wall outlet" width="700" height="500" loading="lazy" decoding="async"><figcaption>Outlets &amp; devices</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Reference</span><img src="assets/conduit.jpg" alt="Lengths of electrical conduit staged for a wiring run" width="700" height="500" loading="lazy" decoding="async"><figcaption>Conduit &amp; rough-in</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Reference</span><img src="assets/meter.jpg" alt="An open electric meter box with multiple meters and service connections" width="700" height="500" loading="lazy" decoding="async"><figcaption>Meter &amp; service work</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Reference</span><img src="assets/commercial.jpg" alt="A tradesman installing a commercial ceiling light fixture" width="700" height="500" loading="lazy" decoding="async"><figcaption>Commercial lighting</figcaption></figure>
+    </div>
+    <p class="pnote">Reference photography &mdash; Red Electric's own panel and jobsite photos drop in here on launch.</p>
+  </div>
+</section>
+
+<!-- ══ CREDENTIALS ══ -->
+<section class="creds" id="trust">
+  <div class="wrap">
+    <div class="lab" data-reveal>Why folks call Red</div>
+    <h2 data-reveal>Thirty years. <span class="c">One straight answer.</span></h2>
+    <p class="lede" data-reveal>A licensed master electrician, a family name on the truck, and work that passes the first time. The kind of shop you call once and keep the number for.</p>
+
+    <div class="cred-grid">
+      <div class="cred" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+        <b>30+ yrs</b>
+        <small>Of hands-on electrical work across Central Arkansas</small>
+      </div>
+      <div class="cred" data-reveal style="--i:1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.6 7.5-9 9-5.4-1.5-9-4-9-9V6l9-3 9 3Z"/></svg>
+        <b>Master</b>
+        <small>Master electrician &mdash; the license that signs off the whole job</small>
+      </div>
+      <div class="cred" data-reveal style="--i:2">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+        <b>Insured</b>
+        <small>Licensed, bonded and insured &mdash; every job, on the books</small>
+      </div>
+      <div class="cred" data-reveal style="--i:3">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/></svg>
+        <b>Family</b>
+        <small>Small, family-owned contracting shop right here in Cabot</small>
+      </div>
+    </div>
+
+    <!-- the master / family signature row — full weight -->
+    <div class="disc" data-reveal>
+      <svg class="badge" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+        <path d="M26 6 12 26h10l-2 16 16-22H26l2-14Z"/>
+      </svg>
+      <div>
+        <h3>Milton Lee, master electrician</h3>
+        <p>Thirty-plus years wiring homes and businesses in Central Arkansas, running Red Electric as a family shop. When Red does the work, a master electrician stands behind it &mdash; jobs of any size, done to code.</p>
+      </div>
+      <span class="who">Ask when you call</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICE AREA ══ -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="lab" data-reveal>Where we work</div>
+    <h2 data-reveal>Based in Cabot. <span class="c">We come to you.</span></h2>
+    <div class="a-grid">
+      <div class="a-info">
+        <div class="a-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Service area
+          </h3>
+          <p class="a-lead">Based in <b>Cabot, Arkansas</b>, wiring homes and businesses across <b>Central Arkansas</b> &mdash; residential and commercial, any size job.</p>
+          <div class="towns">
+            <span>Cabot</span><span>Austin</span><span>Ward</span><span>Jacksonville</span><span>Lonoke</span><span>Beebe</span><span>Sherwood</span><span>&amp; nearby</span>
+          </div>
+        </div>
+        <div class="a-card" data-reveal style="--i:1">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Scheduling
+          </h3>
+          <div class="emerg">
+            <span class="big">Call</span>
+            <small>To schedule an estimate<br/>or a service visit</small>
+          </div>
+          <p class="confirm" style="margin-top:16px">Call for scheduling and to confirm availability for your job before you count on a date.</p>
+        </div>
+        <a class="dir" href="https://maps.google.com/?q=Red+Electric,+Cabot,+AR" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg>
+          Open in Maps
+        </a>
+      </div>
+      <div class="map-card" data-reveal="scale">
+        <iframe title="Map — Red Electric, Cabot AR" src="https://www.google.com/maps?q=Red+Electric,+Cabot,+AR&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:440px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CALL BAND ══ -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2 data-reveal>Breaker tripping? <span class="c">Job to wire?</span></h2>
+      <p class="who" data-reveal style="--i:1">Tell us what it's doing or what you're building, and we'll get it spec'd straight and done to code &mdash; any size job.</p>
+    </div>
+    <a class="big-call" href="tel:+15019881026" data-reveal style="--i:2" data-magnetic="0.16">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 988-1026
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <span class="disp">RED <span>ELECTRIC</span></span><br/>
+        Cabot, AR &middot; serving Central Arkansas<br/>(501) 988-1026
+      </div>
+      <div style="text-align:right" class="mono">Residential &amp; commercial electrical<br/>Master electrician &middot; family-owned &middot; licensed, bonded &amp; insured</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Red Electric. Created by Fresh Signal as a proposal. All marks belong to their owners. Reference photography shown is placeholder, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask about a job
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Red Electric assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span>
+    <div><b>Red Assistant</b><small>SAMPLE &middot; placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey &mdash; I'm Red Electric's assistant. On launch I'll answer "can you come look at this?", figure out what your job needs, and text the details straight to the shop so you get an estimate fast.</div>
+    <div class="ai-chips"><span>Can you upgrade my panel?</span><span>Breaker keeps tripping</span><span>Do you do commercial?</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">&rarr;</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15019881026">Call (501) 988-1026</a>
+  <a href="https://maps.google.com/?q=Red+Electric,+Cabot,+AR" target="_blank" rel="noopener">Service area</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- breaker-panel energize signature + AI panel -->
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var card=document.getElementById('panelCard');
+  var brkrs=card?[].slice.call(card.querySelectorAll('.brkr')):[];
+  var bus=document.getElementById('bus');
+  var pct=document.getElementById('energyPct');
+
+  function setEnergy(p){                 /* p: 0 -> 1 */
+    p=Math.max(0,Math.min(1,p));
+    var n=Math.round(p*brkrs.length);
+    for(var i=0;i<brkrs.length;i++){
+      if(i<n) brkrs[i].classList.add('on'); else brkrs[i].classList.remove('on');
+    }
+    if(n>0) card.classList.add('live'); else card.classList.remove('live');
+    if(bus) bus.style.setProperty('--flow',(-40+ p*140)+'%');
+    if(pct) pct.innerHTML = (p>=1?'Energized · ':'Powering up · ')+'<b>'+Math.round(p*100)+'%</b>';
+  }
+
+  if(!card){ /* nothing */ }
+  else if(RM){
+    setEnergy(1);   /* reduced motion: rest fully energized */
+  } else {
+    /* power-up sequence on load, then scroll drives the glow flow + %  */
+    var loaded=0;
+    (function powerUp(){
+      loaded++;
+      setEnergy(loaded/brkrs.length);
+      if(loaded<brkrs.length) setTimeout(powerUp,170);
+    })();
+    var span=function(){return Math.max(1, window.innerHeight*1.25);};
+    var raf=false;
+    function onScroll(){
+      if(raf) return; raf=true;
+      requestAnimationFrame(function(){
+        /* once fully powered, keep panel full but flow the bus + nudge % by scroll */
+        var p=Math.min(1, 0.35 + window.scrollY/span());
+        if(loaded>=brkrs.length) setEnergy(p);
+        raf=false;
+      });
+    }
+    addEventListener('scroll',onScroll,{passive:true});
+  }
+
+  /* ---- ambient current wash intensifies slightly on scroll ---- */
+  var ambient=document.getElementById('ambient');
+  if(ambient && !RM){
+    var at=false;
+    addEventListener('scroll',function(){
+      if(at) return; at=true;
+      requestAnimationFrame(function(){
+        var h=document.documentElement.scrollHeight-innerHeight;
+        var q=h>0?scrollY/h:0;
+        var a=(0.26-0.12*q).toFixed(3);
+        ambient.style.background='radial-gradient(120% 90% at 80% 6%, rgba(226,58,46,'+a+'), rgba(0,0,0,0) 60%)';
+        at=false;
+      });
+    },{passive:true});
+  }
+
+  /* ---- AI panel ---- */
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
