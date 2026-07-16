@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Color Me Bad Painting — Interior &amp; Exterior Painters in Little Rock, Arkansas</title>
+<meta name="description" content="Color Me Bad Painting — a Little Rock, Arkansas painting crew founded by Karen Dodson. Residential and commercial interior and exterior painting, drywall repair and finishing, texture, and popcorn ceiling removal across Central Arkansas. Free estimates — call (501) 519-7170." />
+<meta name="theme-color" content="#191A1E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23191A1E'/%3E%3Crect x='7' y='9' width='18' height='7' rx='1.4' fill='%231F44E0'/%3E%3Cpath d='M16 16v4' stroke='%23BDB6A6' stroke-width='1.6'/%3E%3Crect x='13.5' y='20' width='5' height='4' rx='1' fill='%23BDB6A6'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 (before </head>) ==== -->
+<style>
+  /* ---- Custom cursor (desktop only) ---- */
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  /* ---- Scroll reveal ---- */
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  /* ---- Hero line mask ---- */
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  /* ---- Magnetic buttons ---- */
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  /* ---- Marquee ---- */
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 34s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  /* ---- Parallax + progress ---- */
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══════════════════════════════════════════════════════════════
+     COLOR ME BAD PAINTING — palette derived from the painter's world:
+     drop-cloth canvas (warm off-white) · graphite (the pencil layout
+     line) · one bold rolled hue = ELECTRIC COBALT (the wet paint) ·
+     a fan-deck of swatch accents for the service chips. The opposite
+     of a starter template — confident, name-first, one bold move.
+     ══════════════════════════════════════════════════════════════ */
+  :root{
+    --canvas:#F2EEE6; --canvas-2:#E9E2D4; --canvas-3:#DBD3C1; --card:#FBF8F1;
+    --ink:#191A1E; --ink-2:#26272D; --ink-soft:#484A55;
+    --paint:#1F44E0; --paint-dk:#1637BE; --paint-lt:#5B77FF;
+    --sw-marigold:#E7A23A; --sw-clay:#C6503C; --sw-sage:#5E8C61;
+    --sw-teal:#1F9AA0; --sw-plum:#7A4E86;
+    --mut:#7C7566; --line:rgba(25,26,30,.14); --line-2:rgba(25,26,30,.08);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--canvas);color:var(--ink);
+    font-family:'Archivo',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.6;
+    background:
+      radial-gradient(1100px 620px at 82% -8%,rgba(31,68,224,.06),transparent 60%),
+      radial-gradient(900px 640px at 4% 106%,rgba(25,26,30,.05),transparent 60%)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--paint);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Big Shoulders Display','Archivo',sans-serif}
+  .lab{font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--paint)}
+
+  /* rotated editorial side-label (archetype A furniture) */
+  .rail{position:fixed;left:15px;top:50%;transform:translateY(-50%) rotate(180deg);
+    writing-mode:vertical-rl;font-family:'Archivo',sans-serif;font-size:11px;font-weight:700;
+    letter-spacing:.38em;text-transform:uppercase;color:rgba(25,26,30,.4);z-index:40;
+    display:flex;align-items:center;gap:16px}
+  .rail::after{content:"";height:56px;width:1px;background:linear-gradient(var(--paint),transparent)}
+  @media(max-width:1240px){.rail{display:none}}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(242,238,230,.82);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:14px}
+  .brand{display:flex;align-items:center;gap:11px;white-space:nowrap}
+  .brand .chip{width:26px;height:15px;border-radius:2px;background:var(--paint);flex:none;
+    box-shadow:inset 0 -5px 0 rgba(255,255,255,.28)}
+  .brand .bt{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:21px;
+    letter-spacing:.01em;line-height:1}
+  .brand .bt small{display:block;font-family:'Archivo';font-weight:700;font-size:9px;letter-spacing:.28em;
+    color:var(--mut);margin-top:2px}
+  .navcta{display:flex;align-items:center;gap:10px}
+  .call{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:700;font-size:14.5px;
+    padding:11px 15px;border:1px solid var(--line);border-radius:10px;transition:border-color .25s,color .25s,background .25s}
+  .call:hover{border-color:var(--paint);color:var(--paint);background:rgba(31,68,224,.05)}
+  .call svg{width:15px;height:15px;flex:none}
+  .book{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--canvas);
+    font-weight:800;font-size:14.5px;padding:12px 20px;border-radius:10px;
+    transition:transform .18s var(--ease),box-shadow .25s,background .25s}
+  .book:hover{box-shadow:0 12px 30px rgba(25,26,30,.24);background:var(--paint)}
+  @media(max-width:640px){.brand .bt small{display:none} .call span{display:none} .call{padding:11px}}
+
+  /* ═══ HERO — the roller-fill wordmark ═══ */
+  header{position:relative;padding:58px 0 40px;overflow:hidden}
+  .h-eyebrow{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+  .h-eyebrow .ln{height:1px;width:38px;background:var(--paint)}
+
+  .mark{position:relative;display:inline-block;margin:0;line-height:.82;
+    padding-right:8px}
+  .mark .big{position:relative;display:block}
+  /* outline layer = pencil layout line */
+  .mark .layer{display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+    font-size:clamp(58px,17vw,190px);letter-spacing:-.005em;line-height:.82;text-transform:uppercase}
+  .mark .outline{color:transparent;-webkit-text-stroke:1.7px rgba(25,26,30,.5);text-stroke:1.7px rgba(25,26,30,.5)}
+  .mark .fill{position:absolute;inset:0;color:var(--paint);
+    clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0)}
+  .mark .fill .l2{color:var(--paint)}
+  .grown .mark .fill{animation:cmb-fill 1.55s cubic-bezier(.66,0,.3,1) .45s forwards}
+  @keyframes cmb-fill{to{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+  /* the roller travelling along the wet edge */
+  .roller{position:absolute;top:-4%;bottom:-4%;left:0;width:clamp(30px,4.4vw,58px);
+    transform:translateX(-52%);opacity:0;z-index:3;pointer-events:none}
+  .roller .nap{position:absolute;inset:0;border-radius:5px;
+    background:linear-gradient(90deg,var(--paint-dk),var(--paint) 42%,var(--paint-lt));
+    box-shadow:0 0 26px rgba(31,68,224,.5), inset 0 0 0 1px rgba(255,255,255,.14)}
+  .roller .sheen{position:absolute;top:8%;bottom:8%;left:22%;width:16%;border-radius:6px;
+    background:linear-gradient(90deg,rgba(255,255,255,.55),rgba(255,255,255,0))}
+  .roller .frame{position:absolute;top:-16px;left:50%;width:2px;height:20px;background:var(--ink);
+    transform:translateX(-50%)}
+  .roller .frame::after{content:"";position:absolute;top:-3px;left:-8px;width:18px;height:5px;
+    border-radius:3px;background:var(--ink)}
+  .grown .roller{animation:cmb-roll 1.55s cubic-bezier(.66,0,.3,1) .45s forwards}
+  @keyframes cmb-roll{
+    0%{left:0;opacity:0}
+    8%{opacity:1}
+    90%{opacity:1}
+    100%{left:100%;opacity:0}
+  }
+  .mark .sub{display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+    font-size:clamp(20px,4.6vw,50px);letter-spacing:.34em;text-transform:uppercase;color:var(--ink);
+    margin-top:.12em;padding-left:.06em}
+
+  .byline{margin:26px 0 0;font-family:'Archivo';font-size:12px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mut)}
+  .byline b{color:var(--ink)}
+  .byline .sep{display:inline-block;margin:0 9px;color:var(--paint)}
+  .h-sub{max-width:56ch;margin:20px 0 0;font-size:clamp(16.5px,2.2vw,18.5px);color:var(--ink-soft);line-height:1.58}
+  .h-sub em{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;color:var(--paint);
+    font-size:1.06em;letter-spacing:.01em}
+  .h-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px 16px;margin:22px 0 0;
+    font-size:13px;letter-spacing:.02em;color:var(--mut)}
+  .h-meta b{color:var(--ink);font-weight:700}
+  .h-meta .dot{width:5px;height:5px;border-radius:1px;background:var(--paint)}
+  .h-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;
+    font-weight:800;font-size:15px;border-radius:11px;
+    transition:transform .18s var(--ease),box-shadow .25s,border-color .25s,background .25s,color .25s}
+  .btn-a{background:var(--paint);color:#fff}
+  .btn-a:hover{background:var(--paint-dk);box-shadow:0 14px 34px rgba(31,68,224,.32)}
+  .btn-b{border:1px solid var(--line);color:var(--ink)}
+  .btn-b:hover{border-color:var(--ink);background:rgba(25,26,30,.04)}
+
+  /* swatch fan-deck ribbon */
+  .ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--canvas-2);padding:14px 0;margin-top:50px}
+  .ribbon .fs-mq__t{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:19px;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);align-items:center}
+  .ribbon .sw{display:inline-block;width:22px;height:12px;border-radius:2px;
+    box-shadow:inset 0 -4px 0 rgba(255,255,255,.3)}
+
+  section{padding:96px 0;position:relative}
+  .sec-head{max-width:66ch}
+  h2{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(28px,6vw,46px);
+    line-height:.98;letter-spacing:.005em;text-transform:uppercase;margin:12px 0 0}
+  h2 em{font-style:normal;color:var(--paint)}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--ink-soft);max-width:60ch;margin:18px 0 0}
+
+  /* ═══ SERVICES — tier ladder with paint-chip bullets ═══ */
+  .svc{background:linear-gradient(180deg,var(--canvas),var(--canvas-2))}
+  .ladder{list-style:none;margin:50px 0 0;padding:0;border-top:1px solid var(--line)}
+  .tier{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;
+    padding:28px 8px;border-bottom:1px solid var(--line);position:relative;transition:padding-left .4s var(--ease)}
+  .tier::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--chip,var(--paint));
+    transition:width .4s var(--ease)}
+  .tier:hover{padding-left:24px}
+  .tier:hover::before{width:4px}
+  .chip-card{width:66px;height:78px;border-radius:5px;flex:none;position:relative;
+    background:var(--card);box-shadow:0 2px 0 rgba(25,26,30,.06),inset 0 0 0 1px var(--line-2);
+    overflow:hidden;display:flex;flex-direction:column}
+  .chip-card .paint{height:56%;background:var(--chip,var(--paint));box-shadow:inset 0 -8px 0 rgba(255,255,255,.14)}
+  .chip-card .no{flex:1;display:grid;place-items:center;font-family:'Big Shoulders Display';font-weight:800;
+    font-size:20px;color:var(--ink-soft)}
+  .occ-name{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(23px,4vw,32px);
+    text-transform:uppercase;letter-spacing:.01em;margin:0 0 4px;line-height:.98}
+  .tservices{margin:0;color:var(--ink-soft);font-size:15.5px}
+  .tmeta{font-family:'Archivo';font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mut);white-space:nowrap;text-align:right}
+  .tmeta b{display:block;color:var(--chip,var(--paint));font-weight:800;margin-top:3px}
+  @media(max-width:720px){
+    .tier{grid-template-columns:auto 1fr;gap:14px 18px;padding:22px 4px}
+    .chip-card{width:52px;height:62px}
+    .tmeta{grid-column:2;text-align:left;margin-top:6px;white-space:normal}
+    .tier:hover{padding-left:14px}
+  }
+  .svc-note{margin-top:22px;font-size:13px;color:var(--mut);letter-spacing:.01em}
+  .svc-note b{color:var(--ink-soft)}
+
+  /* ═══ STORY / PROOF band ═══ */
+  .proof{background:var(--ink);color:var(--canvas);border-top:1px solid var(--ink)}
+  .proof .lab{color:var(--paint-lt)}
+  .proof-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  @media(max-width:900px){.proof-grid{grid-template-columns:1fr;gap:38px}}
+  .quote{font-family:'Big Shoulders Display',sans-serif;font-weight:600;
+    font-size:clamp(24px,3.4vw,38px);line-height:1.12;letter-spacing:.005em;color:#F3EFE6}
+  .quote em{font-style:normal;color:var(--paint-lt)}
+  .attr{margin-top:18px;font-size:13.5px;letter-spacing:.02em;color:#B7B1A2}
+  .attr b{color:#E9E3D4}
+  .stats{display:flex;align-items:flex-start;gap:24px;margin-top:30px;flex-wrap:wrap}
+  .stat{min-width:104px}
+  .stat .rate{font-family:'Big Shoulders Display';font-weight:800;font-size:44px;line-height:1;color:#F3EFE6}
+  .stat .rate small{font-size:22px;color:var(--paint-lt)}
+  .stat .rnote{font-size:12px;color:#A9A392;max-width:20ch;line-height:1.45;margin-top:6px}
+  .stat.div{border-left:1px solid rgba(243,239,230,.16);padding-left:24px}
+
+  /* art-directed imagery — graded so it reads commissioned, not stock */
+  .gimg{position:relative;overflow:hidden;border-radius:12px;background:var(--canvas-3)}
+  .gimg img{width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.05) saturate(.92) brightness(1.02);
+    transition:transform 1s var(--ease),filter .6s}
+  .gimg::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(150deg,rgba(31,68,224,.2),transparent 48%,rgba(25,26,30,.14));
+    mix-blend-mode:multiply}
+  .gimg::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(to top,rgba(18,18,22,.6),transparent 56%)}
+  .gimg:hover img{transform:scale(1.045);filter:contrast(1.07) saturate(1) brightness(1.03)}
+  .gcap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:15px 17px;
+    font-family:'Archivo';font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F3EFE6}
+  .stag{position:absolute;top:11px;left:11px;z-index:2;background:rgba(18,18,22,.6);color:#CFE0FF;
+    font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;border-radius:5px;
+    backdrop-filter:blur(4px)}
+  .proof-photo{aspect-ratio:4/5}
+
+  /* ═══ GALLERY ═══ */
+  .gallery .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+  .gallery .grid .gimg:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .gallery .grid .gimg{aspect-ratio:1/1}
+  .gallery .grid .gimg:nth-child(1){aspect-ratio:auto}
+  @media(max-width:820px){.gallery .grid{grid-template-columns:1fr 1fr}.gallery .grid .gimg:nth-child(1){grid-column:span 2;aspect-ratio:16/10}}
+  .gal-note{margin-top:16px;font-size:12px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+
+  /* ═══ SERVICE AREA + MAP ═══ */
+  .visit{background:var(--canvas-2)}
+  .v-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:36px}
+  @media(max-width:860px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:var(--card)}
+  .v-card h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase;
+    font-size:clamp(20px,2.6vw,23px);margin:0 0 14px;letter-spacing:.01em}
+  .addr{font-size:19px;line-height:1.5}
+  .addr b{color:var(--paint);font-weight:700}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+  .towns span{font-family:'Archivo';font-size:12.5px;font-weight:600;color:var(--ink-soft);
+    border:1px solid var(--line);padding:6px 11px;border-radius:40px}
+  .towns span.hub{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
+  .hint{margin-top:16px;display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink-soft)}
+  .hint svg{width:17px;height:17px;flex:none;stroke:var(--paint);margin-top:2px}
+  .confirm{margin-top:14px;font-size:12px;letter-spacing:.01em;color:var(--mut);
+    background:rgba(31,68,224,.06);border:1px solid var(--line-2);border-radius:9px;padding:10px 12px}
+  .confirm b{color:var(--ink-soft)}
+  .v-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+  .map{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:420px;background:var(--canvas-3)}
+
+  /* footer */
+  footer{background:var(--ink);padding:46px 0;border-top:1px solid var(--ink);
+    font-size:14px;color:rgba(242,238,230,.6)}
+  .foot-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  .foot-mark{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:24px;
+    text-transform:uppercase;color:var(--canvas);letter-spacing:.01em}
+  .foot-mark span{color:var(--paint-lt)}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(242,238,230,.12);
+    font-size:11.5px;line-height:1.65;color:rgba(242,238,230,.44)}
+
+  /* mobile action bar */
+  .mbar{display:none}
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+      background:rgba(242,238,230,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .mbar a{flex:1;text-align:center;padding:15px;font-weight:800;font-size:15px}
+    .mbar a.mcall{color:var(--ink)}
+    .mbar a.mbook{background:var(--paint);color:#fff;margin:8px;border-radius:10px;padding:14px}
+    footer{padding-bottom:92px}
+    section{padding:58px 0}
+    .ai-fab{bottom:80px !important}
+  }
+  @media(max-width:600px){
+    .wrap{padding:0 20px}
+    header{padding:40px 0 30px}
+    .mark .layer{font-size:clamp(52px,18.5vw,80px)}
+    .h-cta{flex-direction:column;align-items:stretch}
+    .h-cta .btn{width:100%}
+    .v-actions{flex-direction:column;align-items:stretch}
+    .v-actions .btn{width:100%}
+    .ribbon{margin-top:38px}
+    .stats{gap:18px}
+    .stat.div{padding-left:18px}
+  }
+
+  /* ═══ AI ASSISTANT WIDGET (demo placeholder) ═══ */
+  .ai-fab{position:fixed;right:20px;bottom:22px;z-index:75;display:inline-flex;align-items:center;gap:10px;
+    background:var(--ink);color:var(--canvas);font-weight:800;font-size:14px;border:0;cursor:pointer;
+    padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 12px 34px rgba(25,26,30,.32);
+    transition:transform .2s var(--ease),box-shadow .25s}
+  .ai-fab:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(25,26,30,.4)}
+  .ai-fab .av{width:26px;height:26px;border-radius:5px;flex:none;display:grid;place-items:center;
+    background:var(--paint);color:#fff;font-family:'Big Shoulders Display';font-weight:800;font-size:15px}
+  .ai-panel{position:fixed;right:20px;bottom:22px;z-index:76;width:min(360px,calc(100vw - 32px));
+    background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 30px 80px rgba(25,26,30,.3);opacity:0;transform:translateY(14px) scale(.98);
+    pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-hd{display:flex;align-items:center;gap:11px;padding:16px 16px 14px;
+    background:linear-gradient(120deg,rgba(31,68,224,.12),rgba(31,68,224,.03));border-bottom:1px solid var(--line)}
+  .ai-hd .av{width:34px;height:34px;border-radius:6px;flex:none;display:grid;place-items:center;
+    background:var(--paint);color:#fff;font-family:'Big Shoulders Display';font-weight:800;font-size:17px}
+  .ai-hd .who{flex:1;line-height:1.2}
+  .ai-hd .who b{font-size:15px;color:var(--ink)}
+  .ai-hd .who small{display:block;color:var(--mut);font-size:11px;letter-spacing:.03em}
+  .ai-x{background:none;border:0;color:var(--mut);cursor:pointer;font-size:20px;line-height:1;padding:4px}
+  .ai-x:hover{color:var(--ink)}
+  .ai-log{padding:16px;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+  .ai-msg{max-width:86%;padding:11px 14px;border-radius:13px;font-size:14px;line-height:1.5}
+  .ai-msg.bot{background:var(--canvas-2);color:var(--ink-soft);border-top-left-radius:4px;align-self:flex-start}
+  .ai-msg.me{background:var(--paint);color:#fff;border-top-right-radius:4px;align-self:flex-end}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+  .ai-chip{background:none;border:1px solid var(--line);color:var(--ink-soft);font-family:'Archivo';font-size:12.5px;
+    font-weight:600;padding:9px 13px;border-radius:40px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+  .ai-chip:hover{border-color:var(--paint);color:var(--paint);background:rgba(31,68,224,.05)}
+  .ai-foot{padding:12px 16px;border-top:1px solid var(--line);font-size:10.5px;color:var(--mut);
+    letter-spacing:.03em;text-align:center}
+  .ai-foot b{color:var(--paint)}
+</style>
+</head>
+<body>
+
+<div class="fs-prog" style="background:linear-gradient(90deg,var(--paint),var(--paint-lt))"></div>
+
+<div class="rail" aria-hidden="true">Color Me Bad Painting · Little Rock, Arkansas</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Color Me Bad Painting home">
+      <span class="chip" aria-hidden="true"></span>
+      <span class="bt disp">Color Me Bad<small>Painting Co. · Little Rock</small></span>
+    </a>
+    <div class="navcta">
+      <a class="call" href="tel:+15015197170" aria-label="Call Color Me Bad Painting at (501) 519-7170">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        <span>(501) 519-7170</span>
+      </a>
+      <a class="book" href="tel:+15015197170" data-magnetic="0.18">Free estimate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO — roller-fill wordmark ═══════════ -->
+<header id="top">
+  <div class="wrap">
+    <div class="h-eyebrow" data-reveal><span class="ln"></span><span class="lab">Painting · Central Arkansas · Since 2010</span></div>
+
+    <h1 class="mark" aria-label="Color Me Bad Painting">
+      <span class="big" aria-hidden="true">
+        <span class="layer outline">Color Me<br/>Bad</span>
+        <span class="layer fill"><span class="l2">Color Me<br/>Bad</span></span>
+        <span class="roller"><span class="frame"></span><span class="nap"></span><span class="sheen"></span></span>
+      </span>
+      <span class="sub" aria-hidden="true">Painting</span>
+    </h1>
+
+    <div class="byline" data-reveal style="--i:1">Founded by <b>Karen Dodson</b> <span class="sep">/</span> A Little&nbsp;Rock painting crew, twelve strong</div>
+
+    <p class="h-sub" data-reveal style="--i:2">Interior and exterior, homes and businesses — <em>painted right the first time.</em> Drywall repair and finishing, texture, popcorn ceiling removal, and the custom work most crews won't touch.</p>
+
+    <div class="h-meta" data-reveal style="--i:3">
+      <span><b>Little Rock, AR</b></span><span class="dot"></span>
+      <span>Serving Central Arkansas</span><span class="dot"></span>
+      <span><b>Free estimates</b></span>
+    </div>
+
+    <div class="h-cta" data-reveal style="--i:4">
+      <a class="btn btn-a" href="tel:+15015197170" data-magnetic="0.2">Get a free estimate — (501) 519-7170</a>
+      <a class="btn btn-b" href="#services">See what we paint</a>
+    </div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="fs-mq"><div class="fs-mq__t">
+      <span>Interior</span><span class="sw" style="background:var(--paint)"></span>
+      <span>Exterior</span><span class="sw" style="background:var(--sw-marigold)"></span>
+      <span>Drywall &amp; Finishing</span><span class="sw" style="background:var(--sw-clay)"></span>
+      <span>Texture</span><span class="sw" style="background:var(--sw-sage)"></span>
+      <span>Popcorn Ceiling Removal</span><span class="sw" style="background:var(--sw-teal)"></span>
+      <span>Residential &amp; Commercial</span><span class="sw" style="background:var(--sw-plum)"></span>
+      <span>Custom Projects</span><span class="sw" style="background:var(--paint)"></span>
+    </div></div>
+  </div>
+</header>
+
+<!-- ═══════════ SERVICES — tier ladder ═══════════ -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>What we paint</div>
+      <h2 data-reveal>Every wall, <em>every finish.</em></h2>
+      <p class="lede" data-reveal>Residential and commercial, inside and out. Here's the work Central Arkansas calls us for most — each one done by our own full-time crew, never a sub.</p>
+    </div>
+
+    <ol class="ladder">
+      <li class="tier" data-reveal style="--chip:var(--paint)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">01</div></div>
+        <div><h3 class="occ-name">Interior Painting</h3><p class="tservices">Walls, ceilings, trim and doors — clean lines, even coats, and the room put back the way we found it.</p></div>
+        <div class="tmeta">Homes &amp; business<b>Free estimate</b></div>
+      </li>
+      <li class="tier" data-reveal style="--chip:var(--sw-marigold)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">02</div></div>
+        <div><h3 class="occ-name">Exterior Painting</h3><p class="tservices">Siding, trim, fascia and fences — prepped and coated to stand up to Arkansas sun and weather.</p></div>
+        <div class="tmeta">Homes &amp; business<b>Free estimate</b></div>
+      </li>
+      <li class="tier" data-reveal style="--chip:var(--sw-clay)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">03</div></div>
+        <div><h3 class="occ-name">Drywall Repair &amp; Finishing</h3><p class="tservices">From a patched hole to full finishing on a new build — the work that earned us the bigger projects.</p></div>
+        <div class="tmeta">Prep to paint<b>Call to scope</b></div>
+      </li>
+      <li class="tier" data-reveal style="--chip:var(--sw-sage)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">04</div></div>
+        <div><h3 class="occ-name">Texture</h3><p class="tservices">Orange peel and knockdown — matched to the rest of your walls so a repair disappears.</p></div>
+        <div class="tmeta">Match &amp; blend<b>Call to scope</b></div>
+      </li>
+      <li class="tier" data-reveal style="--chip:var(--sw-teal)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">05</div></div>
+        <div><h3 class="occ-name">Popcorn Ceiling Removal</h3><p class="tservices">Scrape it off, smooth it out, refinish it clean — the fastest way to modernize a dated room.</p></div>
+        <div class="tmeta">Scrape &amp; refinish<b>Call to scope</b></div>
+      </li>
+      <li class="tier" data-reveal style="--chip:var(--sw-plum)">
+        <div class="chip-card" aria-hidden="true"><div class="paint"></div><div class="no">06</div></div>
+        <div><h3 class="occ-name">Custom Projects</h3><p class="tservices">Have something specific in mind? Tell us the project — interior or exterior — and we'll figure out how to get it done.</p></div>
+        <div class="tmeta">Just ask<b>Call to talk it through</b></div>
+      </li>
+    </ol>
+    <p class="svc-note">Every project is scoped and priced for what it actually needs — <b>call (501) 519-7170 for a free estimate.</b> Service names shown here are the shop's real trades; exact scope and pricing are set with the crew.</p>
+  </div>
+</section>
+
+<!-- ═══════════ STORY / PROOF ═══════════ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div>
+        <div class="lab" data-reveal>Built one project at a time</div>
+        <p class="quote" data-reveal style="--i:1">“After a couple years, we began to get awarded <em>larger projects</em> requiring drywall finishing, so I hired a couple of guys to help with the business.”</p>
+        <p class="attr" data-reveal style="--i:2">— <b>Karen Dodson</b>, founder. What started as a side business in <b>2010</b> went full-time in <b>2018</b>, and now runs a full-time crew across Central Arkansas.</p>
+        <div class="stats" data-reveal style="--i:3">
+          <div class="stat">
+            <span class="rate" data-count="12">12</span>
+            <div class="rnote">Full-time painters — our own crew, on every job.</div>
+          </div>
+          <div class="stat div">
+            <span class="rate">350&ndash;<span data-count="400">400</span></span>
+            <div class="rnote">Projects painted a year across Central Arkansas.</div>
+          </div>
+          <div class="stat div">
+            <span class="rate">Since <span data-count="2010">2010</span></span>
+            <div class="rnote">Little Rock owned and operated — residential &amp; commercial.</div>
+          </div>
+        </div>
+      </div>
+      <div class="gimg proof-photo" data-reveal="scale">
+        <span class="stag">Sample</span>
+        <img src="assets/crew.jpg" alt="A painter in blue coveralls holding a roller in front of a freshly painted wall" width="1000" height="1250" loading="lazy" decoding="async" />
+        <div class="gcap">Our own full-time crew — not a rotating cast of subs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>On the wall</div>
+      <h2 data-reveal>Fresh coats, clean lines.</h2>
+      <p class="lede" data-reveal>Rollers loaded, edges cut by hand. On launch, this fills with Color Me Bad's own before-and-afters from around Central Arkansas.</p>
+    </div>
+    <div class="grid">
+      <div class="gimg" data-reveal>
+        <span class="stag">Sample</span>
+        <img src="assets/roller.jpg" alt="A loaded paint roller against a wall painted a new warm color over the old" width="1000" height="1333" loading="lazy" decoding="async" />
+        <div class="gcap">Interior · rolling a fresh color</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:1">
+        <span class="stag">Sample</span>
+        <img src="assets/exterior.jpg" alt="A two-story house with freshly painted blue exterior siding and white trim" width="1000" height="750" loading="lazy" decoding="async" />
+        <div class="gcap">Exterior · siding &amp; trim</div>
+      </div>
+      <div class="gimg" data-reveal style="--i:2">
+        <span class="stag">Sample</span>
+        <img src="assets/brush.jpg" alt="A paintbrush resting on a wood surface, ready for cutting in edges" width="1000" height="667" loading="lazy" decoding="async" />
+        <div class="gcap">Cutting in by hand</div>
+      </div>
+    </div>
+    <p class="gal-note">Sample photography — the crew's real project photos replace every frame on launch.</p>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICE AREA + MAP ═══════════ -->
+<section class="visit" id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="lab" data-reveal>Where we work</div>
+      <h2 data-reveal>Little Rock, and all over Central Arkansas.</h2>
+      <p class="lede" data-reveal>Based in Little Rock, on the road across the region. If your town's on the list, we'll come take a look and give you a number — free.</p>
+    </div>
+    <div class="v-grid" style="margin-top:44px">
+      <div>
+        <div class="v-card" data-reveal>
+          <h3>Free estimates · call to schedule</h3>
+          <p class="addr"><b>Little Rock, AR</b><br/>Serving Central Arkansas</p>
+          <div class="towns" aria-label="Towns served">
+            <span class="hub">Little Rock</span>
+            <span>Cabot</span><span>Bryant</span><span>Benton</span>
+            <span>Hot Springs</span><span>Arkadelphia</span>
+            <span>Pine Bluff</span><span>Russellville</span>
+          </div>
+          <div class="hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>We come to you to look at the job, measure it up, and quote it — no charge for the visit.</span>
+          </div>
+          <div class="confirm">Scheduling runs around active job sites, so times move week to week — <b>call (501) 519-7170</b> and we'll set the soonest we can get out. Exact hours confirm with the crew on launch.</div>
+          <div class="v-actions">
+            <a class="btn btn-a" href="tel:+15015197170">Call (501) 519-7170</a>
+            <a class="btn btn-b" href="#services">See services</a>
+          </div>
+        </div>
+      </div>
+      <div class="map" data-reveal="scale">
+        <iframe title="Map — Color Me Bad Painting, Little Rock AR" src="https://www.google.com/maps?q=Color+Me+Bad+Painting,+Little+Rock,+AR&z=10&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-mark disp">Color Me <span>Bad</span> Painting</div>
+        <div style="margin-top:8px">Little Rock, AR · Serving Central Arkansas<br/>(501) 519-7170 · Founded by Karen Dodson · Since 2010</div>
+      </div>
+      <div style="text-align:right">
+        Interior · Exterior · Drywall &amp; Finishing<br/>Texture · Popcorn Ceiling Removal · Custom
+      </div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Color Me Bad Painting. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography shown are placeholders, replaced with the crew's own on launch.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="mcall" href="tel:+15015197170">Call</a>
+  <a class="mbook" href="tel:+15015197170">Free estimate</a>
+</div>
+
+<!-- ═══════════ AI ASSISTANT WIDGET (demo placeholder) ═══════════ -->
+<button class="ai-fab" id="aiFab" aria-expanded="false" aria-controls="aiPanel">
+  <span class="av" aria-hidden="true">C</span> Ask us
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-modal="false" aria-label="Color Me Bad Painting assistant (demo)">
+  <div class="ai-hd">
+    <span class="av" aria-hidden="true">C</span>
+    <div class="who"><b>Color Me Bad Painting</b><small>Answers in seconds · demo</small></div>
+    <button class="ai-x" id="aiX" aria-label="Close assistant">×</button>
+  </div>
+  <div class="ai-log" id="aiLog" aria-live="polite">
+    <div class="ai-msg bot">Hey there — I'm Color Me Bad's assistant. On the live site I answer questions and help you set up a free estimate. Tap one below to see how it works.</div>
+  </div>
+  <div class="ai-chips" id="aiChips">
+    <button class="ai-chip" data-q="What do you paint?">What we paint</button>
+    <button class="ai-chip" data-q="Where do you work?">Service area</button>
+    <button class="ai-chip" data-q="How do estimates work?">Estimates</button>
+    <button class="ai-chip" data-q="Residential or commercial?">Res / commercial</button>
+  </div>
+  <div class="ai-foot"><b>Demo assistant</b> — sample answers. Wired to real estimates &amp; FAQs on launch.</div>
+</div>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 (before </body>) ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- Custom cursor ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  /* ---------- Magnetic ---------- */
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  /* ---------- Count-up ---------- */
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          requestAnimationFrame(function step(ts){
+            if(t0===null) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString('en-US',{useGrouping:false}) + suf;
+            if(p<1) requestAnimationFrame(step);
+          });
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  /* ---------- Marquee: duplicate track for seamless loop ---------- */
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  /* ---------- Scroll progress ---------- */
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+
+<!-- ═══ SIGNATURE: the roller sweeps across the wordmark on load ═══ -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var header = document.getElementById('top');
+  if(!header) return;
+  if(RM){
+    var f=header.querySelector('.mark .fill'); if(f){f.style.clipPath='inset(0 0 0 0)';f.style.webkitClipPath='inset(0 0 0 0)';}
+    var r=header.querySelector('.roller'); if(r) r.style.display='none';
+    return;
+  }
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){ header.classList.add('grown'); });
+  });
+})();
+</script>
+
+<!-- ═══ AI assistant (demo placeholder) ═══ -->
+<script>
+(function(){
+  var fab=document.getElementById('aiFab'), panel=document.getElementById('aiPanel'),
+      x=document.getElementById('aiX'), log=document.getElementById('aiLog'),
+      chips=document.getElementById('aiChips');
+  if(!fab||!panel) return;
+  var ANSWERS={
+    "What do you paint?":"Interior and exterior — walls, ceilings, trim and siding — plus drywall repair and finishing, texture (orange peel and knockdown), and popcorn ceiling removal. Residential and commercial both.",
+    "Where do you work?":"We're based in Little Rock and work all over Central Arkansas — Cabot, Bryant, Benton, Hot Springs, Arkadelphia, Pine Bluff, Russellville and around. Call (501) 519-7170 and we'll tell you if you're on the route.",
+    "How do estimates work?":"Estimates are free. Call (501) 519-7170, tell us the project, and we'll come look at it, measure it up, and give you a number — no charge for the visit.",
+    "Residential or commercial?":"Both. From a single room to a full commercial building — our own full-time crew handles it. Tell us what you've got and we'll scope it."
+  };
+  function open(){ panel.classList.add('open'); fab.setAttribute('aria-expanded','true'); fab.style.opacity='0'; fab.style.pointerEvents='none'; x.focus(); }
+  function close(){ panel.classList.remove('open'); fab.setAttribute('aria-expanded','false'); fab.style.opacity=''; fab.style.pointerEvents=''; fab.focus(); }
+  function add(cls,txt){ var d=document.createElement('div'); d.className='ai-msg '+cls; d.textContent=txt; log.appendChild(d); log.scrollTop=log.scrollHeight; }
+  fab.addEventListener('click',open);
+  x.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&panel.classList.contains('open')) close(); });
+  chips.addEventListener('click',function(e){
+    var b=e.target.closest('.ai-chip'); if(!b) return;
+    var q=b.getAttribute('data-q');
+    add('me',q);
+    setTimeout(function(){ add('bot', ANSWERS[q]||"On the live site I'd answer that and help you set up a free estimate."); }, 340);
+  });
+})();
+</script>
+
+</body>
+</html>
