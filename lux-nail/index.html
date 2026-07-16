@@ -40,7 +40,6 @@
   .fr{font-family:'Fraunces',serif}
   .kick{font-family:'Jost';font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--rose-dk);font-weight:500}
   .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,36px)}
-  .mock{position:relative;z-index:6;background:var(--plum);color:var(--gold-lt);text-align:center;font-size:11.5px;font-weight:500;letter-spacing:.03em;padding:8px 14px;font-family:'Jost'}
 
   /* NAV */
   header.top{position:sticky;top:0;z-index:5;background:rgba(251,245,239,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -203,8 +202,6 @@
 </style>
 </head>
 <body>
-<div class="mock">DEMO MOCKUP — built for Lux Nail Spa by Nate Witt · real phone (501) 667-9556 &amp; online booking · sample prices, reviews &amp; photos swapped for the salon's own on launch</div>
-
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Lux Nail Spa home">
@@ -305,18 +302,9 @@
       </div>
 
       <!-- map tile -->
-      <a class="tile gal col2 row2 reveal" href="https://maps.google.com/?q=Lux+Nail+Spa+608+S+Main+St+Searcy+AR" target="_blank" rel="noopener">
-        <div class="ph" data-c="South Main · Searcy" style="background:
-          linear-gradient(rgba(75,36,56,.08),rgba(75,36,56,.08)),
-          repeating-linear-gradient(0deg,transparent 0 26px,rgba(75,36,56,.06) 26px 27px),
-          repeating-linear-gradient(90deg,transparent 0 26px,rgba(75,36,56,.06) 26px 27px),
-          linear-gradient(140deg,#EFE2D6,#E4CBCF);display:grid;place-items:center">
-          <span style="text-align:center;color:var(--plum)">
-            <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span style="display:block;font-family:'Fraunces';font-size:15px;margin-top:6px">Find us on Main St</span>
-          </span>
-        </div>
-      </a>
+      <div class="tile gal col2 row2 reveal">
+        <iframe title="Map — Lux Nail Spa, Searcy AR" src="https://www.google.com/maps?q=608+S+Main+St%2C+Searcy%2C+AR+72143&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
     </div>
 
     <!-- BOOKING BAND -->
@@ -360,7 +348,6 @@
     reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
     are replaced with the owner's real details if this site is built. This page is set to
     <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
