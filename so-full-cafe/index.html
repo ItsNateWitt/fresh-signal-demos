@@ -67,10 +67,6 @@
   .grade::after{content:"";position:absolute;inset:0;
     background:radial-gradient(120% 90% at 50% 45%,transparent 30%,rgba(27,23,18,.55) 75%,rgba(27,23,18,.9) 100%)}
 
-  /* ————— demo banner ————— */
-  .mock{position:relative;z-index:80;background:var(--smoke-2);color:var(--yam);text-align:center;font-size:12.5px;line-height:1.45;font-weight:600;padding:9px 16px}
-  .mock b{color:#fff}
-
   /* ————— minimal chrome nav ————— */
   .nav{position:absolute;left:0;right:0;z-index:60;transition:background .35s var(--ease),backdrop-filter .35s}
   .nav.solid{position:fixed;top:0;background:rgba(27,23,18,.92);backdrop-filter:blur(8px)}
@@ -249,27 +245,6 @@
   .mapbox b{display:block;font-family:'Fraunces';font-weight:900;font-size:17px}
   .mapbox small{display:block;font-size:12px;color:var(--mut);margin-top:6px}
 
-  /* ————— FRESH SIGNAL CLOSE ————— */
-  .fs{background:var(--butter);border-top:1px solid rgba(42,36,28,.18);padding:clamp(80px,11vw,140px) 0}
-  .fs .in{max-width:760px;margin:0 auto}
-  .fs .kick{font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--mut)}
-  .fs h2{font-family:'Fraunces';font-weight:900;font-size:clamp(32px,4.6vw,56px);line-height:1.06;margin-top:18px;max-width:16ch}
-  .fs h2 em{font-style:italic;color:var(--hot)}
-  .fs .letter{margin-top:26px;font-size:17.5px;color:#4a4136;max-width:56ch}
-  .fs .letter p + p{margin-top:14px}
-  .fs hr{border:0;border-top:1px solid rgba(42,36,28,.2);margin:clamp(34px,5vw,50px) 0}
-  .offer{border:1px solid rgba(42,36,28,.22);background:#fbf6e9}
-  .offer .row{display:flex;gap:18px;align-items:baseline;padding:22px clamp(20px,3vw,30px);border-bottom:1px solid rgba(42,36,28,.14);flex-wrap:wrap}
-  .offer .row:last-child{border-bottom:0}
-  .offer .amt{font-family:'Fraunces';font-weight:900;font-size:clamp(24px,3vw,32px);color:var(--collard);white-space:nowrap;min-width:9ch}
-  .offer .amt.b{color:var(--hot)}
-  .offer .amt.c{font-size:clamp(19px,2.2vw,23px);color:var(--smoke)}
-  .offer .what{font-size:16px;color:#4a4136;flex:1;min-width:250px}
-  .fs .why{margin-top:26px;font-size:15.5px;color:var(--mut);font-style:italic;max-width:58ch}
-  .fs .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
-  .fs .ghost{font-size:14px;color:var(--mut)}
-  .fs .sign{margin-top:30px;font-family:'Fraunces';font-style:italic;font-weight:600;font-size:19px;color:var(--collard)}
-
   footer{background:var(--smoke-2);color:rgba(246,238,217,.62);text-align:center;padding:clamp(46px,6vw,70px) 22px;font-size:14.5px}
   footer .mark{font-family:'Fraunces';font-weight:900;font-size:clamp(28px,4.4vw,50px);color:var(--butter);letter-spacing:-.02em;margin-bottom:14px}
   footer .mark em{font-style:italic;color:var(--yam)}
@@ -366,8 +341,6 @@
 </head>
 <body>
 <a class="skip" href="#menu">Skip to the menu</a>
-
-<div class="mock">DEMO MOCKUP — built for <b>The So Full Cafe</b> by Nate Witt · real name, phone (501) 615-8551, address &amp; dishes · <b>sample photos</b>, sample prices, hours &amp; reviews — all swapped for the cafe's own on launch</div>
 
 <header class="hero" id="top">
   <div class="shot">
@@ -657,47 +630,10 @@
           <a class="btn btn-line" href="https://maps.google.com/?q=The+So+Full+Cafe+7805+Kampground+Way+North+Little+Rock+AR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
         </div>
       </div>
-      <div class="mapbox rv d1">
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <b>Kampground Way · North Little Rock</b>
-          <small>Live Google map embeds here on launch</small>
-        </div>
+      <div class="mapbox rv d1" style="padding:0;overflow:hidden;display:block">
+        <iframe title="Map — The So Full Cafe, North Little Rock AR" src="https://www.google.com/maps?q=7805+Kampground+Way%2C+North+Little+Rock%2C+AR+72118&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="fs" id="fresh-signal" aria-labelledby="fs-h">
-  <div class="wrap in">
-    <span class="kick">A note from the person who built this</span>
-    <h2 id="fs-h">This page doesn't exist yet. <em>It's already yours.</em></h2>
-    <div class="letter">
-      <p>I'm Nate. I build websites for local shops here in Central Arkansas. I made this mockup for The So Full Cafe before we ever spoke, because a kitchen doing oxtails like yours deserves a better front door than a Facebook page and a delivery app.</p>
-      <p>Everything on it marked "sample" — the photos, the prices, the hours, the reviews — gets replaced with your real ones. If you want it, it's live in 2–3 days. If you don't, keep the link. It's yours either way.</p>
-    </div>
-    <hr />
-    <div class="offer">
-      <div class="row">
-        <span class="amt">$250<br><span style="font-size:11px;font-family:'Work Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700">one-time</span></span>
-        <span class="what">The whole setup: this site made real with your photos and menu, your Google Business Profile fixed so people find <em>you</em> instead of an aggregator, and a simple AI assistant that answers the common questions and helps folks reach you or book catering.</span>
-      </div>
-      <div class="row">
-        <span class="amt b">$79<br><span style="font-size:11px;font-family:'Work Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700">per month</span></span>
-        <span class="what">Starting the month after launch — basic upkeep of the servers and services that keep it live: hosting, updates, your Google page. Cancel anytime.</span>
-      </div>
-      <div class="row">
-        <span class="amt c">2–3 days</span>
-        <span class="what">That's how fast it goes live, because it's already about 80% built — you're looking at it.</span>
-      </div>
-    </div>
-    <p class="why">An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month. AI lets me build in days what used to take a team weeks — I pass that on, because I'd rather price it so it's easy to say yes and earn a long relationship.</p>
-    <div class="cta">
-      <a class="btn btn-ink" href="sms:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4.2-1L3 20l1.3-4.3A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>Text Nate — (501) 757-3468</a>
-      <a class="btn btn-line" style="color:var(--smoke);border-color:rgba(42,36,28,.35)" href="tel:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6"/></svg>Or call</a>
-      <span class="ghost">No pressure. The demo stays yours either way.</span>
-    </div>
-    <p class="sign">— Nate Witt, Fresh Signal · Central Arkansas</p>
   </div>
 </section>
 
@@ -717,7 +653,6 @@
     and is replaced with the owner's real photos if this site is built. Any hours, prices, staff names,
     ratings and reviews marked SAMPLE are illustrative placeholders, not representations of fact.
     This page is set to <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
