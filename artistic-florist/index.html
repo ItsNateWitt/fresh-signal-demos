@@ -31,7 +31,6 @@
   h1,h2,h3,.disp{font-family:'Bodoni Moda',Georgia,serif;font-weight:500}
   .kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
   .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(18px,5vw,56px)}
-  .mock{background:var(--plum-dk);color:var(--rose-lt);text-align:center;font-size:12px;letter-spacing:.03em;padding:8px 14px}
 
   /* nav */
   nav{position:sticky;top:0;z-index:40;background:rgba(251,247,242,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -143,12 +142,7 @@
   .cinfo .hrs div span:last-child{font-weight:500}
   .cinfo .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
   .cinfo .flag{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(180,137,74,.14);color:var(--gold);padding:4px 9px;border-radius:6px;margin-top:12px}
-  .cmap{border-radius:18px;min-height:260px;background:
-    radial-gradient(circle at 40% 40%,rgba(201,139,148,.35),transparent 60%),
-    linear-gradient(140deg,#e7e0d6,#d3ddcd);display:grid;place-items:center;text-align:center;border:1px solid var(--line)}
-  .cmap .pin{width:42px;height:42px;color:var(--plum);margin:0 auto 10px}
-  .cmap b{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-  .cmap small{display:block;font-size:12px;color:var(--mut);margin-top:4px}
+  .cmap{border-radius:18px;min-height:420px;overflow:hidden;border:1px solid var(--line)}
 
   footer{background:var(--plum-dk);color:rgba(251,247,242,.6);padding:40px 0}
   footer .in{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
@@ -217,8 +211,6 @@
 </script>
 </head>
 <body>
-<div class="mock">DEMO MOCKUP for Artistic Florist &amp; Gifts · real name, Searcy address &amp; phone (501) 268-4333 · sample arrangement names, prices &amp; hours — swapped for the shop's own on launch</div>
-
 <nav>
   <div class="bar">
     <a class="brand" href="#top">
@@ -370,12 +362,8 @@
             <a class="btn btn-line" href="https://maps.google.com/?q=Artistic+Florist+%26+Gifts+1233+W+Beebe+Capps+Searcy+AR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
           </div>
         </div>
-        <div class="cmap reveal" aria-hidden="true">
-          <div>
-            <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <b>Searcy, Arkansas</b>
-            <small>Live Google Map embeds here on launch</small>
-          </div>
+        <div class="cmap reveal">
+          <iframe title="Map — Artistic Florist, Searcy AR" src="https://www.google.com/maps?q=Artistic+Florist+%26+Gifts%2C+1233+W+Beebe+Capps+Expy%2C+Searcy%2C+AR+72143&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
         </div>
       </div>
     </div>
@@ -399,7 +387,6 @@
     reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
     are replaced with the owner's real details if this site is built. This page is set to
     <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
