@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Fulmer's Locksmith — Locks, Keys &amp; Safes | Conway, AR · Since 1965</title>
+<meta name="description" content="Fulmer's Locksmith — serving Conway, AR and Heber Springs since 1965. Emergency lockouts, rekeying, deadbolts, lock repair, automotive key programming, electronic locks and safes. Residential · automotive · commercial. Call (501) 450-2665." />
+<meta name="theme-color" content="#0C0D10" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D10'/%3E%3Cg fill='none' stroke='%23C69A4E' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='5'/%3E%3Cpath d='M14.5 14.5 L24 24'/%3E%3Cpath d='M20 20 l3 0 M22.5 22.5 l2.5 0'/%3E%3C/g%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 36s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;
+    background:linear-gradient(90deg,var(--brass),var(--steel))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ FULMER'S LOCKSMITH — Spec Sheet (G) · cool gunmetal enclosure, heritage brass + blueprint steel, cylinder-that-sets hero ══ */
+  :root{
+    --ink:#0C0D10; --ink2:#101216; --ink3:#08090B;
+    --panel:#16181D; --panel2:#1E2127; --panel3:#262A31;
+    --line:rgba(222,228,238,.09); --line2:rgba(222,228,238,.17);
+    --grid:rgba(127,168,201,.09);
+    --txt:#EEF0F3; --soft:#B7BDC7; --mut:#7C828C;
+    --brass:#C69A4E; --brass2:#E7C87F; --on-brass:#191308;
+    --steel:#7FA8C9; --steel2:#A9C8E0;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--ink);color:var(--txt);
+    font-family:'Figtree',system-ui,-apple-system,sans-serif;font-size:16.5px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--brass2);outline-offset:3px;border-radius:2px}
+  .disp{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  .ambient{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:soft-light;
+    background:radial-gradient(120% 90% at 82% 4%, rgba(198,154,78,.22), rgba(0,0,0,0) 58%)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(8,9,11,.9);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+  .mark .gg{width:38px;height:38px;flex:none}
+  .mark .txt b{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;letter-spacing:.03em;
+    line-height:.92;display:block;color:var(--txt)}
+  .mark .txt b i{font-style:normal;color:var(--brass2)}
+  .mark .txt small{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--brass);display:block;margin-top:3px}
+  .call{display:inline-flex;align-items:center;gap:9px;background:var(--brass);color:var(--on-brass);
+    text-decoration:none;padding:12px 18px;border-radius:9px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--brass2)}
+  .call svg{width:15px;height:15px;flex:none}
+  .call .lbl-full{display:inline}
+
+  /* hero */
+  header{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink2)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 46%;
+    filter:grayscale(.14) brightness(.42) contrast(1.12) saturate(.74) sepia(.2) hue-rotate(-6deg)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(8,9,11,.62) 0%,rgba(8,9,11,.2) 28%,rgba(8,9,11,.97) 100%),
+      linear-gradient(74deg,rgba(8,9,11,.84) 0%,rgba(8,9,11,0) 62%)}
+  .hero-grid{position:absolute;inset:0;pointer-events:none;opacity:.55;
+    background:
+      linear-gradient(var(--grid) 1px,transparent 1px) 0 0/100% 46px,
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/46px 100%;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,0) 70%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,0) 70%)}
+  .hero-rule{position:absolute;left:0;right:0;top:0;height:3px;z-index:4;
+    background:linear-gradient(90deg,var(--brass) 0%,var(--brass2) 34%,var(--steel) 74%,var(--steel2) 100%)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:118px 0 70px}
+  .hero-grid-l{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+  @media(max-width:900px){.hero-grid-l{grid-template-columns:1fr;gap:34px}}
+
+  .kicker{display:inline-flex;align-items:center;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--brass2);margin-bottom:22px}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--brass);flex:none;
+    box-shadow:0 0 0 4px rgba(198,154,78,.16)}
+  h1{margin:0 0 22px;font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:clamp(44px,10vw,92px);line-height:.96;letter-spacing:-.02em;max-width:15ch}
+  h1 .c{color:var(--brass2)}
+  .hero-sub{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:53ch;margin:0 0 30px}
+  .hero-sub b{color:var(--txt);font-weight:600}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:10px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--brass);color:var(--on-brass)}
+  .btn-a:hover{background:var(--brass2)}
+  .btn-b{border:1.5px solid rgba(222,228,238,.3);color:var(--txt)}
+  .btn-b:hover{border-color:var(--brass2);color:var(--brass2)}
+  .btn svg{width:16px;height:16px;flex:none}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .hero-badges span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--soft);border:1px solid var(--line2);padding:7px 11px;border-radius:20px;background:rgba(8,9,11,.4)}
+  .hero-badges span b{color:var(--brass2);font-weight:600}
+
+  /* ══ SIGNATURE — the cylinder that sets & turns ══ */
+  .cyl-card{position:relative;justify-self:end;width:min(390px,100%);
+    background:linear-gradient(180deg,rgba(30,33,39,.82),rgba(16,18,22,.86));
+    border:1px solid var(--line2);border-radius:16px;padding:20px 20px 16px;
+    box-shadow:0 30px 70px rgba(0,0,0,.55);backdrop-filter:blur(7px)}
+  @media(max-width:900px){.cyl-card{justify-self:center;width:min(410px,100%)}}
+  .cyl-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .cyl-top .stat{display:inline-flex;align-items:center;gap:7px;color:var(--mut);transition:color .3s}
+  .cyl-top .stat i{width:7px;height:7px;border-radius:50%;background:var(--mut);font-style:normal;transition:background .3s,box-shadow .3s}
+  .cyl-card.unlocked .cyl-top .stat{color:var(--brass2)}
+  .cyl-card.unlocked .cyl-top .stat i{background:var(--brass);box-shadow:0 0 0 3px rgba(198,154,78,.2)}
+
+  .plug{position:relative;border:1px solid var(--line2);border-radius:12px;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(38,42,49,.6),rgba(10,11,13,.6)),
+      repeating-linear-gradient(180deg,rgba(255,255,255,.014) 0 2px,transparent 2px 4px);
+    padding:16px 14px 12px}
+  .shear{position:absolute;left:12px;right:12px;top:76px;height:0;border-top:1px dashed rgba(127,168,201,.55);z-index:3}
+  .shear::after{content:"SHEAR LINE";position:absolute;right:0;top:-13px;font-family:'IBM Plex Mono',monospace;
+    font-size:7.5px;letter-spacing:.14em;color:var(--steel)}
+  .chambers{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;height:118px;z-index:2}
+  .pin{position:relative;border-radius:5px 5px 0 0;
+    background:linear-gradient(180deg,rgba(127,168,201,.05),transparent);overflow:visible}
+  .pin .spring{position:absolute;left:50%;top:2px;width:12px;height:20px;transform:translateX(-50%);
+    background:repeating-linear-gradient(180deg,var(--mut) 0 1.5px,transparent 1.5px 4px);opacity:.5;transition:top .5s var(--ease)}
+  .pin .driver{position:absolute;left:50%;top:24px;width:13px;height:34px;transform:translateX(-50%);border-radius:3px;
+    background:linear-gradient(180deg,#5a5f68,#2c3038);box-shadow:inset 0 0 3px rgba(0,0,0,.5);
+    transition:top .5s var(--ease)}
+  .pin .keypin{position:absolute;left:50%;top:64px;width:13px;height:30px;transform:translateX(-50%);border-radius:0 0 3px 3px;
+    background:linear-gradient(180deg,#7d6531,#4a3a17);box-shadow:inset 0 0 3px rgba(0,0,0,.5);
+    transition:top .5s var(--ease),background .5s}
+  .pin.set .spring{top:-6px}
+  .pin.set .driver{top:14px}                 /* driver retracts fully above shear */
+  .pin.set .keypin{top:46px;background:linear-gradient(180deg,var(--brass2),var(--brass))}
+  .pin.set::after{content:"";position:absolute;inset:-2px -1px;border-radius:6px;
+    box-shadow:0 0 12px rgba(198,154,78,.28);pointer-events:none}
+
+  /* the key blade with bitting cuts, riding under the pins */
+  .keyway{position:relative;margin-top:6px;height:40px;z-index:2}
+  .blade{position:absolute;left:0;right:0;top:8px;height:26px}
+  .blade svg{width:100%;height:100%;display:block}
+  .plug-rot{transition:transform .8s var(--ease)}
+  .cyl-card.unlocked .plug-rot{transform:rotate(13deg)}
+  .bit-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:2px}
+  .bit-scale span{font-family:'IBM Plex Mono',monospace;font-size:9px;text-align:center;color:var(--mut);
+    border-top:1px solid var(--line);padding-top:5px;transition:color .3s}
+  .cyl-card.unlocked .bit-scale span{color:var(--steel2)}
+
+  .cyl-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:13px;
+    border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+  .cyl-foot .stamp{border:1px solid var(--brass);color:var(--brass2);border-radius:5px;padding:4px 8px;letter-spacing:.14em}
+  .cyl-foot b{color:var(--brass2);font-weight:600}
+  .cyl-hint{text-align:center;margin:11px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
+  /* marquee strip */
+  .strip{background:var(--brass);color:var(--on-brass);border-top:3px solid var(--ink2);border-bottom:3px solid var(--ink2);
+    position:relative;z-index:2}
+  .strip .fs-mq{padding:13px 0}
+  .strip .fs-mq__t span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;letter-spacing:.02em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:rgba(25,19,8,.4)}
+
+  section{padding:100px 0;position:relative;z-index:2}
+  .lab{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brass2);margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .lab::before{content:"";width:28px;height:2px;background:var(--brass)}
+  h2{font-family:'Space Grotesk',sans-serif;font-weight:600;
+    font-size:clamp(28px,6vw,46px);line-height:1.03;letter-spacing:-.018em;margin:0 0 18px;max-width:20ch}
+  h2 .c{color:var(--brass2)}
+  .lede{font-size:clamp(16.5px,2.2vw,18.5px);color:var(--soft);max-width:60ch;margin:0 0 44px}
+
+  /* ══ SPEC SHEET — the service directory ══ */
+  .spec{background:var(--ink2)}
+  .sheet{border:1px solid var(--line2);border-radius:16px;overflow:hidden;background:var(--panel);
+    box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .sheet-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:16px 22px;background:var(--ink3);border-bottom:1px solid var(--line2);
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .sheet-head b{color:var(--brass2);font-weight:600}
+  .srow{display:grid;grid-template-columns:1.35fr 1.5fr .9fr;gap:0;border-bottom:1px solid var(--line);
+    transition:background .22s}
+  .srow:last-child{border-bottom:none}
+  .srow:hover{background:var(--panel2)}
+  .srow > div{padding:20px 22px}
+  .srow .sc-name{display:flex;flex-direction:column;gap:5px;border-right:1px solid var(--line)}
+  .srow .sc-name .no{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--brass2)}
+  .srow .sc-name h3{font-family:'Space Grotesk',sans-serif;font-weight:600;
+    font-size:clamp(20px,2.6vw,23px);margin:0;line-height:1.05;letter-spacing:-.01em}
+  .srow .sc-desc{color:var(--soft);font-size:15px;border-right:1px solid var(--line);display:flex;align-items:center}
+  .srow .sc-tag{display:flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.06em;color:var(--brass2);text-transform:uppercase}
+  .srow.hot .sc-tag{color:var(--steel2)}
+  @media(max-width:720px){
+    .srow{grid-template-columns:1fr}
+    .srow > div{padding:16px 20px}
+    .srow .sc-name{border-right:none;border-bottom:1px solid var(--line);padding-bottom:14px}
+    .srow .sc-desc{border-right:none}
+    .srow .sc-tag{padding-top:0;padding-bottom:18px}
+  }
+  .sheet-note{margin:18px 2px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut)}
+  .sheet-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+    padding:22px 24px;border:1px solid var(--line2);border-radius:14px;background:var(--panel)}
+  .sheet-cta p{margin:0;font-size:16px;color:var(--soft);flex:1;min-width:240px}
+  .sheet-cta b{color:var(--txt)}
+
+  /* ══ THREE DOORS — residential / automotive / commercial ══ */
+  .doors{background:var(--ink3);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .door-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  @media(max-width:820px){.door-grid{grid-template-columns:1fr}}
+  .dc{border:1px solid var(--line2);border-radius:15px;padding:28px 26px;background:var(--panel);
+    position:relative;overflow:hidden;transition:border-color .25s,transform .25s var(--ease)}
+  .dc:hover{border-color:rgba(198,154,78,.42);transform:translateY(-3px)}
+  .dc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--brass)}
+  .dc.b2::before{background:var(--steel)}
+  .dc.b3::before{background:var(--brass2)}
+  .dc .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+  .dc h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);
+    margin:8px 0 12px;letter-spacing:-.01em}
+  .dc p{margin:0;color:var(--soft);font-size:15.5px}
+  .dc ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .dc ul li{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--soft);
+    border:1px solid var(--line2);padding:6px 11px;border-radius:8px}
+
+  /* ══ PROOF gallery ══ */
+  .proof{background:var(--ink)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+  @media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr;grid-auto-rows:190px}}
+  .pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:13px;border:1px solid var(--line)}
+  .pgrid img{width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.2) contrast(1.05) brightness(.82) saturate(.8) sepia(.16) hue-rotate(-6deg);
+    transition:transform .8s var(--ease)}
+  .pgrid figure::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;
+    background:linear-gradient(140deg,rgba(198,154,78,.18),rgba(127,168,201,.12))}
+  .pgrid figure.big{grid-column:span 2;grid-row:span 2}
+  .pgrid figure:hover img{transform:scale(1.05)}
+  .pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px;z-index:2;
+    background:linear-gradient(transparent,rgba(8,9,11,.92));
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt)}
+  .pgrid .stag{position:absolute;top:9px;left:9px;z-index:2;background:rgba(8,9,11,.72);color:var(--brass2);
+    font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px}
+  .pnote{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* ══ CREDENTIALS — etched key-blank plates ══ */
+  .creds{background:var(--ink2);border-top:1px solid var(--line)}
+  .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:820px){.cred-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.cred-grid{grid-template-columns:1fr}}
+  .cred{border:1px solid var(--line);border-radius:14px;padding:24px 22px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    display:flex;flex-direction:column;gap:8px;transition:border-color .25s,transform .25s var(--ease);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+  .cred:hover{border-color:var(--line2);transform:translateY(-3px)}
+  .cred .ic{width:34px;height:34px;color:var(--brass2);margin-bottom:4px}
+  .cred b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);line-height:1.02;
+    color:var(--txt)}
+  .cred small{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);line-height:1.5}
+  /* the affordability creed — full weight */
+  .disc{margin-top:16px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+    padding:26px 28px;border:1px solid var(--brass);border-radius:16px;
+    background:linear-gradient(120deg,rgba(198,154,78,.12),rgba(127,168,201,.03))}
+  @media(max-width:680px){.disc{grid-template-columns:1fr;gap:16px;text-align:left}}
+  .disc .badge{width:56px;height:56px;flex:none;color:var(--brass2)}
+  .disc h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);margin:0 0 6px;
+    letter-spacing:-.01em}
+  .disc p{margin:0;color:var(--soft);font-size:15.5px;max-width:58ch}
+  .disc .who{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--brass2);white-space:nowrap}
+
+  /* ══ SERVICE AREA — map + two shops ══ */
+  .area{background:var(--ink3);border-top:1px solid var(--line)}
+  .a-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:stretch}
+  @media(max-width:900px){.a-grid{grid-template-columns:1fr}}
+  .a-info{display:flex;flex-direction:column;gap:16px}
+  .a-card{border:1px solid var(--line);border-radius:15px;padding:26px;background:var(--panel)}
+  .a-card h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,23px);
+    margin:0 0 14px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+  .a-card h3 svg{width:19px;height:19px;color:var(--brass2);flex:none}
+  .a-lead{font-size:16px;line-height:1.55;margin:0;color:var(--soft)}
+  .a-lead b{color:var(--brass2);font-weight:700}
+  .shops{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  @media(max-width:520px){.shops{grid-template-columns:1fr}}
+  .shop{border:1px solid var(--line2);border-radius:11px;padding:15px 16px;background:var(--ink3)}
+  .shop .st{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+  .shop b{display:block;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--txt);letter-spacing:-.01em}
+  .shop span{display:block;font-size:13.5px;color:var(--soft);margin-top:3px;line-height:1.45}
+  .shop a{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--brass2);text-decoration:none;letter-spacing:.04em}
+  .shop a svg{width:12px;height:12px}
+  .hours-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .hours-row .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;line-height:1.1;color:var(--brass2)}
+  .hours-row small{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+  .confirm{margin:14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:9px 12px;border-radius:8px}
+  .dir{display:inline-flex;align-items:center;gap:9px;background:var(--brass);color:var(--on-brass);
+    text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease);align-self:flex-start}
+  .dir:hover{background:var(--brass2)}
+  .dir svg{width:15px;height:15px}
+  .map-card{position:relative;border-radius:15px;overflow:hidden;border:1px solid var(--line2);
+    background:var(--panel);min-height:440px;box-shadow:0 24px 56px rgba(0,0,0,.45)}
+  .map-card iframe{filter:grayscale(.34) contrast(1.04) brightness(.84) sepia(.08)}
+
+  /* ══ CALL BAND ══ */
+  .band{background:linear-gradient(120deg,var(--panel2),var(--panel));border-top:1px solid var(--line)}
+  .band .wrap{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
+  .band h2{margin:0;max-width:18ch}
+  .band .who{max-width:46ch;color:var(--soft);font-size:16px;margin:12px 0 0}
+  .band .big-call{display:inline-flex;align-items:center;gap:12px;background:var(--brass);color:var(--on-brass);
+    text-decoration:none;padding:20px 30px;border-radius:13px;font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:25px;letter-spacing:-.01em;transition:background .2s,transform .16s var(--ease)}
+  .band .big-call:hover{background:var(--brass2)}
+  .band .big-call svg{width:25px;height:25px}
+
+  footer{background:var(--ink3);padding:46px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(238,240,243,.6);
+    position:relative;z-index:2}
+  .fcols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .fcols .disp{font-size:24px;color:var(--txt)}
+  .fcols .disp span{color:var(--brass2)}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(238,240,243,.42)}
+
+  /* AI assistant widget placeholder */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--brass);color:var(--on-brass);border:none;border-radius:30px;padding:13px 18px;
+    font-family:'Figtree',sans-serif;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.42);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--brass2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(346px,calc(100vw - 36px));
+    background:var(--panel);border:1px solid var(--line2);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.52);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--ink3);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:36px;height:36px;border-radius:9px;flex:none;display:grid;place-items:center;
+    background:var(--panel3);border:1px solid var(--line2)}
+  .ai-head .av svg{width:20px;height:20px;color:var(--brass2)}
+  .ai-head b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:.01em}
+  .ai-head small{display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--brass2);letter-spacing:.1em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--ink3);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:var(--soft)}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass2);border:1px solid var(--line2);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--ink3);border:1px solid var(--line2);border-radius:9px;padding:11px 13px;
+    color:var(--txt);font-family:'Figtree',sans-serif;font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--brass);border:none;border-radius:9px;color:var(--on-brass);font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+
+  /* ══ MOBILE-FIRST BREATHING PASS ══ */
+  @media(max-width:760px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--brass)}
+    .mbar a{flex:1;text-align:center;padding:15px;text-decoration:none;font-weight:700;color:var(--on-brass);font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(25,19,8,.24);background:var(--panel2);color:var(--txt)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+    header{min-height:auto}
+    .hero-in{padding:104px 0 60px}
+    .call .lbl-full{display:none}
+  }
+  @media(max-width:600px){
+    section{padding:56px 0}
+    .wrap{padding:0 20px}
+    h2{margin-bottom:14px}
+    .lede{margin-bottom:30px}
+    .cta{flex-direction:column;align-items:stretch}
+    .cta .btn{width:100%}
+    .sheet-cta .btn{width:100%}
+    .pgrid{grid-auto-rows:170px;gap:14px}
+    .cyl-card{width:100%;padding:18px}
+  }
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Fulmer's Locksmith home">
+      <svg class="gg" viewBox="0 0 40 40" role="img" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#16181D" stroke="#262A31"/>
+        <g fill="none" stroke="#E7C87F" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="15" cy="15" r="6"/>
+          <path d="M19.4 19.4 L30 30"/>
+          <path d="M25 25 l3.4 0 M28 28 l2.6 0"/>
+        </g>
+      </svg>
+      <span class="txt"><b>FULMER'S<i> LOCKSMITH</i></b><small>Conway &amp; Heber Springs · Est. 1965</small></span>
+    </a>
+    <a class="call" href="tel:+15014502665">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      <span class="lbl-full">(501) 450-2665</span>
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-rule" aria-hidden="true"></div>
+  <img class="hero-img" src="assets/hero.jpg" alt="A brass keyhole and ornate handle set into a heavy antique door" width="1500" height="1000" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="hero-grid-l">
+        <div>
+          <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Conway, AR · Locksmith since 1965</div>
+          <h1 data-hero>
+            <span class="fs-line"><span>Locked out?</span></span>
+            <span class="fs-line"><span><span class="c">Call us first.</span></span></span>
+          </h1>
+          <p class="hero-sub" data-reveal style="--i:2">Fulmer's Locksmith has cut keys, changed locks and opened doors across Conway since <b>1965</b> — homes, cars and businesses. Rekeys, deadbolts, automotive keys, electronic locks and safes, with a second shop in Heber Springs.</p>
+          <div class="cta" data-reveal style="--i:3">
+            <a class="btn btn-a" href="tel:+15014502665" data-magnetic="0.2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+              Call for help now
+            </a>
+            <a class="btn btn-b" href="#services">See what we open</a>
+          </div>
+          <div class="hero-badges" data-reveal style="--i:4">
+            <span><b>Since 1965</b> · 60 years</span>
+            <span>Family-run</span>
+            <span>Residential · Automotive · Commercial</span>
+          </div>
+        </div>
+
+        <!-- SIGNATURE: the cylinder that sets & turns -->
+        <div class="cyl-card" id="cylCard" data-reveal="scale" style="--i:2">
+          <div class="cyl-top">
+            <span>Pin-tumbler cylinder · Fulmer's</span>
+            <span class="stat"><i aria-hidden="true"></i><b id="lockState">Locked</b></span>
+          </div>
+          <div class="plug">
+            <div class="shear" aria-hidden="true"></div>
+            <div class="chambers plug-rot" aria-hidden="true">
+              <div class="pin"><span class="spring"></span><span class="driver"></span><span class="keypin"></span></div>
+              <div class="pin"><span class="spring"></span><span class="driver"></span><span class="keypin"></span></div>
+              <div class="pin"><span class="spring"></span><span class="driver"></span><span class="keypin"></span></div>
+              <div class="pin"><span class="spring"></span><span class="driver"></span><span class="keypin"></span></div>
+              <div class="pin"><span class="spring"></span><span class="driver"></span><span class="keypin"></span></div>
+            </div>
+            <div class="keyway plug-rot" aria-hidden="true">
+              <div class="blade">
+                <svg viewBox="0 0 300 26" preserveAspectRatio="none" role="img" aria-hidden="true">
+                  <path d="M0 6 H120 L134 6 L146 16 L160 4 L174 14 L188 6 L202 16 L216 8 L230 18 L244 6 H300 V22 H0 Z"
+                        fill="#8a6f38" stroke="#E7C87F" stroke-width="1.2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="bit-scale" aria-hidden="true">
+              <span>1</span><span>3</span><span>5</span><span>2</span><span>4</span>
+            </div>
+          </div>
+          <div class="cyl-foot">
+            <span class="stamp">EST. 1965</span>
+            <span id="pinsPct">Pins set · <b>0 / 5</b></span>
+          </div>
+          <p class="cyl-hint">Scroll — watch the cuts set the pins and turn the plug</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Emergency Lockouts <i>&#9670;</i></span><span>Rekeying <i>&#9670;</i></span><span>Deadbolt Installation <i>&#9670;</i></span>
+    <span>Lock Repair <i>&#9670;</i></span><span>Automotive Keys <i>&#9670;</i></span><span>Electronic Locks <i>&#9670;</i></span>
+    <span>Safes <i>&#9670;</i></span><span>Residential <i>&#9670;</i></span><span>Automotive <i>&#9670;</i></span><span>Commercial <i>&#9670;</i></span>
+  </div></div>
+</div>
+
+<!-- ══ SPEC SHEET — SERVICE DIRECTORY ══ -->
+<section class="spec" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>What we do</div>
+    <h2 data-reveal>Every lock, <span class="c">on the board.</span></h2>
+    <p class="lede" data-reveal>Sixty years of one trade done well — cutting keys, changing locks, and getting people back through their own doors. If it locks, latches or opens, chances are Fulmer's has handled it before.</p>
+
+    <div class="sheet" data-reveal>
+      <div class="sheet-head">
+        <span>Service directory &mdash; <b>Fulmer's Locksmith</b></span>
+        <span>Residential &middot; Automotive &middot; Commercial</span>
+      </div>
+      <div class="srow hot">
+        <div class="sc-name"><span class="no">01</span><h3>Emergency Lockouts</h3></div>
+        <div class="sc-desc">Locked out of the house, the car or the shop? We come out and get you back in &mdash; emergency calls answered anytime.</div>
+        <div class="sc-tag">Anytime</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">02</span><h3>Rekeying &amp; Master Keys</h3></div>
+        <div class="sc-desc">New place, lost key or old tenant? We rekey your existing locks so old keys stop working &mdash; one key or a master system.</div>
+        <div class="sc-tag">Rekey</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">03</span><h3>Deadbolt Installation</h3></div>
+        <div class="sc-desc">New deadbolts and door hardware fit and set right &mdash; the straightforward upgrade that makes a door harder to force.</div>
+        <div class="sc-tag">Install</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">04</span><h3>Lock Repair</h3></div>
+        <div class="sc-desc">Sticking, loose or worn locks brought back to working right instead of replaced when they don't need to be.</div>
+        <div class="sc-tag">Repair</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">05</span><h3>Automotive Keys &amp; Programming</h3></div>
+        <div class="sc-desc">Car keys cut and transponder / remote keys programmed &mdash; a spare made or a lost key replaced without the dealership trip.</div>
+        <div class="sc-tag">Auto</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">06</span><h3>Electronic &amp; Mailbox Locks</h3></div>
+        <div class="sc-desc">Keypad and electronic locks set up and serviced, plus mailbox locks re-keyed or replaced.</div>
+        <div class="sc-tag">Electronic</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">07</span><h3>Safes</h3></div>
+        <div class="sc-desc">Safe work &mdash; from a combination you've lost track of to getting one opened and serviced. Call and tell us what you've got.</div>
+        <div class="sc-tag">Safe</div>
+      </div>
+      <div class="srow">
+        <div class="sc-name"><span class="no">08</span><h3>Commercial Locksmithing</h3></div>
+        <div class="sc-desc">Storefronts, offices and rentals &mdash; rekeys, master systems, hardware and lockouts for the businesses of Conway.</div>
+        <div class="sc-tag">Commercial</div>
+      </div>
+    </div>
+    <p class="sheet-note">Not sure what your job needs? That's what the call is for &mdash; tell us what's going on and we'll tell you straight what it takes.</p>
+
+    <div class="sheet-cta" data-reveal>
+      <p>Locked out, or need a lock changed? <b>Call and tell us what's going on</b> &mdash; we'll save you the time and money and get it handled.</p>
+      <a class="btn btn-a" href="tel:+15014502665" data-magnetic="0.18">Call (501) 450-2665</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THREE DOORS ══ -->
+<section class="doors" id="doors">
+  <div class="wrap">
+    <div class="lab" data-reveal>Three doors we open</div>
+    <h2 data-reveal>Home, car or business &mdash; <span class="c">same shop.</span></h2>
+    <p class="lede" data-reveal>Fulmer's works all three sides of the trade. The people who rekey your house also cut your car key and handle the locks down at the store.</p>
+    <div class="door-grid">
+      <div class="dc b1" data-reveal>
+        <span class="tag">Door 01</span>
+        <h3>Residential</h3>
+        <p>Houses across Conway &mdash; lockouts, rekeys, deadbolts, repairs and the small fixes that keep a home shut tight and easy to get into for the folks who live there.</p>
+        <ul><li>Lockouts</li><li>Rekeys</li><li>Deadbolts</li><li>Repairs</li></ul>
+      </div>
+      <div class="dc b2" data-reveal style="--i:1">
+        <span class="tag">Door 02</span>
+        <h3>Automotive</h3>
+        <p>Car keys cut and programmed, spares made and lost keys replaced &mdash; often for a good bit less than a trip to the dealership.</p>
+        <ul><li>Key cutting</li><li>Transponders</li><li>Remotes</li><li>Spares</li></ul>
+      </div>
+      <div class="dc b3" data-reveal style="--i:2">
+        <span class="tag">Door 03</span>
+        <h3>Commercial</h3>
+        <p>Storefronts, offices and rentals &mdash; master-key systems, hardware, rekeys and lockouts that keep a business running and secure.</p>
+        <ul><li>Master keys</li><li>Storefront hardware</li><li>Rekeys</li><li>Lockouts</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROOF ══ -->
+<section class="proof" id="work">
+  <div class="wrap">
+    <div class="lab" data-reveal>The trade</div>
+    <h2 data-reveal>Keys, cylinders and <span class="c">solid hardware.</span></h2>
+    <p class="lede" data-reveal>The everyday work of a locksmith &mdash; keys cut to the cut, cylinders pinned right, deadbolts and hardware set the way they're meant to sit.</p>
+    <div class="pgrid">
+      <figure class="big" data-reveal><span class="stag">Reference</span><img src="assets/padlock.jpg" alt="A heavy vintage brass padlock with its key" width="1000" height="720" loading="lazy" decoding="async"><figcaption>Brass locks &amp; hardware</figcaption></figure>
+      <figure data-reveal style="--i:1"><span class="stag">Reference</span><img src="assets/keys.jpg" alt="A cut door key on a keyring against a dark background" width="700" height="500" loading="lazy" decoding="async"><figcaption>Keys cut to the cut</figcaption></figure>
+      <figure data-reveal style="--i:2"><span class="stag">Reference</span><img src="assets/cylinder.jpg" alt="A set of lock cylinders with keys, ready to be pinned" width="700" height="500" loading="lazy" decoding="async"><figcaption>Cylinders &amp; rekeys</figcaption></figure>
+      <figure data-reveal style="--i:3"><span class="stag">Reference</span><img src="assets/deadbolt.jpg" alt="Brass door security hardware installed on a door" width="700" height="500" loading="lazy" decoding="async"><figcaption>Deadbolts &amp; door hardware</figcaption></figure>
+      <figure data-reveal style="--i:4"><span class="stag">Reference</span><img src="assets/auto.jpg" alt="A hand holding a car key with a remote fob beside a vehicle door" width="700" height="500" loading="lazy" decoding="async"><figcaption>Automotive keys</figcaption></figure>
+    </div>
+    <p class="pnote">Reference photography &mdash; Fulmer's own shop, key-cutting and jobsite photos drop in here on launch.</p>
+  </div>
+</section>
+
+<!-- ══ CREDENTIALS ══ -->
+<section class="creds" id="trust">
+  <div class="wrap">
+    <div class="lab" data-reveal>Why Conway calls Fulmer's</div>
+    <h2 data-reveal>Sixty years. <span class="c">Same trade, done right.</span></h2>
+    <p class="lede" data-reveal>A locksmith Conway has trusted since 1965 &mdash; family-run, plain-spoken, and quick to tell you the least a job needs instead of the most. The kind of number you keep in your phone.</p>
+
+    <div class="cred-grid">
+      <div class="cred" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <b>Since 1965</b>
+        <small>Six decades cutting keys and changing locks in Conway</small>
+      </div>
+      <div class="cred" data-reveal style="--i:1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/></svg>
+        <b>Family-run</b>
+        <small>A local family name over the door, not a national call center</small>
+      </div>
+      <div class="cred" data-reveal style="--i:2">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <b>All three</b>
+        <small>Residential, automotive and commercial under one roof</small>
+      </div>
+      <div class="cred" data-reveal style="--i:3">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <b>Two shops</b>
+        <small>Conway and Heber Springs &mdash; covering the area both ways</small>
+      </div>
+    </div>
+
+    <!-- the affordability creed — full weight -->
+    <div class="disc" data-reveal>
+      <svg class="badge" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+        <circle cx="18" cy="18" r="9"/>
+        <path d="M24.5 24.5 L40 40"/>
+        <path d="M33 33 l5 0 M37 37 l3.5 0"/>
+      </svg>
+      <div>
+        <h3>&ldquo;Save your time and money &mdash; call us first.&rdquo;</h3>
+        <p>It's how Fulmer's has worked since 1965: tell us what's going on, and we'll point you at the cheapest thing that actually fixes it &mdash; a rekey instead of a whole new lock, a spare key instead of a dealership tow. Sixty years of straight answers.</p>
+      </div>
+      <span class="who">The Fulmer's way</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICE AREA ══ -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="lab" data-reveal>Where to find us</div>
+    <h2 data-reveal>On Washington Ave <span class="c">in Conway.</span></h2>
+    <div class="a-grid">
+      <div class="a-info">
+        <div class="a-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Two shops
+          </h3>
+          <p class="a-lead">Come by the counter for keys and hardware, or call for a lockout. Fulmer's runs <b>two shops</b> &mdash; Conway and Heber Springs.</p>
+          <div class="shops">
+            <div class="shop">
+              <div class="st">Conway</div>
+              <b>2301 B Washington Ave</b>
+              <span>Conway, AR 72032</span>
+              <a href="tel:+15014502665">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+                (501) 450-2665
+              </a>
+            </div>
+            <div class="shop">
+              <div class="st">Heber Springs</div>
+              <b>510 W Main St, Suite 4</b>
+              <span>Heber Springs, AR</span>
+              <a href="tel:+15014281266">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+                (501) 428-1266
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="a-card" data-reveal style="--i:1">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Hours
+          </h3>
+          <div class="hours-row">
+            <span class="big">Mon&ndash;Fri 8&ndash;5</span>
+            <small>Shop hours</small>
+          </div>
+          <div class="hours-row" style="margin-top:10px">
+            <span class="big">Emergencies anytime</span>
+            <small>Lockouts by call</small>
+          </div>
+          <p class="confirm">Shop hours shown as a guide &mdash; for a lockout or after-hours job, call and we'll tell you what we can do.</p>
+        </div>
+        <a class="dir" href="https://www.google.com/maps?q=2301%20B%20Washington%20Ave%2C%20Conway%2C%20AR%2072032" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg>
+          Open in Maps
+        </a>
+      </div>
+      <div class="map-card" data-reveal="scale">
+        <iframe title="Map — Fulmer's Locksmith, Conway AR" src="https://www.google.com/maps?q=2301%20B%20Washington%20Ave%2C%20Conway%2C%20AR%2072032&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CALL BAND ══ -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2 data-reveal>Locked out? <span class="c">Need a lock changed?</span></h2>
+      <p class="who" data-reveal style="--i:1">Tell us what's going on &mdash; house, car or business &mdash; and we'll get you sorted the quickest, cheapest way that works.</p>
+    </div>
+    <a class="big-call" href="tel:+15014502665" data-reveal style="--i:2" data-magnetic="0.16">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 450-2665
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <span class="disp">FULMER'S <span>LOCKSMITH</span></span><br/>
+        2301 B Washington Ave, Conway, AR 72032<br/>(501) 450-2665 &middot; Heber Springs (501) 428-1266
+      </div>
+      <div style="text-align:right" class="mono">Locks &middot; keys &middot; safes since 1965<br/>Residential &middot; automotive &middot; commercial &middot; family-run</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Fulmer's Locksmith. Created by Fresh Signal as a proposal. All marks belong to their owners. Reference photography shown is placeholder, replaced with the business's own on launch. Shop hours shown as a guide &mdash; confirm current hours before you count on them.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask about a lock
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Fulmer's Locksmith assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="5"/><path d="M13.5 13.5 L21 21"/></svg></span>
+    <div><b>Fulmer's Assistant</b><small>SAMPLE &middot; placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey &mdash; I'm Fulmer's assistant. On launch I'll answer &ldquo;can you get me back in?&rdquo;, figure out whether it's a lockout, a rekey or a new key, and text the details straight to the shop so you get help fast.</div>
+    <div class="ai-chips"><span>I'm locked out of my car</span><span>Need my house rekeyed</span><span>Lost my only key</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">&rarr;</button>
+    </div>
+    <div class="ai-note">Answering live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15014502665">Call (501) 450-2665</a>
+  <a href="#area">Find us</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- cylinder-set signature + AI panel + motion layer -->
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- SIGNATURE: pins set on scroll, plug turns ---------- */
+  var card=document.getElementById('cylCard');
+  var pins=card?[].slice.call(card.querySelectorAll('.pin')):[];
+  var readout=document.getElementById('pinsPct');
+  var stateEl=document.getElementById('lockState');
+  var lastSet=-1;
+
+  function setPins(n){
+    n=Math.max(0,Math.min(pins.length,n));
+    if(n===lastSet) return; lastSet=n;
+    pins.forEach(function(p,i){ p.classList.toggle('set', i<n); });
+    if(readout) readout.innerHTML='Pins set · <b>'+n+' / '+pins.length+'</b>';
+    var done = n>=pins.length;
+    card.classList.toggle('unlocked', done);
+    if(stateEl) stateEl.textContent = done ? 'Unlocked' : 'Locked';
+  }
+
+  function onScroll(){
+    if(!card) return;
+    if(RM){ setPins(pins.length); return; }
+    var vh=window.innerHeight;
+    var r=card.getBoundingClientRect();
+    /* progress 0..1 as the card scrolls from just-entered up past mid-screen */
+    var p=(vh*0.85 - r.top)/(vh*0.62);
+    p=Math.max(0,Math.min(1,p));
+    setPins(Math.round(p*pins.length));
+  }
+  if(card){
+    if(RM){ setPins(pins.length); }
+    else {
+      onScroll();
+      window.addEventListener('scroll',function(){ requestAnimationFrame(onScroll); },{passive:true});
+      window.addEventListener('resize',onScroll,{passive:true});
+    }
+  }
+
+  /* ---------- AI panel toggle ---------- */
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn&&aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---------- Custom cursor ---------- */
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  /* ---------- Hero line reveal on load ---------- */
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  /* ---------- Magnetic ---------- */
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  /* ---------- Marquee: duplicate track for seamless loop ---------- */
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  /* ---------- Scroll progress ---------- */
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
