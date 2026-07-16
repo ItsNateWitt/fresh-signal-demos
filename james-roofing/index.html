@@ -66,8 +66,6 @@
   .mono{font-family:'Space Mono',monospace}
   .kicker{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel)}
   .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
-  .mock{position:relative;z-index:5;background:var(--blueprint);color:var(--safety);text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:9px 14px;font-family:'Space Mono',monospace;line-height:1.5}
-  .mock b{color:var(--paper-2);font-weight:700}
   .skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--safety);color:var(--blueprint);padding:12px 18px;font-family:'Oswald';text-transform:uppercase}
   .skip:focus{left:8px;top:8px}
   main{display:flex;flex-direction:column}
@@ -307,32 +305,6 @@
   .wconfirm h3{font-family:'Oswald';font-weight:600;font-size:21px;text-transform:uppercase}
   .wconfirm p{font-size:14px;color:rgba(238,242,246,.75);margin-top:8px;max-width:40ch;margin-inline:auto}
 
-  /* ============ FRESH SIGNAL CLOSE ============ */
-  #fresh-signal{position:relative;z-index:1;background:var(--paper-2);border-top:1px solid var(--line);padding:clamp(64px,9vw,120px) 0}
-  #fresh-signal .fs{max-width:720px;margin:0 auto}
-  #fresh-signal .fk{font-family:'Space Mono';font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel)}
-  #fresh-signal h2{font-family:'Oswald';font-weight:700;font-size:clamp(30px,5vw,54px);line-height:1.02;text-transform:uppercase;margin-top:16px;max-width:15ch}
-  #fresh-signal h2 em{font-style:normal;color:var(--steel)}
-  #fresh-signal .rule{height:2px;background:var(--ink);margin:30px 0;transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease)}
-  #fresh-signal .rule.in{transform:scaleX(1)}
-  #fresh-signal .letter p{font-size:clamp(16px,1.7vw,18.5px);color:#2c3e52;margin-bottom:14px;max-width:60ch}
-  .offer{border:2px solid var(--ink);background:#fff;margin-top:36px}
-  .offer .oh{background:var(--blueprint);color:var(--paper-2);font-family:'Space Mono';font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:11px 22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-  .offer .oh span:last-child{color:var(--safety)}
-  .offer .orow{display:grid;grid-template-columns:1fr;gap:6px;padding:22px;border-bottom:1px solid var(--line)}
-  @media(min-width:640px){.offer .orow{grid-template-columns:190px 1fr;gap:20px;align-items:baseline}}
-  .offer .orow:last-of-type{border-bottom:0}
-  .offer .price{font-family:'Oswald';font-weight:700;font-size:clamp(24px,3vw,30px);text-transform:uppercase;line-height:1.1}
-  .offer .price em{font-style:normal;color:var(--steel);display:block;font-family:'Space Mono';font-size:10px;letter-spacing:.14em;font-weight:400;margin-top:5px}
-  .offer .odesc{color:#33475c;font-size:15.5px}
-  .offer .why{background:var(--paper);padding:22px;font-size:14.5px;color:#33475c;border-top:1px solid var(--line)}
-  .offer .why b{font-family:'Space Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:8px;font-weight:700}
-  .fs-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-  .fs-cta .btn-ink{background:var(--ink);color:var(--paper-2)}
-  .fs-cta .btn-ink:hover,.fs-cta .btn-ink:focus-visible{background:var(--blueprint)}
-  .fs-cta .alt{font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--safety);padding-bottom:3px;min-height:44px;display:inline-flex;align-items:center}
-  .fs-ghost{font-family:'Space Mono';font-size:11.5px;color:var(--mut);margin-top:18px;letter-spacing:.04em}
-
   footer{position:relative;z-index:1;background:var(--blueprint-2);color:rgba(238,242,246,.7);padding:38px 0;border-top:3px solid var(--safety)}
   footer .wrap{display:grid;gap:18px}
   @media(min-width:720px){footer .wrap{grid-template-columns:1fr auto;align-items:center}}
@@ -361,7 +333,6 @@
     *{animation:none!important;transition:none!important}
     .draw{clip-path:none;opacity:1}
     .rise{opacity:1;transform:none}
-    #fresh-signal .rule{transform:scaleX(1)}
     .xf .ph{opacity:1;transform:none}
     .xf .field{opacity:.16}
     .xf .lines .stroke{stroke-dashoffset:0}
@@ -372,7 +343,7 @@
   /* mobile layout decisions — the form jumps to position 2 (storm leads are urgent) */
   @media(max-width:819px){
     #hero{order:1}#quote{order:2}#services{order:3}#spec{order:4}#storm{order:5}
-    #why{order:6}#plate{order:7}#reviews{order:8}#about{order:9}#fresh-signal{order:10}
+    #why{order:6}#plate{order:7}#reviews{order:8}#about{order:9}
     .hero h1{font-size:clamp(44px,13vw,64px)}
     .about figure .ph{box-shadow:-8px 8px 0 var(--safety)}
     .storm .ph{box-shadow:8px 8px 0 var(--steel)}
@@ -430,7 +401,6 @@
 </head>
 <body>
 <a class="skip" href="#services">Skip to content</a>
-<div class="mock">DEMO MOCKUP — built for <b>James Roofing of Arkansas</b> by Nate Witt · REAL: phone (501) 605-4363, text (501) 837-9299, 25+ yrs, BBB A+ · <b>sample photos</b>, sample address, spec figures &amp; reviews — all swapped for your own on launch</div>
 
 <header>
   <div class="wrap nav">
@@ -820,42 +790,6 @@
   </div>
 </section>
 
-<!-- ================= FRESH SIGNAL CLOSE ================= -->
-<section id="fresh-signal">
-  <div class="wrap fs">
-    <span class="fk">A note from the person who built this</span>
-    <h2>This page doesn't exist yet. <em>It's already yours.</em></h2>
-    <div class="rule" id="fsRule"></div>
-    <div class="letter">
-      <p>I'm Nate. I build websites for local shops here in Central Arkansas, and I made this mockup for James Roofing before we ever spoke — because twenty-five years and an A+ deserve a better front door than a directory listing.</p>
-      <p>Everything on this page marked "sample" gets replaced with your real job photos, your real spec and warranty language, your real address and hours, and your real reviews. Nothing here is a claim I'm asking you to make.</p>
-      <p>If you want it, it's live in 2–3 days. If you don't, keep the link — it's yours either way.</p>
-    </div>
-
-    <div class="offer">
-      <div class="oh"><span>Fresh Signal · Scope &amp; Price</span><span>Live in 2–3 days</span></div>
-      <div class="orow">
-        <div class="price">$250<em>One time</em></div>
-        <div class="odesc">The whole setup: this site made real, your Google Business Profile cleaned up and verified, and a simple AI assistant that answers common questions and helps people reach you or book an inspection.</div>
-      </div>
-      <div class="orow">
-        <div class="price">$79<em>Per month, starting the following month</em></div>
-        <div class="odesc">Basic upkeep of the servers and services that keep it live — hosting, updates, and your Google page. Cancel anytime.</div>
-      </div>
-      <div class="why">
-        <b>Why it's not $5,000</b>
-        An agency charges $3,000–$5,000 to build this, plus $500–$1,500 a month. AI lets me build in days what used to take a team weeks — I pass that on, because I'd rather price it so it's easy to say yes and earn a long relationship.
-      </div>
-    </div>
-
-    <div class="fs-cta">
-      <a class="btn btn-ink" href="sms:+15017573468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text Nate — (501) 757-3468</a>
-      <a class="alt" href="tel:+15017573468">Or call (501) 757-3468</a>
-    </div>
-    <p class="fs-ghost">No pressure. The demo stays yours either way.</p>
-  </div>
-</section>
-
 </main>
 
 <footer>
@@ -880,7 +814,6 @@
     and is replaced with the owner's real photos if this site is built. Any hours, prices, staff names,
     ratings and reviews marked SAMPLE are illustrative placeholders, not representations of fact.
     This page is set to <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
