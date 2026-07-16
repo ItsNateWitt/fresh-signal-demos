@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Downey Moving &amp; Storage — Conway &amp; Searcy, AR · Third-Generation Family Movers</title>
+<meta name="description" content="Third-generation, family-owned movers &amp; storage serving Conway, Searcy and Greater Little Rock. Local &amp; long-distance moving, packing, crating, storage and more. Licensed, bonded &amp; insured. Call (501) 329-8582." />
+<meta name="theme-color" content="#111C2A" />
+<link rel="preload" as="image" href="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111C2A'/%3E%3Cpath d='M6 12l10-4 10 4-10 4z' fill='%23C89A63'/%3E%3Cpath d='M6 12v10l10 4V16z' fill='%23E2BB86'/%3E%3Cpath d='M26 12v10l-10 4V16z' fill='%23A87A45'/%3E%3Crect x='13.5' y='9.4' width='5' height='9' fill='%23D14B2E'/%3E%3C/svg%3E" />
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 1 ==== -->
+<style>
+  .fs-cur, .fs-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+    border-radius:50%;mix-blend-mode:difference;will-change:transform}
+  .fs-cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+  .fs-ring{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);margin:-19px 0 0 -19px;
+    transition:width .28s cubic-bezier(.22,1,.36,1),height .28s cubic-bezier(.22,1,.36,1),
+               border-color .28s,opacity .28s}
+  .fs-ring.is-hot{width:64px;height:64px;border-color:rgba(255,255,255,.95)}
+  .fs-ring.is-hide{opacity:0}
+  @media (hover:none),(pointer:coarse){.fs-cur,.fs-ring{display:none}}
+
+  [data-reveal]{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);
+    transition-delay:calc(var(--i,0) * 90ms)}
+  [data-reveal="left"]{transform:translate3d(-34px,0,0)}
+  [data-reveal="right"]{transform:translate3d(34px,0,0)}
+  [data-reveal="scale"]{transform:scale(.93)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  .fs-line{display:block;overflow:hidden}
+  .fs-line > span{display:block;transform:translate3d(0,110%,0);
+    transition:transform 1.05s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 105ms)}
+  .fs-lit .fs-line > span{transform:none}
+
+  [data-magnetic]{will-change:transform;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+
+  .fs-mq{overflow:hidden;white-space:nowrap;display:flex}
+  .fs-mq__t{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:fs-mq 36s linear infinite}
+  @keyframes fs-mq{to{transform:translateX(-100%)}}
+
+  [data-parallax]{will-change:transform}
+  .fs-prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;background:linear-gradient(90deg,var(--kraft),var(--red))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important}
+    [data-reveal]{opacity:1 !important;transform:none !important}
+    .fs-line > span{transform:none !important}
+    .fs-cur,.fs-ring{display:none !important}
+    .fs-mq__t{animation:none !important}
+  }
+</style>
+
+<style>
+  /* ══ DOWNEY MOVING & STORAGE — Travel Poster · kraft box + packing-tape + shipping-ink world ══ */
+  :root{
+    --ink:#0B1119; --ground:#111C2A; --panel:#17263A; --panel2:#0E1826; --panel3:#0A1420;
+    --kraft:#C89A63; --kraft2:#E2BB86; --kraftdk:#A87A45;
+    --tape:#E7D8AE; --tapeEdge:rgba(120,84,44,.5);
+    --red:#D14B2E; --red2:#E86A45;
+    --cream:#F2ECDD; --cream2:#E0D4BC;
+    --pad:#5C7488;
+    --mut:#94A4B4; --line:rgba(242,236,221,.14);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:clip}
+  body{margin:0;background:var(--ground);color:var(--cream);
+    font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.62;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--kraft2);outline-offset:3px;border-radius:2px}
+  .anton{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.006em;line-height:.9;text-transform:uppercase}
+  .osw{font-family:'Oswald',sans-serif}
+  .mono{font-family:'Space Mono',monospace}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(11,17,25,.9);backdrop-filter:blur(11px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+  .mark{display:inline-flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap}
+  .mark .box{width:30px;height:30px;flex:none}
+  .mark .nm{display:flex;flex-direction:column;line-height:1}
+  .mark .nm b{font-family:'Anton',sans-serif;font-weight:400;font-size:21px;letter-spacing:.03em;color:var(--cream);text-transform:uppercase}
+  .mark .nm small{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.24em;color:var(--kraft2);text-transform:uppercase;margin-top:3px}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;
+    text-decoration:none;padding:11px 17px;border-radius:7px;font-weight:700;font-size:14.5px;
+    transition:background .2s,transform .16s var(--ease)}
+  .call:hover{background:var(--red2)}
+  .call svg{width:15px;height:15px;flex:none}
+
+  /* hero */
+  header{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;
+    background:var(--panel3)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;
+    filter:saturate(.82) brightness(.5) contrast(1.06) sepia(.14)}
+  .hero-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,17,25,.7) 0%,rgba(11,17,25,.26) 32%,rgba(11,17,25,.96) 100%),
+      linear-gradient(80deg,rgba(11,17,25,.72) 0%,rgba(11,17,25,0) 60%)}
+  /* faint packing-tape strip drifting over hero */
+  .hero-tape{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.5;
+    background:repeating-linear-gradient(122deg,rgba(231,216,174,.16) 0 3px,rgba(0,0,0,0) 3px 30px)}
+  .hero-in{position:relative;z-index:3;width:100%;padding:0 0 78px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:11.5px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--kraft2);margin-bottom:22px}
+  .kicker .dot{width:8px;height:8px;border-radius:2px;background:var(--red);flex:none}
+  h1{margin:0 0 22px;font-family:'Anton',sans-serif;font-weight:400;
+    font-size:clamp(52px,12vw,132px);line-height:.86;letter-spacing:.008em;text-transform:uppercase;max-width:12ch}
+  h1 .g{color:var(--kraft2)}
+  h1 .r{color:var(--red2)}
+  .hero-sub{font-size:clamp(16.5px,2.1vw,18.5px);color:#E7E0CF;max-width:52ch;margin:0 0 30px;line-height:1.62}
+  .cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 27px;
+    text-decoration:none;font-weight:700;font-size:15px;border-radius:8px;
+    transition:background .2s var(--ease),border-color .2s,transform .16s var(--ease),color .2s}
+  .btn-a{background:var(--red);color:#fff}
+  .btn-a:hover{background:var(--red2)}
+  .btn-b{border:1.5px solid rgba(242,236,221,.42);color:var(--cream)}
+  .btn-b:hover{border-color:var(--kraft2);color:var(--kraft2)}
+
+  /* postage stamp mark */
+  .stamp{position:absolute;z-index:4;top:104px;right:28px;width:188px;transform:rotate(6deg);
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.5))}
+  @media(max-width:960px){.stamp{width:146px;top:88px;right:16px}}
+  @media(max-width:620px){.stamp{position:static;transform:rotate(-3deg);width:162px;margin:0 0 -26px 6px}}
+
+  /* marquee trust strip */
+  .strip{background:var(--kraft);color:var(--ink);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .strip .fs-mq{padding:12px 0}
+  .strip .fs-mq__t span{font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;letter-spacing:.04em;
+    display:inline-flex;align-items:center;gap:2.5rem;text-transform:uppercase}
+  .strip .fs-mq__t span i{font-style:normal;color:var(--red)}
+
+  section{padding:96px 0;position:relative}
+  .lab{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--kraft2);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .lab::before{content:"";width:26px;height:2px;background:var(--red)}
+  h2{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:clamp(30px,6vw,52px);line-height:1.0;letter-spacing:.01em;margin:0 0 18px;max-width:20ch}
+  h2 .g{color:var(--kraft2)}
+  .lede{font-size:clamp(16.5px,2.1vw,18.5px);color:#D7CFBC;max-width:58ch;margin:0 0 44px;line-height:1.66}
+
+  /* ══ services as stenciled shipping-label boxes ══ */
+  .svc{background:var(--panel)}
+  .boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.boxes{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.boxes{grid-template-columns:1fr}}
+  .cbox{position:relative;border-radius:10px;overflow:hidden;background:
+      linear-gradient(180deg,#CFA268 0%,#BE9256 100%);
+    box-shadow:inset 0 0 0 1px rgba(120,84,44,.4), 0 18px 40px rgba(0,0,0,.28);
+    padding:26px 22px 24px;min-height:216px;display:flex;flex-direction:column;
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .cbox::before{/* kraft corrugation texture */
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+    background:repeating-linear-gradient(90deg,rgba(120,84,44,.16) 0 2px,rgba(0,0,0,0) 2px 9px)}
+  .cbox::after{/* corner packing-tape strip */
+    content:"";position:absolute;top:-16px;right:26px;width:56px;height:52px;transform:rotate(9deg);
+    background:linear-gradient(180deg,rgba(231,216,174,.85),rgba(231,216,174,.6));
+    box-shadow:inset 1px 0 0 var(--tapeEdge),inset -1px 0 0 var(--tapeEdge)}
+  .cbox:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(120,84,44,.4), 0 26px 54px rgba(0,0,0,.36)}
+  .cbox .no{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;color:#5C3F22;position:relative;z-index:2}
+  .cbox h3{position:relative;z-index:2;font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:clamp(20px,2.6vw,23px);letter-spacing:.02em;color:#2C1D0E;margin:10px 0 10px;line-height:1.05}
+  .cbox p{position:relative;z-index:2;margin:0;font-size:14.5px;color:#3F2C17;line-height:1.55}
+  .cbox .stencil{position:relative;z-index:2;margin-top:auto;padding-top:14px;
+    font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#6B4A28;
+    display:flex;align-items:center;gap:8px}
+  .cbox .stencil::before{content:"";width:15px;height:9px;border:1.5px solid #6B4A28;border-radius:2px;flex:none}
+  .cbox.dark{background:var(--panel2);box-shadow:inset 0 0 0 1px var(--line),0 18px 40px rgba(0,0,0,.3)}
+  .cbox.dark::before{opacity:0}
+  .cbox.dark .no{color:var(--kraft2)}
+  .cbox.dark h3{color:var(--cream)}
+  .cbox.dark p{color:#CFC7B4}
+  .cbox.dark .stencil{color:var(--kraft2)}
+  .cbox.dark .stencil::before{border-color:var(--kraft2)}
+
+  /* ══ SIGNATURE: the packing-tape route map ══ */
+  .route{background:var(--panel2)}
+  .route-grid{display:grid;grid-template-columns:.92fr 1.18fr;gap:52px;align-items:center}
+  @media(max-width:900px){.route-grid{grid-template-columns:1fr;gap:34px}}
+  .serve{list-style:none;padding:0;margin:26px 0 0}
+  .serve li{margin:0 0 15px;padding-left:28px;position:relative;font-size:16px;color:#D7CFBC;line-height:1.5}
+  .serve li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:9px;border-radius:2px;
+    background:var(--tape);box-shadow:inset 1px 0 0 var(--tapeEdge),inset -1px 0 0 var(--tapeEdge)}
+  .serve li b{color:var(--kraft2);font-weight:700}
+  .who{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+  .who span{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--cream2);border:1px solid var(--line);padding:7px 11px;border-radius:20px}
+
+  .map-card{position:relative;border-radius:14px;overflow:hidden;
+    background:linear-gradient(160deg,#C79A62 0%,#B98D53 100%);
+    box-shadow:0 30px 70px rgba(0,0,0,.46);padding:22px}
+  .map-card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+    background:
+      repeating-linear-gradient(58deg,rgba(120,84,44,.10) 0 1px,rgba(0,0,0,0) 1px 7px),
+      radial-gradient(120% 90% at 20% 10%,rgba(255,240,210,.25),rgba(0,0,0,0) 55%)}
+  .map-card .cap{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#4E351B}
+  .map-card .cap b{font-family:'Oswald',sans-serif;font-weight:700;font-size:15px;letter-spacing:.04em;color:#2C1D0E}
+  .map-card svg{position:relative;z-index:2;display:block;width:100%;height:auto}
+  .tapeLn{fill:none;stroke:var(--tape);stroke-width:13;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:640;stroke-dashoffset:640;transition:stroke-dashoffset 1.9s var(--ease);
+    filter:drop-shadow(0 2px 3px rgba(60,40,20,.35))}
+  [data-reveal].is-in .tapeLn{stroke-dashoffset:0}
+  .tapeLn.b{transition-delay:.35s}
+  .tapeLn.c{transition-delay:.7s}
+  .tapeEdgeLn{fill:none;stroke:rgba(120,84,44,.55);stroke-width:13;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:2 8;opacity:.7}
+  .boxStamp{fill:#F0E4C8;stroke:#4E351B;stroke-width:1.4}
+  .boxStamp.hub{fill:var(--red);stroke:#5a1c0e}
+  .townT{font-family:'Space Mono',monospace;font-size:12px;fill:#3A2712;letter-spacing:.02em;font-weight:700}
+  .townT.hub{fill:#2C1D0E}
+  .fragile{font-family:'Space Mono',monospace;font-size:8.5px;fill:#B14027;letter-spacing:.14em;font-weight:700}
+
+  .embed-card{margin-top:22px;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    background:var(--panel);box-shadow:0 20px 50px rgba(0,0,0,.36)}
+  .embed-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;
+    border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .embed-head b{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:17px}
+  .embed-head span{font-family:'Space Mono',monospace;font-size:11px;color:var(--mut);letter-spacing:.06em}
+
+  /* ══ proof — the real customer voice ══ */
+  .proof{background:var(--ground)}
+  .quote{max-width:22ch;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:clamp(26px,4.6vw,44px);line-height:1.06;letter-spacing:.01em;margin:0}
+  .quote .mk{color:var(--red2)}
+  .qby{margin-top:22px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--kraft2)}
+  .qby small{display:block;color:var(--mut);letter-spacing:.06em;margin-top:5px;text-transform:none}
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:860px){.proof-grid{grid-template-columns:1fr;gap:32px}}
+  .frames{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .frame{position:relative;margin:0;overflow:hidden;border-radius:8px;background:#0c0c0e;
+    border:6px solid var(--cream);box-shadow:0 16px 36px rgba(0,0,0,.4);transform:rotate(-1.4deg)}
+  .frame:nth-child(2){transform:rotate(1.6deg)}
+  .frame:nth-child(3){transform:rotate(1.2deg)}
+  .frame:nth-child(4){transform:rotate(-1.1deg);grid-column:span 2}
+  .frame img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.85) brightness(.82) contrast(1.05) sepia(.1)}
+  .frame figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 11px;
+    background:linear-gradient(transparent,rgba(11,17,25,.92));
+    font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream)}
+  .frame .stag{position:absolute;top:8px;left:8px;background:rgba(11,17,25,.72);color:var(--kraft2);
+    font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 6px;border-radius:4px}
+  .pnote{margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:52px 0 0}
+  @media(max-width:760px){.stats{grid-template-columns:1fr 1fr;gap:12px}}
+  .stat{border:1px solid var(--line);border-radius:12px;padding:24px 20px;background:var(--panel)}
+  .stat b{display:block;font-family:'Anton',sans-serif;font-size:46px;line-height:1;color:var(--kraft2)}
+  .stat small{display:block;margin-top:8px;font-family:'Space Mono',monospace;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--mut);line-height:1.5}
+
+  /* visit / offices */
+  .visit{background:var(--panel)}
+  .v-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  @media(max-width:900px){.v-grid{grid-template-columns:1fr}}
+  .v-card{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--panel2)}
+  .v-card h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.03em;
+    font-size:clamp(20px,2.6vw,23px);margin:0 0 16px}
+  .v-card .office-tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--kraft2)}
+  .v-card .ph{font-family:'Anton',sans-serif;font-size:30px;color:var(--cream);margin:6px 0 4px;letter-spacing:.01em;display:inline-block;text-decoration:none}
+  .v-card .ph:hover{color:var(--kraft2)}
+  .hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dotted var(--line);font-size:15px}
+  .hrow b{font-weight:500}
+  .hrow span{font-family:'Space Mono',monospace;font-size:12.5px;color:var(--kraft2)}
+  .v-card .em{margin-top:14px;font-size:14px;color:#CFC7B4}
+  .v-card .em a{color:var(--kraft2);font-weight:700;text-decoration:none;word-break:break-all}
+  .v-card .btn-a{margin-top:20px;padding:13px 22px}
+
+  footer{background:var(--panel3);padding:46px 0 34px;border-top:1px solid var(--line);font-size:14px;color:rgba(242,236,221,.62)}
+  .ftop{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .ftop .disp{font-family:'Anton',sans-serif;font-size:26px;color:var(--cream);text-transform:uppercase;letter-spacing:.02em}
+  .fbot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;line-height:1.65;color:rgba(242,236,221,.44)}
+
+  /* AI assistant widget placeholder */
+  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:70;display:inline-flex;align-items:center;gap:9px;
+    background:var(--red);color:#fff;border:none;border-radius:30px;padding:13px 18px;font-family:'DM Sans';
+    font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.42);
+    transition:background .2s,transform .16s var(--ease)}
+  .ai-btn:hover{background:var(--red2);transform:translateY(-2px)}
+  .ai-btn svg{width:18px;height:18px}
+  .ai-panel{position:fixed;right:18px;bottom:74px;z-index:70;width:min(340px,calc(100vw - 36px));
+    background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.55);transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .ai-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .ai-head{background:var(--panel2);padding:15px 17px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line)}
+  .ai-head .av{width:34px;height:34px;border-radius:9px;flex:none;background:linear-gradient(160deg,var(--kraft2),var(--kraftdk))}
+  .ai-head b{font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+  .ai-head small{display:block;font-family:'Space Mono',monospace;font-size:10px;color:var(--kraft2);letter-spacing:.08em}
+  .ai-body{padding:17px}
+  .ai-msg{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;color:#D7CFBC}
+  .ai-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .ai-chips span{font-family:'Space Mono',monospace;font-size:11px;color:var(--kraft2);border:1px solid var(--line);
+    padding:6px 10px;border-radius:16px}
+  .ai-input{display:flex;gap:8px;margin-top:14px}
+  .ai-input input{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:11px 13px;
+    color:var(--cream);font-family:'DM Sans';font-size:14px}
+  .ai-input input::placeholder{color:var(--mut)}
+  .ai-input button{background:var(--red);border:none;border-radius:9px;color:#fff;font-weight:700;padding:0 15px;cursor:pointer}
+  .ai-note{margin-top:11px;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);text-align:center}
+
+  /* mobile sticky bar */
+  .mbar{display:none}
+  @media(max-width:700px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;background:var(--red)}
+    .mbar a{flex:1;text-align:center;padding:16px;text-decoration:none;font-weight:700;color:#fff;font-size:15px}
+    .mbar a+a{border-left:1px solid rgba(0,0,0,.28);background:var(--panel2);color:var(--cream)}
+    footer{padding-bottom:82px}
+    .ai-btn{bottom:70px}
+    .ai-panel{bottom:126px}
+  }
+
+  /* ══ mobile-first breathing pass ══ */
+  @media(max-width:600px){
+    header{min-height:84vh}
+    .hero-in{padding:0 0 56px}
+    section{padding:58px 0}
+    .wrap{padding:0 20px}
+    .lede{margin-bottom:34px}
+    .stats{margin-top:36px}
+    .proof-grid{gap:26px}
+    .cta{flex-direction:column;align-items:stretch}
+    .cta .btn{width:100%}
+    .v-card .btn-a{width:100%}
+    .frame:nth-child(4){grid-column:span 2}
+  }
+  @media(max-width:400px){
+    .frames{grid-template-columns:1fr 1fr;gap:11px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Downey Moving &amp; Storage home">
+      <svg class="box" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12l10-4 10 4-10 4z" fill="#C89A63"/><path d="M6 12v10l10 4V16z" fill="#E2BB86"/><path d="M26 12v10l-10 4V16z" fill="#A87A45"/><rect x="13.5" y="9.4" width="5" height="9" fill="#D14B2E"/></svg>
+      <span class="nm"><b>DOWNEY</b><small>Moving &amp; Storage</small></span>
+    </a>
+    <a class="call" href="tel:+15013298582">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+      (501) 329-8582
+    </a>
+  </div>
+</nav>
+
+<header id="top">
+  <!-- SAMPLE PHOTO — stand-in; replaced with Downey's own trucks & crews on launch -->
+  <img class="hero-img" src="assets/hero.jpg" alt="Interior of a large storage warehouse with tall pallet racks stacked full of boxes and a forklift on the floor" width="1000" height="800" fetchpriority="high" />
+  <div class="hero-tint"></div>
+  <div class="hero-tape" aria-hidden="true"></div>
+
+  <!-- POSTAGE-STAMP SIGNATURE MARK -->
+  <svg class="stamp" viewBox="0 0 200 214" role="img" aria-label="Postage-stamp mark: Third generation. Licensed, bonded and insured. Conway and Searcy, Arkansas.">
+    <rect x="8" y="8" width="184" height="198" rx="6" fill="#F2ECDD"
+      stroke="#0B1119" stroke-width="2" stroke-dasharray="0.01 9.6" stroke-linecap="round"/>
+    <rect x="14" y="14" width="172" height="186" fill="#17263A"/>
+    <rect x="14" y="14" width="172" height="46" fill="#C89A63"/>
+    <text x="100" y="34" text-anchor="middle" font-family="Space Mono,monospace" font-size="10" fill="#2C1D0E" letter-spacing="2">QUALITY STORAGE</text>
+    <text x="100" y="50" text-anchor="middle" font-family="Space Mono,monospace" font-size="10" fill="#2C1D0E" letter-spacing="2">MOVING &amp; MORE</text>
+    <text x="100" y="96" text-anchor="middle" font-family="Anton,sans-serif" font-size="34" fill="#E2BB86" letter-spacing="1">THIRD</text>
+    <text x="100" y="128" text-anchor="middle" font-family="Anton,sans-serif" font-size="34" fill="#F2ECDD" letter-spacing="1">GENERATION</text>
+    <rect x="52" y="140" width="96" height="2.5" fill="#D14B2E"/>
+    <text x="100" y="162" text-anchor="middle" font-family="Space Mono,monospace" font-size="10.5" fill="#E2BB86" letter-spacing="1.5">LICENSED · BONDED</text>
+    <text x="100" y="177" text-anchor="middle" font-family="Space Mono,monospace" font-size="10.5" fill="#E2BB86" letter-spacing="1.5">&amp; INSURED</text>
+    <text x="100" y="194" text-anchor="middle" font-family="Space Mono,monospace" font-size="9" fill="#94A4B4" letter-spacing="2">CONWAY · SEARCY · AR</text>
+  </svg>
+
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="kicker" data-reveal><span class="dot" aria-hidden="true"></span>Conway &amp; Searcy, AR · Third-generation family movers</div>
+      <h1 data-reveal style="--i:1">Handle<br/>with <span class="r">care.</span></h1>
+      <p class="hero-sub" data-reveal style="--i:2">Three generations of one family packing, hauling and storing Central Arkansas — Conway to Little Rock to Searcy. Quality storage, moving, and more. Licensed, bonded and insured. We come to you.</p>
+      <div class="cta" data-reveal style="--i:3">
+        <a class="btn btn-a" href="tel:+15013298582" data-magnetic="0.2">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+          Call for a free estimate
+        </a>
+        <a class="btn btn-b" href="#route">See our service area</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- marquee trust strip -->
+<div class="strip" aria-hidden="true">
+  <div class="fs-mq"><div class="fs-mq__t">
+    <span>Local &amp; Long-Distance Moving <i>◆</i></span><span>Storage <i>◆</i></span><span>Packing &amp; Crating <i>◆</i></span>
+    <span>International Shipping <i>◆</i></span><span>Third-Generation Family-Owned <i>◆</i></span><span>Licensed · Bonded · Insured <i>◆</i></span>
+  </div></div>
+</div>
+
+<!-- services as stenciled shipping-label boxes -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="lab" data-reveal>What we handle</div>
+    <h2 data-reveal>From one room <span class="g">to the whole house.</span></h2>
+    <p class="lede" data-reveal>Individuals, businesses, corporations and military — down the street or across the country. Here's what goes on the truck.</p>
+
+    <div class="boxes">
+      <div class="cbox" data-reveal>
+        <div class="no">01</div>
+        <h3>Local &amp; Long-Distance Moving</h3>
+        <p>Across town or across the country — the same careful crew loads, hauls and sets your home back down where it belongs.</p>
+        <div class="stencil">This side up</div>
+      </div>
+      <div class="cbox" data-reveal style="--i:1">
+        <div class="no">02</div>
+        <h3>Packing &amp; Crating</h3>
+        <p>We wrap, box and crate the fragile things — dishes, art, glass — so they travel the way they left: intact.</p>
+        <div class="stencil">Fragile · handle with care</div>
+      </div>
+      <div class="cbox" data-reveal style="--i:2">
+        <div class="no">03</div>
+        <h3>Storage</h3>
+        <p>Clean, secure storage for the in-between — a few weeks between homes or the long haul. Your things kept, not just stacked.</p>
+        <div class="stencil">Kept safe · kept dry</div>
+      </div>
+      <div class="cbox" data-reveal>
+        <div class="no">04</div>
+        <h3>International Shipping</h3>
+        <p>Moving overseas? We handle the crating, paperwork and freight to get your household where it's going.</p>
+        <div class="stencil">Destination: anywhere</div>
+      </div>
+      <div class="cbox" data-reveal style="--i:1">
+        <div class="no">05</div>
+        <h3>Moving Supplies</h3>
+        <p>Boxes, tape, wrap and blankets — the right materials so nothing gets crushed on the way.</p>
+        <div class="stencil">Boxes · tape · wrap</div>
+      </div>
+      <div class="cbox dark" data-reveal style="--i:2">
+        <div class="no">06</div>
+        <h3>Debris Removal &amp; Blanket Wrapping</h3>
+        <p>Furniture blanket-wrapped for the trip, and the leftover boxes and debris hauled off when the last piece is in place.</p>
+        <div class="stencil">Wrapped · cleared · done</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIGNATURE: THE PACKING-TAPE ROUTE MAP ══ -->
+<section class="route" id="route">
+  <div class="wrap">
+    <div class="lab" data-reveal>We come to you</div>
+    <h2 data-reveal>The route runs right through <span class="g">Central Arkansas.</span></h2>
+    <p class="lede" data-reveal>Two offices, Conway and Searcy, with routes taped out across the whole region — Greater Little Rock, Mayflower, Cammack Village and everywhere in between.</p>
+
+    <div class="route-grid">
+      <div>
+        <ul class="serve">
+          <li>Based right here in <b>Conway &amp; Searcy</b> — a Central Arkansas family, not a national chain routing your move through a call center.</li>
+          <li>We move <b>Greater Little Rock, Conway, Mayflower and Cammack Village</b> — and go long-distance and international when the job calls for it.</li>
+          <li>One family, <b>three generations deep</b>, on the truck and answering the phone — the people who show up are the people who own it.</li>
+        </ul>
+        <div class="who" data-reveal>
+          <span>Individuals</span><span>Businesses</span><span>Corporations</span><span>Military</span>
+        </div>
+      </div>
+
+      <div class="map-card" data-reveal="scale">
+        <div class="cap"><b>Central Arkansas · Service Routes</b><span>FRAGILE · THIS SIDE UP</span></div>
+        <svg viewBox="0 0 560 460" role="img" aria-label="Illustrated route map: packing-tape lines running from Conway through Mayflower to Little Rock and Cammack Village, with a branch east to Searcy.">
+          <!-- packing-tape route strips -->
+          <path class="tapeEdgeLn" d="M150 120 L200 250 L250 360"/>
+          <path class="tapeLn"      d="M150 120 L200 250 L250 360"/>
+          <path class="tapeEdgeLn"  d="M150 120 L400 175"/>
+          <path class="tapeLn b"    d="M150 120 L400 175"/>
+          <path class="tapeEdgeLn"  d="M250 360 L360 340"/>
+          <path class="tapeLn c"    d="M250 360 L360 340"/>
+
+          <!-- fragile labels riding the tape -->
+          <text class="fragile" x="176" y="196" transform="rotate(69 176 196)">FRAGILE ▸ FRAGILE ▸</text>
+          <text class="fragile" x="250" y="140" transform="rotate(13 250 140)">THIS SIDE UP ▸</text>
+
+          <!-- town box-stamps -->
+          <g>
+            <rect class="boxStamp hub" x="118" y="98" width="30" height="24" rx="2" transform="rotate(-4 133 110)"/>
+            <text class="townT hub" x="158" y="114">CONWAY</text>
+          </g>
+          <g>
+            <rect class="boxStamp" x="186" y="238" width="26" height="21" rx="2" transform="rotate(3 199 248)"/>
+            <text class="townT" x="220" y="253">MAYFLOWER</text>
+          </g>
+          <g>
+            <rect class="boxStamp" x="236" y="349" width="28" height="22" rx="2" transform="rotate(-3 250 360)"/>
+            <text class="townT" x="272" y="365">LITTLE ROCK</text>
+          </g>
+          <g>
+            <rect class="boxStamp" x="348" y="329" width="26" height="21" rx="2" transform="rotate(4 361 339)"/>
+            <text class="townT" x="300" y="316">CAMMACK VILLAGE</text>
+          </g>
+          <g>
+            <rect class="boxStamp" x="388" y="163" width="28" height="22" rx="2" transform="rotate(5 402 174)"/>
+            <text class="townT" x="424" y="179">SEARCY</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- REAL map embed -->
+    <div class="embed-card" data-reveal>
+      <div class="embed-head">
+        <b>Find Downey Moving &amp; Storage</b>
+        <span>Conway, Arkansas</span>
+      </div>
+      <iframe title="Map — Downey Moving & Storage, Conway AR" src="https://www.google.com/maps?q=Downey+Moving+and+Storage,+Conway,+AR&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- proof — real customer voice -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="lab" data-reveal>In their words</div>
+    <div class="proof-grid">
+      <div data-reveal>
+        <p class="quote"><span class="mk">&ldquo;</span>Thanks so much for making our move as stress-free as possible!<span class="mk">&rdquo;</span></p>
+        <div class="qby">Milicent McDonald<small>Downey Moving &amp; Storage customer</small></div>
+      </div>
+      <div class="frames" data-reveal="left">
+        <figure class="frame"><span class="stag">Sample</span><img src="assets/storage.jpg" alt="A clean storage corridor lined with roll-up unit doors and neatly stacked moving boxes" width="700" height="525" loading="lazy" decoding="async"><figcaption>Secure storage</figcaption></figure>
+        <figure class="frame"><span class="stag">Sample</span><img src="assets/fleet.jpg" alt="A clean white cargo van ready to load" width="700" height="525" loading="lazy" decoding="async"><figcaption>We come to you</figcaption></figure>
+        <figure class="frame"><span class="stag">Sample</span><img src="assets/handling.jpg" alt="Forklifts on a warehouse floor beside racks of stored goods" width="700" height="525" loading="lazy" decoding="async"><figcaption>Careful handling</figcaption></figure>
+        <figure class="frame"><span class="stag">Sample</span><img src="assets/hero.jpg" alt="Rows of tall pallet racks stacked with stored boxes in a warehouse" width="900" height="675" loading="lazy" decoding="async"><figcaption>Room for it all</figcaption></figure>
+      </div>
+    </div>
+    <p class="pnote">Sample photography — Downey's own trucks, crews and jobs go here on launch.</p>
+
+    <div class="stats">
+      <div class="stat" data-reveal><b><span data-count="3" data-suf="rd">3rd</span></b><small>Generation family-owned</small></div>
+      <div class="stat" data-reveal style="--i:1"><b><span data-count="2">2</span></b><small>Offices — Conway &amp; Searcy</small></div>
+      <div class="stat" data-reveal style="--i:2"><b>L·B·I</b><small>Licensed, bonded &amp; insured</small></div>
+      <div class="stat" data-reveal style="--i:3"><b>Mon–Fri</b><small>8 AM – 5 PM</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- offices / contact -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="lab" data-reveal>Reach us</div>
+    <h2 data-reveal>Two offices. <span class="g">One family.</span></h2>
+    <div class="v-grid">
+      <div class="v-card" data-reveal>
+        <div class="office-tag">Office 01</div>
+        <h3>Conway</h3>
+        <a class="ph" href="tel:+15013298582">(501) 329-8582</a>
+        <div class="hrow"><b>Monday – Friday</b><span>8 AM – 5 PM</span></div>
+        <div class="hrow"><b>Saturday – Sunday</b><span>Closed</span></div>
+        <p><a class="btn btn-a" href="tel:+15013298582">Call the Conway office</a></p>
+      </div>
+      <div class="v-card" data-reveal style="--i:1">
+        <div class="office-tag">Office 02</div>
+        <h3>Searcy</h3>
+        <a class="ph" href="tel:+15012688243">(501) 268-8243</a>
+        <div class="hrow"><b>Monday – Friday</b><span>8 AM – 5 PM</span></div>
+        <div class="hrow"><b>Saturday – Sunday</b><span>Closed</span></div>
+        <p><a class="btn btn-a" href="tel:+15012688243">Call the Searcy office</a></p>
+      </div>
+      <div class="v-card" data-reveal style="--i:2">
+        <div class="office-tag">Get a quote</div>
+        <h3>Email us</h3>
+        <p class="em">Tell us where you're moving from, where you're headed, and roughly when — we'll get back with an estimate.<br/><br/>
+          <a href="mailto:downeymoving@conwaycorp.net">downeymoving@conwaycorp.net</a></p>
+        <p><a class="btn btn-a" href="mailto:downeymoving@conwaycorp.net">Email for an estimate</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div>
+        <span class="disp">Downey Moving &amp; Storage</span><br/>
+        Third-generation family movers &amp; storage<br/>
+        Conway (501) 329-8582 · Searcy (501) 268-8243<br/>
+        downeymoving@conwaycorp.net
+      </div>
+      <div style="text-align:right" class="mono">Serving Conway, Searcy<br/>&amp; Greater Little Rock<br/>Mon–Fri · 8 AM – 5 PM<br/>Licensed · Bonded · Insured</div>
+    </div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Downey Moving &amp; Storage. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography and the illustrated service-area map shown are placeholders, replaced with the business's own on launch.</div>
+  </div>
+</footer>
+
+<!-- AI assistant widget placeholder -->
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="aiPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Ask Downey
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Downey Moving assistant (sample)">
+  <div class="ai-head">
+    <span class="av" aria-hidden="true"></span>
+    <div><b>Downey Assistant</b><small>SAMPLE · placeholder</small></div>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msg">Hey — I'm the Downey assistant. On launch I'll answer estimates, moving dates and "can you store it for a month?" around the clock, then pass the details straight to the office.</div>
+    <div class="ai-chips"><span>Get an estimate</span><span>Do you store?</span><span>Long-distance?</span></div>
+    <div class="ai-input">
+      <input type="text" name="ai-message" placeholder="Type a question…" aria-label="Message (disabled in demo)" disabled />
+      <button type="button" disabled aria-label="Send (disabled in demo)">→</button>
+    </div>
+    <div class="ai-note">Wired live on launch — this is a preview</div>
+  </div>
+</div>
+
+<div class="mbar">
+  <a href="tel:+15013298582">Call (501) 329-8582</a>
+  <a href="mailto:downeymoving@conwaycorp.net">Get a quote</a>
+</div>
+
+<div class="fs-prog" aria-hidden="true"></div>
+
+<!-- AI panel toggle -->
+<script>
+(function(){
+  var aiBtn=document.getElementById('aiBtn'), aiPanel=document.getElementById('aiPanel');
+  if(aiBtn && aiPanel){
+    aiBtn.addEventListener('click',function(){
+      var open=aiPanel.classList.toggle('open');
+      aiBtn.setAttribute('aria-expanded', open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && aiPanel.classList.contains('open')){
+        aiPanel.classList.remove('open'); aiBtn.setAttribute('aria-expanded','false'); aiBtn.focus();
+      }
+    });
+  }
+})();
+</script>
+
+<!-- ==== FRESH SIGNAL MOTION LAYER — BLOCK 2 ==== -->
+<script>
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  if (FINE && !RM) {
+    var dot = document.createElement('div'); dot.className = 'fs-cur';
+    var ring = document.createElement('div'); ring.className = 'fs-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    },{passive:true});
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    var HOT='a,button,[data-cursor],input,select,textarea,summary';
+    document.addEventListener('mouseover',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.add('is-hot');
+    });
+    document.addEventListener('mouseout',function(e){
+      if(e.target.closest&&e.target.closest(HOT)) ring.classList.remove('is-hot');
+    });
+    document.addEventListener('mouseleave',function(){ ring.classList.add('is-hide'); });
+    document.addEventListener('mouseenter',function(){ ring.classList.remove('is-hide'); });
+  }
+
+  var rev = document.querySelectorAll('[data-reveal]');
+  if (rev.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      rev.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+      rev.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-hero]').forEach(function(h){ h.classList.add('fs-lit'); });
+  });
+
+  if (FINE && !RM) {
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      var s = parseFloat(el.getAttribute('data-magnetic')) || 0.32;
+      el.addEventListener('mousemove',function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate3d(' + ((e.clientX-r.left-r.width/2)*s) + 'px,'
+                                            + ((e.clientY-r.top-r.height/2)*s) + 'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+    });
+  }
+
+  var px = document.querySelectorAll('[data-parallax]');
+  if (px.length && !RM) {
+    var tick=false;
+    addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        px.forEach(function(el){
+          var sp=parseFloat(el.getAttribute('data-parallax'))||0.15;
+          var r=el.getBoundingClientRect();
+          var off=(r.top + r.height/2 - innerHeight/2) * -sp;
+          el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
+        });
+        tick=false;
+      });
+    },{passive:true});
+  }
+
+  var cs = document.querySelectorAll('[data-count]');
+  if (cs.length) {
+    if (RM || !('IntersectionObserver' in window)) {
+      cs.forEach(function(el){ el.textContent = (el.getAttribute('data-pre')||'') + el.getAttribute('data-count') + (el.getAttribute('data-suf')||''); });
+    } else {
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target, end=parseFloat(el.getAttribute('data-count'))||0;
+          var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+          var t0=null, dur=1400;
+          function step(ts){
+            if(t0===null) t0=ts;
+            var p=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-p,3);
+            el.textContent = pre + Math.round(end*e).toLocaleString() + suf;
+            if(p<1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          cio.unobserve(el);
+        });
+      },{threshold:.5});
+      cs.forEach(function(el){ cio.observe(el); });
+    }
+  }
+
+  document.querySelectorAll('.fs-mq').forEach(function(m){
+    var t=m.querySelector('.fs-mq__t'); if(t && m.children.length===1) m.appendChild(t.cloneNode(true));
+  });
+
+  var pr=document.querySelector('.fs-prog');
+  if(pr){ addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pr.style.width = (h>0 ? (scrollY/h*100) : 0) + '%';
+  },{passive:true}); }
+})();
+</script>
+</body>
+</html>
