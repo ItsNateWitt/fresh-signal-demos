@@ -37,10 +37,6 @@
   img{max-width:100%;display:block}
   :focus-visible{outline:3px solid var(--ember-lt);outline-offset:3px}
 
-  .demo{background:var(--sun);color:var(--ink);font-family:'JetBrains Mono',monospace;
-    font-size:11.5px;letter-spacing:.05em;padding:9px 16px;text-align:center;line-height:1.55}
-  .demo b{font-weight:500}
-
   nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
     border-bottom:2px solid var(--ink)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:14px}
@@ -200,11 +196,6 @@
     font-size:13px;cursor:pointer;font-family:'Archivo',sans-serif;transition:border-color .18s,background .18s}
   .q:hover{border-color:var(--ember);background:#FFF7EE}
 
-  .fs-close{background:var(--cream);color:var(--ink)}
-  .letter{max-width:58ch;font-size:18.5px;line-height:1.75}
-  .letter p{margin:0 0 15px}
-  .sig{font-family:'Caveat',cursive;font-size:30px;color:var(--pop);margin-top:8px}
-
   footer{background:var(--ink);padding:44px 0;font-size:14px;color:rgba(255,255,255,.66)}
   .fbot{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);
     font-size:12px;line-height:1.6;color:rgba(255,255,255,.5)}
@@ -268,7 +259,6 @@
     nav .wrap{gap:8px;height:62px}
     .mark{font-size:19px;min-width:0;overflow:hidden;text-overflow:ellipsis}
     .call{padding:9px 12px;font-size:13px;letter-spacing:0}
-    .demo{font-size:10.5px;padding:8px 12px}
     .wrap{padding:0 18px}
     h1{font-size:clamp(40px,11vw,60px)}
     .hero-sub{font-size:16px;max-width:100%}
@@ -357,8 +347,6 @@
   .mbar{background:var(--ink) !important}
   .mbar a{color:#fff !important}
   .mbar a + a{background:var(--sky);color:var(--ink) !important}
-  .sig{color:var(--sky-dk) !important}
-  .fs-close{background:var(--sky-2) !important}
   .fs-prog{background:var(--sky-dk) !important}
   /* Pin the hero so a landscape photo isn't crushed into a portrait keyhole on a phone. */
   @media(max-width:640px){
@@ -370,12 +358,6 @@
 </head>
 <body>
 <div class="fs-prog"></div>
-
-<div class="demo">
-  <b>DEMO MOCKUP</b> — built for Lokal Koffee Roasters by Nate Witt · Fresh Signal.
-  REAL: name, address, phone, "since 2014," roaster + bakery, Facebook &amp; Square.
-  SAMPLE (swapped for yours on launch): photos, menu, prices, roast names, hours.
-</div>
 
 <nav>
   <div class="wrap">
@@ -564,26 +546,6 @@
         <div class="hrow"><b>Sunday</b><span>Closed</span></div>
         <span class="sample-tag" style="margin-top:18px">Hours pulled from online listings — we'll confirm your real ones</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="fs-close">
-  <div class="wrap">
-    <div class="letter" data-reveal>
-      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;
-        text-transform:uppercase;color:var(--ember);margin-bottom:22px">A note from the guy who built this</p>
-      <p>I'm Nate. I build websites for local shops here in Central Arkansas.</p>
-      <p>I made this for Lokal Koffee before we ever spoke, because you roast your own beans and bake your
-      own pastries in a hundred-year-old downtown — and the internet shows almost none of it. That seemed
-      like a shame worth fixing.</p>
-      <p>Everything marked <em>sample</em> — the photos, the menu, the roast notes, the hours — gets
-      replaced with your real ones. I wasn't going to guess at your prices.</p>
-      <p>If you want it, it's live in two or three days. If you don't, keep the link anyway. It's yours
-      either way.</p>
-      <div class="sig">— Nate</div>
-      <p style="margin-top:20px;font-size:16px">
-        <a href="tel:+15017573468" style="color:var(--ember);font-weight:700">(501) 757-3468</a></p>
     </div>
   </div>
 </section>
