@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,800;1,500&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C2622'/%3E%3Cpath d='M7 17c4-5 14-5 18 0-4 5-14 5-18 0z' fill='%23E0A73B'/%3E%3Ccircle cx='11' cy='15' r='1.6' fill='%231C2622'/%3E%3C/svg%3E" />
 <style>
-  /* Palette from a Southern creek-side fish house: cast iron · fried gold · catfish slate · creek green · cornbread */
+  /* Palette from a classic barbershop: cast iron · warm gold · slate · deep green · cream */
   :root{
     --iron:#141414; --iron-2:#1D1D1F; --slate:#3A3A3C;
     --gold:#C8A24A; --gold-lt:#E0C177; --brick:#B4302B;
@@ -29,10 +29,6 @@
   img{max-width:100%;display:block}
   :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   .bit{font-family:'Bitter',Georgia,serif}
-
-  .demo{background:var(--gold);color:var(--iron);font-family:'JetBrains Mono',monospace;font-size:11.5px;
-    letter-spacing:.04em;padding:9px 16px;text-align:center;line-height:1.5}
-  .demo b{font-weight:600}
 
   nav{position:sticky;top:0;z-index:60;background:rgba(28,38,34,.86);backdrop-filter:blur(11px);
     border-bottom:1px solid rgba(245,236,216,.14)}
@@ -66,32 +62,6 @@
   h2 em{font-style:italic;color:var(--gold)}
   .lede{font-size:19px;color:var(--cream-2);max-width:56ch;margin:0 0 40px}
 
-  /* ══ SIGNATURE: the Google-search demo — the whole SEO pitch, made touchable ══ */
-  .seo{background:var(--iron-2)}
-  .seo-grid{display:grid;grid-template-columns:1fr .85fr;gap:52px;align-items:center}
-  @media(max-width:900px){.seo-grid{grid-template-columns:1fr;gap:32px}}
-  .phone{background:#0E1512;border:10px solid #050907;border-radius:34px;padding:0;overflow:hidden;
-    max-width:340px;margin:0 auto;box-shadow:0 34px 80px rgba(0,0,0,.5)}
-  .ph-bar{background:#fff;display:flex;align-items:center;gap:9px;padding:11px 14px}
-  .ph-bar .g{width:16px;height:16px;border-radius:50%;background:conic-gradient(#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);flex:none}
-  .ph-q{flex:1;background:#F1F3F4;border-radius:20px;padding:7px 12px;font-size:13.5px;color:#202124;font-family:'Barlow',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ph-body{background:#fff;color:#202124;padding:14px 14px 18px;min-height:330px;font-family:'Barlow',sans-serif}
-  .ph-stat{font-size:11.5px;color:#70757A;margin-bottom:12px}
-  .result{padding:11px 0;border-bottom:1px solid #ECECEC;opacity:.5;transition:opacity .4s,background .4s;border-radius:6px}
-  .result.you{opacity:1;background:#FEF7E6;border:1px solid var(--gold);padding:12px;margin:4px 0;box-shadow:0 4px 14px rgba(224,167,59,.2)}
-  .result .site{font-size:11.5px;color:#5F6368;display:flex;align-items:center;gap:6px}
-  .result .site .pin{width:14px;height:14px;border-radius:50%;background:var(--gold);color:#fff;font-size:9px;display:grid;place-items:center;font-weight:700}
-  .result .ttl{font-size:16px;color:#1A0DAB;margin:2px 0 2px;font-weight:500}
-  .result.you .ttl{color:#0B7A3E}
-  .result .snip{font-size:12.5px;color:#4D5156;line-height:1.4}
-  .result .badge{display:inline-block;background:#E6F4EA;color:#137333;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-top:5px}
-  .kw-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-  .kw{background:transparent;border:1px solid var(--slate);color:var(--cream);font-family:'Barlow';font-weight:600;
-    font-size:14px;padding:11px 15px;border-radius:24px;cursor:pointer;min-height:46px;transition:background .2s,border-color .2s,color .2s}
-  .kw:hover{border-color:var(--gold)}
-  .kw.on{background:var(--gold);border-color:var(--gold);color:var(--iron)}
-  .seo-note{font-size:14px;color:var(--mut);margin-top:16px}
-
   /* buffet spread */
   .buffet{background:var(--iron)}
   .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -117,20 +87,6 @@
   .addr b{color:var(--gold);font-weight:600}
   .stag2{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--mut);border:1px solid rgba(245,236,216,.2);padding:4px 8px;border-radius:4px}
-
-  /* fresh signal close */
-  .fs{background:var(--cream);color:var(--iron)}
-  .letter{max-width:60ch;font-size:18.5px;line-height:1.72}
-  .letter p{margin:0 0 15px}
-  .sig{font-family:'Bitter',serif;font-style:italic;font-size:22px;color:var(--brick);margin-top:6px}
-  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 0}
-  @media(max-width:700px){.offer{grid-template-columns:1fr}}
-  .oc{border:1px solid rgba(28,38,34,.16);border-radius:10px;padding:20px;background:#fff}
-  .oc .amt{font-family:'Bitter',serif;font-weight:800;font-size:34px;color:var(--iron)}
-  .oc .amt small{display:block;font-family:'Barlow';font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:2px}
-  .oc p{font-size:14px;color:var(--slate);margin:8px 0 0}
-  .risk{margin-top:22px;background:var(--iron);color:var(--cream);border-radius:10px;padding:20px 22px;font-size:16px}
-  .risk b{color:var(--gold-lt)}
 
   footer{background:var(--iron);padding:40px 0;border-top:1px solid rgba(245,236,216,.14);font-size:14px;color:rgba(245,236,216,.6)}
   .fbot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(245,236,216,.1);font-size:11.5px;line-height:1.6;color:rgba(245,236,216,.42)}
@@ -165,10 +121,6 @@
 </head>
 <body>
 
-<div class="demo"><b>DEMO MOCKUP</b> — built for The Chop Shop Barbershop by Nate Witt · Fresh Signal.
-  REAL: name, 1815 Old Morrilton Hwy Conway, Booksy booking, hours, phone.
-  SAMPLE (swapped on launch): photos, prices, barbers, reviews.</div>
-
 <nav>
   <div class="wrap">
     <a class="mark" href="#top">The Chop <span>Shop</span></a>
@@ -179,7 +131,7 @@
 <header id="top">
   <!-- SAMPLE PHOTO — stand-in; replace with the restaurant's real plate on launch -->
   <img class="hero-img" src="assets/b2-23-chop-shop-barbershop-conway/hero.jpg"
-       alt="Fried catfish plate at The Chop Shop Barbershop, Conway AR" width="1500" height="1000" fetchpriority="high" />
+       alt="A fresh cut at The Chop Shop Barbershop, Conway AR" width="1500" height="1000" fetchpriority="high" />
   <div class="hero-scrim"></div>
   <div class="hero-in">
     <div class="wrap">
@@ -194,51 +146,6 @@
   </div>
 </header>
 
-<!-- ══ SIGNATURE: THE GOOGLE-SEARCH DEMO — the SEO pitch, touchable ══ -->
-<section class="seo" id="found">
-  <div class="wrap">
-    <div class="lab" data-reveal>Get found</div>
-    <h2 data-reveal>When Conway searches, <em>you're who they find.</em></h2>
-    <p class="lede" data-reveal>Everybody's got a phone, nobody's got a phone book. When a guy new to Conway googles for a cut, the shop with a real website gets the chair. Tap a search — watch where The Chop Shop lands.</p>
-
-    <div class="seo-grid">
-      <div>
-        <div class="kw-row" role="group" aria-label="Try a search">
-          <button class="kw on" data-q="barber near me conway">barber near me conway</button>
-          <button class="kw" data-q="skin fade conway ar">skin fade conway ar</button>
-          <button class="kw" data-q="walk in barber conway">walk in barber conway</button>
-          <button class="kw" data-q="mens haircut conway">mens haircut conway</button>
-        </div>
-        <p class="seo-note">This is what a real website does that a Facebook page can't: it puts you at the top when the whole town is searching for a cut. That's the $79/month working while you're behind the chair.</p>
-      </div>
-
-      <div class="phone" data-reveal="scale">
-        <div class="ph-bar"><span class="g"></span><span class="ph-q" id="phQ">barber near me conway</span></div>
-        <div class="ph-body">
-          <div class="ph-stat">About 41,300 results · Conway, AR</div>
-          <div class="result you">
-            <div class="site"><span class="pin">★</span> thechopshopconway.com</div>
-            <div class="ttl" id="phTtl">The Chop Shop Barbershop — All-You-Can-Eat Buffet</div>
-            <div class="snip">Fried catfish, tenders &amp; frog legs on the creek in Conway. Open Thu–Sun.
-            ★★★★★ "Best buffet in Faulkner County."</div>
-            <span class="badge">You — #1 result</span>
-          </div>
-          <div class="result">
-            <div class="site">facebook.com › some other place</div>
-            <div class="ttl">A competitor's Facebook page</div>
-            <div class="snip">No hours, no menu, no directions — the search moves on.</div>
-          </div>
-          <div class="result">
-            <div class="site">yelp.com › listings</div>
-            <div class="ttl">A directory nobody controls</div>
-            <div class="snip">Third-party page with old info.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ THE BUFFET ══ -->
 <section class="buffet" id="work">
   <div class="wrap">
@@ -246,7 +153,7 @@
     <h2 data-reveal>Fades that <em>hold up.</em></h2>
     <p class="lede" data-reveal>Clean lines, tight fades, beard work that looks intentional. A few off the wall.</p>
     <div class="bgrid">
-      <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-23-chop-shop-barbershop-conway/hero.jpg" alt="Fried catfish, The Chop Shop Barbershop Conway AR" width="900" height="675" loading="lazy" decoding="async"><figcaption>Fried catfish — the reason you came</figcaption></figure>
+      <figure data-reveal><span class="stag">Sample</span><img src="assets/b2-23-chop-shop-barbershop-conway/hero.jpg" alt="A fresh haircut at The Chop Shop Barbershop, Conway AR" width="900" height="675" loading="lazy" decoding="async"><figcaption>The cut you came for</figcaption></figure>
       <figure data-reveal style="--i:1"><span class="stag">Sample</span><img src="assets/b2-23-chop-shop-barbershop-conway/fade.jpg" alt="Haircut in progress, Conway AR" width="700" height="525" loading="lazy" decoding="async"><figcaption>Clippers &amp; scissor</figcaption></figure>
       <figure data-reveal style="--i:2"><span class="stag">Sample</span><img src="assets/b2-23-chop-shop-barbershop-conway/beard.jpg" alt="Beard trim, Conway AR" width="700" height="525" loading="lazy" decoding="async"><figcaption>Beard &amp; straight-razor</figcaption></figure>
       <figure data-reveal style="--i:3"><span class="stag">Sample</span><img src="assets/b2-23-chop-shop-barbershop-conway/interior.jpg" alt="Inside The Chop Shop, Conway AR" width="700" height="525" loading="lazy" decoding="async"><figcaption>The shop</figcaption></figure>
@@ -279,38 +186,14 @@
   </div>
 </section>
 
-<!-- ══ FRESH SIGNAL CLOSE ══ -->
-<section class="fs">
-  <div class="wrap">
-    <div class="letter" data-reveal>
-      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brick);margin-bottom:20px">A note from the guy who built this</p>
-      <p>I'm Nate — I build websites for local spots here in Central Arkansas.</p>
-      <p>I built this for The Chop Shop before we ever talked, because you've got a real shop with real reviews and almost nothing online to catch the guys who'd sit in your chair if they could just <em>find</em> you. Right now it's Facebook and a Booksy link that looks like every other shop's.</p>
-      <p>Here's the whole idea: when a guy googles <b>"barber near me Conway,"</b> a real website puts <em>you</em> at the top instead of a Facebook page. That's chairs you're not filling right now. Everything marked <em>sample</em> becomes your real photos, prices, and barbers — and your Booksy booking stays right where it is.</p>
-      <p>Live in two or three days. And you don't pay me a dime until it's up and you love it.</p>
-      <div class="sig">— Nate Witt, Fresh Signal</div>
-
-      <div class="offer">
-        <div class="oc"><div class="amt">$250<small>One-time</small></div><p>The whole build: your website, your Google profile fixed so you rank for "barber Conway," and a simple assistant that answers hours, walk-in wait &amp; directions 24/7.</p></div>
-        <div class="oc"><div class="amt">$79<small>Per month</small></div><p>Hosting, updates, and we keep your Google sharp with fresh cuts, reviews &amp; posts every month. Cancel anytime.</p></div>
-        <div class="oc"><div class="amt">2–3<small>Days to live</small></div><p>Because it's already about 80% built — you're looking at it.</p></div>
-      </div>
-      <p class="risk"><b>You don't pay until it's live and you love it.</b> I build it, you look it over, and
-      only then do we talk money. You keep the site and the domain either way. There's no risk to you —
-      that's the whole point.</p>
-      <p style="margin-top:18px;font-size:16px"><a href="tel:+15017573468" style="color:var(--brick);font-weight:700">Nate · (501) 757-3468</a></p>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
-      <div><span class="bit" style="font-weight:800;font-size:20px;color:var(--cream)">Hidden Creek <span style="color:var(--gold)">Catfish</span></span><br/>1815 Old Morrilton Hwy · Conway, AR 72034 · (501) 504-2488</div>
+      <div><span class="bit" style="font-weight:800;font-size:20px;color:var(--cream)">The Chop <span style="color:var(--gold)">Shop</span></span><br/>1815 Old Morrilton Hwy · Conway, AR 72034 · (501) 504-2488</div>
       <div style="text-align:right">Walk in or book<br/>Mon – Sat</div>
     </div>
-    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by Hidden
-    Creek Catfish. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography, prices, barbers and reviews shown are placeholders, replaced with the shop's own on launch.</div>
+    <div class="fbot">Unofficial concept mockup. Not affiliated with, endorsed by, or commissioned by The Chop Shop
+    Barbershop. Created by Fresh Signal as a proposal. All marks belong to their owners. Sample photography, prices, barbers and reviews shown are placeholders, replaced with the shop's own on launch.</div>
   </div>
 </footer>
 
@@ -319,22 +202,6 @@
   <a href="https://maps.google.com/?q=Chop+Shop+Barbershop+1815+Old+Morrilton+Hwy+Conway+AR" target="_blank" rel="noopener">Book / Directions</a>
 </div>
 
-<script>
-(function(){
-  /* the Google-search signature */
-  var DATA = {
-    "catfish buffet near me":   {t:"The Chop Shop Barbershop — All-You-Can-Eat Buffet"},
-    "all you can eat conway ar":{t:"The Chop Shop Barbershop — Conway's AYCE Fish House"},
-    "fish fry near conway":     {t:"The Chop Shop Barbershop — Fried Catfish on the Creek"},
-    "catfish restaurant conway":{t:"The Chop Shop Barbershop — Conway, AR · Open Thu–Sun"}
-  };
-  var kws=[].slice.call(document.querySelectorAll('.kw')), q=document.getElementById('phQ'), ttl=document.getElementById('phTtl');
-  kws.forEach(function(b){b.addEventListener('click',function(){
-    kws.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
-    var k=b.getAttribute('data-q'); q.textContent=k; if(DATA[k]) ttl.textContent=DATA[k].t;
-  });});
-})();
-</script>
 <script>
 /* ============================================================
    FRESH SIGNAL — SIGNATURE ENGINE v1
