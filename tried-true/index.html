@@ -46,8 +46,6 @@
   .cond{font-family:'Barlow Condensed',sans-serif}
   .kick{font-family:'Barlow Condensed';font-weight:700;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
   .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)}
-  .mock{position:relative;z-index:6;background:var(--ink);color:var(--gold);text-align:center;font-size:12px;font-weight:600;letter-spacing:.02em;padding:8px 14px}
-  .mock b{color:#fff}
 
   /* NAV */
   nav{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
@@ -165,10 +163,7 @@
   .vcta .btn{flex:1;min-width:150px}
   .btn-call2{background:var(--red);color:#fff}.btn-call2:hover{background:var(--red-dk)}
   .btn-fb{background:transparent;color:var(--parch);border-color:rgba(235,220,187,.4)}.btn-fb:hover{border-color:var(--gold);color:var(--gold)}
-  .mapbox{border:3px solid var(--ink);border-radius:12px;min-height:280px;background:linear-gradient(150deg,#D8C9A4,#C9B587);display:grid;place-items:center;text-align:center;padding:24px}
-  .mapbox .pin{width:46px;height:46px;color:var(--red);margin:0 auto 10px}
-  .mapbox b{font-family:'Alfa Slab One';font-size:15px;color:var(--ink)}
-  .mapbox small{display:block;font-size:12px;color:var(--mut);margin-top:5px}
+  .mapbox{border:3px solid var(--ink);border-radius:12px;min-height:280px;overflow:hidden}
 
   footer{position:relative;z-index:1;background:var(--ink);color:rgba(235,220,187,.72);text-align:center;padding:40px 22px;font-size:14px}
   footer .slab{display:block;font-family:'Alfa Slab One';font-size:24px;color:var(--gold);margin-bottom:8px}
@@ -222,8 +217,6 @@
 </style>
 </head>
 <body>
-<div class="mock">DEMO MOCKUP — built for <b>Tried &amp; True Tattoo</b> by Nate Witt · real phone (479) 886-4335 · sample prices, reviews, artist details &amp; flash art swapped for the shop's own on launch</div>
-
 <div class="wrap">
   <nav>
     <a class="brand" href="#top">
@@ -389,12 +382,8 @@
           <a class="btn btn-fb" href="https://www.facebook.com/triedandtruetattoocorickmedina/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>Facebook</a>
         </div>
       </div>
-      <div class="mapbox reveal" aria-hidden="true">
-        <div>
-          <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <b>E Main St · Russellville</b>
-          <small>Live Google Map embeds here on launch</small>
-        </div>
+      <div class="mapbox reveal">
+        <iframe title="Map — Tried &amp; True Tattoo, Russellville AR" src="https://www.google.com/maps?q=701+E+Main+St+Ste+16,+Russellville,+AR+72801&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:420px;border:0;display:block;border-radius:inherit"></iframe>
       </div>
     </div>
   </div>
@@ -412,7 +401,6 @@
     reviews marked SAMPLE are illustrative placeholders &mdash; not representations of fact &mdash; and
     are replaced with the owner's real details if this site is built. This page is set to
     <b>noindex</b> and is not listed in search engines.
-    Questions or removal requests: Nate Witt &mdash; <a href="tel:+15017573468">(501) 757-3468</a>.
   </aside>
 </footer>
 
