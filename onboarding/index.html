@@ -81,6 +81,11 @@
   .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
   .btn-ghost:hover{border-color:var(--ink)}
   .saved{font-size:13px;color:var(--mut);margin-top:12px}
+  .handoff{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 24px}
+  .handoff div{background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:12px}
+  .handoff b{display:block;color:var(--accent);font-family:'Oswald';font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .handoff span{display:block;font-size:13px;line-height:1.45;margin-top:4px}
+  @media(max-width:560px){.handoff{grid-template-columns:1fr;gap:7px}.handoff div{display:grid;grid-template-columns:90px 1fr;gap:8px;align-items:start}.handoff span{margin-top:0}}
 </style>
 </head>
 <body>
@@ -91,27 +96,30 @@
   <div class="brandsub">Websites &amp; Customer Assistants · Central Arkansas</div>
 </header>
 
+<div class="handoff" aria-label="What happens after you send your details">
+  <div><b>1 · Share</b><span>Fill in what you know. You can leave unknown details blank.</span></div>
+  <div><b>2 · Confirm</b><span>I'll follow up with you to confirm anything needed for launch.</span></div>
+  <div><b>3 · Build</b><span>The 2–3 business-day window starts when I have your content and Google Profile access or permission to request it.</span></div>
+</div>
+
 <div class="ok" id="ok">
-  <b>Got it — thank you.</b> I have everything I need to start. Your site goes live in 2–3 business days,
-  and I'll text you the moment it's ready.
+  <b>Got it — thank you.</b> Your details reached me. I'll confirm anything missing with you; the 2–3 business-day window starts once I have the launch details and access.
 </div>
 
 <div class="fb" id="fb">
-  <h2>One last tap</h2>
-  <p>Your answers are saved and ready — I just need you to send them across. Either button works,
-  whichever you'd rather use.</p>
+  <h2>Send your details to Nate</h2>
+  <p>Your answers are ready. Choose email or copy to send them; nothing is sent automatically.</p>
   <div class="btnrow">
     <a class="btn2 btn-primary" id="fbMail" href="#">Email my answers to Nate</a>
     <button class="btn2 btn-ghost" id="fbCopy" type="button">Copy my answers</button>
-    <a class="btn2 btn-ghost" id="fbSms" href="sms:+15017573468">Text Nate — (501) 757-3468</a>
+    <a class="btn2 btn-ghost" id="fbSms" href="sms:+15017573468">Need help? Text Nate</a>
   </div>
-  <p class="saved" id="fbSaved">Nothing is lost — your answers are saved on this device. You can close
-  this page and come back to it.</p>
+  <p class="saved" id="fbSaved" aria-live="polite"></p>
 </div>
 
 <h1>Let's build your site</h1>
-<p class="lede">This is everything I need to make the mockup real. It takes about 5 minutes.
-Anything you're unsure about, leave blank and we'll sort it on a call.</p>
+<p class="lede">This takes about 5 minutes. Start with what you know; I won't guess at your services, prices, or business details.
+Launch needs real photos, services and prices, hours, and Google Business Profile access (or permission for me to request it). <a href="sms:+15017573468">Rather fill it out together? Text Nate.</a></p>
 
 <form id="f" method="POST">
 
@@ -134,17 +142,17 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
     <input type="text" id="addr" name="address" />
     <div class="hint">Exactly as it should appear on Google. If you're mobile-only, say so.</div>
 
-    <label for="hours">Your hours <span class="req">*</span></label>
-    <textarea id="hours" name="hours" required placeholder="Mon–Fri 9–6, Sat 10–4, closed Sunday"></textarea>
-    <div class="hint">The demo used placeholder hours — these replace them.</div>
+    <label for="hours">Your hours</label>
+    <textarea id="hours" name="hours" placeholder="Mon–Fri 9–6, Sat 10–4, closed Sunday"></textarea>
+    <div class="hint">The demo used placeholder hours. If you don't have them handy, leave this blank and we'll confirm them.</div>
   </fieldset>
 
   <fieldset>
     <legend>What you sell</legend>
 
-    <label for="services">Your services and prices <span class="req">*</span></label>
-    <textarea id="services" name="services" required placeholder="The Cut — $25&#10;Skin Fade — $30&#10;Beard Trim — $20"></textarea>
-    <div class="hint">Every price on the demo is a placeholder. Give me the real ones — I won't guess.</div>
+    <label for="services">Your services and prices</label>
+    <textarea id="services" name="services" placeholder="The Cut — $25&#10;Skin Fade — $30&#10;Beard Trim — $20"></textarea>
+    <div class="hint">Every price on the demo is a placeholder. Add the real ones when you can — I won't guess.</div>
 
     <label for="staff">Your team (names + roles)</label>
     <textarea id="staff" name="staff" placeholder="Jason — owner, custom work&#10;..."></textarea>
@@ -157,9 +165,12 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
   <fieldset>
     <legend>Your photos &amp; accounts</legend>
 
-    <label for="photos">Where are your photos? <span class="req">*</span></label>
-    <textarea id="photos" name="photos" required placeholder="I'll text them / they're on my Facebook page / Google Drive link..."></textarea>
-    <div class="hint">The demo uses stock stand-ins. Your real photos replace all of them.</div>
+    <label for="logo">Where can I find your logo?</label>
+    <input type="text" id="logo" name="logo" placeholder="I'll text it / Facebook page / Google Drive link..." />
+
+    <label for="photos">Where can I find your photos?</label>
+    <textarea id="photos" name="photos" placeholder="I'll text them / they're on my Facebook page / Google Drive link..."></textarea>
+    <div class="hint">The demo uses stock stand-ins. Your real photos replace them before launch.</div>
 
     <label for="social">Facebook / Instagram / booking links</label>
     <textarea id="social" name="social" placeholder="facebook.com/yourpage&#10;instagram.com/yourshop&#10;booksy.com/..."></textarea>
@@ -171,7 +182,8 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
       <option>Yes — but I've lost access</option>
       <option>No / not sure</option>
     </select>
-    <div class="hint">Part of the $500 setup is cleaning this up. If you've lost access, I'll help you claim it.</div>
+    <!-- SUPERSEDED 2026-10-25: “Part of the $500 setup is cleaning this up.” Current offer source: OFFER_V2.md ($250 setup). Kept as history. -->
+    <div class="hint">Google Business Profile setup is included. If you've lost access, tell me here and I'll help with the next step.</div>
 
     <label for="domain">Do you own a domain name?</label>
     <input type="text" id="domain" name="domain" placeholder="yourshop.com — or 'no'" />
@@ -180,9 +192,9 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
   <fieldset>
     <legend>The customer assistant</legend>
 
-    <label for="faq">The 5 questions customers ask you most <span class="req">*</span></label>
-    <textarea id="faq" name="faq" required placeholder="Are you open Sunday?&#10;Do you take walk-ins?&#10;How much for a fade?&#10;Where do I park?&#10;Do you do kids' cuts?"></textarea>
-    <div class="hint">This is what the assistant will answer for you, 24/7. Be honest about the boring ones — those are the calls you're losing.</div>
+    <label for="faq">Questions customers ask you most</label>
+    <textarea id="faq" name="faq" placeholder="Are you open Sunday?&#10;Do you take walk-ins?&#10;How much for a fade?&#10;Where do I park?&#10;Do you do kids' cuts?"></textarea>
+    <div class="hint">Add any that come to mind. We'll confirm the answers before the assistant uses them.</div>
 
     <label for="handoff">When should it hand off to a human?</label>
     <input type="text" id="handoff" name="handoff" placeholder="Anything about pricing a big job / complaints / booking changes" />
@@ -202,7 +214,8 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
     </div>
   </fieldset>
 
-  <button type="submit">Send it — let's build</button>
+  <button type="submit">Continue to sending options</button>
+  <p class="note" id="saveStatus" aria-live="polite">This form doesn't send automatically. Your draft saves in this browser as you type.</p>
   <p class="note">Questions? Text Nate — <a href="sms:+15017573468">(501) 757-3468</a></p>
 </form>
 
@@ -217,21 +230,24 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
   var FIELDS = [
     ['business','Business name'], ['owner','Your name'], ['phone','Best phone'],
     ['email','Email'], ['address','Business address'], ['hours','Hours'],
-    ['services','Services and prices'], ['staff','Team'], ['about','About'],
+    ['services','Services and prices'], ['staff','Team'], ['about','About'], ['logo','Logo'],
     ['photos','Photos'], ['social','Social / booking links'],
     ['google_profile','Google Business Profile'], ['domain','Domain'],
-    ['faq','Top 5 customer questions'], ['handoff','Hand off to a human when'],
+    ['faq','Customer questions'], ['handoff','Hand off to a human when'],
     ['sms_consent','Agreed to receive texts']
   ];
 
   var f = document.getElementById('f'),
       ok = document.getElementById('ok'),
       fb = document.getElementById('fb');
+  var savedLocally = true;
 
   function hideIntro(){
     var h = document.querySelector('h1'), l = document.querySelector('.lede');
     if (h) h.style.display = 'none';
     if (l) l.style.display = 'none';
+    var p = document.querySelector('.handoff');
+    if (p) p.style.display = 'none';
   }
 
   function values(){
@@ -244,7 +260,17 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
     return v;
   }
 
-  function save(){ try { localStorage.setItem(STORE, JSON.stringify(values())); } catch(e){} }
+  function save(){
+    var status = document.getElementById('saveStatus');
+    try {
+      localStorage.setItem(STORE, JSON.stringify(values()));
+      savedLocally = true;
+      if (status) status.textContent = 'Draft saved on this device. Return here in this browser to finish.';
+    } catch(e) {
+      savedLocally = false;
+      if (status) status.textContent = 'This browser could not save a draft. Send your answers before closing this page.';
+    }
+  }
 
   function restore(){
     var raw;
@@ -287,6 +313,9 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
     var mail = 'mailto:' + TO + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(text);
 
     document.getElementById('fbMail').setAttribute('href', mail);
+    document.getElementById('fbSaved').textContent = savedLocally
+      ? 'Draft saved on this device. You can return in this browser to finish.'
+      : 'This browser could not save a draft. Keep this page open until you send your answers.';
 
     document.getElementById('fbCopy').onclick = function(){
       var btn = this;
@@ -324,7 +353,7 @@ Anything you're unsure about, leave blank and we'll sort it on a call.</p>
       fallback();
     }).then(function(){
       btn.disabled = false;
-      btn.textContent = 'Send it — let\'s build';
+      btn.textContent = 'Continue to sending options';
     });
   });
 </script>
